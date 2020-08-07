@@ -7,7 +7,7 @@ import {showMessage} from 'app/utils'
 import {  Checkbox ,notification} from 'antd'
 import * as exportRecordingActions from 'app/redux/Search/ExportRecording/exportRecording.action'
 import * as homeActions from 'app/redux/Home/home.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @immutableRenderDecorator
 export default

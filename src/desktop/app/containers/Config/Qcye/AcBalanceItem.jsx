@@ -1,12 +1,12 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon, message } from 'antd'
+import { message } from 'antd'
 import XfnInput from 'app/components/XfnInput'
 import { toJS, fromJS } from 'immutable'
 import { formatMoney } from 'app/utils'
-import { Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import { Amount, Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 
 import * as qcyeActions	from 'app/redux/Config/Qcye/qcye.action.js'
 

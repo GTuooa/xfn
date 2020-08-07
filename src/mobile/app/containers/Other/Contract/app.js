@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { fromJS, toJS }	from 'immutable'
 import { Container, Row, ScrollView, ButtonGroup, Button, Icon } from 'app/components'
 // import * as tcsjActions from 'app/actions/tcsj.action.js'

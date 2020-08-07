@@ -11,7 +11,7 @@ import { ExportModal,XfnIcon } from 'app/components'
 
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'
-import * as sobLogActions from 'app/redux/Config/SobLog/SobLog.action.js'
+import * as sobLogActions from 'app/redux/Config/SobLog/sobLog.action.js'
 import * as middleActions from 'app/redux/Home/middle.action.js'
 
 import './style.less'

@@ -6,7 +6,7 @@ import * as Limit from 'app/constants/Limit.js'
 import { DatePicker, Input, Select, Checkbox, Button, Modal, message, Timeline, Icon } from 'antd'
 import { RunCategorySelect, AcouontAcSelect, TableAll, TableTitle, TableBody, TableItem, Amount, TableOver } from 'app/components'
 import RunningCardBody from './RunningCardBody'
-import CalculateCardBody from './CalculateCardBody'
+import CalculateCardBody from './CalculateCardbody'
 import { getCategorynameByType } from './common/common'
 // import UploadImg from './UploadImg'
 import Enclosure from 'app/containers/components/Enclosure'
@@ -109,25 +109,25 @@ class CardWrap extends React.Component {
 				{
 					pageTab === 'business' && paymentType !== 'LB_SFGL' ?
 					<RunningCardBody
-							flags={flags}
-							oriTemp={oriTemp}
-							dispatch={dispatch}
-							accountList={accountList}
-							taxRateTemp={taxRateTemp}
-							payOrReceive={payOrReceive}
-							insertOrModify={insertOrModify}
-							runningCategory={runningCategory}
-							disabledBeginDate={disabledBeginDate}
-							configPermission={configPermission}
-							// simplifyStatus={simplifyStatus}
-							categoryTypeObj={categoryTypeObj}
-							disabledDate={disabledDate}
-							isCheckOut={isCheckOut}
-							enableWarehouse={enableWarehouse}
-							openQuantity={openQuantity}
-							accountPoundage={accountPoundage}
-							moduleInfo={moduleInfo}
-							disabledChange={disabledChange}
+						flags={flags}
+						oriTemp={oriTemp}
+						dispatch={dispatch}
+						accountList={accountList}
+						taxRateTemp={taxRateTemp}
+						payOrReceive={payOrReceive}
+						insertOrModify={insertOrModify}
+						runningCategory={runningCategory}
+						disabledBeginDate={disabledBeginDate}
+						configPermission={configPermission}
+						// simplifyStatus={simplifyStatus}
+						categoryTypeObj={categoryTypeObj}
+						disabledDate={disabledDate}
+						isCheckOut={isCheckOut}
+						enableWarehouse={enableWarehouse}
+						openQuantity={openQuantity}
+						accountPoundage={accountPoundage}
+						moduleInfo={moduleInfo}
+						disabledChange={disabledChange}
 					/> :
 					<CalculateCardBody
 						flags={flags}

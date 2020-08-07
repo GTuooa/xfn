@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, Form, AmountInput, TextInput } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import AcShow from './AcShow.jsx'
 import InfoAffirms from './InfoAffirms.jsx'
 

@@ -5,7 +5,7 @@ import * as Limit from 'app/constants/Limit.js'
 const Option = Select.Option
 
 
-export default
+
 class RunAcMultipleSelect extends React.Component {
 	constructor() {
 		super()
@@ -55,6 +55,8 @@ class RunAcMultipleSelect extends React.Component {
 		)
 	}
 }
+
+export default RunAcMultipleSelect
 
 /*
 

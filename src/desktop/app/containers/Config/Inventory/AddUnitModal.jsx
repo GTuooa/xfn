@@ -9,7 +9,8 @@ import { jxcConfigCheck } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
 import XfnSelect from './XfnSelect'
 import { UpperClassSelect, SelectAc, NumberInput, XfnIcon } from 'app/components'
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Radio, Icon, Tooltip } from 'antd'
+import { Switch, Input, Select, Checkbox, Button, Modal, message, Radio, Tooltip } from 'antd'
+import { Icon } from 'app/components'
 const { Option, OptGroup } = Select
 const RadioGroup = Radio.Group
 const CheckboxGroup = Checkbox.Group

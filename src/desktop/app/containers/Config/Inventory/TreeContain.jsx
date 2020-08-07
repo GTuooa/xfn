@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Select, Icon }  from 'antd'
-import { TableTree, JxcTree } from 'app/components'
+import { Select }  from 'antd'
+import { TableTree, JxcTree, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as inventoryConfActions from 'app/redux/Config/Inventory/inventory.action.js'
@@ -35,13 +35,13 @@ class TreeContain extends React.Component {
 			if (item.childList.length) {
 				selectList.push({
 					value: `${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`,
-					name: `${item.name}${item.cardNumber?`(${item.cardNumber})`:''}`
+					name: item.name
 				})
 				loop(item.childList)
 			} else {
 				selectList.push({
 					value: `${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`,
-					name: `${item.name}${item.cardNumber?`(${item.cardNumber})`:''}`
+					name: item.name
 				})
 			}
 		})
@@ -66,12 +66,7 @@ class TreeContain extends React.Component {
 						}}
 						showArrow={false}
 					>
-						{
-							selectList.map((v, i) =>
-								<Select.Option key={i} value={v.value}>
-									{`${v.name}`}
-								</Select.Option>
-						)}
+						{selectList.map((v, i) => <Select.Option key={i} value={v.value}>{v.name}</Select.Option>)}
 					</Select>
 					<Icon type="search" className="table-right-table-input-search"/>
 					<Icon

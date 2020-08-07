@@ -8,7 +8,7 @@ import logGetformatDate from './logGetformatDate'
 import { Button, Tooltip, Icon, Input, Modal } from 'antd'
 import { TableWrap, TableBody, TableTitle, TableItem, TableOver, TableAll, TableTree, ExportModal } from 'app/components'
 import SobItem from './SobItem'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 
@@ -63,7 +63,7 @@ class Sob extends React.Component {
 		const corpId = userInfo.get('corpId')
 		const user = `${userInfo.get('useruuid')}_${userInfo.get('username')}`
 
-		const visibilityList = ['ding50f34631d604e77935c2f4657eb6378f', 'ding75d2d8a9cfb940bf', 'dingcb3d1516c40fded835c2f4657eb6378f', 'ding9849431a8160211e', 'ding9e1aa64cbe4d3b3435c2f4657eb6378f']
+		const visibilityList = ['ding50f34631d604e77935c2f4657eb6378f', 'ding75d2d8a9cfb940bf', 'dingcb3d1516c40fded835c2f4657eb6378f', 'ding9849431a8160211e']
 
 		return (
 			<ContainerWrap type="config-four" className="sob-wrap">
@@ -118,7 +118,7 @@ class Sob extends React.Component {
 									visible={chooseModal}
 									onCancel={() => this.setState({chooseModal: false})}
 									onOk={() => {
-										dispatch(homeActions.createTestSob(history, demo))
+										dispatch(homeActions.createTestSob(demo))
 										this.setState({chooseModal: false})
 									}}
 									maskClosable={false}
@@ -139,7 +139,7 @@ class Sob extends React.Component {
 												<h1>智能版</h1>
 												<p>无需会计基础，财务小白也能零门槛输出专业报表</p>
 												<div className='help-btn-click' onClick={() => {
-													dispatch(homeActions.createTestSob(history, 'SMART_DEMO'))
+													dispatch(homeActions.createTestSob('SMART_DEMO'))
 													this.setState({chooseModal: false})
 												}}>点击进入</div>
 											</div>
@@ -147,7 +147,7 @@ class Sob extends React.Component {
 												<h1>会计版</h1>
 												<p>传统总账系统</p>
 												<div className='help-btn-click' onClick={() => {
-													dispatch(homeActions.createTestSob(history, 'ACCOUNTING_DEMO'))
+													dispatch(homeActions.createTestSob('ACCOUNTING_DEMO'))
 													this.setState({chooseModal: false})
 												}}>点击进入</div>
 											</div>

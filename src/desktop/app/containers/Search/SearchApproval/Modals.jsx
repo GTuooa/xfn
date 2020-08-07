@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
-import { Icon, Select, Button, Modal, DatePicker, Checkbox, Tooltip, message } from 'antd'
+import { Select, Button, Modal, DatePicker, Checkbox, Tooltip, message } from 'antd'
+import { Icon } from 'app/components'
 import moment from 'moment'
 const Option = Select.Option
 import { fromJS, toJS } from 'immutable'

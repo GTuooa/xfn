@@ -7,7 +7,7 @@ import './style.less'
 import { type } from './common'
 import * as editApprovalActions from 'app/redux/Edit/EditApproval/editApproval.action.js'
 import SearchApproval from './SearchApproval'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

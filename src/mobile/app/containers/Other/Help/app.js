@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { USER_GUIDE_KJ,USER_GUIDE_ZN, USER_GUIDE_VIDEO, XFNVERSION, ROOTURL, SERVERURL } from 'app/constants/fetch.constant.js'
 import { Container, Row, ScrollView, ButtonGroup, Button, Icon } from 'app/components'
 
@@ -87,7 +87,7 @@ class Help extends React.Component {
                                 onSuccess : (result) => {
                                     if (result.buttonIndex === 1) {
 
-                                        const href = location.href
+                                        const href = window.location.href
                                         const post = href.indexOf('?')
                                         const endPost = href.indexOf('#/') == -1 ? href.length : href.indexOf('#/')
                                         let serverMessage = href.slice(post+1, endPost)

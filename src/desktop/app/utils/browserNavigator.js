@@ -1,4 +1,4 @@
-export default {
+const browserNavigator = {
 	versions: (() => {
 		var u = navigator.userAgent
 		return {
@@ -17,3 +17,5 @@ export default {
 		}
 	})()
 }
+
+export default browserNavigator

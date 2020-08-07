@@ -24,6 +24,8 @@ class VorcherTitle extends React.Component {
 			enclosureCountUser
 		} = this.props
 
+		console.log('sdf', moment.locale);
+
 		const lrpzActions = (!!closedBy || !!reviewedBy) ? new Proxy({}, {get: () => () => ({type: 'NO_CHANGE'})}) : lrpzActions_init
 
 		const dateFormat = 'YYYY-MM-DD'
@@ -34,7 +36,7 @@ class VorcherTitle extends React.Component {
 					<span>凭证字</span>
 					<span>
 						<Select defaultValue="记" style={{width: 60}}>
-							<Option value="记">记</Option>
+							<Select.Option value="记">记</Select.Option>
 						</Select>
 					</span>
 					<span>

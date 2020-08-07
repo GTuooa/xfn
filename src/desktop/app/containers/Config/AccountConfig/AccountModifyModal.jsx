@@ -7,7 +7,8 @@ import { NumberInput } from 'app/components'
 import { typeList, typeStr } from './commom.js'
 import * as Limit from 'app/constants/Limit.js'
 import { AcouontAcSelect } from 'app/components'
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Icon, Tooltip } from 'antd'
+import { Switch, Input, Select, Checkbox, Button, Modal, message, Tooltip } from 'antd'
+import { Icon } from 'app/components'
 import { numberTest, nameCheck } from 'app/utils'
 const Option = Select.Option
 

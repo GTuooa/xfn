@@ -2,8 +2,9 @@ import React, { PropTypes } from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, fromJS } from 'immutable'
 
-import { Button, Icon, Checkbox } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import { Button, Checkbox } from 'antd'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 
 import * as sobRoleActions from 'app/redux/Config/SobRole/sobRole.action.js'
 

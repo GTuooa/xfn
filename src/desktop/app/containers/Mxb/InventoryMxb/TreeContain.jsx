@@ -2,9 +2,9 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, fromJS, Map, List } from 'immutable'
 
-import { Select, Icon, Menu, Pagination }  from 'antd'
+import { Select, Menu, Pagination }  from 'antd'
 import * as Limit from 'app/constants/Limit.js'
-import { TableTree, XfnIcon } from 'app/components'
+import { TableTree, XfnIcon, Icon } from 'app/components'
 import CategorySelect from './CategorySelect'
 const { Option } = Select;
 import * as inventoryMxbActions from 'app/redux/Mxb/InventoryMxb/inventoryMxb.action.js'

@@ -1,7 +1,7 @@
 import React, { PropTypes }	from 'react'
 import { connect }	from 'react-redux'
 import { toJS, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { Switch, XfInput, Button, ButtonGroup, Icon, Container, Row, Form, ScrollView, Multiple } from 'app/components'
 const { Item } = Form

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 
 import { Row, Icon, Single } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
@@ -9,12 +10,12 @@ import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunnin
 
 export default
     class Account extends Component {
-    static contextTypes = { router: PropTypes.object }
+    // static contextTypes = { router: PropTypes.object }
 
     render() {
 
         const { dispatch, accountList, accounts, accountStatus } = this.props
-        const { router } = this.context
+        // const { router } = this.context
 
         let dataList = accountList.toJS()
         dataList.push({ key: '新增账户', value: `insert${Limit.TREE_JOIN_STR}` })
@@ -34,7 +35,7 @@ export default
                 onOk={value => {
                     if (value.value.split(Limit.TREE_JOIN_STR)[0] == 'insert') {
                         dispatch(editRunningConfigActions.beforAddAccontfromEditRunning(['views', 'flags'], 'insert'))
-                        router.history.push('/config/account/card/edit')
+                        dispatch(push('/config/account/card/edit'))
                         return
                     }
                     dispatch(editRunningActions.changeLrlsAccount(value, accountStatus))

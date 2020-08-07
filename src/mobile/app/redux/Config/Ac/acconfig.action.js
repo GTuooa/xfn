@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as allActions from 'app/redux/Home/All/aclist.actions'
 import * as qcyeActions from 'app/redux/Config/Qcye/qcye.action'
 import * as Limit from 'app/constants/Limit.js'

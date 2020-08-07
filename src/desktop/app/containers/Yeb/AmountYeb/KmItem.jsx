@@ -7,8 +7,7 @@ import * as AmmxbActions from 'app/redux/Mxb/AmountMxb/amountMxb.action.js'
 import * as homeActions from 'app/redux/Home/home.action.js'
 
 import { toJS } from 'immutable'
-import {  Icon } from 'antd'
-import { Amount, Price, TableItem, TableOver } from 'app/components'
+import { Amount, Price, TableItem, TableOver, Icon } from 'app/components'
 
 @immutableRenderDecorator
 export default

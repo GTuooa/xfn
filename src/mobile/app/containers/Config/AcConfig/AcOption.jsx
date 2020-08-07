@@ -6,7 +6,7 @@ import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import * as allActions from 'app/redux/Home/All/aclist.actions'
 import './ac-option.less'
 import { SwitchText, Switch, TextInput, Button, ButtonGroup, Icon, Container, Row, Form, ScrollView, SinglePicker } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 const {

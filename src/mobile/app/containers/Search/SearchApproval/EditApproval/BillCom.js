@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Row, Single, Icon, Amount, SwitchText, XfInput } from 'app/components'
 import * as editRunning from 'app/constants/editRunning.js'
 import * as searchApprovalActions from 'app/redux/Search/SearchApproval/searchApproval.action.js'

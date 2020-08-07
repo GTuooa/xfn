@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect }	from 'react-redux'
 import { toJS, Map } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as assetsYebActions from 'app/redux/Yeb/AssetsYeb/assetsYeb.action.js'
 import { TopMonthPicker } from 'app/containers/components'
 import { Container, Row, ScrollView } from 'app/components'

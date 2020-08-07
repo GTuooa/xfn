@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 import { Icon, Container, ScrollView, Single,Button, ButtonGroup,Checkbox ,Form,TextInput,Switch,Row,TextListInput}from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const { Item } = Form
 import * as allActions from 'app/redux/Home/All/other.action'
 import 'app/containers/Config/common/style/listStyle.less'

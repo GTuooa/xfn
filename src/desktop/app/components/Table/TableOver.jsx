@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class TableOver extends React.Component{
 	render() {
 		const { type, className, titleList, onClick, textAlign, isLink, liOnClice } = this.props
@@ -25,3 +25,5 @@ class TableOver extends React.Component{
 		)
 	}
 }
+
+export default TableOver;

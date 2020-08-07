@@ -4,13 +4,13 @@ import { toJS, Map, fromJS } from 'immutable'
 import './style/index.less'
 
 import { Button, ButtonGroup, Icon, Container, Row } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import Running from './Running'
 import Tax from './Tax'
 
 import { runningIndexActions } from 'app/redux/Config/Running/index'
-import * as taxConfActions from 'app/redux/Config/Running/tax/taxConf.action'
+import * as taxConfActions from 'app/redux/Config/Running/Tax/taxConf.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 import * as runningConfActions from 'app/redux/Config/Running/runningConf/runningConf.action'
 

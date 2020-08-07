@@ -5,7 +5,7 @@ import { fromJS, toJS } from 'immutable'
 import { decimal, throttle } from 'app/utils'
 import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, Checkbox } from 'app/components'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

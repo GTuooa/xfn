@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 import { Icon, Container, ScrollView, Row, SinglePicker,Button, ButtonGroup,Checkbox ,}	from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Modal } from 'antd-mobile';
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as extraInformationActions from 'app/redux/Report/ExtraInformation/extraInformation.action.js'

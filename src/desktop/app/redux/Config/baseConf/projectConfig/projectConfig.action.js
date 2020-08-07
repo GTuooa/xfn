@@ -4,7 +4,7 @@ import * as lrAccountActions from 'app/redux/Edit/LrAccount/lrAccount.action'
 import fetchApi from 'app/constants/fetch.account.js'
 
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import {fromJS,toJS} from 'immutable'
 import {message,Modal} from 'antd'

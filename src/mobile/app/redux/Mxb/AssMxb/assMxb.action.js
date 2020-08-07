@@ -4,7 +4,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 // import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import * as lrpzExportActions from 'app/redux/Edit/Lrpz/lrpzExport.action.js'
 import { pushVouhcerToLrpzReducer } from 'app/redux/Search/Cxpz/cxpz.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 export const getAssMxbAclistAndReportdetailFetch = (issuedate, endissuedate, acid, assid, asscategory, assidTwo, asscategoryTwo, isCheck) => dispatch => {

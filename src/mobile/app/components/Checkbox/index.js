@@ -1,6 +1,6 @@
 import React from 'react';
 import './checkbox.css';
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 export default
 class Checkbox extends React.Component {
 

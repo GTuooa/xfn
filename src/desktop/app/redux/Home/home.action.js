@@ -1,10 +1,9 @@
 import fetchApi from 'app/constants/fetch.constant.js'
 import * as ActionTypes from './ActionTypes.js'
 import { message }	from 'antd'
-let network = 'network=wifi'
-let source = 'source=desktop'
+import { push } from 'react-router-redux'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showMessage, DateLib } from 'app/utils'
 import { browserNavigator } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
@@ -13,9 +12,9 @@ import { ROOT, ROOTURL, XFNVERSION, getUrlParam } from 'app/constants/fetch.cons
 import * as allActions from 'app/redux/Home/All/all.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action.js'
 import * as middleActions from 'app/redux/Home/middle.action.js'
-import * as editCalculateActions from 'app/redux/Edit/EditCalculate/editCalculate.action'
 
-
+let network = 'network=wifi'
+let source = 'source=desktop'
 
 export const addHomeTabpane = (tabKey, openPage, title) => dispatch => {
     // if (sessionStorage.getItem("firstload") == 'first') {
@@ -59,7 +58,7 @@ export const getPlaySobModelList = () => dispatch => {
 
 
 //获取账套列表 在进入首页后就立即发送
-export const getDbListFetch = (first, history) => (dispatch, getState) => {
+export const getDbListFetch = (first) => (dispatch, getState) => {
 
     if (global.isplayground) { // 通过路由判断是体验模式
         if (browserNavigator.versions.mobile || browserNavigator.versions.ios || browserNavigator.versions.android || browserNavigator.versions.iPhone || browserNavigator.versions.iPad) { // 手机端体验模式
@@ -71,7 +70,7 @@ export const getDbListFetch = (first, history) => (dispatch, getState) => {
                     thirdParty.Alert(json.message)
                     //return
                 } else if (json.code === 10006) {
-                    dispatch(codeError(first, history))
+                    dispatch(codeError(first))
                 } else {
                     if (showMessage(json)) {
                         dispatch(afterGetDbListFetch(json, first))
@@ -95,7 +94,7 @@ export const getDbListFetch = (first, history) => (dispatch, getState) => {
                         thirdParty.Alert(json.message)
                         return
                     } else if (json.code === 10006) {
-                        dispatch(codeError('', history))
+                        dispatch(codeError(''))
                     } else {
                         if (showMessage(json)) {
                             dispatch(afterGetDbListFetch(json))
@@ -105,10 +104,9 @@ export const getDbListFetch = (first, history) => (dispatch, getState) => {
                     }
                 })
             } else {
-          
-                const href = location.href
+                const href = window.location.href
                 const start = href.indexOf('?')
-                let serverMessage = location.href.slice(start+1).split('&')
+                let serverMessage = window.location.href.slice(start+1).split('&')
                 let corpId = ''
 
                 // 从路由读取 corpid
@@ -137,7 +135,7 @@ export const getDbListFetch = (first, history) => (dispatch, getState) => {
                                         thirdParty.Alert(json.message)
                                         //return
                                     } else if (json.code === 10006) {
-                                        dispatch(codeError(first, history))
+                                        dispatch(codeError(first))
                                     } else {
                                         if (showMessage(json)) {
 
@@ -185,7 +183,7 @@ export const getDbListFetch = (first, history) => (dispatch, getState) => {
 
             //             if (json.data.isForceReload === true) {
             //                 window.location.href=window.location.href+"?timestamp=" + new Date().getTime()
-            //                 location.reload(true)
+            //                 window.location.reload(true)
             //             }
 
             //             const _config = json.data.config
@@ -356,7 +354,7 @@ export const getUserloginInfoInWeb = (first, code) => dispatch => {
                         thirdParty.Alert(json.message)
                         return
                     } else if (json.code === 10006) {
-                        dispatch(codeError('', history))
+                        dispatch(codeError(''))
                     } else {
                         if (showMessage(json)) {
                             dispatch(afterGetDbListFetch(json, first))
@@ -381,7 +379,7 @@ export const getUserloginInfoInWeb = (first, code) => dispatch => {
                 thirdParty.Alert(json.message)
                 return
             } else if (json.code === 10006) {
-                dispatch(codeError('', history))
+                dispatch(codeError(''))
             } else {
                 if (showMessage(json)) {
                     dispatch(afterGetDbListFetch(json))
@@ -529,7 +527,6 @@ const afterGetDbListFetch = (receivedData, first) => dispatch => {
                             name: 'firstToSecurity',
                             bool: true
                         })
-                        // history.push('/config/security')
                     } else {
                         if (receivedData.data.sobNumber > receivedData.data.usedSobNumber) { // 有账套余额
                             dispatch({
@@ -542,7 +539,6 @@ const afterGetDbListFetch = (receivedData, first) => dispatch => {
                             dispatch(addPageTabPane('ConfigPanes', 'SobOption', 'SobOption', '账套新增'))
                             dispatch(addHomeTabpane('Config', 'SobOption', '账套新增'))
                             setTimeout(() => dispatch(middleActions.sobOptionInit('', ()=>{}, corpName)), 100)
-                            // dispatch(sobConfigActions.beforeHomeInsertOrModifySob(history))
                         } else {
                             dispatch({
                                 type: ActionTypes.CHANGE_LOGIN_GUIDE_STRING,
@@ -699,15 +695,15 @@ export const setDefaultDbFetch = (defaultsobid) => dispatch => {
 //
 // }
 //显示page10006页面
-export const showCodePage = (first ,history) => dispatch => {
-    history.push('/page10006')
+export const showCodePage = () => dispatch => {
+    dispatch(push('/page10006'))
 }
 // ({
 // 	type: ActionTypes.SHOW_CODE_PAGE
 // })
 
 //10006
-const codeError = (first='', history) => dispatch => {
+const codeError = (first='') => dispatch => {
 	fetchApi('getdduserinfo', 'POST', JSON.stringify({code: ''}), json => {
 		if (json.code === 3) {
 			thirdParty.Alert(json.message)
@@ -716,7 +712,7 @@ const codeError = (first='', history) => dispatch => {
 				if (json.code === 3) {
 					thirdParty.Alert(json.message)
 				}else if(json.code === 10006){
-					dispatch(showCodePage(history))
+					dispatch(showCodePage())
 				}else{
 					showMessage(json)
 					if(first){
@@ -757,7 +753,7 @@ export const changePleasureGroundModule = (bool) => ({
     bool
 })
 
-export const enterPleasureGround = (history, demo, sobModel) => dispatch => {
+export const enterPleasureGround = (demo, sobModel) => dispatch => {
 
     fetchApi('playOpen', 'POST', JSON.stringify({
         demo,
@@ -776,7 +772,7 @@ export const enterPleasureGround = (history, demo, sobModel) => dispatch => {
             dispatch(allActions.freshEditPage())
             dispatch(allActions.freshConfigPage())
 
-            dispatch(getDbListFetch('', history))
+            dispatch(getDbListFetch(''))
 
             dispatch({
                 type: ActionTypes.CLEAR_HOME_TAB_PANE
@@ -785,7 +781,7 @@ export const enterPleasureGround = (history, demo, sobModel) => dispatch => {
     })
 }
 
-export const quitPleasureGround = (history) => dispatch => {
+export const quitPleasureGround = () => dispatch => {
     thirdParty.Confirm({
 		message: "确定退出体验模式？",
 		title: "提示",
@@ -801,7 +797,7 @@ export const quitPleasureGround = (history) => dispatch => {
                 dispatch(allActions.freshSearchPage())
                 dispatch(allActions.freshEditPage())
                 dispatch(allActions.freshConfigPage())
-                dispatch(getDbListFetch('', history))
+                dispatch(getDbListFetch(''))
                 dispatch({
                     type: ActionTypes.CLEAR_HOME_TAB_PANE
                 })
@@ -814,7 +810,7 @@ export const quitPleasureGround = (history) => dispatch => {
 }
 
 // 创建内部演示账套
-export const createTestSob = (history, demo) => dispatch => {
+export const createTestSob = (demo) => dispatch => {
 
     fetchApi('copyTest', 'POST', JSON.stringify({demo}), json => {
         if (showMessage(json)) {
@@ -826,7 +822,7 @@ export const createTestSob = (history, demo) => dispatch => {
             dispatch(allActions.freshEditPage())
             dispatch(allActions.freshConfigPage())
 
-            dispatch(getDbListFetch('', history))
+            dispatch(getDbListFetch(''))
 
             dispatch({
                 type: ActionTypes.CLEAR_HOME_TAB_PANE
@@ -917,7 +913,7 @@ export const openLinkInBrowser = (callBack) => dispatch => {
             if (showMessage(mes)) {
                 const code = mes.data
 
-                const href = location.href
+                const href = window.location.href
                 const urlParam = getUrlParam(href)
 
                 thirdParty.openLink({

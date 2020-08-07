@@ -45,11 +45,11 @@ export default class CategoryCom extends Component {
 
         //屏蔽转出未交增值税
         let categoryList = lastCategory.toJS()
-        categoryList.map(v => {
+        /*categoryList.map(v => {
             if (v['uuid']=='内部核算') {
                 v['childList'] = v['childList'].filter(w => {
                     let shouldReturn = true
-                    /*if (w['categoryType'] == 'LB_ZCWJZZS') {
+                    if (w['categoryType'] == 'LB_ZCWJZZS') {
                         shouldReturn = false
                     }
                     if (scale == 'small' && w['categoryType'] == 'LB_FPRZ') {
@@ -72,14 +72,11 @@ export default class CategoryCom extends Component {
                     }
                     if (['small', 'isEnable'].includes(scale) && w['categoryType'] == 'LB_JXSEZC') {
                         shouldReturn = false
-                    }*/
-                    if (w['categoryType'] == 'LB_SFGL') {
-                        shouldReturn = false
                     }
                     return shouldReturn
                 })
             }
-        })
+        })*/
 
         //费用支出允许修改类别
         if (isModify && !disabled) {

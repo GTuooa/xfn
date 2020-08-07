@@ -47,32 +47,6 @@ class Table extends React.Component {
 					</TableBody>
 				</TableAll>
 			</TableWrap>
-            // <div className="layer">
-			// 	<i className="shadow-title"></i>
-			// 	<TableTit
-			// 		dateSort={dateSort}
-			// 		indexSort={indexSort}
-			// 		dispatch={dispatch}
-			// 		selectDraftAll={selectDraftAll}
-			// 	/>
-            //     <div className="draft-body">
-			// 		<table>
-			// 			<tbody>
-			// 				{
-			// 					draftList.map((u,i) => {
-			// 						return <VcItem
-			// 							idx={i}
-			// 							key={i}
-			// 							dispatch={dispatch}
-			// 							vcItem={u}
-			// 							vcKeyList={vcKeyList}
-			// 						/>
-			// 					})
-			// 				}
-			// 			</tbody>
-			// 		</table>
-			// 	</div>
-			// </div>
 		)
 	}
 }

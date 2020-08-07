@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect }	from 'react-redux'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { USER_PAY_GUIDE } from 'app/constants/fetch.constant.js'
 import { Container, Row, Icon, ScrollView } from 'app/components'
 import './style.less'

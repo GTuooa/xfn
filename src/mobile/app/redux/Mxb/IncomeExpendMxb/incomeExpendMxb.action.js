@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.running.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 
@@ -211,15 +211,15 @@ export const getIncomeExpendDetailCategory = (issuedate, endissuedate) => dispat
     })
 }
 
-export const changeIncomeExpendMxbChooseMorePeriods = (chooseperiods) => ({
-    type: ActionTypes.CHANGE_INCOME_EXPEND_MXB_CHOOSE_MORE_PERIODS,
-    chooseperiods
-})
+// export const changeIncomeExpendMxbChooseMorePeriods = (chooseperiods) => ({
+//     type: ActionTypes.CHANGE_INCOME_EXPEND_MXB_CHOOSE_MORE_PERIODS,
+//     chooseperiods
+// })
 
-export const changeIncomeExpendMxbSearchContent = (value) => ({
-    type: ActionTypes.CHANGE_INCOME_EXPEND_MXB_SEARCH_CONTENT,
-    value
-})
+// export const changeIncomeExpendMxbSearchContent = (value) => ({
+//     type: ActionTypes.CHANGE_INCOME_EXPEND_MXB_SEARCH_CONTENT,
+//     value
+// })
 
 export const changeIncomeExpendMxbCommonState = (parent, position, value) => ({type: ActionTypes.CHANGE_INCOME_EXPEND_MXB_COMMON_STATE, parent, position, value})
 

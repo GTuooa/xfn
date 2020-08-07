@@ -9,7 +9,7 @@ import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action.js'
 import * as middleActions from 'app/redux/Home/middle.action.js'
 
 import TabTitle from 'app/containers/components/TabTitle/index.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Button, Tooltip, Icon, Input, Select, Modal, message } from 'antd'
 import './style.less'
 

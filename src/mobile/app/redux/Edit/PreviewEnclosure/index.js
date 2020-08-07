@@ -1,7 +1,7 @@
 import { fromJS } from 'immutable'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 const ActionTypes = {

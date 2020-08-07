@@ -6,7 +6,7 @@ import { XfnIcon } from 'app/components'
 import './table.less'
 import { Tooltip } from 'antd'
 @immutableRenderDecorator
-export default
+
 class TitleKmye extends React.Component{
 	constructor() {
 		super()
@@ -40,13 +40,6 @@ class TitleKmye extends React.Component{
 
 						}}>
 							{title1}
-							{/* {
-									isShowAll ?
-									// <Icon type="kmyeUp" className='kmyeDown kmyeDownRotate' style={{transform: 'rotate(180deg)'}}/>
-									<Icon type="kmyeUp" className='kmyeUp'/>
-									:
-									<Icon type="kmyeDown" className='kmyeDown'/>
-							} */}
 							{
 								isAssYeb ?
 								<XfnIcon type={assYeb ? 'kmyeUp' : 'kmyeDown'} className={assYeb ? 'kmyeDown kmyeUp' : 'kmyeDown'}/>
@@ -95,3 +88,5 @@ class TitleKmye extends React.Component{
 		)
 	}
 }
+
+export default TitleKmye;

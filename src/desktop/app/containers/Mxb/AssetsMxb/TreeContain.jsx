@@ -5,7 +5,8 @@ import * as AssetsMxbActions from 'app/redux/Mxb/AssetsMxb/assetsMxb.action.js'
 
 import Trees from './Trees.jsx'
 import TreesBottom from './TreesBottom.jsx'
-import { Select, Icon }  from 'antd'
+import { Select }  from 'antd'
+import { Icon } from 'app/components'
 import { TableTree } from 'app/components'
 
 @immutableRenderDecorator

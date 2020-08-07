@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.account.js'
 // import fetchGlApi from 'app/constants/fetch.constant.js'
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { toJS, fromJS } from 'immutable'
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'
@@ -567,68 +567,68 @@ export const deleteAccountItemCardAndRunning = (main) => (dispatch, getState) =>
     })
 }
 
-export const getRunningBusinessDuty = (flowNumber, uuid, canMakeVc, openModifyCard) => (dispatch, getState) => {
+// export const getRunningBusinessDuty = (flowNumber, uuid, canMakeVc, openModifyCard) => (dispatch, getState) => {
 
 
-	// 后台数据有问题，所以自己查询，以后要删掉
+// 	// 后台数据有问题，所以自己查询，以后要删掉
 
-	const accountConfState = getState().accountConfState
-	const runningCategory = accountConfState.get('runningCategory')
+// 	const accountConfState = getState().accountConfState
+// 	const runningCategory = accountConfState.get('runningCategory')
 
-	dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
+// 	dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
 
-	fetchApi('getNewRunningBusiness', 'GET', `oriUuid=${uuid}`, json => {
-		dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
+// 	fetchApi('getNewRunningBusiness', 'GET', `oriUuid=${uuid}`, json => {
+// 		dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
 
-		if (showMessage(json)) {
+// 		if (showMessage(json)) {
 
-			const categoryUuid = json.data.result.categoryUuid
-			let category = fromJS([])
+// 			const categoryUuid = json.data.result.categoryUuid
+// 			let category = fromJS([])
 
-			const loop = (data) => data.map(v => {
+// 			const loop = (data) => data.map(v => {
 
-				if (v.get('uuid') === categoryUuid) {
+// 				if (v.get('uuid') === categoryUuid) {
 
-					category = category.push(v)
-				}
-				if (v.get('childList') && v.get('childList').size) {
-					loop(v.get('childList'))
-				}
-			})
+// 					category = category.push(v)
+// 				}
+// 				if (v.get('childList') && v.get('childList').size) {
+// 					loop(v.get('childList'))
+// 				}
+// 			})
 
-			loop(runningCategory)
+// 			loop(runningCategory)
 
-			// openModifyCard()
-			// dispatch({
-			// 	type: ActionTypes.BEFORE_MODIFY_BUSINESS_CARD,
-			// 	receivedData: json.data,
-			// 	category,
-			// 	canMakeVc
-			// })
-			const runningState = json.data.result.runningState
-			if (runningState === 'STATE_JK_ZFLX' || runningState === 'STATE_TZ_SRGL' || runningState === 'STATE_TZ_SRLX' || runningState === 'STATE_ZB_ZFLR' || runningState === 'STATE_ZS_TH' || runningState === 'STATE_ZF_SH') {
-				dispatch(lrAccountActions.changeLrAccountCommonString('', ['flags', 'specialStateforAccrued'], true))
-			}
-			dispatch(lrAccountActions.getRunningSettingInfo())
+// 			// openModifyCard()
+// 			// dispatch({
+// 			// 	type: ActionTypes.BEFORE_MODIFY_BUSINESS_CARD,
+// 			// 	receivedData: json.data,
+// 			// 	category,
+// 			// 	canMakeVc
+// 			// })
+// 			const runningState = json.data.result.runningState
+// 			if (runningState === 'STATE_JK_ZFLX' || runningState === 'STATE_TZ_SRGL' || runningState === 'STATE_TZ_SRLX' || runningState === 'STATE_ZB_ZFLR' || runningState === 'STATE_ZS_TH' || runningState === 'STATE_ZF_SH') {
+// 				dispatch(lrAccountActions.changeLrAccountCommonString('', ['flags', 'specialStateforAccrued'], true))
+// 			}
+// 			dispatch(lrAccountActions.getRunningSettingInfo())
 
-			// dispatch(homeActions.addTabpane('LrAccount'))
-			dispatch(homeActions.addPageTabPane('EditPanes', 'LrAccount', 'LrAccount', '录入流水'))
-			dispatch(homeActions.addHomeTabpane('Edit', 'LrAccount', '录入流水'))
+// 			// dispatch(homeActions.addTabpane('LrAccount'))
+// 			dispatch(homeActions.addPageTabPane('EditPanes', 'LrAccount', 'LrAccount', '录入流水'))
+// 			dispatch(homeActions.addHomeTabpane('Edit', 'LrAccount', '录入流水'))
 
-			dispatch({
-				type: ActionTypes.INIT_LR_ACCOUNT,
-				strJudgeType: 'fromCxAccount',
-				receivedData: json.data,
-				category,
-				canMakeVc,
-				flowNumber
-			})
-			if (runningState === 'STATE_CQZC_JZSY') {
-				dispatch(lrAccountActions.calculateGain())
-			}
-		}
-	})
-}
+// 			dispatch({
+// 				type: ActionTypes.INIT_LR_ACCOUNT,
+// 				strJudgeType: 'fromCxAccount',
+// 				receivedData: json.data,
+// 				category,
+// 				canMakeVc,
+// 				flowNumber
+// 			})
+// 			if (runningState === 'STATE_CQZC_JZSY') {
+// 				dispatch(lrAccountActions.calculateGain())
+// 			}
+// 		}
+// 	})
+// }
 
 export const getRunningPayment = (uuid, openModifyCard) => dispatch => {
 	dispatch({type: ActionTypes.SWITCH_LOADING_MASK})

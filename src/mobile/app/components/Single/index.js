@@ -5,7 +5,7 @@ import { Icon, TextListInput } from 'app/components'
 
 import './style.less'
 
-export default class SinglePicker extends Component {
+class SinglePicker extends Component {
     scrollView = ''
     btnGroup = ''
     state = {
@@ -59,13 +59,16 @@ export default class SinglePicker extends Component {
                         style={{minHeight: isSearch || maxHeight ? (maxHeight ? maxHeight : '75%') : ''}}
                     >
                         <div className='xfn-single-title' onClick={(e) => e.stopPropagation()}>
-                            {!isSearch && icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
-                                <Icon type={icon['type']}/>
-                            </span> : null }
-                            {!isSearch && iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
-                                <Icon type={iconTwo['type']}/>
-                            </span> : null }
                             <div style={{display: isSearch ? 'none' : ''}}>
+                                {
+                                    icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
+                                            <Icon type={icon['type']}/>
+                                        </span> : null}
+                                {
+                                    iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
+                                            <Icon type={iconTwo['type']}/>
+                                        </span> : null
+                                }
                                 <span>{title ? title : '请选择'}</span>
                                 {showSearch ? <Icon type='search' className='no-search' onClick={() => this.setState({isSearch: true})}/> : null}
                             </div>
@@ -139,13 +142,17 @@ class Mask extends Component {
                     style={{minHeight: isSearch || maxHeight ? (maxHeight ? maxHeight : '75%') : ''}}
                 >
                     <div className='xfn-single-title' onClick={(e) => e.stopPropagation()}>
-                        {!isSearch && icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
-                            <Icon type={icon['type']}/>
-                        </span> : null }
-                        {!isSearch && iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
-                            <Icon type={iconTwo['type']}/>
-                        </span> : null }
                         <div style={{display: isSearch ? 'none' : ''}}>
+                            {
+                                icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
+                                        <Icon type={icon['type']}/>
+                                    </span> : null
+                            }
+                            {
+                                iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
+                                        <Icon type={iconTwo['type']}/>
+                                    </span> : null
+                            }
                             <span>{title ? title : '请选择'}</span>
                             {showSearch ? <Icon type='search' className='no-search' onClick={() => this.setState({isSearch: true})}/> : null}
                         </div>
@@ -290,13 +297,17 @@ export class SinglePortal extends Component {
                             style={{minHeight: isSearch || maxHeight ? (maxHeight ? maxHeight : '75%') : ''}}
                         >
                             <div className='xfn-single-title' onClick={(e) => e.stopPropagation()}>
-                                {!isSearch && icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
-                                    <Icon type={icon['type']}/>
-                                </span> : null }
-                                {!isSearch && iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
-                                    <Icon type={iconTwo['type']}/>
-                                </span> : null }
                                 <div style={{display: isSearch ? 'none' : ''}}>
+                                    {
+                                        icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
+                                                <Icon type={icon['type']}/>
+                                            </span> : null
+                                    }
+                                    {
+                                        iconTwo ? <span className='title-left-icon icon-two' onClick={()=> { iconTwo.onClick() }}>
+                                                <Icon type={iconTwo['type']}/>
+                                            </span> : null
+                                    }
                                     <span>{title ? title : '请选择'}</span>
                                     {showSearch ? <Icon type='search' className='no-search' onClick={() => this.setState({isSearch: true})}/> : null}
                                 </div>
@@ -337,5 +348,7 @@ export class SinglePortal extends Component {
 }
 
 
+SinglePicker.SinglePortal = SinglePicker
 
+export default SinglePicker;
 

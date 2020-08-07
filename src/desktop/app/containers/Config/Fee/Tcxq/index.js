@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Checkbox, Button, Modal } from 'antd'
 import Title from '../components/Title'
 import OrderList from './OrderList'
@@ -29,7 +29,7 @@ class Tcxq extends React.Component {
 
     render() {
 
-        const { tcxqState, dispatch, homeState, history } = this.props
+        const { tcxqState, dispatch, homeState } = this.props
 
         const corpId = tcxqState.getIn(['data', 'corpInfo', 'corpId'])
         const corpName = tcxqState.getIn(['data', 'corpInfo', 'corpName'])
@@ -178,7 +178,6 @@ class Tcxq extends React.Component {
 					invoiceMessage={invoiceMessage}
 					corpId={corpId}
 					ddUserId={ddUserId}
-                    history={history}
 				/>
 
                 {/* 提示信息 */}

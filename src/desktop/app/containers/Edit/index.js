@@ -37,7 +37,7 @@ class Edit extends React.Component {
 
     render() {
 
-        const { dispatch, history, currentPage, homeState, allState } = this.props
+        const { dispatch, currentPage, homeState, allState } = this.props
 
         const curentKey = 'Edit'
         const panes = homeState.get('panes')

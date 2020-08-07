@@ -47,7 +47,7 @@ export default function handleCxpz(state = cxpzState, action) {
 			return state.set('issuedate', action.issuedate).update('vclist', v => v.clear().merge(fromJS(action.receivedData.data))).set('currentPage', pageCount).set('pageCount', pageCount)
 		},
 		[ActionTypes.DELETE_VC_FETCH]                   : () => state.update('vclist', v => v.filter(v => !v.get('selected'))),
-		[ActionTypes.SORT_AND_CHANGE_VC_ID]             : () => state.update('vclist', v => v.sort((a, b) => parseInt(a.get('vcindex')) < parseInt(b.get('vcindex')) ? 0 : 1).map((v, i) => v.set('vcindex', i.toString()))),
+		// [ActionTypes.SORT_AND_CHANGE_VC_ID]             : () => state.update('vclist', v => v.sort((a, b) => parseInt(a.get('vcindex')) < parseInt(b.get('vcindex')) ? 0 : 1).map((v, i) => v.set('vcindex', i.toString()))),
 		[ActionTypes.CHANGE_ALL_VC_CHECKBOX_DISPLAY]    : () => state.set('toolBarDisplayIndex', 2).set('allCheckboxDisplay', true),
 		[ActionTypes.CANCEL_CHANGE_VC_CHECKBOX_DISPALY] : () => state.set('toolBarDisplayIndex', 1).update('vclist',v => v.map(w => w.set('selected', false))).set('allCheckboxDisplay', false),
 		[ActionTypes.SELECT_VC_ALL]                     : () => {

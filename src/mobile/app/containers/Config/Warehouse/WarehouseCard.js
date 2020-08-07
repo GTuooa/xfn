@@ -4,11 +4,11 @@ import { connect }	from 'react-redux'
 import { toJS, fromJS } from 'immutable'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, TextInput, Switch, Row, Form } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { configCheck } from 'app/utils'
 const { Item } = Form
 
-import * as warehouseConfActions from 'app/redux/Config/Warehouse/WarehouseConf.action.js'
+import * as warehouseConfActions from 'app/redux/Config/Warehouse/warehouseConf.action.js'
 
 @connect(state => state)
 export default

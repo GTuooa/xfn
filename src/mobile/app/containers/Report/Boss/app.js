@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
 import { fromJS, toJS, Map } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './boss.less'
 import '../sheet.less'
 import { Amount } from 'app/components'

@@ -7,7 +7,7 @@ import * as syxmbActions from 'app/redux/Report/Syxmb/syxmb.actions.js'
 import * as homeActions from 'app/redux/Home/home.action.js'
 
 import PageSwitch from 'app/containers/components/PageSwitch'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { formatMoney } from 'app/utils'
 import { Select, Modal, Button, Checkbox,TreeSelect } from 'antd'
 import AmbBody from './AmbBody'

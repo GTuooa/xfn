@@ -6,7 +6,7 @@ import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, Checkbox
 import { decimal } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 const loop = (data) => {
     data.forEach(v => {

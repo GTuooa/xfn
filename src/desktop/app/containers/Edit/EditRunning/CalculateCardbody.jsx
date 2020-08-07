@@ -5,7 +5,8 @@ import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 import './EditCalculateComp/index.less'
 
-import { Button, message, Modal, Radio, Tooltip, Icon } from 'antd'
+import { Button, message, Modal, Radio, Tooltip } from 'antd'
+import { Icon } from 'app/components'
 import { TableWrap } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 

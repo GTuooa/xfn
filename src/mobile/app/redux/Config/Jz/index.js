@@ -2,7 +2,7 @@ import { fromJS } from 'immutable'
 import { showMessage } from 'app/utils'
 import * as ActionTypes from './ActionTypes.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 //生产环境应当设置为空
 const jzState = fromJS({

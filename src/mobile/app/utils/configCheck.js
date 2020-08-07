@@ -1,4 +1,4 @@
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 
@@ -193,7 +193,7 @@ export function beforeSaveCheck (list, onSuccess, returnError) {
 }
 
 
-export function inputCheck (type, value, onSuccess, digits = 2) {
+function inputCheck (type, value, onSuccess, digits = 2) {
     ({
         'code': () => {
 
@@ -327,3 +327,11 @@ export function inputCheck (type, value, onSuccess, digits = 2) {
         },
     }[type])()
 }
+
+
+let configCheck = {}
+configCheck.hasChiness = hasChiness
+configCheck.beforeSaveCheck = beforeSaveCheck
+configCheck.inputCheck = inputCheck
+
+export default configCheck

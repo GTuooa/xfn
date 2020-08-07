@@ -1,7 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOT } from 'app/constants/fetch.constant.js'
 import { Button,Modal, Select } from 'antd'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'

@@ -3,6 +3,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');//html插件，需要安装依赖项 npm install htmp-webpack-plugin --save-dev
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");//压缩css文件
 //压缩css文件
+const TerserPlugin = require('terser-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 
 const NODE_ENV = process.env.NODE_ENV
 const DEVICE_TYPE = process.env.NODE_DEVICE
@@ -14,8 +16,9 @@ if (DEVICE_TYPE !== 'mobile' && DEVICE_TYPE !== 'desktop') {
 const BUILD_DEVICE_PATH = path.resolve(__dirname, `../build/${DEVICE_TYPE}`)
 const SRC_DEVICE_PATH = path.resolve(__dirname, `../src/${DEVICE_TYPE}`)
 const APP_PATH = path.resolve(SRC_DEVICE_PATH, 'app')
-const DateLib = require('../src/desktop/app/utils/DateLib.js');
-const timestamp = new DateLib(new Date()).getFullDatetoString()
+// const DateLib = require('../src/desktop/app/utils/DateLib.js');
+// const timestamp = new DateLib(new Date()).getFullDatetoString()
+const timestamp = '20160608'
 
 module.exports = {
     // entry:{
@@ -30,7 +33,7 @@ module.exports = {
         // publicPath: '../', //模板、样式、脚本、图片等资源对应的的路径
         publicPath: './', //模板、样式、脚本、图片等资源对应的的路径
         filename: `js${timestamp}/[name].js`, //每个页面对应的主js的生成配置
-        // chunkFilename: 'js/[id][hash:8].chunk.js' //chunk生成的配置
+        chunkFilename: `js${timestamp}/[name].chunk.js` //chunk生成的配置
     },
     // resolve:{
     //     extensions:['.js','.jsx','json','.css'], //需要编译的文件类型
@@ -152,6 +155,8 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: `css${timestamp}/[name].css`,
             // chunkFilename: "css/[name][id][hash:8].css"
-        })
-    ]
+        }), 
+    ],
+    
+    
 }

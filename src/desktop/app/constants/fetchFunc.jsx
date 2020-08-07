@@ -1,16 +1,18 @@
 import fetch from 'isomorphic-fetch'
-let network = 'network=wifi'
-let source = 'source=desktop'
-// let psiCorpId = sessionStorage.getItem('corpId');
-let psiCorpId = 'ding9849431a8160211e';
+
 import { XFNVERSION, ROOTURL, getUrlParam } from 'app/constants/fetch.constant.js'
 import { notification } from 'antd';
 import { DateLib } from 'app/utils'
 import { NotificationModal } from 'app/containers/components/NotificationModal'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { fromJS } from 'immutable';
 
-const href = location.href
+let network = 'network=wifi'
+let source = 'source=desktop'
+// let psiCorpId = sessionStorage.getItem('corpId');
+let psiCorpId = 'ding9849431a8160211e';
+
+const href = window.location.href
 const urlParam = getUrlParam(href)
 
 // 在网页端或体验模式的判断
@@ -18,15 +20,6 @@ global.isInWeb = urlParam.isInWeb && urlParam.isInWeb === 'true'
 const isWebPlay = urlParam.isplayground && urlParam.isplayground === 'true'
 global.isPlay = false
 global.isplayground = isWebPlay
-// const start = href.lastIndexOf('&')
-// let serverMessage = location.href.substr(start+1)
-// const isplaygroundName = serverMessage.substr(0, 12)
-// const isplaygroundBool = serverMessage.substr(13, 4)
-// global.isInWeb = (serverMessage.substr(0, 7) === 'isInWeb' && serverMessage.substr(8, 4) === 'true') ? true : false
-// const isWebPlay = isplaygroundName === 'isplayground' && isplaygroundBool === 'true'
-// global.isPlay = false
-// global.isplayground = isWebPlay ? true : false
-
 let fetchErrCount = 0
 
 export default

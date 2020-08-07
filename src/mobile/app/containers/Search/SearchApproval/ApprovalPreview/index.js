@@ -3,7 +3,7 @@ import { Map, toJS, fromJS } from 'immutable'
 import { connect } from 'react-redux'
 import '../style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Container, Row, ScrollView, Icon, ButtonGroup, Button, Amount } from 'app/components'
 import { receiptList, hideCategoryCanSelect, getCategorynameByType, systemProJectCodeCommon } from 'app/containers/Config/Approval/components/common.js'
 import { showToolTipAccountState } from 'app/containers/Search/SearchApproval/common/common.js'

@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './style.less'
 
 @immutableRenderDecorator
-export default
+
 class ModalConfigTitle extends Component {
 
 	render() {
@@ -20,3 +20,4 @@ class ModalConfigTitle extends Component {
 		)
 	}
 }
+export default ModalConfigTitle;

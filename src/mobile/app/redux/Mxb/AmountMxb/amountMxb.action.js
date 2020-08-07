@@ -6,7 +6,7 @@ import * as ActionTypes from './ActionTypes.js'
 import * as lrpzExportActions from 'app/redux/Edit/Lrpz/lrpzExport.action.js'
 import { pushVouhcerToLrpzReducer } from 'app/redux/Search/Cxpz/cxpz.action'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getAmountMxbAclist = (issuedate, endissuedate, currentAcid, ass) => dispatch => {
 	const date = `${issuedate.substr(0,4)}${issuedate.substr(5,2)}`

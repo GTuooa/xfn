@@ -4,13 +4,13 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { Container, Row, ScrollView, TreeSelect, Icon, SinglePicker, Amount, SwitchText, ChosenPicker } from 'app/components'
 import { MutiPeriodMoreSelect, ScrollLoad } from 'app/containers/components'
 import { PickerView } from 'antd-mobile';
 
-import TableAmount from 'app/containers/components/table/TableAmount'
+import TableAmount from 'app/containers/components/Table/TableAmount.js'
 import RelativeTreeSelect from './RelativeTreeSelect'
 import Item from './Item'
 

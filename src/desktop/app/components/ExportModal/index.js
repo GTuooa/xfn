@@ -2,14 +2,14 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Button, Modal, Radio, Checkbox } from 'antd'
-const RadioGroup = Radio.Group
 
 import AntdModal from './AntdModal'
 // import thirdparty from 'app/utils/thirdparty'
 import './exportmodal.less'
+const RadioGroup = Radio.Group
 
 @immutableRenderDecorator
-export default
+
 class ExportModal extends React.Component{
     constructor() {
 		super()
@@ -61,3 +61,5 @@ class ExportModal extends React.Component{
 		)
 	}
 }
+
+export default ExportModal;

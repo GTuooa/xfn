@@ -2,7 +2,7 @@
 // import { Map, List, toJS, fromJS } from 'immutable'
 // import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 // import { getFileNameNoExt } from 'app/utils'
 // import { message, Icon, Modal } from 'antd'
 // import { ROOTPKT } from 'app/constants/fetch.constant.js'

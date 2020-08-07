@@ -1,8 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, Button, message, Tooltip } from 'antd'
-import { TableItem, ItemTriangle, TableOver,Amount } from 'app/components'
+import { Checkbox, Button, message, Tooltip } from 'antd'
+import { TableItem, ItemTriangle, TableOver,Amount, Icon } from 'app/components'
 
 import * as wlmxActions from 'app/redux/Mxb/WlMxb/wlMxb.action'
 import * as wlyeActions from 'app/redux/Yeb/WlYeb/wlYeb.action'

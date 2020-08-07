@@ -3,7 +3,7 @@ import { fromJS, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 import { cxAccountActions } from 'app/redux/Search/Cxls'
 import { yllsActions } from 'app/redux/Ylls'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Icon, Container, Row, ScrollView, Checkbox, Amount, ButtonGroup, Button } from 'app/components'
 
 

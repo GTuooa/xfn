@@ -1,11 +1,10 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Input, Select, Modal, Button } from 'antd'
+import {  Select } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 const Option = Select.Option
 
 @immutableRenderDecorator
-export default
 class AcouontAcSelect extends React.Component {
 	constructor() {
 		super()
@@ -39,4 +38,6 @@ class AcouontAcSelect extends React.Component {
 
 		)
 	}
-}
+};
+
+export default AcouontAcSelect;

@@ -3,7 +3,7 @@ import { toJS, fromJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 // import * as accountConfigActions from 'app/redux/Config/AccountConfig/accountconfig.action'
 import { Radio, Icon, Container, Row, Form, ScrollView, Checkbox, ButtonGroup, Button } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const {
 	Label,
 	Control,

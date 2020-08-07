@@ -1,7 +1,7 @@
 import { fromJS, toJS, is }	from 'immutable'
 import * as ActionTypes from './ActionTypes.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 const lsqcState = fromJS({
 	flags: {

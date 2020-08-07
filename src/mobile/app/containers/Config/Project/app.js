@@ -6,7 +6,7 @@ import 'app/containers/Config/common/style/listStyle.less'
 import 'app/containers/Config/common/style/configStyle.less'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, Checkbox } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import findValue from 'app/containers/Config/common/func/findValue.js'
 import { throttle } from 'app/utils'
 

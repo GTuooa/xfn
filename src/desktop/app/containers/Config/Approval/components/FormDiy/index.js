@@ -6,7 +6,8 @@ import './style.less'
 import { componentName } from '../common'
 import * as components from './FormTypeOption'
 
-import { Button, Input, Icon, Menu, Dropdown } from 'antd'
+import { Button, Input, Menu, Dropdown } from 'antd'
+import { Icon } from 'app/components'
 
 @immutableRenderDecorator
 export default

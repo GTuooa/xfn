@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import { Map, List, fromJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { NumberInput, TableItem, InputFour, XfnSelect } from 'app/components'
 
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as middleActions from 'app/redux/Home/middle.action.js'

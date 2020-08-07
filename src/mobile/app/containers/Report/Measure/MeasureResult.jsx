@@ -5,7 +5,7 @@ import { Icon,Container,ButtonGroup,Button,ScrollView }	from 'app/components'
 import MeasurePieChar from './MeasurePieChar'
 import MeasureResultList from './MeasureResultList'
 import * as measureActions from 'app/redux/Report/Measure/measure.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 @immutableRenderDecorator
 export default
 class MeasureItem extends React.Component {

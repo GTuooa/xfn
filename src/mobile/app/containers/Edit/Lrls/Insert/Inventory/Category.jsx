@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 import { fromJS, toJS } from 'immutable'
 
 import {  Checkbox, Row, Icon, Button, ButtonGroup, Container, ScrollView } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
 

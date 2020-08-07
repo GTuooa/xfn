@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Icon, Single } from 'app/components'
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopMonthPicker, TopDatePicker } from 'app/containers/components'
 
 import './style.less'

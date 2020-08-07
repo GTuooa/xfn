@@ -50,7 +50,7 @@ class Table extends React.Component {
 		:['编码','名称',`${titleName}`,'启/停用']
 
         const titleList = openQuantity && Psi?
-		BATCH?['编码','名称',`${titleName}`,'批次','启用组装','启/停用']:['编码','名称',`${titleName}`,'启用组装','启/停用']
+		BATCH?['编码','名称',`${titleName}`,'批次','启用组装']:['编码','名称',`${titleName}`,'启用组装']
 		:['编码','名称',`${titleName}`]
 		const currentItem = fromJS({'name': activeTapKey, 'uuid': activeTapKeyUuid})
         let selectUuidList = []

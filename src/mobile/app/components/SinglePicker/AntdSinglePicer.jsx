@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { Picker, List } from 'antd-mobile'
-import { createForm } from 'rc-form'
+// import { createForm } from 'rc-form'
 import { fromJS, toJS } from 'immutable'
 import './style.less'
 
-class AntdSinglePicker extends Component {
+class SinglePicker extends Component {
 
     render() {
 
-        const { getFieldProps } = this.props.form
+        // const { getFieldProps } = this.props.form
         const { district, value, lableName, onOk, extra, disabled, className, key, style } = this.props
 
         const data = district.map(v => {return {label: v.key, value: v.value}})
@@ -48,5 +48,5 @@ class AntdSinglePicker extends Component {
     }
 }
 
-const SinglePicker = createForm()(AntdSinglePicker)
+// const SinglePicker = createForm()(AntdSinglePicker)
 export default SinglePicker

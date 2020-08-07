@@ -1,55 +1,55 @@
-import customStore from './customStore'
-import browserNavigator from './browserNavigator'
-import showMessage from './showMessage'
-import DateLib from './DateLib'
-import * as configCheck from './configCheck'
-import decimal from './decimal'
-import cascadeData from './cascadeData'
-import jsonifyDate from './jsonifyDate'
-import createArray from './createArray'
-import showError from './showError'
-import formatMoney from './formatMoney'
-import formatNumber from './formatNumber'
-import ascOrder from './ascOrder'
-import descOrder from './descOrder'
-import formatDate from './formateDate'
-import selectAc from './selectAc'
-import currentDate from './currentDate'
-import showImg from './showImg'
-import getFileNameNoExt from './getFileNameNoExt'
-import upfile from './upfile'
-import upfilePz from './upfilePz'
-import numberFourTest from './numberFourTest'
-import chineseAmount from './chineseAmount'
+export { default as customStore } from './customStore'
+export { default as browserNavigator } from './browserNavigator'
+export { default as showMessage } from './showMessage'
+export { default as DateLib } from './DateLibLocal'
+export { default as configCheck } from './configCheck'
+export { default as decimal } from './decimal'
+export { default as cascadeData } from './cascadeData'
+export { default as jsonifyDate } from './jsonifyDate'
+export { default as createArray } from './createArray'
+export { default as showError } from './showError'
+export { default as formatMoney } from './formatMoney'
+export { default as formatNumber } from './formatNumber'
+export { default as ascOrder } from './ascOrder'
+export { default as descOrder } from './descOrder'
+export { default as formatDate } from './formateDate'
+export { default as selectAc } from './selectAc'
+export { default as currentDate } from './currentDate'
+export { default as showImg } from './showImg'
+export { default as history } from './history'
+export { default as getFileNameNoExt } from './getFileNameNoExt'
+export { default as upfile } from './upfile'
+export { default as upfilePz } from './upfilePz'
+export { default as numberFourTest } from './numberFourtest'
+export { default as EXIF } from './exif'
+export { throttle, debounce } from './throttleDebounce.js'
+export { default as chineseAmount } from './chineseAmount'
 
-import EXIF from './exif'
-import { throttle, debounce } from './throttleDebounce.js'
 
-export {
-    customStore,
-    browserNavigator,
-    showMessage,
-    DateLib,
-    cascadeData,
-    jsonifyDate,
-    createArray,
-    showError,
-    formatMoney,
-    formatNumber,
-    ascOrder,
-    descOrder,
-    formatDate,
-    selectAc,
-    currentDate,
-    showImg,
-    decimal,
-    configCheck,
-    getFileNameNoExt,
-    upfile,
-    upfilePz,
-    numberFourTest,
-    EXIF,
-    throttle,
-    debounce,
-    chineseAmount
-}
+// export {
+//     customStore,
+//     browserNavigator,
+//     showMessage,
+//     DateLib,
+//     cascadeData,
+//     jsonifyDate,
+//     createArray,
+//     showError,
+//     formatMoney,
+//     formatNumber,
+//     ascOrder,
+//     descOrder,
+//     formatDate,
+//     selectAc,
+//     currentDate,
+//     showImg,
+//     decimal,
+//     configCheck,
+//     getFileNameNoExt,
+//     upfile,
+//     upfilePz,
+//     numberFourTest,
+//     EXIF,
+//     throttle,
+//     debounce,
+// }

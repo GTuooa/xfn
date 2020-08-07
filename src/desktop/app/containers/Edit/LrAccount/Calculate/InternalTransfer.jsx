@@ -12,9 +12,9 @@ import {
   Modal,
   message,
   Radio,
-  Icon,
   Divider
 } from 'antd'
+import { Icon } from 'app/components'
 const MonthPicker = DatePicker.MonthPicker
 import SelectAss from './SelectAss'
 const RadioGroup = Radio.Group

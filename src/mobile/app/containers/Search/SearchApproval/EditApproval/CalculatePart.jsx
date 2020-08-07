@@ -2,6 +2,7 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 
 import { Container, Row, ScrollView, Icon, Single, ButtonGroup, Button, Amount, ChosenPicker, TextListInput, TextareaItem } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
@@ -24,7 +25,7 @@ const amountProps = {decimalZero: false, decimalPlaces: 4}
 export default
 	class CalculatePart extends React.Component {
 
-    static contextTypes = { router: PropTypes.object }    
+    // static contextTypes = { router: PropTypes.object }    
 
 	constructor(props) {
 		super(props)
@@ -45,7 +46,7 @@ export default
             accountSource,
         } = this.props
         const { isAll, visible, idx, categoryValue } = this.state
-        const { router } = this.context
+        // const { router } = this.context
 
         const editRunningModalTemp = editRunningModalState.get('editRunningModalTemp')
         const warehouseList = editRunningModalState.get('warehouseSourceCategoryList')  // 可选类别列表
@@ -93,7 +94,6 @@ export default
 
 		return (
 			<div>
-
                 <Row className='lrls-card'>
                     <div className='lrls-line'>
                         <label>摘要：</label>
@@ -248,7 +248,7 @@ export default
                                 type: 'inventory-add',
                                 onClick: () => {
                                     // if (stockRange.size) {
-                                        dispatch(editRunningConfigActions.beforeAddInventoryCardFromEditRunning([], router.history, 'searchApproval'))
+                                        dispatch(editRunningConfigActions.beforeAddInventoryCardFromEditRunning([], '', 'searchApproval'))
                                     // } else {
                                     //     thirdParty.toast.info('请选择存货范围')
                                     // }
@@ -312,7 +312,7 @@ export default
                                         <div className='lrls-more-card' onClick={() => {
                                             // dispatch(editRunningActions.changeLrlsData(['views', 'idx'], i))
                                             dispatch(searchApprovalActions.changeSearchApprovalString('', 'currentEditInvetoryIndex', i))
-                                            router.history.push('/searchapproval/hidegategorystockcomedit')
+                                            dispatch(push('/searchapproval/hidegategorystockcomedit'))
                                         }}>
                                             <div className='lrls-single'>
                                                 <Row className='lrls-more-card lrls-card-bottom'>

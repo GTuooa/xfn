@@ -9,8 +9,8 @@ import XfIcon from 'app/components/Icon'
 import { jxcConfigCheck } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
 import XfnSelect from './XfnSelect'
-import { UpperClassSelect, SelectAc, NumberInput, TableAll, TableBody, TableItem, Tab, TablePagination } from 'app/components'
-import { Modal, message, Radio, Icon, Tree, Input, Button, Checkbox } from 'antd'
+import { UpperClassSelect, SelectAc, NumberInput, TableAll, TableBody, TableItem, Tab, TablePagination, Icon } from 'app/components'
+import { Modal, message, Radio, Tree, Input, Button, Checkbox } from 'antd'
 const { TreeNode } = Tree
 const { confirm } = Modal
 import * as editInventoryCardActions from 'app/redux/Config/Inventory/editInventoryCard.action.js'

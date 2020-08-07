@@ -170,11 +170,11 @@ export default function handleRelativeConfState(state = relativeConfState, actio
                          .set('cardList', fromJS(action.list))
             return state
         },
-		[ActionTypes.GET_INVENTORY_SETTING_HIGH_TYPE_LIST]         : () => {
-            action.title.unshift({'name': Limit.ALL_TAB_NAME_STR, 'uuid':''})
-            state = state.set('originTags', fromJS(action.title))
-            return state
-        },
+		// [ActionTypes.GET_INVENTORY_SETTING_HIGH_TYPE_LIST]         : () => {
+        //     action.title.unshift({'name': Limit.ALL_TAB_NAME_STR, 'uuid':''})
+        //     state = state.set('originTags', fromJS(action.title))
+        //     return state
+        // },
 		// 大类别
 		[ActionTypes.BEFORE_EDIT_RELATIVE_HIGH_TYPE]                     : () => {
 			state = state.set('relativeHighTypeTemp', fromJS(action.receivedData))
@@ -323,10 +323,10 @@ export default function handleRelativeConfState(state = relativeConfState, actio
                          .setIn(['views', 'typeTreeSelectList'], fromJS([]))
             return state
         },
-		[ActionTypes.INVENTORY_SETTING_TYPE_DELETE_BTN_SHOW]            : () => {
-            state = state.setIn(['relativeTypeBtnStatus', 'isDelete'], true)
-            return state
-        },
+		// [ActionTypes.INVENTORY_SETTING_TYPE_DELETE_BTN_SHOW]            : () => {
+        //     state = state.setIn(['relativeTypeBtnStatus', 'isDelete'], true)
+        //     return state
+        // },
 		[ActionTypes.SAVE_RELATIVE_CARD_TYPE]                  : () => {
             state = state.set('typeTree', fromJS(action.typeTree))
             if (action.btnFlag != 'new') { // 保存

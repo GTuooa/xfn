@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 import { toJS, fromJS } from 'immutable'
 
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 import { formatDate } from 'app/utils'
@@ -564,22 +564,22 @@ fetchApi('getRunningSettingInfo', 'GET', '', json => {
 
 
 // 单条收款准备
-export const beforeRunningPayOrReceive = (payDirection, assList, notHandleAmount, uuidList, runningList) => dispatch => {
+// export const beforeRunningPayOrReceive = (payDirection, assList, notHandleAmount, uuidList, runningList) => dispatch => {
 
-	if (notHandleAmount < 0) {
-		notHandleAmount = -notHandleAmount
-		payDirection = payDirection === '收' ? '付' : '收'
-	}
+// 	if (notHandleAmount < 0) {
+// 		notHandleAmount = -notHandleAmount
+// 		payDirection = payDirection === '收' ? '付' : '收'
+// 	}
 
-	dispatch({
-		type: ActionTypes.BEFORE_RUNNING_PAY_OR_RECEIVE,
-		payDirection,
-		assList,
-		notHandleAmount,
-		uuidList,
-		runningList
-	})
-}
+// 	dispatch({
+// 		type: ActionTypes.BEFORE_RUNNING_PAY_OR_RECEIVE,
+// 		payDirection,
+// 		assList,
+// 		notHandleAmount,
+// 		uuidList,
+// 		runningList
+// 	})
+// }
 
 export const getBusinessManagerModal = (item,childItem,callBack,type, actionFrom) => (dispatch,getState) => {
     dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
@@ -1340,7 +1340,7 @@ export const getSearchRunningItem = (item, insertOrModify,uuidList,page='search'
                     })
                 }
                 if(paymentType === 'LB_JZSY'){
-                    dispatch(editCalculateActions.getJzsyProjectCardList(json.data.category.projectRange,'CqzcTemp',true))
+                    dispatch(editCalculateActions.getJzsyProjectCardList(json.data.category.projectRange))
                 }
                 if(paymentType === 'LB_JZCB'){
                     const needCommonCard = true
@@ -1383,14 +1383,9 @@ export const getSearchRunningItem = (item, insertOrModify,uuidList,page='search'
                     const propertyCarryover = json.data.category.propertyCarryover
                     const projectRange = json.data.category.projectRange
                     const acBusinessExpense = json.data.category.acBusinessExpense
-                    let needCommonCard = false,needIndirect = false,needMechanical = false,needAssist = false,needMake = false
                     if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_FW' || categoryType === 'LB_FYZC'){
-                        needCommonCard = true,needIndirect = true,needMechanical = true,needAssist = true,needMake = true
+                        dispatch(editCalculateActions.getJzsyProjectCardList(projectRange,'TaxTransferTemp',true))
                     }
-                    if(categoryType === 'LB_YYWZC'){
-                        needCommonCard = true
-                    }
-                    dispatch(editCalculateActions.getJzsyProjectCardList(projectRange,'TaxTransferTemp',needCommonCard,'',needIndirect,needMechanical,needAssist,needMake))
                     if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_HW'){
                         dispatch(editCalculateActions.getStockCategoryList(acBusinessExpense.stockRange))
                         dispatch(editCalculateActions.getCanUseWarehouseCardList({temp:'TaxTransferTemp'}))
@@ -1450,14 +1445,14 @@ export const getSearchRunningItem = (item, insertOrModify,uuidList,page='search'
 }
 
 // 分页
-export const changeCurrentPage = (assList, value) => dispatch => {
-	dispatch({
-		type: ActionTypes.CHANGE_CURRENT_PAGE_FZHE,
-		assList,
-		value
-	})
+// export const changeCurrentPage = (assList, value) => dispatch => {
+// 	dispatch({
+// 		type: ActionTypes.CHANGE_CURRENT_PAGE_FZHE,
+// 		assList,
+// 		value
+// 	})
 
-}
+// }
 
 export const changeCxAccountCommonString = (tab, place, value) => (dispatch) => {
   let placeArr = typeof place === 'string'?[`${tab}Temp`,place]:[`${tab}Temp`, ...place]

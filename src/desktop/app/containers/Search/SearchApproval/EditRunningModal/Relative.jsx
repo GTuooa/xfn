@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { Select, Divider, Icon, Switch } from 'antd'
+import { Select, Divider, Switch } from 'antd'
+import { Icon } from 'app/components'
 import AddCardModal from 'app/containers/Config/Relative/AddCardModal.jsx'
 import * as Limit from 'app/constants/Limit.js'
 

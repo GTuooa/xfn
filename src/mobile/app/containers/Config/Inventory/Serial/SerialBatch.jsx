@@ -6,7 +6,7 @@ import { toJS, fromJS } from 'immutable'
 import { Button, ButtonGroup, Icon, Container, ScrollView, XfInput, Form } from 'app/components'
 const { Item, Label } = Form
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'
 
 @connect(state => state)

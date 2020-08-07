@@ -5,13 +5,14 @@ import { fromJS } from 'immutable'
 
 import { TableWrap } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
-import { Radio, Select, Icon, Divider } from 'antd'
+import thirdParty from 'app/thirdParty'
+import { Radio, Select, Divider } from 'antd'
 const RadioGroup = Radio.Group
 const Option = Select.Option
 
 import XfnIcon from 'app/components/Icon'
-import * as taxConfActions from 'app/redux/Config/Running/tax/taxConf.action'
+import { Icon } from 'app/components'
+import * as taxConfActions from 'app/redux/Config/Running/Tax/taxConf.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 import ChooseModal from './ChooseModal'
 

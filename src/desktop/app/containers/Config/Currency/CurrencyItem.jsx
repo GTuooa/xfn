@@ -1,7 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, Button, Tooltip }	from 'antd'
+import { Checkbox, Button, Tooltip }	from 'antd'
+import { Icon } from 'app/components'
 import { TableItem, TableOver, TableAll, TableTree, Price } from 'app/components'
 import { judgePermission} from 'app/utils'
 

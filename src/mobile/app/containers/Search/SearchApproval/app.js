@@ -3,7 +3,7 @@ import { Map } from 'immutable'
 import { connect } from 'react-redux'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import ApprovalAll from './ApprovalAll/index.js'
 import Detail from './Detail/index.js'

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Row, Icon, Single, Switch, ChosenPicker } from 'app/components'
 import { systemProJectCodeCommon } from 'app/containers/Config/Approval/components/common.js'
 
@@ -21,7 +22,7 @@ const loop = (data) => {
 
 //项目组件
 export default class ProjectCom extends Component {
-    static contextTypes = { router: PropTypes.object }
+    // static contextTypes = { router: PropTypes.object }
     state = {
         isAll: true,
         categoryValue: 'ALL',
@@ -51,7 +52,7 @@ export default class ProjectCom extends Component {
         } = this.props
 
         const { isAll, categoryValue } = this.state
-        const { router } = this.context
+        // const { router } = this.context
         
         // showCommon 是否显示项目公共费用 true 显示
         let showCommon = false//是否显示项目公共费用 true 显示
@@ -215,7 +216,7 @@ export default class ProjectCom extends Component {
                             type: 'project-add',
                             onClick: () => {
                                 if (projectRange.size) {
-                                    dispatch(editRunningConfigActions.beforeAddProjectCardFromEditRunning(router.history, projectRange, 'searchApproval'))
+                                    dispatch(editRunningConfigActions.beforeAddProjectCardFromEditRunning('', projectRange, 'searchApproval'))
                                 } else {
                                     thirdParty.toast.info('请选择项目范围')
                                 }

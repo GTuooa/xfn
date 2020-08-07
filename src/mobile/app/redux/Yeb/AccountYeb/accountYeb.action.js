@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.running.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 

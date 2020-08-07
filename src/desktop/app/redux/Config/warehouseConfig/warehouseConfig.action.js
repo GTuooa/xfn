@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.account.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { fromJS } from 'immutable'
 import { message, Modal } from 'antd'
 const confirm = Modal.confirm;

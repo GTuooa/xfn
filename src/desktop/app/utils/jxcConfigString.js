@@ -1,5 +1,5 @@
 
-export function perPlaceholder (leve) {
+function perPlaceholder (leve) {
     const placeholder = ({
         1: () => '',
         2: () => '- ',
@@ -11,7 +11,7 @@ export function perPlaceholder (leve) {
 }
 
 // ActionTypes用
-export function capital (currentPage) {
+function capital (currentPage) {
     const capitalStr = ({
 
 
@@ -37,7 +37,7 @@ export function capital (currentPage) {
 
 
 // url拼接用
-export function camelCase (currentPage) {
+function camelCase (currentPage) {
     const capitalStr = ({
         // 'warehouse': () => 'Warehouse',
         // 'inventory': () => 'Inventory',
@@ -75,7 +75,7 @@ export function camelCase (currentPage) {
 }
 
 // state拼接用
-export function stateName (currentPage) {
+function stateName (currentPage) {
     const stateNameStr = ({
         'inventoryClass': () => 'inventory',
         'inventoryCard': () => 'inventory',
@@ -98,7 +98,7 @@ export function stateName (currentPage) {
 }
 
 // card和calss归哪一类， 如存货类
-export function currentPageCategory (currentPage) {
+function currentPageCategory (currentPage) {
     const categoryNameStr = ({
         'inventoryClass': () => 'inventory',
         'inventoryCard': () => 'inventory',
@@ -119,3 +119,9 @@ export function currentPageCategory (currentPage) {
 
     return categoryNameStr
 }
+
+let jxcConfigCheck = {};
+jxcConfigCheck.perPlaceholder = perPlaceholder;
+jxcConfigCheck.capital = capital;
+
+export default jxcConfigCheck;

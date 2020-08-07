@@ -2,7 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fromJS, toJS } from 'immutable';
 
-import { Modal, Button, Tooltip, DatePicker, Select, Icon } from 'antd'
+import { Modal, Button, Tooltip, DatePicker, Select } from 'antd'
+import { Icon } from 'app/components'
 import moment from 'moment'
 import * as Limit from 'app/constants/Limit.js'
 import { receiptList } from 'app/containers/Config/Approval/components/common.js'

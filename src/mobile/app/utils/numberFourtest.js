@@ -1,4 +1,4 @@
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 const regFour = /^\d{0,14}(\.\d{0,4})?$/
 const regNegativeFour = /^-{0,1}\d{0,14}(\.\d{0,4})?$/

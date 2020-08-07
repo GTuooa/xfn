@@ -2,9 +2,9 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
-import { Icon, message, Input, Modal, Tree } from 'antd'
+import { message, Input, Modal, Tree } from 'antd'
 const TreeNode = Tree.TreeNode
-import { TableBody, TableItem, TableAll } from 'app/components'
+import { TableBody, TableItem, TableAll, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action'

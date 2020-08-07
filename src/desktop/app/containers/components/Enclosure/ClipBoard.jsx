@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, List, toJS, fromJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 import { DateLib } from 'app/utils'
 import { message, Icon } from 'antd'
 // import { ROOTPKT, ROOT } from 'app/constants/fetch.constant.js'
@@ -175,7 +175,7 @@ class ClipBoard extends React.Component {
 // import html2canvas from 'html2canvas'
 // import Button from '../Button'
 // import './style.less'
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 
 
 // import plupload from 'plupload'

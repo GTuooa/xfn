@@ -5,7 +5,7 @@ import { connect }	from 'react-redux'
 import * as fjglActions from 'app/redux/Search/Fjgl/fjgl.action.js'
 import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopMonthPicker } from 'app/containers/components'
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView,SinglePicker } from 'app/components'
 import './fjgl.less'

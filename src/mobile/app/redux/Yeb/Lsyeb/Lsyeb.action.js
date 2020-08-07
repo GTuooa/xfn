@@ -6,7 +6,7 @@ import * as lsmxbActions from 'app/redux/Mxb/Lsmxb/lsmxb.action'
 
 import * as ActionTypes from './ActionTypes.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getPeriodAndBalanceList = (issuedate,endissuedate,getPeriod) => (dispatch,getState) => {
 	let url = ''

@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 
 import { Icon, Button, ButtonGroup, Container, Row, Form, ScrollView, TextInput, MonthPicker, SinglePicker } from 'app/components'
 import { fromJS,toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'
 import '../style.less'
 

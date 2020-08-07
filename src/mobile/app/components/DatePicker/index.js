@@ -1,7 +1,7 @@
 import React, { Component, PropTypes }  from 'react'
 import { fromJS, toJS } from 'immutable'
 import { DatePicker, List } from 'antd-mobile'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import browserNavigator from 'app/utils/browserNavigator'
 import { DateLib } from 'app/utils'
 

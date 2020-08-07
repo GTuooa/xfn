@@ -5,7 +5,7 @@ import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'
 import './Assets.less'
 // import * as acconfigActions from 'app/actions/acconfig.action.js'
 import { Icon } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 // import { Select }	from 'app/components'
 
 @immutableRenderDecorator

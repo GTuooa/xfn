@@ -2,7 +2,7 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Checkbox } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'
 
 @immutableRenderDecorator

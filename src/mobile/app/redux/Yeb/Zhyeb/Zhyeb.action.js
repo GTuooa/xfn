@@ -5,7 +5,7 @@ import * as allActions from 'app/redux/Home/All/other.action'
 
 import * as ActionTypes from './ActionTypes.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getPeriodAndBalanceList = (issuedate,endissuedate) => (dispatch,getState) => {
     thirdParty.toast.loading(Limit.LOADING_TIP_TEXT, 0)

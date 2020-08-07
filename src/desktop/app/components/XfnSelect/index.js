@@ -7,7 +7,7 @@ const Option = Select.Option
 import { formatMoney } from 'app/utils'
 
 @immutableRenderDecorator
-export default
+
 class XfnSelect extends React.Component {
 	render() {
 		const {
@@ -96,9 +96,8 @@ class XfnSelect extends React.Component {
 				}}
             >
 				{
-					this.props.children.map((v,i) =>
+					this.props.children.map(v =>
 					<Option
-						key={i}
 						{...v.props}
 						value={v.props.children}
 						ITEM_FOR_VALUE={v.props.value}
@@ -110,3 +109,5 @@ class XfnSelect extends React.Component {
 		)
 	}
 }
+
+export default XfnSelect;

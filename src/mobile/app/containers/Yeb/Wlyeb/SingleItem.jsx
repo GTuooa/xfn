@@ -4,7 +4,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Icon, Amount } from 'app/components'
 import { yllsActions } from 'app/redux/Ylls'
 import * as wlyebActions from 'app/redux/Yeb/Wlyeb/Wlyeb.action.js'
-import * as wlmxbActions from 'app/redux/Mxb/Wlmxb/Wlmxb.action.js'
+import * as wlmxbActions from 'app/redux/Mxb/Wlmxb/WlMxb.action.js'
 
 @immutableRenderDecorator
 export default

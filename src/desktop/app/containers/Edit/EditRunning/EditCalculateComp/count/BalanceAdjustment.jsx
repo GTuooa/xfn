@@ -4,7 +4,7 @@ import { Button, Dropdown, Icon, message, Modal,Tooltip,TreeSelect, Select  } fr
 const { TreeNode } = TreeSelect;
 import { fromJS } from 'immutable'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Export } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 import { numberCalculate ,formatFour, numberFourTest} from 'app/utils'

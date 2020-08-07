@@ -7,16 +7,20 @@ import * as Limit from 'app/constants/Limit.js'
 
 import { jxcConfigCheck, formatMoney, formatNum, formatFour, numberFourTest } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
-import { UpperClassSelect, SelectAc, NumberInput, TableBody, TableTitle, TableItem, TableAll, XfnIcon, XfnSelect } from 'app/components'
-import { Modal, message, Radio, Icon, Tree, Select, DatePicker, Input, Divider, Button } from 'antd'
-const { TreeNode } = Tree
+import { UpperClassSelect, SelectAc, NumberInput, TableBody, TableTitle, TableItem, TableAll, XfnIcon, XfnSelect, Icon } from 'app/components'
+import { Modal, message, Radio, Tree, Select, DatePicker, Input, Divider, Button } from 'antd'
+
 import InputFour from 'app/components/InputFour'
 import WarehouseTableItem from './WarehouseTableItem'
 import BatchDrop from './BatchDrop'
 
 import * as editInventoryCardActions from 'app/redux/Config/Inventory/editInventoryCard.action.js'
-let warehouseTotalAmount = 0
 import XfnInput from 'app/components/Input'
+let warehouseTotalAmount = 0
+
+const { TreeNode } = Tree
+const Option = Select.Option
+
 export default
 class OpenQuantityTable extends React.Component {
 	state={

@@ -9,7 +9,7 @@ import { Button, ButtonGroup, Icon, Container, ScrollView, Checkbox } from 'app/
 import { Popover } from 'antd-mobile'
 const Item = Popover.Item
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { accountConfigActions } from 'app/redux/Config/Account/index.js'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'

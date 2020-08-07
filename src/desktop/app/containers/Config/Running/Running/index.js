@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import PageSwitch from 'app/containers/components/PageSwitch'
-import { Tab } from 'app/components'
-import { Button, Modal, Dropdown, Icon, Menu, Tabs } from 'antd'
+import { Tab, Icon } from 'app/components'
+import { Button, Modal, Dropdown, Menu, Tabs } from 'antd'
 const { TabPane } = Tabs
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 

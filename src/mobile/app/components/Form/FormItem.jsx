@@ -17,12 +17,6 @@ class FormItem extends Component {
 		} = this.props
 
 		return (
-			// <div className={["form-item", className].join(' ')} {...other}>
-			// 	<Label showAsterisk={showAsterisk}>{label}</Label>
-			// 	<Control>
-			// 		{children}
-			// 	</Control>
-			// </div>
 			<div className="form-item-wrap">
 				<div className={["form-item", className].join(' ')} {...other}>
 					<Label showAsterisk={showAsterisk}>{label}</Label>

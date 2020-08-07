@@ -14,8 +14,8 @@ import BatchModal from './BatchModal'
 import BatchDrop from './BatchDrop'
 import { batchReg, batchMessage } from './common'
 
-import { UpperClassSelect, SelectAc, NumberInput, TableAll, TableBody, TableItem, Tab, TablePagination } from 'app/components'
-import { Modal, message, Radio, Icon, Tree, Input, Button, Checkbox, Switch, DatePicker } from 'antd'
+import { UpperClassSelect, SelectAc, NumberInput, TableAll, TableBody, TableItem, Tab, TablePagination, Icon } from 'app/components'
+import { Modal, message, Radio, Tree, Input, Button, Checkbox, Switch, DatePicker } from 'antd'
 const { TreeNode } = Tree
 const { confirm } = Modal
 const { Search } = Input

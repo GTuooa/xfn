@@ -6,7 +6,7 @@
 //
 // import { feeActions } from 'app/redux/Fee'
 // import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 //
 // import OrderUpgrade from '../components/OrderUpgrade/index.js'
 // import Upgrade from './Upgrade'

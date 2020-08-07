@@ -6,7 +6,7 @@ import { Row, Icon, Button, ButtonGroup, Container, ScrollView, TextareaItem, Xf
 import { TopDatePicker, EnclosurePublic } from 'app/containers/components'
 
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as searchRunningActions from 'app/redux/Search/SearchRunning/searchRunning.action.js'
 
 

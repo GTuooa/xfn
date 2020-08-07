@@ -7,7 +7,7 @@ import { TopDatePicker, EnclosurePublic } from 'app/containers/components'
 import Poundage from './Poundage.jsx'
 
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as searchRunningActions from 'app/redux/Search/SearchRunning/searchRunning.action.js'

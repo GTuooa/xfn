@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 import { Icon, Container, ScrollView, Row, SinglePicker }	from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Toast } from 'antd-mobile';
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as lrbActions from 'app/redux/Report/Lrb/lrb.action.js'

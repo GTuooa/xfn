@@ -7,9 +7,10 @@ import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import * as kmmxbActions from 'app/redux/Mxb/Kmmxb/kmmxb.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 
-import { Checkbox, Icon } from 'antd'
+import { Checkbox } from 'antd'
 import jsonifyDate	from 'app/utils/jsonifyDate'
 import { CxpzTableItem, TableOver, Amount } from 'app/components'
+import { Icon } from 'app/components'
 import { judgePermission } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
 

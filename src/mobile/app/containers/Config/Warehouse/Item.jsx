@@ -4,7 +4,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Checkbox, Icon } from 'app/components'
 
-import * as warehouseConfActions from 'app/redux/Config/Warehouse/WarehouseConf.action.js'
+import * as warehouseConfActions from 'app/redux/Config/Warehouse/warehouseConf.action.js'
 
 @immutableRenderDecorator
 export default

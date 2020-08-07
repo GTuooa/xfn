@@ -7,7 +7,7 @@ import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
 import { homeActions } from 'app/redux/Home/home.js'
 import { TopDatePicker } from 'app/containers/components'
 import { DateLib, showImg } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import './index.less'
 

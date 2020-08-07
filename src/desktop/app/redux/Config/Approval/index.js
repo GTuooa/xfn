@@ -69,36 +69,36 @@ const approvalActions = {
 			}
 		})
 	},
-	createProcessModel: () => dispatch => {
-		fetchApi('createProcessModel', 'GET', '', json => {
-			if (showMessage(json, 'show')) {
-				fetchApi('getProcessSelectModel', 'GET', '', json => {
-					if (showMessage(json)) {
-						dispatch({
-							type: ActionTypes.GET_PROCESS_SELECT_MODEL,
-							detailList: json.data.detailList,
-							modelList: json.data.modelList,
-						})
-					}
-				})
-			}
-		})
-	},
-	disableProcessModel: (index) => dispatch => {
-		fetchApi('disableProcessModel', 'GET', '', json => {
-			if (showMessage(json, 'show')) {
-				fetchApi('getProcessSelectModel', 'GET', '', json => {
-					if (showMessage(json)) {
-						dispatch({
-							type: ActionTypes.GET_PROCESS_SELECT_MODEL,
-							detailList: json.data.detailList,
-							modelList: json.data.modelList,
-						})
-					}
-				})
-			}
-		})
-	},
+	// createProcessModel: () => dispatch => {
+	// 	fetchApi('createProcessModel', 'GET', '', json => {
+	// 		if (showMessage(json, 'show')) {
+	// 			fetchApi('getProcessSelectModel', 'GET', '', json => {
+	// 				if (showMessage(json)) {
+	// 					dispatch({
+	// 						type: ActionTypes.GET_PROCESS_SELECT_MODEL,
+	// 						detailList: json.data.detailList,
+	// 						modelList: json.data.modelList,
+	// 					})
+	// 				}
+	// 			})
+	// 		}
+	// 	})
+	// },
+	// disableProcessModel: (index) => dispatch => {
+	// 	fetchApi('disableProcessModel', 'GET', '', json => {
+	// 		if (showMessage(json, 'show')) {
+	// 			fetchApi('getProcessSelectModel', 'GET', '', json => {
+	// 				if (showMessage(json)) {
+	// 					dispatch({
+	// 						type: ActionTypes.GET_PROCESS_SELECT_MODEL,
+	// 						detailList: json.data.detailList,
+	// 						modelList: json.data.modelList,
+	// 					})
+	// 				}
+	// 			})
+	// 		}
+	// 	})
+	// },
 }
 
 export { approvalActions }

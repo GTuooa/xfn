@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, Collapse } from 'app/components'
 import * as currencyActions from 'app/redux/Config/Currency/currency.action'
 import * as allActions from 'app/redux/Home/All/aclist.actions'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import Item from './Item.jsx'
 import './currency.less'
 

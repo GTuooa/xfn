@@ -122,24 +122,24 @@
                 font-size: 12px;
                 color: #333;
 
-                &:nth-child(2){
-                    & > .ant-select{
-                        & > .ant-select-selection--single{
-                            height: 28px;
-                            & > .ant-select-selection__rendered{
-                                line-height: 28px;
-                                font-size: 12px;
-                                color: #333;
-                            }
-                        }
-                    }
-                }
-                &:nth-child(3){
-                    .ant-input-number-input-wrap{
-                        font-size: 12px;
-                        color: #333;
-                    }
-                }
+                // &:nth-child(2){
+                //     & > .ant-select{
+                //         & > .ant-select-selection--single{
+                //             height: 28px;
+                //             & > .ant-select-selection__rendered{
+                //                 line-height: 28px;
+                //                 font-size: 12px;
+                //                 color: #333;
+                //             }
+                //         }
+                //     }
+                // }
+                // &:nth-child(3){
+                //     .ant-input-number-input-wrap{
+                //         font-size: 12px;
+                //         color: #333;
+                //     }
+                // }
 			}
 		}
 		.voucher-date {
@@ -148,12 +148,12 @@
 			.clearfix;
             // display: flex;
 
-            & > .ant-calendar-picker{
-                .ant-calendar-picker-input{
-                    font-size: 12px;
-                    color: #333;
-                }
-            }
+            // & > .ant-calendar-picker{
+            //     .ant-calendar-picker-input{
+            //         font-size: 12px;
+            //         color: #333;
+            //     }
+            // }
 		}
 		.voucher-header-tit {
 			margin-right: 20px;
@@ -223,7 +223,7 @@
 						cursor: pointer;
 					}
 
-					&> i{
+					& > span{
 						display: block;
 						width: 20px;
 						.vertical-mixin(20px);
@@ -566,73 +566,118 @@
 		background: transparent;
 		z-index: 1;
 	}
-    .combselect-select-focus,
-    .asslist-select-focus {
-        .ant-select-selection-selected-value {
-            padding-left: 10px;
-        }
-        .ant-select-search {
-            display: block !important;
-            padding-left: 10px;
-        }
-    }
+    // .combselect-select-focus,
+    // .asslist-select-focus {
+    //     .ant-select-selection-selected-value {
+    //         padding-left: 10px;
+    //     }
+    //     .ant-select-search {
+    //         display: block !important;
+    //         padding-left: 10px;
+    //     }
+    // }
 	.combselect-select{
 		position: absolute;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		& > div {
+		border: 0;
+		box-shadow: none;
+
+		.ant-select-selector {
 			width: 100%;
 			height: 100%;
 			border-radius: 0;
+			padding: 0;
+			border-radius: 0;
+			outline: none;
 			border: 0;
 			box-shadow: none;
+			// border: 1px solid #999;
+			// box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
 
-            & > div {
-                width: 100%;
-    			height: 100%;
-            }
-			// & input{
-			& .ant-select-selection-selected-value {
-				.vertical-mixin(68px);
-				font-size: 14px;
-				font-family: Verdana, Geneva, sans-serif;
-                width: 100%;
-    			height: 100%;
-				// &:focus{
-				// 	outline: none;
-				// 	border-radius: 0;
-				// 	border: 1px solid #999;
-				// 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
-				// }
+			.ant-select-selection-search {
+				left: 0;
+				right: 0;
+				border: 1px solid #999;
+				box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
 			}
-			& > div:last-child:before {
-				content: '';
-			}
-
-            .ant-select-arrow {
-                display: none;
-            }
-
-            .ant-select-selection__rendered {
-                margin-left: 0;
-            }
 		}
+		
+		.ant-select-selection-search-input {
+			height: 68px !important;
+			line-height: 68px !important;
+			font-size: 14px;
+			font-family: Verdana, Geneva, sans-serif;
+			padding-left: 5px !important;
+			border: 0;
+			box-shadow: none;
+		}
+		.ant-select-selection-item {
+			height: 68px !important;
+			line-height: 68px !important;
+			font-size: 14px;
+			font-family: Verdana, Geneva, sans-serif;
+			width: 100%;
+			height: 100%;
+			
+		}
+		
+		// & > div {
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	border-radius: 0;
+		// 	border: 0;
+		// 	box-shadow: none;
+
+        //     & > div {
+        //         width: 100%;
+    	// 		height: 100%;
+        //     }
+		// 	// & input{
+		// 	// & .ant-select-selection-selected-value {
+		// 	& .ant-select-selector {
+		// 		.vertical-mixin(68px);
+		// 		font-size: 14px;
+		// 		font-family: Verdana, Geneva, sans-serif;
+        //         width: 100%;
+    	// 		height: 100%;
+		// 		// &:focus{
+		// 		// 	outline: none;
+		// 		// 	border-radius: 0;
+		// 		// 	border: 1px solid #999;
+		// 		// 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
+		// 		// }
+		// 	}
+		// 	& > div:last-child:before {
+		// 		content: '';
+		// 	}
+
+        //     .ant-select-arrow {
+        //         display: none;
+        //     }
+
+        //     .ant-select-selection__rendered {
+        //         margin-left: 0;
+        //     }
+		// }
 	}
+	// .combselect-select-focus {
+	// 	// & > div {
+	// 		// & .ant-select-selection-selected-value {
+	// 		.ant-select-selection-search-input {
+	// 			outline: none;
+	// 			border-radius: 0;
+	// 			border: 1px solid #999;
+	// 			box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
+	// 		}
+	// 	// }
+	// }
 }
 
 // 获得的焦点
-.combselect-select-focus {
-    & > div {
-        & .ant-select-selection-selected-value {
-            outline: none;
-            border-radius: 0;
-            border: 1px solid #999;
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
-        }
-    }
-}
+
 
 .asslist-select-focus {
     .ant-select-selection {
@@ -873,13 +918,15 @@
         width: 820px;
 		padding: 20px;
 
-        .ant-calendar-picker {
-    		width: 100px !important;
+        // .ant-calendar-picker {
+        .ant-picker {
+			width: 100px !important;
+			font-size: 11px;
     	}
 	}
 	.voucher .voucher-header .voucher-date {
 		width: 135px;
-		margin-right: 20px;
+		margin-right: 10px;
 	}
 	.voucher .voucher-body .voucher-title .voucher-abstract,
 	.voucher .voucher-body .voucher-jv .voucher-abstract {

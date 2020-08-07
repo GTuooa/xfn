@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS, Map, List } from 'immutable'
 import * as qcyeActions from 'app/redux/Config/Qcye/qcye.action'
 import { TextInput, AmountInput, Icon } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { formatMoney } from 'app/utils'
 import { Amount } from 'app/components'
 import AssBa from './AssBa'
@@ -91,7 +91,6 @@ class Balance extends React.Component {
 					<span className="acname">
 					{
 						hasAss ?
-						// <span>
 							<Icon
 								className="icon qcye-add-icon"
 								type="add-plus-fill"
@@ -184,7 +183,6 @@ class Balance extends React.Component {
 									})(0, true)
 								}}
 								/>
-							// </span>
 							: ''
 						}
 						<span className="acname-acname">

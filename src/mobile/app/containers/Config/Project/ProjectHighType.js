@@ -2,7 +2,7 @@ import React from 'react'
 import { connect }	from 'react-redux'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as projectConfActions from 'app/redux/Config/Project/projectConf.action.js'
 

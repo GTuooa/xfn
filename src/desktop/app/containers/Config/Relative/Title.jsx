@@ -4,9 +4,9 @@ import { fromJS, toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
-import { Button, Menu, Icon, Modal, message, Input } from 'antd'
+import { Button, Menu, Modal, message, Input } from 'antd'
 const Search = Input.Search
-import { UpperClassSelect, SelectAc, ExportModal, Tab } from 'app/components'
+import { UpperClassSelect, SelectAc, ExportModal, Tab, Icon } from 'app/components'
 import PageSwitch from 'app/containers/components/PageSwitch'
 import ImportModal from '../components/ImportModal'
 import RegretModal from 'app/components/RegretModal'
@@ -197,7 +197,7 @@ class Title extends React.Component {
 						beforCallback={() => dispatch(relativeConfActions.beforeWLImport())}
 						closeCallback={() => dispatch(relativeConfActions.closeVcImportContent())}
 						onSubmitCallBack={(from) => dispatch(relativeConfActions.getFileUploadFetch(from))}
-						ddImportCallBack={value => dispatch(relativeConfActions.exportReceiverlist(value))}
+						// ddImportCallBack={value => dispatch(relativeConfActions.exportReceiverlist(value))}
 						curNumber={curNumber}
 						totalNumber={totalNumber}
 						allSize={allSize}
@@ -312,9 +312,9 @@ class Title extends React.Component {
 						regretResultKey={regretResultKey}
 						usedCardList={usedCardList}
 						cardTypeList={cardTypeList}
-						downloadResult={(key) => {
-							dispatch(relativeConfActions.downloadResult(key))
-						}}
+						// downloadResult={(key) => {
+						// 	dispatch(relativeConfActions.downloadResult(key))
+						// }}
 						downloadBefore={(cardList) => {
 							dispatch(relativeConfActions.downloadBefore(cardList))
 						}}

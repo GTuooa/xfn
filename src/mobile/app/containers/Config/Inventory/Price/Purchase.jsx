@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 
 import { Single, Icon, XfInput } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { configCheck } from 'app/utils'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'

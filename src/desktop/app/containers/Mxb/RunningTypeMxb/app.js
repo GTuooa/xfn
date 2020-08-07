@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import { Button, message, Input, Icon } from 'antd'
+import { Button, message, Input } from 'antd'
+import { Icon } from 'app/components'
 const Search = Input.Search
 import { debounce } from 'app/utils'
 import { TableWrap } from 'app/components'

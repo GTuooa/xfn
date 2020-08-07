@@ -2,7 +2,7 @@ import { fromJS } from 'immutable'
 import fetchApi from 'app/constants/fetch.account.js'
 import * as Limit from 'app/constants/Limit.js'
 import { showMessage, decimal } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { DateLib } from 'app/utils'
 
 

@@ -118,10 +118,10 @@ export default function handleLrb(state = wlyeState, action) {
             return state.update('chooseperiods', v => !v)
         }
     },
-    [ActionTypes.GET_WL_CONTACTS] 	 : () => {
+    // [ActionTypes.GET_WL_CONTACTS] 	 : () => {
 
-        return state = state.setIn(['flags','wlRelate'],action.value)
-    },
+    //     return state = state.setIn(['flags','wlRelate'],action.value)
+    // },
     [ActionTypes.CHANGE_WLYEB_COMMON_STRING] 	 : () => {
 
         return state = state.setIn(action.place,action.value)

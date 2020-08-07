@@ -2,8 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, List, fromJS, toJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Amount } from 'app/components'
-import { Icon } from 'antd'
+import { Amount, Icon } from 'app/components'
 import * as syxmbActions from 'app/redux/Report/Syxmb/syxmb.actions.js'
 import LiLast from './LiLast'
 

@@ -1,6 +1,6 @@
 import * as dd from 'dingtalk-jsapi'
 
-export const version = '1.1.0'
+// export const version = '1.1.0'
 
 export function config(conf) {
     dd.config({

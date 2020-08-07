@@ -4,7 +4,7 @@ import { Row, SinglePicker, Icon, Switch, Amount, TextListInput } from 'app/comp
 import * as Common from '../CommonData.js'
 import * as Limit from 'app/constants/Limit.js'
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { toJS, fromJS } from 'immutable'
 import { decimal } from 'app/utils'
 

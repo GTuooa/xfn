@@ -4,7 +4,8 @@ import { toJS, is ,fromJS } from 'immutable'
 import moment from 'moment'
 import { connect }	from 'react-redux'
 
-import { Input, Select, Divider, Icon } from 'antd'
+import { Input, Select, Divider } from 'antd'
+import { Icon } from 'app/components'
 const Option = Select.Option
 import * as Limit from 'app/constants/Limit.js'
 import XfnSelect from 'app/components/XfnSelect'

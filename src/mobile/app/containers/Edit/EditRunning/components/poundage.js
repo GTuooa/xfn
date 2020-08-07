@@ -3,7 +3,7 @@ import { toJS, fromJS } from 'immutable'
 
 import { Row, Single, Icon, Amount, Switch, XfInput } from 'app/components'
 import { decimal, formatMoney } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 

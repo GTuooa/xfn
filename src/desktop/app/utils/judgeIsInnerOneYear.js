@@ -1,4 +1,5 @@
-import DateLib from './DateLib.js'
+// import DateLib from './DateLib.js'
+import { DateLib } from 'app/utils'
 import moment from 'moment'
 
 // 传入的日期是否是一年之内

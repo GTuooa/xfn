@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
 import { fromJS, toJS }	from 'immutable'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getAcBalanceFetch = (closedyear) => dispatch => {
 	thirdParty.toast.loading(Limit.LOADING_TIP_TEXT, 0)

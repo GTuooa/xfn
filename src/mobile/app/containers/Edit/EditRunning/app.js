@@ -12,7 +12,7 @@ import './style.less'
 
 import { DateLib, throttle } from 'app/utils'
 import { TopDatePicker } from 'app/containers/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import * as editRunning from 'app/constants/editRunning.js'
 
@@ -449,7 +449,7 @@ class EditRunning extends React.Component {
 							dispatch={dispatch}
 							categoryType={categoryType}
 							oriState={oriState}
-							propertyTax={propertyTax}
+							propertyPay={propertyPay}
 							history={history}
 							projectRange={projectRange}
 							projectCategoryList={projectCategoryList}

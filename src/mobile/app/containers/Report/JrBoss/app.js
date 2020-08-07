@@ -2,14 +2,14 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 
 import { fromJS, toJS, Map } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './boss.less'
 import '../sheet.less'
 import { Amount } from 'app/components'
 
 import { Icon, ButtonGroup, Button, Container, ScrollView, Row, SinglePicker } from 'app/components'
 import { TopMonthPicker } from 'app/containers/components'
-import * as jrBossActions from 'app/redux/Report/jrBoss/jrBoss.action'
+import * as jrBossActions from 'app/redux/Report/JrBoss/jrBoss.action'
 import * as runningTypeMxbActions from 'app/redux/Mxb/RunningTypeMxb/runningTypeMxb.action.js'
 
 @connect(state => state)
@@ -109,7 +109,7 @@ class Boss extends React.Component {
 					</div>
                     <SinglePicker
                         district={bossSource}
-                        onOk={(result) => dispatch(jrBossActions.getBossSheetFetch(issuedate, result.value))}
+                        // onOk={(result) => dispatch(jrBossActions.getBossSheetFetch(issuedate, result.value))}
                         style={{display: bossAssList.size > 1 ? '' : 'none'}}
                     >
                         <Row

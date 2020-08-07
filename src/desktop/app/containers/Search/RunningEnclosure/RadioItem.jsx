@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import './style/index.less'
-import { Radio,Icon,Input} from 'antd'
+import { Radio, Input} from 'antd'
+import { Icon } from 'app/components'
 import * as runningEnclosureActions from 'app/redux/Search/RunningEnclosure/runningEnclosure.action'
 
 @connect(state => state)

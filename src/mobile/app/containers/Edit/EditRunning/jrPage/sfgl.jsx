@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, Checkbox, TreeSelect, ChosenPicker, Multiple, XfInput } from 'app/components'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 

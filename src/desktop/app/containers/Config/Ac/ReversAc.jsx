@@ -3,7 +3,8 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import * as configActions from 'app/redux/Config/Ac/acConfig.action.js'
 
-import { Radio, Input, Button, Modal, message, Icon } from 'antd'
+import { Radio, Input, Button, Modal, message } from 'antd'
+import { Icon } from 'app/components'
 import ReversAcSelect from './ReversAcSelect'
 import ReverseDetail from './ReverseDetail.jsx'
 import AcShow from './AcShow.jsx'
@@ -268,7 +269,7 @@ class ReversAc extends React.Component {
 									}
 								}}
 							/>
-							<span className="pconfig-reverse-item-tip">{canChangeClassId && canChangeClassId !== 'true' ? <span><Icon type="info-circle-o" />{canChangeClassId}</span> : ''}</span>
+							<span className="pconfig-reverse-item-tip">{canChangeClassId && canChangeClassId !== 'true' ? <span><Icon type="info-circle" />{canChangeClassId}</span> : ''}</span>
 						</div>
 					</div>
 				}

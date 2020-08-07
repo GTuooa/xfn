@@ -4,12 +4,12 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { Container, Row, ScrollView, TreeSelect, Icon, SinglePicker, Amount, ChosenPicker } from 'app/components'
 import { MutiPeriodMoreSelect, ScrollLoad } from 'app/containers/components'
 
-import Account from './Account'
+// import Account from './Account'
 import Item from './Item'
 
 import * as accountMxbActions from 'app/redux/Mxb/AccountMxb/accountMxb.action.js'

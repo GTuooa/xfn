@@ -7,7 +7,7 @@ import * as Limit from 'app/constants/Limit.js'
 import * as securityActions from 'app/redux/Config/Security/security.action'
 import { homeActions } from 'app/redux/Home/home.js'
 import { Container, Row, Column, Icon, ButtonGroup , Button, ScrollView, TipWrap, Form, SinglePicker, TextInput } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './style.less'
 
 const {

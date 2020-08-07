@@ -2,7 +2,7 @@ const EXIF = (function() {
 
     var debug = false;
 
-    var root = this;
+    // var root = this;
 
     var EXIF = function(obj) {
         if (obj instanceof EXIF) return obj;
@@ -10,14 +10,16 @@ const EXIF = (function() {
         this.EXIFwrapped = obj;
     };
 
-    if (typeof exports !== 'undefined') {
-        if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = EXIF;
-        }
-        exports.EXIF = EXIF;
-    } else {
-        root.EXIF = EXIF;
-    }
+    // if (typeof exports !== 'undefined') {
+    //     if (typeof module !== 'undefined' && module.exports) {
+    //         exports = module.exports = EXIF;
+    //     }
+    //     exports.EXIF = EXIF;
+    // } else {
+    //     if (root) {
+    //         root.EXIF = EXIF;
+    //     }
+    // }
 
     var ExifTags = EXIF.Tags = {
 
@@ -1050,11 +1052,13 @@ const EXIF = (function() {
         return findEXIFinJPEG(file);
     }
 
-    if (typeof define === 'function' && define.amd) {
-        define('exif-js', [], function() {
-            return EXIF;
-        });
-    }
+    return EXIF
+
+    // if (typeof define === 'function' && define.amd) {
+    //     define('exif-js', [], function() {
+    //         ;
+    //     });
+    // }
 }.call(this));
 
 export default EXIF

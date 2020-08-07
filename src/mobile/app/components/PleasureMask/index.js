@@ -2,7 +2,7 @@ import React from 'react'
 import { connect }	from 'react-redux'
 
 import { browserNavigator } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { getUrlParam } from 'app/constants/fetch.constant.js'
 import './style.less'
 
@@ -22,7 +22,7 @@ class Home extends React.Component {
                     <div
                         className="home-orgTrial-icon"
                         onClick={() => {
-                            const href = location.href
+                            const href = window.location.href
                             const urlParam = getUrlParam(href)
 
                             thirdParty.openLink({

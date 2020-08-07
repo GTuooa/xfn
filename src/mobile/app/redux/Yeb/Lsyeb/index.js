@@ -45,14 +45,14 @@ export default function handleLsyeb(state = lsyebState, action) {
 						.set('balanceTemp', fromJS(data))
                         .set('runningShowChild',fromJS(selectList))
 		},
-		[ActionTypes.CHANGE_KMYEB_BEGIN_DATE]	: () => {
-			if(action.bool){
-				state = state.set('endissuedate', action.begin)
-				return state
-			}
-			state = state.set('issuedate', action.begin)
-			return state
-		},
+		// [ActionTypes.CHANGE_KMYEB_BEGIN_DATE]	: () => {
+		// 	if(action.bool){
+		// 		state = state.set('endissuedate', action.begin)
+		// 		return state
+		// 	}
+		// 	state = state.set('issuedate', action.begin)
+		// 	return state
+		// },
 		// 流水类别是否显示下级
 		[ActionTypes.ACCOUNTCONF_BALANCE_TRIANGLE_SWITCH]          : () => {
 	        const showLowerList = state.get('runningShowChild')

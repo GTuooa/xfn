@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { Container, Row, ScrollView, Icon, Amount } from 'app/components'
 import { MutiPeriodMoreSelect, ScrollLoad, TableTreeSelect } from 'app/containers/components'
-import TableAmount from 'app/containers/components/table/TableAmount'
+import TableAmount from 'app/containers/components/Table/TableAmount'
 
 import SzItem from './SzItem'
 import Item from './Item'

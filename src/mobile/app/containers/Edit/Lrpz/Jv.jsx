@@ -3,7 +3,7 @@ import { Map, List, fromJS, toJS } from 'immutable'
 
 import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 //
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { SwitchText, Icon, TextInput, AmountInput, Row, SinglePicker }	from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 

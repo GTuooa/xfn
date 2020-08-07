@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './style.less'
 
-import { Menu, Icon, message }	from 'antd'
-import { XfnIcon } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import { Menu, message }	from 'antd'
+import { XfnIcon, Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 
 import * as pzBombActions from 'app/redux/Edit/PzBomb/pzBomb.action.js'
 

@@ -10,7 +10,7 @@ import * as Limit from 'app/constants/Limit.js'
 import { Select, message, Tooltip } from 'antd'
 const Option = Select.Option
 const OptionGroup = Select.OptGroup
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @immutableRenderDecorator
 export default
@@ -122,6 +122,8 @@ class CombSelect extends React.Component{
 				</div>
 				<Select
 					showSearch
+					showArrow={false}
+					autoFocus
 					className={focus ? "combselect-select combselect-select-focus" : "combselect-select"}
 					optionFilterProp={"children"}
 					notFoundContent="无法找到相应科目"

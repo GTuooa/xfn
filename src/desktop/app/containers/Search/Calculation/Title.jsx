@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react'
 import {immutableRenderDecorator} from 'react-immutable-render-mixin'
 
-import {Icon, Select, TreeSelect, Button, Input, Checkbox, Modal, DatePicker} from 'antd'
+import { Select, TreeSelect, Button, Input, Checkbox, Modal, DatePicker} from 'antd'
 const Option = Select.Option
-import {Amount, TableItem} from 'app/components'
+import {Amount, TableItem, Icon } from 'app/components'
 import { accountTreeData, formatDate, numberTest } from 'app/utils'
 import CalculateModel from './CalculateModel'
 import moment from 'moment'

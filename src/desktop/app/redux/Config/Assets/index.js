@@ -1,7 +1,7 @@
 import { fromJS, toJS }	from 'immutable'
 import { message } from 'antd'
 import * as ActionTypes from './ActionTypes.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 //生产环境应当设置为空

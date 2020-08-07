@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, ScrollView, Icon } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { fromJS, toJS }	from 'immutable'
 import * as Limit from 'app/constants/Limit.js'
 import './index.less'

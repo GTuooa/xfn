@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import { Row, Icon, ChosenPicker } from 'app/components'
 import UploadEnclosure from 'app/containers/components/Enclosure/UploadEnclosure'
 import * as editApprovalActions from 'app/redux/Edit/EditApproval/editApproval.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export default
 class CategoryComp extends React.Component {

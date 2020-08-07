@@ -3,7 +3,7 @@ import { fromJS } from 'immutable'
 import fetchApi from 'app/constants/fetch.account.js'
 import { showMessage } from 'app/utils'
 import { message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as allActions from 'app/redux/Home/All/all.action'
 import * as Limit from 'app/constants/Limit.js'
 

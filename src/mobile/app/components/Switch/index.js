@@ -1,13 +1,13 @@
 import React, { Component, PropTypes }  from 'react'
 import { fromJS, toJS } from 'immutable'
 import { Switch } from 'antd-mobile'
-import { createForm } from 'rc-form'
+// import { createForm } from 'rc-form'
 import './index.less'
-import * as thirdParty from 'app/thirdParty'
-class SwitchItem extends Component {
+import thirdParty from 'app/thirdParty'
+class AntdSwitch extends Component {
 
     render() {
-        const { getFieldProps } = this.props.form
+        // const { getFieldProps } = this.props.form
         const { onClick, disabled, checked, disabledToast, ...other } = this.props
 
         return (
@@ -33,5 +33,5 @@ class SwitchItem extends Component {
     }
 }
 
-const AntdSwitch = createForm()(SwitchItem)
+// const AntdSwitch = createForm()(SwitchItem)
 export default AntdSwitch

@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.account.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showMessage, DateLib } from 'app/utils'
 import { message } from 'antd'
 import { toJS } from 'immutable'
@@ -9,7 +9,7 @@ import * as Limit from 'app/constants/Limit.js'
 import { categoryTypeObj, categoryTypeObjList } from 'app/constants/editRunning.js'
 
 import { runningIndexActions } from 'app/redux/Config/Running/index'
-import * as taxConfActions from 'app/redux/Config/Running/tax/taxConf.action'
+import * as taxConfActions from 'app/redux/Config/Running/Tax/taxConf.action'
 
 export const getRunningSettingInfo = () => dispatch => {
 	thirdParty.toast.loading(Limit.LOADING_TIP_TEXT, 0)

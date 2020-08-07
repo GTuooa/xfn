@@ -35,7 +35,8 @@ export default function chineseAmount (num) {
     }
 
     numArray[1] = numArray[1] ? numArray[1] : ""
-    numArray[0] = numArray[0] ? numArray[0] + "元" : numArray[0], numArray[1] = numArray[1].replace(/^零+/, "")
+    numArray[0] = numArray[0] ? numArray[0] + "元" : numArray[0]
+    numArray[1] = numArray[1].replace(/^零+/, "")
     numArray[1] = (numArray[1].match(/角/) || numArray[1].match(/分/)) ? numArray[1] : numArray[1] + "整"
 
     return isMinus ? '负' + numArray[0] + numArray[1] : numArray[0] + numArray[1]

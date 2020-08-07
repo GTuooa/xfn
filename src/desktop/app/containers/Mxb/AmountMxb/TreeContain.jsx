@@ -5,7 +5,8 @@ import * as AmmxbActions from 'app/redux/Mxb/AmountMxb/amountMxb.action.js'
 import * as Limit from 'app/constants/Limit.js'
 
 import Trees from './Trees.jsx'
-import { Select, Icon }  from 'antd'
+import { Select }  from 'antd'
+import { Icon } from 'app/components'
 import { TableTree } from 'app/components'
 
 @immutableRenderDecorator

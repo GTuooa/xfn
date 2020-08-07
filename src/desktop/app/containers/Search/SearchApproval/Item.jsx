@@ -1,9 +1,9 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Checkbox, Icon, Button, Tooltip } from 'antd'
-import { CxpzTableItem, TableOver, Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import { Checkbox, Button, Tooltip } from 'antd'
+import { CxpzTableItem, TableOver, Amount, Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import { showAccountState, showToolTipAccountState } from 'app/containers/Search/SearchApproval/common/common.js'
 
 import * as searchApprovalActions from 'app/redux/Search/SearchApproval/searchApproval.action.js'
@@ -88,31 +88,31 @@ export default
 												manageModal:true
 											})},'debit', 'receive'))
 											break
-										case 'makeOut' :
-											dispatch(searchApprovalActions.getBusinessInvioceModal(item,childItem,() => {parent.setState({
-												invioceModal:true
-											})}))
-											break
-										case 'auth' :
-											dispatch(searchApprovalActions.getBusinessDefineModal(item,childItem,() => {parent.setState({
-												defineModal:true
-											})}))
-											break
-										case 'carryover' :
-											dispatch(searchApprovalActions.getBusinessJzsyModal(item,childItem,() => {parent.setState({
-												jzsyModal:true
-											})}))
-											break
-										case 'grant' :
-											dispatch(searchApprovalActions.getBusinessGrantModal(item,childItem,() => {parent.setState({
-												grantModal:true
-											})}))
-											break
-										case 'defray' :
-											dispatch(searchApprovalActions.getBusinessDefrayModal(item,childItem,() => {parent.setState({
-												defrayModal:true
-											})}))
-											break
+										// case 'makeOut' :
+										// 	dispatch(searchApprovalActions.getBusinessInvioceModal(item,childItem,() => {parent.setState({
+										// 		invioceModal:true
+										// 	})}))
+										// 	break
+										// case 'auth' :
+										// 	dispatch(searchApprovalActions.getBusinessDefineModal(item,childItem,() => {parent.setState({
+										// 		defineModal:true
+										// 	})}))
+										// 	break
+										// case 'carryover' :
+										// 	dispatch(searchApprovalActions.getBusinessJzsyModal(item,childItem,() => {parent.setState({
+										// 		jzsyModal:true
+										// 	})}))
+										// 	break
+										// case 'grant' :
+										// 	dispatch(searchApprovalActions.getBusinessGrantModal(item,childItem,() => {parent.setState({
+										// 		grantModal:true
+										// 	})}))
+										// 	break
+										// case 'defray' :
+										// 	dispatch(searchApprovalActions.getBusinessDefrayModal(item,childItem,() => {parent.setState({
+										// 		defrayModal:true
+										// 	})}))
+										// 	break
 										case 'takeBack' :
 											dispatch(searchApprovalActions.getBusinessTakeBackModal(item,childItem,() => {parent.setState({
 												takeBackModal:true
@@ -162,31 +162,31 @@ export default
 												manageModal:true
 											})},'debit', 'receive'))
 											break
-										case 'makeOut' :
-											dispatch(searchApprovalActions.getBusinessInvioceModal(item,childItem,() => {parent.setState({
-												invioceModal:true
-											})}))
-											break
-										case 'auth' :
-											dispatch(searchApprovalActions.getBusinessDefineModal(item,childItem,() => {parent.setState({
-												defineModal:true
-											})}))
-											break
-										case 'carryover' :
-											dispatch(searchApprovalActions.getBusinessJzsyModal(item,childItem,() => {parent.setState({
-												jzsyModal:true
-											})}))
-											break
-										case 'grant' :
-											dispatch(searchApprovalActions.getBusinessGrantModal(item,childItem,() => {parent.setState({
-												grantModal:true
-											})}))
-											break
-										case 'defray' :
-											dispatch(searchApprovalActions.getBusinessDefrayModal(item,childItem,() => {parent.setState({
-												defrayModal:true
-											})}))
-											break
+										// case 'makeOut' :
+										// 	dispatch(searchApprovalActions.getBusinessInvioceModal(item,childItem,() => {parent.setState({
+										// 		invioceModal:true
+										// 	})}))
+										// 	break
+										// case 'auth' :
+										// 	dispatch(searchApprovalActions.getBusinessDefineModal(item,childItem,() => {parent.setState({
+										// 		defineModal:true
+										// 	})}))
+										// 	break
+										// case 'carryover' :
+										// 	dispatch(searchApprovalActions.getBusinessJzsyModal(item,childItem,() => {parent.setState({
+										// 		jzsyModal:true
+										// 	})}))
+										// 	break
+										// case 'grant' :
+										// 	dispatch(searchApprovalActions.getBusinessGrantModal(item,childItem,() => {parent.setState({
+										// 		grantModal:true
+										// 	})}))
+										// 	break
+										// case 'defray' :
+										// 	dispatch(searchApprovalActions.getBusinessDefrayModal(item,childItem,() => {parent.setState({
+										// 		defrayModal:true
+										// 	})}))
+										// 	break
 										case 'takeBack' :
 											dispatch(searchApprovalActions.getBusinessTakeBackModal(item,childItem,() => {parent.setState({
 												takeBackModal:true

@@ -7,7 +7,7 @@ import { TopDatePicker } from 'app/containers/components'
 import { Account } from 'app/containers/Edit/Lrls/components'
 
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import { cxAccountActions } from 'app/redux/Search/Cxls'

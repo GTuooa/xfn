@@ -3,7 +3,6 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './index.less'
 
 @immutableRenderDecorator
-export default
 class FlexTitle extends React.Component{
 	render() {
 		return (
@@ -13,3 +12,5 @@ class FlexTitle extends React.Component{
 		)
 	}
 }
+
+export default FlexTitle

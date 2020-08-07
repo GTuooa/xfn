@@ -1,7 +1,8 @@
 import React, { PropTypes, Fragment } from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import copy from 'copy-to-clipboard';
-import { Drawer, Icon, Button, message} from 'antd';
+import { Drawer, Button, message} from 'antd';
+import { Icon } from 'app/components'
 import { Amount } from 'app/components'
 
 import XfIcon from 'app/components/Icon'

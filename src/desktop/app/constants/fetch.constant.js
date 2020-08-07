@@ -1,7 +1,7 @@
-import 'es6-shim'
+// import 'es6-shim'
 import fetchFunc from './fetchFunc'
 
-const href = location.href
+const href = window.location.href
 // 安全域名灰度
 const isPre = href.indexOf('desktop.xfannix.com') > 0
 // 从路由读取 corpid
@@ -21,7 +21,7 @@ export const ROOTLOG = `${SERVERURL}/CWLOG`
 export const ROOTCO = `${SERVERURL}/CO`
 export const ROOTAUTH = `${SERVERURL}/CWAUTH`
 
-let nameType = 'pr'
+let nameType = 'yz'
 // export const ROOT = 'http://172.18.0.12:8100' //jk
 // export const ROOTPKT = 'http://172.18.0.174:8081' //j
 
@@ -76,8 +76,8 @@ const URL = {
 
 	// 审批
 	getProcessSelectModel : `${ROOT}/process/select/model`,
-	createProcessModel    : `${ROOT}/process/create/model`,
-	disableProcessModel   : `${ROOT}/process/disable/model`,
+	// createProcessModel    : `${ROOT}/process/create/model`,
+	// disableProcessModel   : `${ROOT}/process/disable/model`,
 
 	// 付费
 	// adminCorpEquity		: `${ROOT}/admin/corp/equity`,

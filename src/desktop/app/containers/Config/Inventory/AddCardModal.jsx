@@ -6,8 +6,8 @@ import './style.less'
 import * as Limit from 'app/constants/Limit.js'
 import { jxcConfigCheck, numberFourTest, DateLib } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
-import { UpperClassSelect, SelectAc, TableBody, TableTitle, TableItem, TableAll, XfnIcon } from 'app/components'
-import { Switch, Select, Checkbox, Button, Modal, message, Radio, Icon, Tree, Tag } from 'antd'
+import { UpperClassSelect, SelectAc, TableBody, TableTitle, TableItem, TableAll, XfnIcon, Icon } from 'app/components'
+import { Switch, Select, Checkbox, Button, Modal, message, Radio, Tree, Tag } from 'antd'
 const { Option, OptGroup } = Select
 const RadioGroup = Radio.Group
 const CheckboxGroup = Checkbox.Group;

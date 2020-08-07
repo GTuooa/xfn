@@ -3,8 +3,8 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'
 
-import { Icon, Checkbox, Button, message }	from 'antd'
-import { TableItem, TableOver, ItemTriangle } from 'app/components'
+import { Checkbox, Button, message }	from 'antd'
+import { TableItem, TableOver, ItemTriangle, Icon } from 'app/components'
 
 @immutableRenderDecorator
 export default

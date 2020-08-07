@@ -5,7 +5,8 @@ import moment from 'moment'
 import { connect }	from 'react-redux'
 
 import Input from 'app/components/Input'
-import { Select, message, Divider, Icon } from 'antd'
+import { Select, message, Divider } from 'antd'
+import { Icon } from 'app/components'
 const Option = Select.Option
 import * as Limit from 'app/constants/Limit.js'
 import XfnSelect from 'app/components/XfnSelect'

@@ -1,7 +1,7 @@
 import view from '../app.js';
 
 import runningConfState from 'app/redux/Config/Running/runningConf'
-import taxConfState from 'app/redux/Config/Running/tax'
+import taxConfState from 'app/redux/Config/Running/Tax'
 import runningIndexState from 'app/redux/Config/Running/index.js'
 import lsqcState from 'app/redux/Config/Lsqc'
 

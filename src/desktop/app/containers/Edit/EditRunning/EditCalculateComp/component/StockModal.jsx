@@ -1,7 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, Input, Modal, Tag, Tree, message } from 'antd'
+import { Checkbox, Input, Modal, Tag, Tree, message } from 'antd'
+import { Icon } from 'app/components'
 const TreeNode = Tree.TreeNode
 import {TableBody, TableItem, ItemTriangle, TableOver,Amount, TableAll, TablePagination } from 'app/components'
 

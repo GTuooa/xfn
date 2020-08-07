@@ -5,8 +5,9 @@ import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'
 
 import Trees from './Trees.jsx'
 import TreesBottom from './TreesBottom.jsx'
-import { Select, Icon }  from 'antd'
-import { TableTree } from 'app/components'
+import { Select }  from 'antd'
+import { TableTree, Icon } from 'app/components'
+const Option = Select.Option
 
 @immutableRenderDecorator
 export default

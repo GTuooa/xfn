@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { Container, Row, ScrollView, TreeSelect, Icon, ChosenPicker } from 'app/components'
 import { MutiPeriodMoreSelect, ScrollLoad } from 'app/containers/components'

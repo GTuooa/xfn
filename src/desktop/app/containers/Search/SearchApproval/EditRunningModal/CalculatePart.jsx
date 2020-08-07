@@ -2,8 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 
-import { message, Select, Icon } from 'antd'
-import { XfInput } from 'app/components'
+import { message, Select } from 'antd'
+import { XfInput, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import Inventory from './stock/Inventory.jsx'

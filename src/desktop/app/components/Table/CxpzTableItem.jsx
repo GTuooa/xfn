@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class CxpzTableItem extends React.Component{
 	render() {
 		const { type, className, line, onClick, style } = this.props
@@ -15,3 +15,5 @@ class CxpzTableItem extends React.Component{
 		)
 	}
 }
+
+export default CxpzTableItem;

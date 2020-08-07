@@ -3,7 +3,7 @@ import { Map, toJS, fromJS } from 'immutable'
 import { connect } from 'react-redux'
 import '../style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopDatePicker } from 'app/containers/components'
 import { Container, Row, ScrollView, Icon, Single, ButtonGroup, Button, ChosenPicker, XfInput, TextareaItem } from 'app/components'
 import { getCategorynameByType, numberTest, receiptList, hideCategoryCanSelect } from 'app/containers/Config/Approval/components/common.js'

@@ -3,7 +3,7 @@ import { fromJS, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 import { SegmentedControl, WingBlank } from 'antd-mobile'
 import { cxAccountActions } from 'app/redux/Search/Cxls'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export default
 class ScrollLoad extends React.Component {

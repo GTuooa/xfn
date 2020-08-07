@@ -2,7 +2,7 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Button } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showImg } from 'app/utils'
 
 import { previewEnclosureActions } from 'app/redux/Edit/PreviewEnclosure/index.js'

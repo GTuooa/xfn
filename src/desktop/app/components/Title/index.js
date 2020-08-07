@@ -3,9 +3,10 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Button, Select } from 'antd'
 import './title.css'
+const Option = Select.Option
 
 @immutableRenderDecorator
-export default
+
 class Title extends React.Component{
 	render() {
 		const { issues, issuedate, onChange, onClick, ...rest } = this.props
@@ -31,3 +32,4 @@ class Title extends React.Component{
 	}
 }
 // className={`"title" ${this.props.className? ' '+this.props.className : ''}`}
+export default Title;

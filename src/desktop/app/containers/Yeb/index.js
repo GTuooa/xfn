@@ -42,7 +42,7 @@ class Yeb extends React.Component {
 
         console.log('yuebiao');
 
-        const { dispatch, history, currentPage, homeState } = this.props
+        const { dispatch, currentPage, homeState } = this.props
 
         const curentKey = 'Yeb'
         const panes = homeState.get('panes')

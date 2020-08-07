@@ -6,7 +6,7 @@ import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'
 import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
 import moment from 'moment'
 import { currentDate } from 'app/utils'
-
+import { push } from 'react-router-redux'
 
 @immutableRenderDecorator
 export default
@@ -18,8 +18,7 @@ class OrderMessage extends React.Component {// 订单详情
         invoiceMessage,
         showOrderInfoStatus,
         corpId,
-        ddUserId,
-        history
+        ddUserId
     } = this.props
 
     const isInvoice = invoiceMessage ? (invoiceMessage.get('isInvoice') == "YES" ? true : false) : ''//是否有发票
@@ -109,7 +108,7 @@ class OrderMessage extends React.Component {// 订单详情
                                 dispatch(tcxqActions.successSubmitOrder(invoiceMessage.get('payAmount') , invoiceMessage.get('orderNo')))
 
                                 dispatch(tcgmActions.payment(corpId, ddUserId, invoiceMessage.get('orderNo')))
-                                history.push('/paysuccess')
+                                push('/paysuccess')
 
                             } else {
                                return false

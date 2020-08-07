@@ -1,14 +1,13 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import * as Limit from 'app/constants/Limit.js'
+// import * as Limit from 'app/constants/Limit.js'
 import FormDiy from '../components/FormDiy'
 
 import * as approvalTemplateActions from 'app/redux/Config/Approval/ApprovalTemplate/approvalTemplate.action.js'
 
 @immutableRenderDecorator
-export default
-	class FormConf extends React.Component {
+class FormConf extends React.Component {
 
 	render() {
 
@@ -28,3 +27,5 @@ export default
 		)
 	}
 }
+
+export default FormConf

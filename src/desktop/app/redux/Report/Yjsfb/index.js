@@ -30,16 +30,16 @@ export default function handleSfb(state = yjsfbState, action) {
 
 			let showChildList = state.get("showChildList").toJS()
 			let newShowChildList
-			if(showChildList.includes(lineIndex)){
-				let index =showChildList.findIndex((value,index)=>{
-					return value ==lineIndex
+			if (showChildList.includes(lineIndex)) {
+				let index = showChildList.findIndex((value,index) => {
+					return value === lineIndex
 				})
 				showChildList.splice(index,1)
 				newShowChildList = showChildList
 			}else{
 				newShowChildList = showChildList.concat(lineIndex)
 			}
-			console.log(newShowChildList);
+
 			return state.set("showChildList",fromJS(newShowChildList))
 		}
 	}[action.type] || (() => state))()

@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 import { Switch, SinglePicker, TextInput, Button, ButtonGroup, Container, ScrollView, Form, Row, Icon } from 'app/components'
 import * as currencyActions from 'app/redux/Config/Currency/currency.action'
 const Item = Form.Item
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 @connect(state => state)

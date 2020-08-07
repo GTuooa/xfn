@@ -1,16 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
-import { customStore } from 'app/utils'
+// import { createStore, applyMiddleware } from 'redux'
+// import { Provider } from 'react-redux'
+import { customStore, history } from 'app/utils'
 // import Reducers from 'app/redux'
 import Reducers from 'app/redux/asyncReducers'
-import CreateRouter from 'app/containers/router.js'
-import zhCN from 'antd/lib/locale-provider/zh_CN'
-import browserNavigator from 'app/utils/browserNavigator'
-import { ConfigProvider } from 'antd'
-import { xfnFetchErrorToDeveloper } from 'app/constants/fetchFunc.jsx'
-import { ROOT } from 'app/constants/fetch.constant.js'
+// import CreateRouter from 'app/containers/router.js'
+// import zhCN from 'antd/lib/locale-provider/zh_CN'
+// import browserNavigator from 'app/utils/browserNavigator'
+// import { ConfigProvider } from 'antd'
+// import { xfnFetchErrorToDeveloper } from 'app/constants/fetchFunc.jsx'
+// import { ROOT } from 'app/constants/fetch.constant.js'
+import App from './app.js'
 
 export let store = customStore(Reducers)
 
@@ -60,16 +61,8 @@ document.body.appendChild(div)
 //     //
 // 	// console.log('text', text);
 // 	if (browserNavigator.versions.DingTalk && text.indexOf('Loading') > -1) {
-//         location.reload() && sessionStorage.clear()
+//         window.location.reload() && sessionStorage.clear()
 //     }
 // }
 
-ReactDOM.render(
-
-    <Provider store={store}>
-        <ConfigProvider locale={zhCN}>
-            <CreateRouter />
-        </ConfigProvider>
-    </Provider>,
-    document.getElementById('root')
-)
+ReactDOM.render(<App store={store} history={history} />, document.getElementById('root'));

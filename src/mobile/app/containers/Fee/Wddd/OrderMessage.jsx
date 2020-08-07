@@ -47,14 +47,6 @@ class OrderMessage extends React.Component {// 订单详情
                     : ''
 
         return (
-            // <Container>
-            //     <ScrollView flex='1'>
-            // {/* <Modal
-                // visible={showOrderInfoStatus}
-                // onCancel={() => dispatch(tcxqActions.cancelShowOrderInfo())}
-                // title="订单详情"
-                // footer={null}
-            //    > */}
             <PopUp
                 title={'订单详情'}
                 onCancel={() => dispatch(tcxqActions.cancelShowOrderInfo())}

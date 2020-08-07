@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account'
 import * as ActionTypes from './ActionTypes.js'
 import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import { pushVouhcerToLrpzReducer } from 'app/redux/Search/Cxpz/cxpz.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 

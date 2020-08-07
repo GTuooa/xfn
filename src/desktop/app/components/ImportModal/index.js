@@ -1,14 +1,15 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Button, Menu, Dropdown, Icon, Spin, Upload, message,Progress } from 'antd'
+import { Button, Menu, Dropdown, Spin, Upload, message,Progress } from 'antd'
 // import thirdparty from 'app/utils/thirdparty'
-import * as thirdParty from 'app/thirdParty'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import './style.less'
 import ImportProgress from './ImportProgress'
 import { Pagination } from 'antd'
 
 @immutableRenderDecorator
-export default
+
 class ImportModal extends React.Component{
 	constructor() {
 		super()
@@ -236,20 +237,6 @@ class ImportModal extends React.Component{
 										this.setState({currentPage: 1})
 										closeCallback()
 									}}/>
-									{
-										// <Button
-										// 	// type="primary"
-										// 	className="import-mask-main-message-copy"
-										// 	onClick={() => {
-										// 		if (iframeload) {
-										// 			this.refs['copy'] && this.refs['copy'].select() // 选择对象
-										// 			document.execCommand("Copy") // 执行浏览器复制命令
-										// 			thirdParty.Alert("已复制好，可贴粘")
-										// 		}
-										// 	}}>
-										// 	当前提示信息复制
-										// </Button>
-									}
 								</div>
 								{
 									importHaveProgress ?
@@ -354,3 +341,5 @@ class ImportModal extends React.Component{
 		)
 	}
 }
+
+export default ImportModal;

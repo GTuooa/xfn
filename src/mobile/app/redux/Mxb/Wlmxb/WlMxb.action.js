@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 import { fromJS, toJS } from 'immutable'
 
 import { showMessage, formatDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as allActions from 'app/redux/Home/All/other.action'
@@ -21,7 +21,8 @@ export const getPeriodDetailList = (issuedate,endissuedate,isTop,typeUuid,curCar
         cardCategoryUuid,
         cardSubUuid,
         pageNum: 1,
-        pageSize: Limit.MXB_PAGE_SIZE,
+        // pageSize: Limit.MXB_PAGE_SIZE,
+        pageSize: undefined,
         getPeriod: 'true'
 	}),json => {
         thirdParty.toast.hide()
@@ -73,7 +74,8 @@ export const reflashDetailList = (issuedate,endissuedate,isTop,typeUuid,curCardU
         cardCategoryUuid,
         cardSubUuid,
         pageNum: currentPage,
-        pageSize: Limit.MXB_PAGE_SIZE,
+        // pageSize: Limit.MXB_PAGE_SIZE,
+        pageSize: undefined,
         getPeriod: 'true'
 	}),json => {
         thirdParty.toast.hide()
@@ -114,7 +116,8 @@ export const getDetailList = (issuedate, endissuedate,cardUuid,categoryUuid,prop
     categoryUuid,
     propertyCost,
     pageNum,
-    pageSize: Limit.MXB_PAGE_SIZE,
+    // pageSize: Limit.MXB_PAGE_SIZE,
+    pageSize: undefined,
     getPeriod: "true",
 
   }), json => {
@@ -178,7 +181,8 @@ export const getBusinessDetail = (item, issuedate,endissuedate,typeUuid,wlType,h
       categoryUuid:'',
       propertyCost:'',
       pageNum: 1,
-      pageSize: Limit.MXB_PAGE_SIZE,
+    //   pageSize: Limit.MXB_PAGE_SIZE,
+      pageSize: undefined,
       getPeriod: "true",
 
     }), json => {
@@ -261,7 +265,8 @@ export const getContactsCardList = (issuedate, endissuedate, isTop, typeUuid, ge
         cardCategoryUuid,
         cardSubUuid,
         pageNum: curPage,
-        pageSize: Limit.MXB_PAGE_SIZE,
+        // pageSize: Limit.MXB_PAGE_SIZE,
+        pageSize: undefined,
         getPeriod
 	}),json => {
         thirdParty.toast.hide()

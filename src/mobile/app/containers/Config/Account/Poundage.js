@@ -5,7 +5,7 @@ import { toJS, Map, fromJS } from 'immutable'
 import 'app/containers/Config/common/style/listStyle.less'
 
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, ChosenPicker, Switch, Form } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 const { Item } = Form
 

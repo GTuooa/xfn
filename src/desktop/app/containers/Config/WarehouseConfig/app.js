@@ -9,7 +9,7 @@ import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 import { ExportModal} from 'app/components'
 import { Button, Menu } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOTPKT } from 'app/constants/fetch.account.js'
 
 import Table from './Table'

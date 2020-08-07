@@ -66,12 +66,12 @@ class NoticeSwitchBar extends Component {
                                 {
                                     itemlist.map((item,index) => {
                                         if(item.get('type') === 'local'){
-                                            return( <a key={index} className="text-underline" href='javascript:void(0);' onClick={() => history.push('/payguide')}>
+                                            return( <a key={index} className="text-underline" href='#' onClick={() => history.push('/payguide')}>
                                                 {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                                             </a>)
                                         }else{
                                             return (
-                                                <a key={index} className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : 'javascript:void(0);'}`}>
+                                                <a key={index} className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : '#'}`}>
                                                     {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                                                 </a>
                                             )
@@ -83,12 +83,12 @@ class NoticeSwitchBar extends Component {
                                 {
                                     itemlist.map((item,index) => {
                                         if(item.get('type') === 'local'){
-                                            return( <a key={index} className="text-underline" href='javascript:void(0);' onClick={() => history.push('/payguide')}>
+                                            return( <a key={index} className="text-underline" href='#' onClick={() => history.push('/payguide')}>
                                                 {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                                             </a>)
                                         }else{
                                             return (
-                                                <a key={index} className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : 'javascript:void(0);'}`}>
+                                                <a key={index} className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : '#'}`}>
                                                     {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                                                 </a>
                                             )

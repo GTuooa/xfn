@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.running.js'
 import { toJS, fromJS } from 'immutable'
 
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { formatDate, decimal } from 'app/utils'
 import { getCategorynameByType, hideCategoryCanSelect } from 'app/containers/Config/Approval/components/common.js'

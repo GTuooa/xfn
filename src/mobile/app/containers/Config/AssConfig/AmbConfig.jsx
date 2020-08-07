@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import * as assconfigActions from 'app/redux/Config/Ass/assconfig.action'
 import { Switch, Button, ButtonGroup, Container, Form, Row, Icon, Single } from 'app/components'
 const Item = Form.Item
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './ass-option.less'
 
 @connect(state => state)

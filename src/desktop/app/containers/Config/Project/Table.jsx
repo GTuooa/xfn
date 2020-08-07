@@ -41,7 +41,7 @@ class Table extends React.Component {
 
         const titleName = activeTapKey === anotherTabName ? '项目性质': `${activeTapKey}类别`
         const proTitleList = ['编码','名称',`${titleName}`,'启/停用']
-        const titleList = ['编码','名称',`${titleName}`,'启/停用']
+        const titleList = ['编码','名称',`${titleName}`]
 
         let selectUuidList = []
 		cardSelectList.map((item,index) =>{

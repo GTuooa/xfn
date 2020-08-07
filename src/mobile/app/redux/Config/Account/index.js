@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.running.js'
 import * as Limit from 'app/constants/Limit.js'
 import { showMessage, decimal } from 'app/utils'
 import * as Common from 'app/containers/Edit/Lrls/CommonData.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { DateLib } from 'app/utils'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 

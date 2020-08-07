@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
-import { Icon, message, Input, Modal, Tree, Checkbox, Button, Tag } from 'antd'
+import { message, Input, Modal, Tree, Checkbox, Button, Tag } from 'antd'
+import { Icon } from 'app/components'
 const TreeNode = Tree.TreeNode
 import { TableBody, TableItem, TableAll } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'

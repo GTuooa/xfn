@@ -2,8 +2,7 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 @immutableRenderDecorator
-export default
-class Table extends React.Component {
+class TableAllo extends React.Component {
 
 	render() {
 		const {
@@ -37,3 +36,5 @@ class Table extends React.Component {
 		)
 	}
 }
+
+export default TableAllo;

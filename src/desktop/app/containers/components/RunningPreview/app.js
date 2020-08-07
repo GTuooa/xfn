@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { connect }	from 'react-redux'
 import './style.less'
 
-import { Drawer, Modal, Button, Icon, message, DatePicker, Input, Select, Switch } from 'antd'
+import { Drawer, Modal, Button, message, DatePicker, Input, Select, Switch } from 'antd'
+import { Icon } from 'app/components'
 import { fromJS } from 'immutable'
 
 import * as Limit from 'app/constants/Limit.js'
@@ -107,9 +108,9 @@ class RunningPreview extends React.Component {
 		const lrPermissionInfo = homeState.getIn(['permissionInfo', 'LrAccount'])
 		const label = searchRunningAllState.get('label')// 附件标签
 		// 附件上传
+		const moduleInfo = homeState.getIn(['data', 'userInfo', 'sobInfo', 'moduleInfo'])
 		const enCanUse = moduleInfo ? (moduleInfo.indexOf('ENCLOSURE_RUN') > -1 ? true : false) : true
 		const checkMoreFj = homeState.getIn(['data', 'userInfo', 'checkMoreFj']) === 'TRUE' ? true : false
-		const moduleInfo = homeState.getIn(['data', 'userInfo', 'sobInfo', 'moduleInfo'])
 		const sobInfo = homeState.getIn(['data', 'userInfo', 'sobInfo'])
 		const pageActive = homeState.get('pageActive')
 

@@ -8,10 +8,10 @@ import 'app/containers/Config/common/style/listStyle.less'
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, Checkbox } from 'app/components'
 import Item from './Item.jsx'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
-import * as warehouseConfActions from 'app/redux/Config/Warehouse/WarehouseConf.action.js'
+import * as warehouseConfActions from 'app/redux/Config/Warehouse/warehouseConf.action.js'
 
 @connect(state => state)
 export default

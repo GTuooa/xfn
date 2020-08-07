@@ -16,12 +16,10 @@ class AmbLineChar extends React.Component {
 			isCutLineData
 		} = this.props
 
-		// const showLineData = isCutLineData ? lineData.slice(6) : lineData
-		// const xData = lineData.showLineData(v => `${Number(v.get('name').substr(4,2))}月`).toJS()
-		// const amountData = showLineData.map(v => v.get('amount')).toJS()
-		//显示12个月
-		const xData = lineData.map(v => `${Number(v.get('name').substr(4,2))}月`).toJS()
-		const amountData = lineData.map(v => v.get('amount')).toJS()
+		const showLineData = isCutLineData ? lineData.slice(6) : lineData
+
+		const xData = showLineData.map(v => `${Number(v.get('name').substr(4,2))}月`).toJS()
+		const amountData = showLineData.map(v => v.get('amount')).toJS()
 
 		let color = ''
 		let lightColor = ''

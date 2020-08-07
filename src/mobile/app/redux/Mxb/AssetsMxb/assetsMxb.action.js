@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import * as ActionTypes from 'app/constants/ActionTypes.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getAssetsDetailFetch = (issuedate, endissuedate) => dispatch => {
 	// fetchApi('getassetsdetail', 'POST', JSON.stringify(jsonifyDate(issuedate)), json => {

@@ -6,7 +6,7 @@ import { toJS, fromJS } from 'immutable'
 import { Button, ButtonGroup, Icon, Container, ScrollView, Form, Switch, Multiple, XfInput } from 'app/components'
 const { Label, Item } = Form
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import TreeCom from 'app/containers/components/TreeCom/index.js'
 
 import * as projectConfActions from 'app/redux/Config/Project/projectConf.action.js'

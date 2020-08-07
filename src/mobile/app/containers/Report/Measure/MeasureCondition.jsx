@@ -4,7 +4,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { TextListInput,Checkbox,Amount}from 'app/components'
 import { Icon,Container, ScrollView, Row, SinglePicker,ButtonGroup,Button }	from 'app/components'
 import { decimal } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import MeasureItem from './MeasureItem'
 

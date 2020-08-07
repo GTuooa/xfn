@@ -33,7 +33,7 @@ class Report extends React.Component {
 
     render() {
 
-        const { dispatch, history, homeState } = this.props
+        const { dispatch, homeState } = this.props
 
         const curentKey = 'Report'
         const panes = homeState.get('panes')

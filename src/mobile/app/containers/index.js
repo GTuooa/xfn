@@ -1,14 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
-import { Provider } from 'react-redux'
+// import { createStore, applyMiddleware } from 'redux'
+// import { Provider } from 'react-redux'
 import { customStore } from 'app/utils'
 import Reducers from 'app/redux/asyncReducers'
-import CreateRouter from 'app/containers/router.js'
-import browserNavigator from 'app/utils/browserNavigator'
-import { ROOT } from 'app/constants/fetch.constant.js'
+// import CreateRouter from 'app/containers/router.js'
+// import browserNavigator from 'app/utils/browserNavigator'
+// import { ROOT } from 'app/constants/fetch.constant.js'
 import FastClick from 'fastclick'
-import { xfnFetchErrorToDeveloper } from 'app/constants/fetchFunc.jsx'
+// import { xfnFetchErrorToDeveloper } from 'app/constants/fetchFunc.jsx'
+import App from './app.js'
+
+// console.log('App', App);
+
 
 FastClick.prototype.focus = function(targetElement) {
     targetElement.focus();
@@ -74,9 +78,11 @@ document.body.appendChild(div)
 // 	// }
 // }
 
+// ReactDOM.render(
+//     ,
+//     document.getElementById('root')
+// )
 ReactDOM.render(
-    <Provider store={store}>
-        <CreateRouter />
-    </Provider>,
+    <App store={store} />,
     document.getElementById('root')
 )

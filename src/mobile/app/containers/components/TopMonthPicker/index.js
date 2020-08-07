@@ -2,7 +2,7 @@ import React, { Component, PropTypes }  from 'react'
 import { fromJS, toJS } from 'immutable'
 import { Row, Icon, SwitchText, SinglePicker } from 'app/components'
 import browserNavigator from 'app/utils/browserNavigator'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import '../TopDatePicker/index.less'
 

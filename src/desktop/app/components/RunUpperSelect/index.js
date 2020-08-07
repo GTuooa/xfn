@@ -7,7 +7,7 @@ const TreeNode = TreeSelect.TreeNode
 import { toJS } from 'immutable'
 
 @immutableRenderDecorator
-export default
+
 class RunUpperSelect extends React.Component{
 	// 类别新增专用
 
@@ -52,3 +52,4 @@ class RunUpperSelect extends React.Component{
 		)
 	}
 }
+export default RunUpperSelect;

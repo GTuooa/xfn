@@ -4,7 +4,7 @@ import { Input, Select, Modal, Button } from 'antd'
 const Option = Select.Option
 
 @immutableRenderDecorator
-export default
+
 class SelectAc extends React.Component {
 	constructor() {
 		super()
@@ -46,3 +46,4 @@ class SelectAc extends React.Component {
 		)
 	}
 }
+export default SelectAc;

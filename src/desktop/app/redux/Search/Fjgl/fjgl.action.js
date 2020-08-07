@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes.js'
 import { jsonifyDate, showMessage } from 'app/utils'
 import * as allActions from 'app/redux/Home/All/all.action'
 import { message }	from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { allDownloadEnclosure } from 'app/redux/Home/All/all.action.js'
 

@@ -8,7 +8,7 @@ import { Select, Button, Modal, message } from 'antd'
 import XfnIcon from 'app/components/Icon'
 import NoticeSwitch from 'app/components/NoticeSwitch'
 const Option = Select.Option
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 @immutableRenderDecorator
@@ -26,7 +26,7 @@ class Title extends React.Component {
 	}
 
 	render() {
-		const { defaultSobName, sobList, dispatch, activeTabkey, itemlist, history, isPlay, packInfoList, moduleList, corpName, openHelpCenter, secret, showLockFilter } = this.props
+		const { defaultSobName, sobList, dispatch, activeTabkey, itemlist, isPlay, packInfoList, moduleList, corpName, openHelpCenter, secret, showLockFilter } = this.props
 		const { chooseModal, demo, modelId } = this.state
 
 		const time = 3000
@@ -115,7 +115,7 @@ class Title extends React.Component {
 						className="home-topbar-btn home-topbar-attention-btn"
 						type="ghost"
 						onClick={() => {
-							dispatch(homeActions.quitPleasureGround(history))
+							dispatch(homeActions.quitPleasureGround())
 						}}
 					>退出体验模式</Button> :
 					<Button
@@ -123,7 +123,7 @@ class Title extends React.Component {
 						type="ghost"
 						onClick={() => {
 
-							const href = location.href
+							const href = window.location.href
                 			const urlParam = getUrlParam(href)
 							
 							thirdParty.openLink({
@@ -148,7 +148,7 @@ class Title extends React.Component {
 					visible={chooseModal}
 					onCancel={() => global.isplayground ? {} : this.setState({chooseModal: false})}
 					onOk={() => {
-						dispatch(homeActions.enterPleasureGround(history, demo))
+						dispatch(homeActions.enterPleasureGround(demo))
 						this.setState({chooseModal: false})
 					}}
 					maskClosable={false}
@@ -203,7 +203,7 @@ class Title extends React.Component {
 								className="help-sob-select-btn"
 								onClick={() => {
 									if (modelId) {
-										dispatch(homeActions.enterPleasureGround(history, demo, demo === 'SMART_DEMO' ? jrModelList.find(v => v.get('modelId') === modelId) : accountModelList.find(v => v.get('modelId') === modelId)))
+										dispatch(homeActions.enterPleasureGround(demo, demo === 'SMART_DEMO' ? jrModelList.find(v => v.get('modelId') === modelId) : accountModelList.find(v => v.get('modelId') === modelId)))
 										this.setState({chooseModal: false})
 									} else {
 										message.info('请选择账套模板')

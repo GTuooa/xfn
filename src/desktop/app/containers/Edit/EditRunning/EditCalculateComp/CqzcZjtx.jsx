@@ -398,7 +398,7 @@ class CqzcZjtx extends React.Component {
                     selectThingsList={selectThingsList}
                     thingsList={thingsList}
                     selectedKeys={selectedKeys === '' ? [`all${Limit.TREE_JOIN_STR}1`] : selectedKeys}
-                    stockCardList={projectCard ? fromJS([projectCard.toJS()]) : fromJS([])}
+                    stockCardList={fromJS([projectCard.toJS()])}
                     title={'选择项目'}
                     selectFunc={(item, cardUuid) => {
                         const code = item.code

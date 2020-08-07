@@ -1875,26 +1875,26 @@ export default function handleLrb(state = editCalculateState, action) {
 
         },
 		// 选择项目单位
-		[ActionTypes.COMMON_CHARGE_ITEM_CHECKBOX_SELECT]               : () => {
-                const showLowerList = state.getIn(['flags', 'selectList'])
-                const selectItemList = state.getIn(['flags', 'selectItem'])
-                if (!action.checked) {
-                        // 原来没选
-                        const newShowLowerList = showLowerList.push(action.uuid)
-                        const newSelectItemList = selectItemList.push(fromJS({uuid:action.uuid,name:action.name,code:action.code}))
+		// [ActionTypes.COMMON_CHARGE_ITEM_CHECKBOX_SELECT]               : () => {
+        //         const showLowerList = state.getIn(['flags', 'selectList'])
+        //         const selectItemList = state.getIn(['flags', 'selectItem'])
+        //         if (!action.checked) {
+        //                 // 原来没选
+        //                 const newShowLowerList = showLowerList.push(action.uuid)
+        //                 const newSelectItemList = selectItemList.push(fromJS({uuid:action.uuid,name:action.name,code:action.code}))
 
-                        return state.setIn(['flags', 'selectList'], newShowLowerList)
-                                    .setIn(['flags', 'selectItem'], fromJS(newSelectItemList))
-                } else {
-                        // 原来选了
-                        const newShowLowerList = showLowerList.splice(showLowerList.findIndex(v => v === action.uuid), 1)
-                        const newSelectItemList = selectItemList.splice(showLowerList.findIndex(v => v.uuid === action.uuid), 1)
+        //                 return state.setIn(['flags', 'selectList'], newShowLowerList)
+        //                             .setIn(['flags', 'selectItem'], fromJS(newSelectItemList))
+        //         } else {
+        //                 // 原来选了
+        //                 const newShowLowerList = showLowerList.splice(showLowerList.findIndex(v => v === action.uuid), 1)
+        //                 const newSelectItemList = selectItemList.splice(showLowerList.findIndex(v => v.uuid === action.uuid), 1)
 
-                        return state.setIn(['flags', 'selectList'], newShowLowerList)
-                                    .setIn(['flags', 'selectItem'], fromJS(newSelectItemList))
-                }
+        //                 return state.setIn(['flags', 'selectList'], newShowLowerList)
+        //                             .setIn(['flags', 'selectItem'], fromJS(newSelectItemList))
+        //         }
 
-        },
+        // },
 		[ActionTypes.SAVE_AND_NEW_COMMON_CHARGE]                           :() => {
             if (action.saveAndNew) {
                 const CommonChargeTemp = editCalculateState.get('CommonChargeTemp')

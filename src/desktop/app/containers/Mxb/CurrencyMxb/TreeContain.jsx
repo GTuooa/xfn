@@ -4,8 +4,9 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as currencyMxbActions from 'app/redux/Mxb/CurrencyMxb/currencyMxb.action.js'
 
 import Trees from './Trees.jsx'
-import { Select, Icon }  from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import { Select }  from 'antd'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import { TableTree } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 

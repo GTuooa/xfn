@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class TableAll extends React.Component{
 	render() {
 		const { type, className, shadowTop, style, page, jxcTotal, bottom, shadowTwo, newTable, shadowThree } = this.props
@@ -48,3 +48,4 @@ class TableAll extends React.Component{
 		}
 	}
 }
+export default TableAll;

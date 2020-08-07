@@ -2,7 +2,7 @@
 // import { Modal, message } from 'antd'
 // import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 // import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 
 // import OrderBuy from './OrderBuy'
 

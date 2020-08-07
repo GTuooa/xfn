@@ -5,12 +5,12 @@ import * as homeActions from 'app/redux/Home/home.action.js'
 import * as warehouseConfigActions from 'app/redux/Config/warehouseConfig/warehouseConfig.action'
 
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { fromJS, toJS } from 'immutable'
 import { message, Modal } from 'antd'
-const confirm = Modal.confirm
 import * as editInventoryCardActions from 'app/redux/Config/Inventory/editInventoryCard.action.js'
+
 // 首次获取存货设置
 export const getInventoryConfigInit = () => (dispatch,getState) => {
     dispatch({type: ActionTypes.SWITCH_LOADING_MASK})

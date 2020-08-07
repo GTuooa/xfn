@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 
 import { showMessage, formatDate } from 'app/utils'
 import { message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as allActions from 'app/redux/Home/All/all.action'
@@ -113,20 +113,20 @@ export const getDetailList = (categorValue, issuedate, curPage,accountUuid,endis
 
 }
 
-export const getCalculateListInfo = (issuedate)  => (dispatch, getState) => {
-const zhmxState = getState().zhmxState
-  fetchApi('getRunningSettingInfo', 'GET', '', json => {
-    let hideCategoryList = []
-    if (showMessage(json)) {
-      json.data.hideCategoryList.map(item => {
-        if (item.categoryType !== 'LB_SFGL')
-          hideCategoryList.push(item)
-      })
-      dispatch({type: ActionTypes.INIT_DETAIL_ACCOUNT_LIST, hideCategoryList: hideCategoryList})
-    }
-  })
+// export const getCalculateListInfo = (issuedate)  => (dispatch, getState) => {
+// const zhmxState = getState().zhmxState
+//   fetchApi('getRunningSettingInfo', 'GET', '', json => {
+//     let hideCategoryList = []
+//     if (showMessage(json)) {
+//       json.data.hideCategoryList.map(item => {
+//         if (item.categoryType !== 'LB_SFGL')
+//           hideCategoryList.push(item)
+//       })
+//       dispatch({type: ActionTypes.INIT_DETAIL_ACCOUNT_LIST, hideCategoryList: hideCategoryList})
+//     }
+//   })
 
-}
+// }
 export const getDetailsListInfo = (issuedate,endissuedate,accountUuid='',defaultCategory = false) => (dispatch, getState) => {
   const zhmxState = getState().zhmxState
   const aUuid = accountUuid ? accountUuid=== '全部' ? '' : accountUuid.split(Limit.TREE_JOIN_STR)[0] : ''

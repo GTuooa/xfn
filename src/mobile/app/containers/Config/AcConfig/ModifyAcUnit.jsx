@@ -3,7 +3,7 @@ import { Map } from 'immutable'
 import { connect }	from 'react-redux'
 import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import { TextInput, AmountInput, Button, ButtonGroup, Icon, Container, Row, Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './ac-modifyUnit.less'
 import * as Limit from 'app/constants/Limit.js'
 

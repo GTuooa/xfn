@@ -13,7 +13,7 @@ import Table from './Table.jsx'
 import AddHypeTypeModal from './AddHypeTypeModal'
 import AddCardTypeModal from './AddCardTypeModal'
 import AddCardModal from './AddCardModal'
-import AdjustAllCardlistModal from './AdjustAllCardlistModal'
+import AdjustAllCardlistModal from './AdjustAllCardListModal'
 
 import * as relativeConfActions from 'app/redux/Config/Relative/relative.action.js'
 

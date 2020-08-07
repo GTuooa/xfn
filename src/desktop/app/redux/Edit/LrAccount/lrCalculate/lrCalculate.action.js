@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 
 import { showMessage, formatDate } from 'app/utils'
 import { message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as allActions from 'app/redux/Home/All/all.action'

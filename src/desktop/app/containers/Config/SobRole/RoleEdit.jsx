@@ -1,8 +1,9 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, Button, Radio, Modal, Input, message }	from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import { Checkbox, Button, Radio, Modal, Input, message }	from 'antd'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 
 import * as sobRoleActions from 'app/redux/Config/SobRole/sobRole.action.js'
 

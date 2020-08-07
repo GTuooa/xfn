@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, List, toJS, fromJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 // import { getFileNameNoExt } from 'app/utils'
 import { message, Icon, Modal, Checkbox } from 'antd'
 import { XfInput } from 'app/components'
@@ -46,9 +46,7 @@ class ClipBoardModal extends React.Component {
             changeCustomName,
             widthHeigthRate
         } = this.props
-
         
-
 		return (
             <Modal
                 title="上传附件"

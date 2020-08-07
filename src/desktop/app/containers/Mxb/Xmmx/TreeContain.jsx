@@ -3,7 +3,8 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 
 import Trees from './Trees.jsx'
-import { Select, Icon, Menu, Input, Collapse, Tree, Pagination }  from 'antd'
+import { Select, Menu, Input, Collapse, Tree, Pagination }  from 'antd'
+import { Icon } from 'app/components'
 const TreeNode = Tree.TreeNode
 import { TableTree } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
@@ -204,7 +205,8 @@ class TreeContain extends React.Component {
 										onSelect={value => {
 											if(value[0]){
 												const valueList = value[0].split(Limit.TREE_JOIN_STR)
-												dispatch(xmmxActions.getDetailList(issuedate,endissuedate,curCardUuid,valueList[0],valueList[2], 1,))
+												// dispatch(xmmxActions.getDetailList(issuedate,endissuedate,curCardUuid,valueList[0],valueList[2], 1,))
+												dispatch(xmmxActions.getProjectDetailList(issuedate,endissuedate,1,curCardUuid,amountType,valueList[0],valueList[2],searchContent))
 												dispatch(xmmxActions.changeDetailXmmxCommonString('',['flags', 'propertyCost'],valueList[2]))
 												dispatch(xmmxActions.changeDetailXmmxCommonString('',['flags', 'categoryUuid'],valueList[0]))
 												dispatch(xmmxActions.changeDetailXmmxCommonString('',['flags', 'categoryName'],valueList[1]))

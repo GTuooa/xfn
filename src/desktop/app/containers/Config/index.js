@@ -3,7 +3,6 @@ import { connect }	from 'react-redux'
 import { fromJS } from 'immutable'
 
 import { Button, Tabs, Spin } from 'antd'
-const TabPane = Tabs.TabPane
 
 import Fee from './Fee/index/index.js'
 import Ac from './Ac/index/index.js'
@@ -34,6 +33,7 @@ import ProjectConf from './Project/index/index.js'
 import RelativeConf from './Relative/index/index.js'
 
 import * as allActions from 'app/redux/Home/All/all.action'
+const TabPane = Tabs.TabPane
 
 @connect(state => state)
 export default
@@ -53,7 +53,7 @@ class Config extends React.Component {
 
     render() {
 
-        const { dispatch, history, homeState } = this.props
+        const { dispatch, homeState } = this.props
 
         const curentKey = 'Config'
         const panes = homeState.get('panes')

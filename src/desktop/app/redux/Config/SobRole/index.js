@@ -29,7 +29,7 @@ const sobRoleState = fromJS({
 
 export default function handleSobLog(state = sobRoleState, action) {
 	return ({
-		[ActionTypes.INIT_SOB_ROLE]									 : () => sobRoleState,
+		// [ActionTypes.INIT_SOB_ROLE]									 : () => sobRoleState,
 		// 从账套编辑跳转
 		[ActionTypes.GET_SOB_ROLE_LIST_FROM_SOB_OPTION]				 : () => {
 

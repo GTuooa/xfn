@@ -3,6 +3,7 @@ import { Modal } from 'antd'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
 import { fromJS } from 'immutable'
+import { push } from 'react-router-redux'
 
 @immutableRenderDecorator
 export default
@@ -16,7 +17,6 @@ class OrderBuy extends React.Component {
 			dispatch,
             orderWindowShow,
             orderNumber,
-            history,
 			corpId,
 			ddUserId,
 			amount,
@@ -42,7 +42,7 @@ class OrderBuy extends React.Component {
                         onClick={() => {
                             dispatch(tcgmActions.successSubmitTc())
                             dispatch(tcgmActions.payment(corpId, ddUserId, orderNumber))
-							history.push('/paysuccess')
+							push('/paysuccess')
                         }}
                     >
                         去支付

@@ -1,11 +1,11 @@
 import fetchApi from 'app/constants/fetch.constant.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { browserNavigator, showMessage, DateLib } from 'app/utils'
 import { ROOT, ROOTURL, GET_DD_USER_INFO, XFNVERSION } from 'app/constants/fetch.constant.js'
 import { tabNames, allPermission, loginInfo } from './moduleConstants.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action.js'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 import { Icon } from 'app/components'
 
 import * as Limit from 'app/constants/Limit.js'
@@ -1542,9 +1542,9 @@ const homeActions = {
                 if (ddReady) {
                     dispatch(homeActions.getdduserinfoFetch('', '', history))
                 } else {
-                    const href = location.href
+                    const href = window.location.href
                     const start = href.indexOf('?')
-                    let serverMessage = location.href.slice(start+1).split('&')
+                    let serverMessage = window.location.href.slice(start+1).split('&')
                     let corpId = ''
 
                     for (let i=0; i < serverMessage.length; i++) {
@@ -1947,7 +1947,7 @@ const homeActions = {
         //         onSuccess : function(result) {
         //             thirdParty.toast.loading('加载中...')
         //             if (result.buttonIndex === 0) {
-        //                 location.replace(`https://fannixddfe1.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FF5EC9F6&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
+        //                 window.location.replace(`https://fannixddfe1.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FF5EC9F6&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
         //             } else if (result.buttonIndex === 1) {
         //                 // if (receivedData.data.isAdmin === 'TRUE') {
         //                     thirdParty.Confirm({
@@ -1956,7 +1956,7 @@ const homeActions = {
         //                         buttonLabels: ["返回之前版本", "确认"],
         //                         onSuccess : function(result) {
         //                             if (result.buttonIndex === 0) {
-        //                                 location.replace(`https://fannixddfe1.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FF5EC9F6&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
+        //                                 window.location.replace(`https://fannixddfe1.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FF5EC9F6&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
         //                             } else if (result.buttonIndex === 1) {
         //                                 dispatch(homeActions.updateNewEntry(history))
         //                             }
@@ -1969,7 +1969,7 @@ const homeActions = {
         //         },
         //         onFail : function(err) {}
         //     })
-            // location.replace(`https://fannixddfe0.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
+            // window.location.replace(`https://fannixddfe0.hz.taeapp.com/build/v0/mobile/app/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=true&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
         // }
 
         // 调试假数据

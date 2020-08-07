@@ -1,8 +1,7 @@
 import React, { PropTypes } from 'react'
 import { Map, List } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
-import { Icon } from 'antd'
-import { Amount } from 'app/components'
+import { Amount, Icon } from 'app/components'
 import { formatMoney } from 'app/utils'
 
 @immutableRenderDecorator

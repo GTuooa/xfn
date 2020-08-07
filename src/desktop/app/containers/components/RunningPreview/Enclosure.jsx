@@ -2,8 +2,9 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { Icon, Modal, DatePicker, Switch, Input, Select, message } from 'antd'
+import { Modal, DatePicker, Switch, Input, Select, message } from 'antd'
 const Option = Select.Option
+import { Icon } from 'app/components'
 import { formatMoney, formatDate, showImg } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
 

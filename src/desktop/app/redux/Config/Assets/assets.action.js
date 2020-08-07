@@ -4,7 +4,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import { toJS } from 'immutable'
 import { showMessage } from 'app/utils'
 import { message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as assetsMxbActions from 'app/redux/Mxb/AssetsMxb/assetsMxb.action.js'

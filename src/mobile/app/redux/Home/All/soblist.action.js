@@ -1,9 +1,9 @@
 import * as ActionTypes from './ActionTypes'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { homeActions } from 'app/redux/Home/home.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showMessage, showError } from 'app/utils'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 
 import * as Limit from 'app/constants/Limit.js'
 
@@ -145,9 +145,9 @@ export const deleteSobFetch = (history) => (dispatch, getState) => {
 }
 
 
-export const cancelEnterSobFetch = () => ({
-	type: ActionTypes.CANCEL_ENTER_SOB_FETCH
-})
+// export const cancelEnterSobFetch = () => ({
+// 	type: ActionTypes.CANCEL_ENTER_SOB_FETCH
+// })
 
 export const selectSob = idx => ({
 	type: ActionTypes.SELECT_SOB,

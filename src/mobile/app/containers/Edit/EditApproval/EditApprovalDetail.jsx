@@ -8,7 +8,7 @@ import { CategoryComp, InventoryComp, CommonChoose, CommonInput, CommonRow, Uplo
 import { Row, Container, ScrollView, Icon, ButtonGroup, Button }  from 'app/components'
 import './style.less'
 import { type, formType, jrType } from './common'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { homeActions } from 'app/redux/Home/home.js'
 import * as editApprovalActions from 'app/redux/Edit/EditApproval/editApproval.action.js'

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Icon } from 'app/components'
 import { configCheck } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './assist.less'
 
 export default

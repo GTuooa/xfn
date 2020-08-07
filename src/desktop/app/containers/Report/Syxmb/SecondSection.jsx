@@ -44,8 +44,7 @@ class SecondSection extends React.Component {
 			'损益': () => detailDrawing.get('ginAndLossForMonth') ? detailDrawing.get('ginAndLossForMonth') : fromJS([])
 		}[activeKey])()
 
-		// const beginDate = lineData.size ? lineData.getIn([isCutLineData ? 6 : 0, 'name']) : ''
-		const beginDate = lineData.size ? lineData.getIn([ 0, 'name']) : ''
+		const beginDate = lineData.size ? lineData.getIn([isCutLineData ? 6 : 0, 'name']) : ''
 		const endData = lineData.size ? lineData.getIn([-1, 'name']) : ''
 
 		return (

@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { fromJS, toJS } from 'immutable'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Button, ButtonGroup, Container, Row, ScrollView, Single, Icon, XfInput, ChosenPicker } from 'app/components'
 import { getCategorynameByType, numberTest } from 'app/containers/Config/Approval/components/common.js'
 import { numberFourTest } from 'app/utils'

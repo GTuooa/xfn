@@ -3,7 +3,7 @@ import { Map, List, fromJS, toJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { Amount } from 'app/components'
-import { Icon } from 'antd'
+import { Icon } from 'app/components'
 import * as ambsybActions from 'app/redux/Report/Ambsyb/ambsyb.action.js'
 import LiLast from './LiLast'
 

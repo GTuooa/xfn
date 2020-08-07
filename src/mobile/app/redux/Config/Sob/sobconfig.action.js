@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { fromJS } from 'immutable'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showMessage, browserNavigator } from 'app/utils'
 import { homeActions } from 'app/redux/Home/home.js'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
@@ -179,16 +179,8 @@ const saveSob = (data, history) => (dispatch, getState) => {
 				// dispatch(homeActions.getDbListFetch('', history))
 
 				if (!sobInfo) {
-					// if (browserNavigator.versions.DingTalk) {
-						// 新建第一个账套 sessionStorage.clear() 清掉之前sessionStorage里的东西
-						// location.replace(`${ROOTURL}/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=false&corpid=${sessionStorage.getItem('corpId')}`)
 						dispatch(homeActions.getDbListFetch('', history))
 						history.goBack()
-					// } else {
-					// 	// location.replace(`http://localhost:4800/build/mobile/index.html`)
-					// 	dispatch(homeActions.getDbListFetch('', history))
-					// 	history.goBack()
-					// }
 					if (getState().homeState.getIn(['views', 'firstToSob'])) {
 						dispatch(homeActions.changeLoginGuideString('firstToSob', false))
 					}
@@ -318,9 +310,9 @@ export const hideAllSobCheckbox = () => ({
 	type: ActionTypes.HIDE_ALL_SOB_CHECKBOX
 })
 
-export const cancelEnterSobFetch = () => ({
-	type: ActionTypes.CANCEL_ENTER_SOB_FETCH
-})
+// export const cancelEnterSobFetch = () => ({
+// 	type: ActionTypes.CANCEL_ENTER_SOB_FETCH
+// })
 
 export const changeXuanzeboxStatus = () => ({
 	type: ActionTypes.CHANGE_XUANZEBOX_STATUS

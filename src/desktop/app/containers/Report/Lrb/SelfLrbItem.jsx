@@ -3,7 +3,7 @@ import { Map, List ,toJS} from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { Amount, TableItem,ItemTriangle ,TableOver} from 'app/components'
 import * as lrbActions from 'app/redux/Report/Lrb/lrb.action.js'
-import { Icon } from 'antd'
+import { Icon } from 'app/components'
 import { debounce, formatMoney } from 'app/utils'
 
 @immutableRenderDecorator

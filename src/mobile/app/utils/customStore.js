@@ -1,12 +1,13 @@
 import { compose, createStore, applyMiddleware }	from 'redux';
 import thunk from 'redux-thunk';
 import { createReducer } from 'app/redux/asyncReducers'
+import { routerMiddleware } from 'connected-react-router';
+import { history } from 'app/utils'
 
 export default function customStore(rootReducer) {
 	let buildStore = compose(
-		applyMiddleware(thunk),
+        applyMiddleware(routerMiddleware(history), thunk),
 		window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f => f
-		// window.devToolsExtension ? window.devToolsExtension() : f => f
 	)(createStore);
 
 	const store = buildStore(rootReducer);
@@ -38,7 +39,9 @@ function injectAsyncReducers(store, asyncReducers) {
             }
         }
     }
-    flag && store.replaceReducer(createReducer(store.asyncReducers));
+    if (flag) {
+        store.replaceReducer(createReducer(store.asyncReducers))
+    }
 }
 /*
 const rootReducer = combineReducers(reducers);

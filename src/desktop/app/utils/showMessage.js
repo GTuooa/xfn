@@ -1,6 +1,6 @@
 import { message } from 'antd'
 // import * as components from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 // import { notification } from 'antd';
 // import { NotificationModal } from 'app/containers/components/NotificationModal'
@@ -25,7 +25,7 @@ export default function showMessage (receivedData, successTip)  {
 		// }
 		else if (receivedData.code === 10002) {
 			thirdParty.Alert('登录信息失效，重新登录')
-			location.reload() && sessionStorage.clear()
+			window.location.reload() && sessionStorage.clear()
 		} else if (receivedData.code === 10011) {
 
 			thirdParty.Confirm({
@@ -36,17 +36,17 @@ export default function showMessage (receivedData, successTip)  {
 					if (result.buttonIndex === 1) {
 
 						if (global.isPlay) {
-							location.reload() && sessionStorage.clear()
+							window.location.reload() && sessionStorage.clear()
 						} else {
-							const href = location.href
+							const href = window.location.href
 							const start = href.indexOf('?')
-							let serverMessage = location.href.slice(start+1).split('&')
+							let serverMessage = window.location.href.slice(start+1).split('&')
 							const corpId = serverMessage[1].slice(7)
 
 							if (receivedData.data === corpId) {
-								location.reload() && sessionStorage.clear()
+								window.location.reload() && sessionStorage.clear()
 							} else {
-								location.replace(`${ROOTURL}/index.html?isOV=false&corpid=${receivedData.data}&isInWeb=true`) && sessionStorage.clear()
+								window.location.replace(`${ROOTURL}/index.html?isOV=false&corpid=${receivedData.data}&isInWeb=true`) && sessionStorage.clear()
 							}
 						}
 					}

@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-// import { formatNum } from 'app/utils'
 import { formatMoney } from 'app/utils'
 
 @immutableRenderDecorator
-export default
 class Amount extends Component {
 
 	render() {
@@ -32,3 +30,5 @@ class Amount extends Component {
 		)
 	}
 }
+
+export default Amount

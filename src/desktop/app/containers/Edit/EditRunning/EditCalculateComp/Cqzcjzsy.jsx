@@ -111,6 +111,7 @@ class Cqzcjzsy extends React.Component {
 		let curDateTime = 0
 
 		const finalUuidList = getUuidList(businessList) // 上下条
+		console.log(finalUuidList);
 
 		businessList && businessList.size && businessList.map((v,i) => {
 			const itemDate = new Date(v.get('oriDate')).getTime()
@@ -212,6 +213,30 @@ class Cqzcjzsy extends React.Component {
 							}}/>
 						</div>
 					</div>
+					{/* <div className="edit-running-modal-list-item">
+						<label>流水类别：</label>
+						<div>
+							<Select
+								disabled={insertOrModify === 'modify' || accountType === 'single'}
+								value={paymentTypeList[paymentType]}
+								onChange={value => {
+									dispatch(innerCalculateActions.changeEditCalculateCommonString('',['flags','paymentType'],value))
+								}}
+								>
+									{
+										hideCategoryList && hideCategoryList.size ? hideCategoryList.map(item => {
+											return <Option key={item.get('uuid')} value={item.get('categoryType')}>
+												{item.get('name')}
+											</Option>
+										})
+										:
+										null
+								}
+
+							</Select>
+						</div>
+
+					</div> */}
 					<CategorySelect
 						dispatch={dispatch}
 						insertOrModify={insertOrModify}
@@ -249,7 +274,7 @@ class Cqzcjzsy extends React.Component {
 									}
 									loopFind(dealTypeList.getIn([0,'childList']),valueList[3])
 									if (projectRange.size) {
-										dispatch(editCalculateActions.getJzsyProjectCardList(projectRange,'CqzcTemp',true))
+										dispatch(editCalculateActions.getJzsyProjectCardList(projectRange))
 									} else {
 										dispatch(editCalculateActions.changeEditCalculateCommonState('CqzcTemp', 'beProject',false))
 									}
@@ -293,7 +318,7 @@ class Cqzcjzsy extends React.Component {
 														dispatch(editCalculateActions.changeEditCalculateCommonState('CqzcTemp', 'projectCard', fromJS([{cardUuid,name,code}])))
 													}}
 													>
-													{projectList && projectList.filter(v => v.get('projectProperty') !== 'XZ_PRODUCE' && v.get('projectProperty') !== 'XZ_CONSTRUCTION').map((v, i) =>
+													{projectList && projectList.filter(v => v.get('code') !== 'COMNCRD' && v.get('projectProperty') !== 'XZ_PRODUCE' && v.get('projectProperty') !== 'XZ_CONSTRUCTION').map((v, i) =>
 														<Option
 															key={v.get('uuid')}
 															value={`${v.get('code')}${Limit.TREE_JOIN_STR}${v.get('name')}`}
@@ -306,7 +331,7 @@ class Cqzcjzsy extends React.Component {
 												{
 													<div className='chosen-word'
 														onClick={() => {
-															dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,true,'XZ_LOSS',true,true,true,true,1))
+															dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,false,'XZ_LOSS',true,true,true,true,1))
 															this.setState({
 																index:i,
 																showSingleModal:true
@@ -438,10 +463,10 @@ class Cqzcjzsy extends React.Component {
                     dispatch={dispatch}
                     showSingleModal={showSingleModal}
 					MemberList={memberList.filter(v => v.get('name') !== '生产项目' && v.get('name') !== '施工项目')}
-					thingsList={thingsList.filter(v => v.get('projectProperty') !== 'XZ_PRODUCE' && v.get('projectProperty') !== 'XZ_CONSTRUCTION')}
+					thingsList={thingsList.filter(v => v.get('projectProperty') !== 'XZ_PRODUCE' && v.get('projectProperty') !== 'XZ_CONSTRUCTION' && v.get('code') !== 'COMNCRD')}
                     selectThingsList={selectThingsList}
                     selectedKeys={selectedKeys === '' ? [`all${Limit.TREE_JOIN_STR}1`] : selectedKeys}
-                    stockCardList={projectCard ? fromJS([projectCard.toJS()]) : fromJS([])}
+                    stockCardList={fromJS([projectCard.toJS()])}
                     title={'选择项目'}
                     selectFunc={(item, cardUuid) => {
                         const code = item.code
@@ -454,7 +479,7 @@ class Cqzcjzsy extends React.Component {
 
                     selectListFunc={(uuid, level) => {
 						if(uuid === 'all'){
-							dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,true,'XZ_LOSS',true,true,true,true,1))
+							dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,false,'XZ_LOSS',true,true,true,true,1))
 						} else {
 							dispatch(editCalculateActions.getProjectSomeCardList(uuid,level,'',1))
 						}
@@ -472,7 +497,7 @@ class Cqzcjzsy extends React.Component {
                     cardPageObj={cardPageObj}
                     paginationCallBack={(value)=>{
                         if(selectTreeUuid === 'all'){
-                            dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,true,'XZ_LOSS',true,true,true,true,value))
+                            dispatch(editCalculateActions.getProjectAllCardList(projectRange,'showSingleModal',false,false,'XZ_LOSS',true,true,true,true,value))
                         } else {
                             dispatch(editCalculateActions.getProjectSomeCardList(selectTreeUuid,selectTreeLevel,'',value))
                         }

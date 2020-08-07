@@ -2,8 +2,9 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
-import { Select, Divider, Icon, Button, Modal,Tooltip, message } from 'antd'
+import { Select, Divider, Button, Modal,Tooltip, message } from 'antd'
 import XfnSelect from 'app/components/XfnSelect'
+import { Icon } from 'app/components'
 import { numberCalculate, formatMoney,formatFour, numberFourTest } from 'app/utils'
 const Option = Select.Option
 import * as Limit from 'app/constants/Limit.js'

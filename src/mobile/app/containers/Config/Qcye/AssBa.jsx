@@ -5,7 +5,7 @@ import * as qcyeActions from 'app/redux/Config/Qcye/qcye.action'
 import { TextInput, Icon, AmountInput } from 'app/components'
 import { formatMoney } from 'app/utils'
 import { Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @immutableRenderDecorator
 export default

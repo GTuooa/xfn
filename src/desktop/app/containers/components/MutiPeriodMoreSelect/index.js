@@ -2,8 +2,8 @@ import React from 'react'
 import moment from 'moment'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Select, Checkbox, DatePicker, Icon, message,Input }	from 'antd'
-import { XfnIcon } from 'app/components'
+import { Select, Checkbox, DatePicker, message,Input }	from 'antd'
+import { XfnIcon, Icon } from 'app/components'
 import { debounce } from 'app/utils'
 const { RangePicker } = DatePicker
 const { Option } = Select
@@ -158,29 +158,31 @@ class MutiPeriodMoreSelect extends React.Component {
 				break;
 			case 'DATE_DATE':
 				chooseSelect.push(
-					<RangePicker
-						disabledDate={disabledDate}
-						className='title-more-choose-month'
-						allowClear={false}
-						value={issuedate ? [moment(issuedate, dateFormat), moment(endissuedateValue, dateFormat)] : []}
-						format={dateFormat}
-						allowClear={false}
-						onChange={(value, dateString) => debounce(() =>{
-							if (dateString.length > 1) {
-								const begin = dateString[0]
-								let end = dateString[1]
-								if(begin.indexOf('Invalid') === -1){
-									if(end.indexOf('Invalid') > -1){
-										end = ''
+					<div className='title-more-data-to-data'>
+						<RangePicker
+							disabledDate={disabledDate}
+							className='title-more-choose-month'
+							allowClear={false}
+							value={issuedate ? [moment(issuedate, dateFormat), moment(endissuedateValue, dateFormat)] : []}
+							format={dateFormat}
+							allowClear={false}
+							onChange={(value, dateString) => debounce(() =>{
+								if (dateString.length > 1) {
+									const begin = dateString[0]
+									let end = dateString[1]
+									if(begin.indexOf('Invalid') === -1){
+										if(end.indexOf('Invalid') > -1){
+											end = ''
+										}
+										changePeriodCallback(begin,end)
+									}else{
+										message.info('日期格式错误，请刷新重试')
 									}
-									changePeriodCallback(begin,end)
-								}else{
-									message.info('日期格式错误，请刷新重试')
 								}
-							}
-						})()}
-						suffixIcon={<Icon type="down" />}
-					/>
+							})()}
+							suffixIcon={<Icon type="down" />}
+						/>
+					</div>
 				)
 				break;
 
@@ -190,10 +192,7 @@ class MutiPeriodMoreSelect extends React.Component {
 
 		return (
             <div className='common-data-change-box'>
-			{
-				chooseSelect
-			}
-
+				{chooseSelect}
 				<Select
                     className="title-more-choose"
 					dropdownMatchSelectWidth={false}

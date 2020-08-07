@@ -1,7 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Icon } from 'app/components'
 
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'

@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { toJS } from 'immutable'
 import { showMessage, configCheck } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 export const getAssestsListFetch = () => dispatch => {

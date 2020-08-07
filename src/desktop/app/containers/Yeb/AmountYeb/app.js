@@ -78,7 +78,6 @@ class AmountYeb extends React.Component {
         const isPlay = homeState.getIn(['views', 'isPlay'])
 
         return (
-            // <div className="wrap-body ammountyeb table-title-content">
             <ContainerWrap type="yeb-six" className="ammountyeb">
                 <FlexTitle>
                     <div className="flex-title-left">

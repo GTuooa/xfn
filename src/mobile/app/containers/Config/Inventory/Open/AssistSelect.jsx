@@ -3,7 +3,7 @@ import { toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Icon, Amount, Single } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @immutableRenderDecorator
 export default

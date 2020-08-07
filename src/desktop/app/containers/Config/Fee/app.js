@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 
-import { feeActions } from 'app/redux/Fee'
+// import { feeActions } from 'app/redux/Fee'
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'
-import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
-import { history } from 'app/containers/router.js'
+// import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
 
-import Tcgm from './Tcgm'
+// import Tcgm from './Tcgm'
 import Tcxq from './Tcxq'
 
 @connect(state => state)
@@ -34,8 +33,8 @@ class Fee extends React.Component {
         const currentPage = feeState.getIn(['views', 'currentPage'])
 
         const conponent = ({
-            'Tcxq': () => <Tcxq history={history}/>,
-            'Tcgm': () => <Tcgm history={history}/>
+            'Tcxq': () => <Tcxq />,
+            // 'Tcgm': () => <Tcgm />
         }[currentPage] || (() => <div></div>))()
 
         return conponent

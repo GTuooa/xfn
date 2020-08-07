@@ -5,7 +5,7 @@ import { Button, ButtonGroup, Icon } from 'app/components'
 import TaxConfig from './TaxConfig'
 import QueryTaxConfig from './QueryTaxConfig'
 
-import * as taxConfActions from 'app/redux/Config/Running/tax/taxConf.action'
+import * as taxConfActions from 'app/redux/Config/Running/Tax/taxConf.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 
 export default

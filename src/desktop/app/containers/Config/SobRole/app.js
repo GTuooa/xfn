@@ -7,7 +7,7 @@ import { ROOT, ROOTURL } from 'app/constants/fetch.constant.js'
 
 import { Button, Tooltip, Icon, Input, Modal } from 'antd'
 import { TableWrap, TableBody, TableTitle, TableItem, TableOver, TableAll, TableTree, ExportModal } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 

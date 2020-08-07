@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 import { toJS, Map }	from 'immutable'
 import { ButtonGroup, Button, Container, Row, ScrollView, Icon, SinglePicker, Amount } from 'app/components'
 import Jv from './Jv.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopMonthPicker } from 'app/containers/components'
 import './assMxb.less'
 

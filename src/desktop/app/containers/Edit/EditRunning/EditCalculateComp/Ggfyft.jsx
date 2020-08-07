@@ -392,7 +392,6 @@ class Ggfyft extends React.Component {
                                             if(insertOrModify === 'insert'){
                                                 dispatch(innerCalculateActions.changeEditCalculateCommonString('CommonCharge', 'tabName',e.target.value))
                                                 dispatch(editCalculateActions.getProjectShareList(oriDate,oriState,e.target.value))
-                                                dispatch(editCalculateActions.manageCheckboxCheckAll(true, paymentList,'jrJvUuid'))
                                             }
                                         }}
                                         value={tabName}

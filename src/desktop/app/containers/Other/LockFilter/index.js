@@ -3,7 +3,8 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import './style.less'
 import ScreenSaver from './ScreenSaver'
-import { Input, Button, message, Icon, Tooltip } from 'antd'
+import { Input, Button, message, Tooltip } from 'antd'
+import { Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 @immutableRenderDecorator

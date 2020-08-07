@@ -50,7 +50,7 @@ class Title extends React.Component {
 			cancelReceiveAble,
 			inputValue,
 			changeInputValue,
-			changeSearchValue,
+			// changeSearchValue,
 			onChangeLabel,
 			intelligentStatus
 		} = this.props
@@ -207,7 +207,7 @@ class Title extends React.Component {
 	                        //     key="cancel"
 							// 	download
 	                        //     style={{display: needDownLoad.length==1 && !download ? '' : 'none'}}
-	                        //     href="javascript:void(0);"
+	                        //     href="#"
 	                        //     onClick={() => {
 							// 		dispatch(fjglActions.fjglDownloadEnclosure(needDownLoad[0]['url'], needDownLoad[0]['fileName']))
 	                        //         this.setState({download: true})

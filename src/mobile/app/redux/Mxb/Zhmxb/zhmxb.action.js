@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account'
 import * as ActionTypes from './ActionTypes.js'
 import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import { pushVouhcerToLrpzReducer } from 'app/redux/Search/Cxpz/cxpz.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 
@@ -137,20 +137,20 @@ export const getDetailList = (categorValue, issuedate, curPage,accountUuid,endis
 
 }
 
-export const getCalculateListInfo = (issuedate)  => (dispatch, getState) => {
-const zhmxState = getState().zhmxbState
-  fetchApi('getRunningSettingInfo', 'GET', '', json => {
-    let hideCategoryList = []
-    if (showMessage(json)) {
-      json.data.hideCategoryList.map(item => {
-        if (item.categoryType !== 'LB_SFGL')
-          hideCategoryList.push(item)
-      })
-      dispatch({type: ActionTypes.INIT_DETAIL_ACCOUNT_LIST, hideCategoryList: hideCategoryList})
-    }
-  })
+// export const getCalculateListInfo = (issuedate)  => (dispatch, getState) => {
+// const zhmxState = getState().zhmxbState
+//   fetchApi('getRunningSettingInfo', 'GET', '', json => {
+//     let hideCategoryList = []
+//     if (showMessage(json)) {
+//       json.data.hideCategoryList.map(item => {
+//         if (item.categoryType !== 'LB_SFGL')
+//           hideCategoryList.push(item)
+//       })
+//       dispatch({type: ActionTypes.INIT_DETAIL_ACCOUNT_LIST, hideCategoryList: hideCategoryList})
+//     }
+//   })
 
-}
+// }
 export const getDetailsListInfo = (issuedate,endissuedate,accountUuid='',defaultCategory = false) => (dispatch, getState) => {
   const zhmxState = getState().zhmxbState
   const aUuid = accountUuid ? accountUuid=== '全部' ? '' : accountUuid.split(Limit.TREE_JOIN_STR)[0] : ''
@@ -172,18 +172,18 @@ export const getDetailsListInfo = (issuedate,endissuedate,accountUuid='',default
   })
 }
 
-export const changeDetailAccountCommonString = (tab, place, value) => (dispatch) => {
-  let placeArr = typeof place === 'string'
-    ? [`${tab}Temp`, place]
-    : [
-      `${tab}Temp`, ...place
-    ]
-  if (place[0] === 'flags') {
-    placeArr = place
-  }
-  dispatch({type: ActionTypes.CHANGE_ZH_DETAIL_ACCOUNT_COMMON_STRING, tab, placeArr, value})
+// export const changeDetailAccountCommonString = (tab, place, value) => (dispatch) => {
+//   let placeArr = typeof place === 'string'
+//     ? [`${tab}Temp`, place]
+//     : [
+//       `${tab}Temp`, ...place
+//     ]
+//   if (place[0] === 'flags') {
+//     placeArr = place
+//   }
+//   dispatch({type: ActionTypes.CHANGE_ZH_DETAIL_ACCOUNT_COMMON_STRING, tab, placeArr, value})
 
-}
+// }
 
 export const getBusinessDetail = (history,item, issuedate,endissuedate) => (dispatch) => {
   thirdParty.toast.loading(Limit.LOADING_TIP_TEXT, 0)
@@ -234,10 +234,10 @@ export const getBusinessDetail = (history,item, issuedate,endissuedate) => (disp
 
 }
 
-export const changeZhmxMorePeriods = (chooseperiods) => ({
-	type: ActionTypes.CHANGE_ZHMX_MORE_PERIODS,
-	chooseperiods
-})
+// export const changeZhmxMorePeriods = (chooseperiods) => ({
+// 	type: ActionTypes.CHANGE_ZHMX_MORE_PERIODS,
+// 	chooseperiods
+// })
 
 export const accountDetailTriangleSwitch = (showChild, uuid) => ({
     type: ActionTypes.ZHMX_DETAIL_TRIANGLE_SWITCH,

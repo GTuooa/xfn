@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 import { showMessage } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 
 export const getPeriodAndFCMxbAclistFetch = (issuedate, endissuedate, fcNumber,currentPage, acid) => dispatch => {
@@ -11,10 +11,10 @@ export const getPeriodAndFCMxbAclistFetch = (issuedate, endissuedate, fcNumber,c
 		allActions.getPeriodFetch('', dispatch, (issuedate) => dispatch(getFCMxbAclistFetch(issuedate, issuedate,fcNumber ,currentPage, acid)))
 	} else if (issuedate === 'NO_VALID_ISSUE_DATE') {
 		dispatch({
-			type: ActionTypes.INIT_AMMXB
+			type: ActionTypes.INIT_FCMXB
 		})
 	} else {
-		allActions.refreshPeriodHandle(issuedate, dispatch, (issuedate) => dispatch(getFCMxbAclistFetch(issuedate, endissuedate ,fcNumber , currentPage,acid)), () => dispatch({type: ActionTypes.INIT_AMMXB}))
+		allActions.refreshPeriodHandle(issuedate, dispatch, (issuedate) => dispatch(getFCMxbAclistFetch(issuedate, endissuedate ,fcNumber , currentPage,acid)), () => dispatch({type: ActionTypes.INIT_FCMXB}))
 	}
 }
 

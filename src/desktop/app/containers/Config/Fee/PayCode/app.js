@@ -12,9 +12,9 @@ class PayCodeHome extends React.Component {
 	render() {
 
 		// 从路由地址获取提交的订单信息
-		const href = location.href
+		const href = window.location.href
 		const start = href.indexOf('?')
-		let serverMessage = location.href.slice(start+1).split('&')
+		let serverMessage = window.location.href.slice(start+1).split('&')
 		const corpId = serverMessage[0].slice(7)
 		const ddUserId = serverMessage[1].slice(9)
 		const orderNo = serverMessage[2].slice(8)

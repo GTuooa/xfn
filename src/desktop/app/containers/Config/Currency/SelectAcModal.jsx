@@ -1,7 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Tag, Icon, Tabs, Tree, Modal } from 'antd'
+import { Tag, Tabs, Tree, Modal } from 'antd'
+import { Icon } from 'app/components'
 const TabPane = Tabs.TabPane
 import Trees from './Trees.jsx'
 import * as Limit from 'app/constants/Limit.js'

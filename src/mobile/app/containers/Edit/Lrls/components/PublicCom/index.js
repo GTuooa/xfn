@@ -1,18 +1,21 @@
 import React, { Component }  from 'react'
 import { toJS, fromJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 import { Row, SinglePicker, Icon, SwitchText, TreeSelect, Single } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
+import { connect }	from 'react-redux'
 
+@connect(state => state)
 export default
 class Account extends Component {
-    static contextTypes = { router: PropTypes.object }
+    // static contextTypes = { router: PropTypes.object }
 
     render() {
 
-        const { accountList, accountUuid, accountName, onOk, history, noInsert } = this.props
-        const { router } = this.context
+        const { dispatch, accountList, accountUuid, accountName, onOk, history, noInsert } = this.props
+        // const { router } = this.context
 
         let dataList = accountList.toJS()
         if (!noInsert) {//查询流水中的账户不需要新增
@@ -26,7 +29,7 @@ class Account extends Component {
                 value={`${accountUuid}${Limit.TREE_JOIN_STR}${accountName}`}
                 onOk={value => {
                     if (value.value.split(Limit.TREE_JOIN_STR)[0]=='insert') {
-                        router.history.push('/lrls-account')
+                        dispatch(push('/lrls-account'))
                         return
                     }
                     onOk(value.value)

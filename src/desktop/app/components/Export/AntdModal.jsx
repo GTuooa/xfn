@@ -3,14 +3,16 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Button, Modal, Radio, message } from 'antd'
 // import thirdparty from 'app/utils/thirdparty'
 import '../ExportModal/exportmodal.less'
-const RadioGroup = Radio.Group;
+
 import fetch from 'isomorphic-fetch'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
+
+const RadioGroup = Radio.Group;
 
 // PDF或Excel导出
 @immutableRenderDecorator
-export default
-class Export extends React.Component{
+
+class AntdModal extends React.Component{
     constructor() {
 		super()
 		this.state = {valueFirst: 1, valueSecond: 1, download: false, valuePdfType: 1, valueAcType: 1}
@@ -237,7 +239,6 @@ class Export extends React.Component{
         const moreContain = ({
             // 科目余额表
             'third': () => {
-
                 if (PDFSelect && (valueFirst === 2 || valueFirst === 3)) {
                     return <li>
                         <span>导出内容：</span>
@@ -294,109 +295,109 @@ class Export extends React.Component{
         })()
 
 		return (
+            <Modal
+                visible={modalVisible}
+                title={'温馨提示'}
+                onCancel={() => {
+                    onClosedModal()
+                }}
+                footer={[
+                    <a
+                        className='export-download'
+                        style={{display: download ? 'none' : ''}}
+                        key="cancel"
+                        // href={href}
+                        onClick={() => {
+                            this.setState({download: true})
+                            setTimeout(() => this.setState({download: false}), 15000)
 
-                <Modal
-                    visible={modalVisible}
-                    title={'温馨提示'}
-                    onCancel={() => {
-                        onClosedModal()
-                    }}
-                    footer={[
-                        <a
-                            className='export-download'
-                            style={{display: download ? 'none' : ''}}
-                            key="cancel"
-                            // href={href}
-                            onClick={() => {
-                                this.setState({download: true})
-                                setTimeout(() => this.setState({download: false}), 15000)
 
-
-                                const option = {
-                                    credentials: 'include'
-                                }
-                                fetch(href, option)
-                                .then(res => {
-                                    if (res.status === 200) {
-                                        return res.json()
-                                    } else {
-                                        return {
-                                            code: '-2',
-                                            message: `通信异常，服务器返回码${res.status}`
-                                        }
+                            const option = {
+                                credentials: 'include'
+                            }
+                            fetch(href, option)
+                            .then(res => {
+                                if (res.status === 200) {
+                                    return res.json()
+                                } else {
+                                    return {
+                                        code: '-2',
+                                        message: `通信异常，服务器返回码${res.status}`
                                     }
-                                })
-                                .catch(err => {
-                                    // console.log(err);
-                                    window.location.href = href
-                                }).then(json => {
-                                    if (json) {
-                                        if (json.code) {
-                                            thirdParty.Alert(json.message)
-                                            return false
-                                        }
-                                    }
-                                })
-                            }}
-                            >
-                            下载至本地
-                        </a>,
-                        <a
-                            className='export-download export-download-wait'
-                            style={{display: download ? '' : 'none'}}
-                            key="wait"
-                            >
-                            请等待
-                        </a>,
-                        <a
-                            key="ok"
-                            // type='ghost'
-                            className='export-download'
-                            onClick={() => {
-                                // 导出到联系人
-                                // thirdparty.choose({
-                                //     multiple: true,
-                                //     users: [],
-                                //     max: 1500,
-                                //     onSuccess: (resultlist) => {
-                                //         resultlist = resultlist.map(v => {
-                                //             v.emplId = v.emplId.toString()
-                                //             return v.emplId
-                                //         })
-                                //         ddCallback(resultlist)
-                                //         this.setState({modalVisible: false})
-                                //     },
-                                //     onFail: (err) => {
-                                //         thirdparty.alert("此功能尚不稳定请回到首页刷新")
-                                //     }
-                                // })
-                                if (!ddCallback) {
-                                    onErrorSendMsg(type, valueFirst, valueSecond)
-                                    message.error('发至我的“工作通知”异常，已通知开发人员')
                                 }
+                            })
+                            .catch(err => {
+                                // console.log(err);
+                                window.location.href = href
+                            }).then(json => {
+                                if (json) {
+                                    if (json.code) {
+                                        thirdParty.Alert(json.message)
+                                        return false
+                                    }
+                                }
+                            })
+                        }}
+                        >
+                        下载至本地
+                    </a>,
+                    <a
+                        className='export-download export-download-wait'
+                        style={{display: download ? '' : 'none'}}
+                        key="wait"
+                        >
+                        请等待
+                    </a>,
+                    <a
+                        key="ok"
+                        // type='ghost'
+                        className='export-download'
+                        onClick={() => {
+                            // 导出到联系人
+                            // thirdparty.choose({
+                            //     multiple: true,
+                            //     users: [],
+                            //     max: 1500,
+                            //     onSuccess: (resultlist) => {
+                            //         resultlist = resultlist.map(v => {
+                            //             v.emplId = v.emplId.toString()
+                            //             return v.emplId
+                            //         })
+                            //         ddCallback(resultlist)
+                            //         this.setState({modalVisible: false})
+                            //     },
+                            //     onFail: (err) => {
+                            //         thirdparty.alert("此功能尚不稳定请回到首页刷新")
+                            //     }
+                            // })
+                            if (!ddCallback) {
+                                onErrorSendMsg(type, valueFirst, valueSecond)
+                                message.error('发至我的“工作通知”异常，已通知开发人员')
+                            }
 
-                                ddCallback && ddCallback('')
-                                // this.setState({modalVisible: false})
-                                onClosedModal()
-                            }}>
-                            发至我的“工作通知”
-                        </a>
-                    ]}
-                    >
-                    <ul className="export-tiplist-tip">
-                        <li>当导出数据较多时，生成文件耗时较长，建议选择‘发至我的“工作通知”’，文件生成后将以消息的形式发送给您。</li>
-                        <li>{this.props.children}</li>
-                    </ul>
-                    <ul className="export-radiogroup">
-                        <li>
-                            <span>导出方式：</span>
-                            {patternContain}
-                        </li>
-                        {exportContain}
-                        {moreContain}
-                    </ul>
-                </Modal>
-
+                            ddCallback && ddCallback('')
+                            // this.setState({modalVisible: false})
+                            onClosedModal()
+                        }}>
+                        发至我的“工作通知”
+                    </a>
+                ]}
+                >
+                <ul className="export-tiplist-tip">
+                    <li>当导出数据较多时，生成文件耗时较长，建议选择‘发至我的“工作通知”’，文件生成后将以消息的形式发送给您。</li>
+                    <li>{this.props.children}</li>
+                </ul>
+                <ul className="export-radiogroup">
+                    <li>
+                        <span>导出方式：</span>
+                        {patternContain}
+                    </li>
+                    {exportContain}
+                    {moreContain}
+                </ul>
+            </Modal>
 		)
 	}
 }
+
+export default AntdModal;

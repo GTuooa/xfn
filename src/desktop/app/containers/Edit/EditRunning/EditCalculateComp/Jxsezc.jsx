@@ -4,7 +4,7 @@ import { toJS, fromJS } from 'immutable'
 
 import * as Limit from 'app/constants/Limit.js'
 import XfnInput from 'app/components/Input'
-import { DatePicker, Input, Select, Checkbox, Radio, Switch, message, Tooltip } from 'antd'
+import { DatePicker, Input, Select, Checkbox, Radio, Switch, message } from 'antd'
 import NumberInput from 'app/components/Input'
 import XfIcon from 'app/components/Icon'
 import XfnSelect from 'app/components/XfnSelect'
@@ -83,7 +83,6 @@ class Jxsezc extends React.Component {
         const propertyCostList = categoryMessage.get('propertyCostList')
         const projectRange = categoryMessage.get('projectRange')
         const categoryType = categoryMessage.get('categoryType')
-        const newProjectRange = categoryMessage.get('newProjectRange')
         const usedProject = TaxTransferTemp.get('usedProject')
 
 		const memberList = commonCardObj.get('memberList')
@@ -107,12 +106,6 @@ class Jxsezc extends React.Component {
 			'XZ_SALE':'销售费用',
 			'XZ_MANAGE':'管理费用',
 			'XZ_FINANCE':'财务费用',
-			'XZ_SCCB':'生产成本',
-            'XZ_FZSCCB':'辅助生产成本',
-            'XZ_ZZFY':'制造费用',
-            'XZ_HTCB':'合同成本',
-            'XZ_JJFY':'间接费用',
-            'XZ_JXZY':'机械作业',
 			'':''
 		}[propertyCost]
 		let totalAmount = 0
@@ -139,7 +132,7 @@ class Jxsezc extends React.Component {
 		})
 		}
 		const yysrCategory = runningCategory.getIn([0,'childList']).filter((item) => {
-			return item.get('categoryType') === 'LB_YYZC' || item.get('categoryType') === 'LB_FYZC' || item.get('categoryType') === 'LB_CQZC' || item.get('categoryType') === 'LB_YYWZC'
+			return item.get('categoryType') === 'LB_YYZC' || item.get('categoryType') === 'LB_FYZC' || item.get('categoryType') === 'LB_CQZC'
 		})
 		let costDealType = []
 		const loop = data => data.map(item => {
@@ -156,18 +149,6 @@ class Jxsezc extends React.Component {
 		loop(yysrCategory)
 
 		let totalSeAmount = 0
-
-		let needCommonCard = false,needIndirect = false,needMechanical = false,needAssist = false,needMake = false
-		if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_FW' || categoryType === 'LB_FYZC'){
-			needCommonCard = true,needIndirect = true,needMechanical = true,needAssist = true,needMake = true
-		}
-		if(categoryType === 'LB_YYWZC'){
-			needCommonCard = true
-		}
-
-		const filterProjectList = categoryType === 'LB_CQZC' ? projectList ? projectList.filter(v => v.get('projectProperty') == 'XZ_LOSS') : fromJS([]) : projectList
-		const filterMemberList = categoryType === 'LB_CQZC' ? memberList ? memberList.filter(v => v.get('name') == '损益项目') : fromJS([]) : memberList
-		const filterThingsList = categoryType === 'LB_CQZC' ? thingsList ? thingsList.filter(v => v.get('projectProperty') == 'XZ_LOSS') : fromJS([]) : thingsList
 
 		return (
 			<div className="accountConf-modal-list accountConf-modal-list-hidden">
@@ -255,7 +236,6 @@ class Jxsezc extends React.Component {
                                 dispatch(editCalculateActions.getCategoryMessage(valueList[0]))
 
 								dispatch(innerCalculateActions.changeEditCalculateCommonString('TaxTransfer','stockCardList', fromJS([{cardUuid:'',name:'',code:'',amount:''}])))
-								dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'projectCard', fromJS([{ cardUuid: '', code: '', name: '' }])))
 								dispatch(innerCalculateActions.changeEditCalculateCommonString('TaxTransfer','taxTransferList', fromJS([])))
 							}}
 							>
@@ -269,9 +249,8 @@ class Jxsezc extends React.Component {
 						</Select>
 					</div>
                     {
-                        // propertyCarryover !== 'SX_HW' && categoryType !== 'LB_CQZC' &&
-						categoryType === 'LB_CQZC'  && newProjectRange.some(v => v.get('name') === '损益项目') ||
-						categoryType !== 'LB_CQZC' && (beProject && insertOrModify === 'insert' || ((projectCard && projectCard.get('cardUuid') || beProject)  && insertOrModify === 'modify')) ?
+                        propertyCarryover !== 'SX_HW' && categoryType !== 'LB_CQZC' &&
+						(beProject && insertOrModify === 'insert' || ((projectCard && projectCard.get('cardUuid') || beProject)  && insertOrModify === 'modify')) ?
 						<Switch
 							className="use-unuse-style lrls-jzsy-box"
 							style={{ margin: '.1rem 0 0 .2rem' }}
@@ -279,11 +258,8 @@ class Jxsezc extends React.Component {
 							checkedChildren={'项目'}
 							unCheckedChildren={'项目'}
 							onChange={() => {
-								if (!usedProject ) {
-									insertOrModify === 'insert' && dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'projectCard', fromJS([{ cardUuid: '', code: '', name: '' }])))
-
-								}else{
-									dispatch(editCalculateActions.changeEditCalculateCommonState(position,'propertyCost',propertyCostList.size === 1 ? propertyCostList.get(0) : ''))
+								if (!usedProject && insertOrModify === 'insert') {
+									dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'projectCard', fromJS([{ cardUuid: '', code: '', name: '' }])))
 								}
 								dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'usedProject', !usedProject))
 							}}
@@ -295,49 +271,29 @@ class Jxsezc extends React.Component {
 					<div className="edit-running-modal-list-item">
 						<label>费用性质：</label>
 						<div>
-							<Tooltip title={
+							<Select
+								value={propertyCostName}
+								onChange={value => {
+									dispatch(editCalculateActions.changeEditCalculateCommonState(position,'propertyCost',value))
+								}}
+							>
 								{
-									XZ_SCCB:`已选择生产项目`,
-									XZ_FZSCCB:`已选择"辅助生产成本"项目`,
-									XZ_ZZFY:`已选择"制造费用"项目`,
-									XZ_JJFY:`已选择"间接费用"项目`,
-									XZ_JXZY:`已选择"机械作业"项目`,
-									XZ_HTCB:`已选择施工项目`
-								}[propertyCost] || ''}
-								placement='topLeft'
-								>
-								<Select
-									disabled={
-										propertyCost === 'XZ_SCCB' ||
-										propertyCost === 'XZ_FZSCCB' ||
-										propertyCost === 'XZ_ZZFY' ||
-										propertyCost === 'XZ_JJFY' ||
-										propertyCost === 'XZ_JXZY' ||
-										propertyCost === 'XZ_HTCB'
-									}
-									value={propertyCostName}
-									onChange={value => {
-										dispatch(editCalculateActions.changeEditCalculateCommonState(position,'propertyCost',value))
-									}}
-								>
-									{
-										propertyCostList && propertyCostList.size?
-										propertyCostList.map((v, i) =>{
-											const name ={
-												XZ_SALE:'销售费用',
-												XZ_MANAGE:'管理费用',
-												XZ_FINANCE:'财务费用'
-											}[v]
-											return <Option key={i} value={v}>
-												{name}
-											</Option>
-										})
-										:
-										null
-									}
+									propertyCostList && propertyCostList.size?
+									propertyCostList.map((v, i) =>{
+										const name ={
+											XZ_SALE:'销售费用',
+											XZ_MANAGE:'管理费用',
+											XZ_FINANCE:'财务费用'
+										}[v]
+										return <Option key={i} value={v}>
+											{name}
+										</Option>
+									})
+									:
+									null
+								}
 
-								</Select>
-							</Tooltip>
+							</Select>
 						</div>
 					</div> : ''
 				}
@@ -359,54 +315,30 @@ class Jxsezc extends React.Component {
 					</div>
 				</div>
 				{
-					// propertyCarryover !== 'SX_HW' && categoryType !== 'LB_CQZC' &&
-					categoryType === 'LB_CQZC'  && newProjectRange.some(v => v.get('name') === '损益项目') && usedProject ||
-					categoryType !== 'LB_CQZC'  && ( usedProject && (beProject && insertOrModify === 'insert' || ((projectCard && projectCard.get('cardUuid') || beProject) && insertOrModify === 'modify')) )?
+					propertyCarryover !== 'SX_HW' && categoryType !== 'LB_CQZC' && usedProject &&
+					(beProject && insertOrModify === 'insert' || ((projectCard && projectCard.get('cardUuid') || beProject) && insertOrModify === 'modify')) ?
 					<div className="edit-running-modal-list-item" >
 						<label>项目：</label>
 						<div className='chosen-right'>
 							<Select
 								combobox
 								showSearch
-								value={`${projectCard.get('code') !== 'COMNCRD'  && projectCard.get('code') !== 'INDIRECT' && projectCard.get('code') !== 'MECHANICAL' && projectCard.get('code') !== 'ASSIST' && projectCard.get('code') !== 'MAKE' && projectCard.get('code') ? projectCard.get('code') : ''} ${projectCard.get('name') ? projectCard.get('name') : ''}`}
+								value={`${projectCard.get('code') !== 'COMNCRD' && projectCard.get('code') ? projectCard.get('code') : ''} ${projectCard.get('name') ? projectCard.get('name') : ''}`}
 								onChange={(value,options) => {
 									const valueList = value.split(Limit.TREE_JOIN_STR)
 									const cardUuid = options.props.uuid
 									const code = valueList[0]
 									const name = valueList[1]
 									dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'projectCard', fromJS({ cardUuid, name, code })))
-									switch(code) {
-										case 'ASSIST':
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_FZSCCB'))
-											break
-										case 'MAKE':
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_ZZFY'))
-											break
-										case 'INDIRECT':
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_JJFY'))
-											break
-										case 'MECHANICAL':
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_JXZY'))
-											break
-										default:
-											if (options.props.projectProperty === 'XZ_PRODUCE') {
-												dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_SCCB'))
-											}else if (options.props.projectProperty === 'XZ_CONSTRUCTION') {
-												dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_HTCB'))
-											} else if (propertyCost !== 'XZ_FINANCE' && propertyCost !== 'XZ_MANAGE' && propertyCost !== 'XZ_SALE') {
-												propertyCost && dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', propertyCostList.get(0)))
-											}
-									}
 								}}
 							>
-								{filterProjectList && filterProjectList.map((v, i) =>
+								{projectList && projectList.filter(v => v.get('code') !== 'COMNCRD').map((v, i) =>
 									<Option
 										key={v.get('uuid')}
 										value={`${v.get('code')}${Limit.TREE_JOIN_STR}${v.get('name')}`}
 										uuid={v.get('uuid')}
-										projectProperty={v.get('projectProperty')}
 									>
-										{`${v.get('code') !== 'COMNCRD' && v.get('code') !== 'INDIRECT' && v.get('code') !== 'MECHANICAL' && v.get('code') !== 'ASSIST' && v.get('code') !== 'MAKE' ? v.get('code') : ''} ${v.get('name')}`}
+										{`${v.get('code') !== 'COMNCRD' ? v.get('code') : ''} ${v.get('name')}`}
 									</Option>
 								)}
 							</Select>
@@ -414,8 +346,7 @@ class Jxsezc extends React.Component {
 								<div className='chosen-word'
 									onClick={() => {
 										dispatch(editCalculateActions.changeEditCalculateCommonState('commonCardObj', 'modalName', 'singleModalProject'))
-
-										dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',false,needCommonCard,'',needIndirect,needMechanical,needAssist,needMake,1))
+										dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',false,true))
 
 									}}>选择</div>
 							}
@@ -592,40 +523,17 @@ class Jxsezc extends React.Component {
 					<StockSingleModal
 						dispatch={dispatch}
 						showSingleModal={showSingleModal}
-						MemberList={filterMemberList}
-						thingsList={filterThingsList}
+						MemberList={memberList}
+						thingsList={thingsList}
 						selectedKeys={selectedKeys === '' ? [`all${Limit.TREE_JOIN_STR}1`] : selectedKeys}
 						stockCardList={stockCardList}
 						title={modalName === 'singleModalStock' ? '选择存货' : '选择项目'}
 						selectFunc={(item, cardUuid) => {
 							const code = item.code
 							const name = item.name
-							const projectProperty = item.projectProperty
 							if (modalName === 'singleModalStock') {
 								dispatch(innerCalculateActions.changeEditCalculateCommonString('TaxTransfer', ['stockCardList', selectI], fromJS({ cardUuid, name, code,amount:''})))
 							} else {
-								switch(code) {
-									case 'ASSIST':
-										dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_FZSCCB'))
-										break
-									case 'MAKE':
-										dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_ZZFY'))
-										break
-									case 'INDIRECT':
-										dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_JJFY'))
-										break
-									case 'MECHANICAL':
-										dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_JXZY'))
-										break
-									default:
-										if (projectProperty === 'XZ_PRODUCE') {
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_SCCB'))
-										}else if (projectProperty === 'XZ_CONSTRUCTION') {
-											dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', 'XZ_HTCB'))
-										} else if (propertyCost !== 'XZ_FINANCE' && propertyCost !== 'XZ_MANAGE' && propertyCost !== 'XZ_SALE') {
-											propertyCost && dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'propertyCost', propertyCostList.get(0)))
-										}
-								}
 								dispatch(editCalculateActions.changeEditCalculateCommonState(position, 'projectCard', fromJS({ cardUuid, name, code })))
 							}
 							dispatch(editCalculateActions.changeEditCalculateCommonState('commonCardObj', 'showSingleModal', false))
@@ -646,9 +554,8 @@ class Jxsezc extends React.Component {
 									dispatch(editCalculateActions.getStockCategoryList(categoryMessage.getIn(['acBusinessExpense','stockRange']),false,1))
 								}
 							} else {
-
 								if (uuid === 'all') {
-									dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',true,needCommonCard,'',needIndirect,needMechanical,needAssist,needMake,1))
+									dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',true,true,'',false,false,false,false,1))
 								} else {
 									dispatch(editCalculateActions.getProjectSomeCardList(uuid, level,'',1))
 								}
@@ -665,7 +572,7 @@ class Jxsezc extends React.Component {
 								}
 							} else {
 								if (selectTreeUuid === 'all') {
-									dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',true,needCommonCard,'',needIndirect,needMechanical,needAssist,needMake,value))
+									dispatch(editCalculateActions.getProjectAllCardList(projectRange, 'showSingleModal',true,true,'',false,false,false,false,value))
 								} else {
 									dispatch(editCalculateActions.getProjectSomeCardList(selectTreeUuid,selectTreeLevel,'',value))
 								}

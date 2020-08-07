@@ -127,7 +127,7 @@ class RunningTypeYeb extends React.Component {
 					totalBalance={totalBalance}
 					showChildList={showChildList}
 					chooseValue={chooseValue}
-					paginationCallBack={value => dispatch(runningTypeYebActions.getRunningTypeYebMxbListFromPage(issuedate, endissuedate,value))}
+					// paginationCallBack={value => dispatch(runningTypeYebActions.getRunningTypeYebMxbListFromPage(issuedate, endissuedate,value))}
 				/>
 
 			</ContainerWrap>

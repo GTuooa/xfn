@@ -1,6 +1,6 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { feeActions } from 'app/redux/Fee'
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'

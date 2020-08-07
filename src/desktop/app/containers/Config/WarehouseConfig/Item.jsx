@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { Checkbox, Icon, Switch }	from 'antd'
+import { Checkbox, Switch }	from 'antd'
+import { Icon } from 'app/components'
 import { TableItem, TableOver } from 'app/components'
 
 import * as warehouseConfigActions from 'app/redux/Config/warehouseConfig/warehouseConfig.action'

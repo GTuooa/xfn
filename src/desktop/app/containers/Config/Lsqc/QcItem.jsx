@@ -2,8 +2,8 @@ import React from 'react'
 import {immutableRenderDecorator} from 'react-immutable-render-mixin'
 import { formatNum, formatMoney, numberTest } from 'app/utils'
 
-import { Icon, message, Input } from 'antd'
-import { TableItem, Amount} from 'app/components'
+import { message, Input } from 'antd'
+import { TableItem, Amount, Icon } from 'app/components'
 import NumberInput from 'app/components/Input'
 
 import * as accountConfActions from 'app/redux/Config/Account/account.action'

@@ -1,7 +1,7 @@
 import React, { PropTypes }	from 'react'
 import { connect }	from 'react-redux'
 import { toJS, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import '../../style/index.less'
 

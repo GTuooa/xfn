@@ -1,14 +1,13 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Button, Modal, Radio, Tooltip } from 'antd'
+import { Radio, Tooltip } from 'antd'
 // import thirdparty from 'app/utils/thirdparty'
 import '../ExportModal/exportmodal.less'
-
 import AntdModal from './AntdModal'
 
 // PDF或Excel导出
 @immutableRenderDecorator
-export default
+
 class Export extends React.Component{
     constructor() {
 		super()
@@ -89,3 +88,5 @@ class Export extends React.Component{
 		)
 	}
 }
+
+export default Export;

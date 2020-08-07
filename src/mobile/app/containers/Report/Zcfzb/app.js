@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { fromJS, toJS, Map } from 'immutable'
 import { connect }	from 'react-redux'
 import * as zcfzbActions from 'app/redux/Report/Zcfzb/zcfzb.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { Icon, Container, ScrollView, Row }	from 'app/components'
 import { TopMonthPicker } from 'app/containers/components'

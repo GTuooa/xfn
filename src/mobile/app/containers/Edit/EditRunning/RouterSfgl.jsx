@@ -5,7 +5,7 @@ import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, XfInput 
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 
 import { decimal, DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopDatePicker } from 'app/containers/components'
 
 

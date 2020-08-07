@@ -9,8 +9,9 @@ import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action.js'
 import * as middleActions from 'app/redux/Home/middle.action.js'
 
 import TabTitle from 'app/containers/components/TabTitle/index.js'
-import * as thirdParty from 'app/thirdParty'
-import { Button, Tooltip, Icon, Input } from 'antd'
+import thirdParty from 'app/thirdParty'
+import { Button, Tooltip, Input } from 'antd'
+import { Icon } from 'app/components'
 import './style.less'
 
 function chooseLib(list, callback) {
@@ -165,20 +166,13 @@ class CompanySettings extends React.Component {
                                     if (userInfo.get('sobNumber') > userInfo.get('usedSobNumber')) { // 有账套余额
                                         dispatch(homeActions.changeLoginGuideString('firstToSecurity', false))
                                         dispatch(homeActions.changeLoginGuideString('firstToSobInsert', true))
-                                        // dispatch(sobConfigActions.beforeHomeInsertOrModifySob(history))
-                                        // if (GLCanUse ) {
-
-                                            dispatch(homeActions.addPageTabPane('ConfigPanes', 'SobOption', 'SobOption', '账套新增'))
-                                            dispatch(homeActions.addHomeTabpane('Config', 'SobOption', '账套新增'))
-                                            setTimeout(() => dispatch(middleActions.sobOptionInit('', ()=>{})), 100)
+                                        dispatch(homeActions.addPageTabPane('ConfigPanes', 'SobOption', 'SobOption', '账套新增'))
+                                        dispatch(homeActions.addHomeTabpane('Config', 'SobOption', '账套新增'))
+                                        setTimeout(() => dispatch(middleActions.sobOptionInit('', ()=>{})), 100)
                                             
-                                        // } else {
-                                        // 	thirdParty.Alert('总账已到期，不能创建账套')
-                                        // }
                                     } else {
                                         dispatch(homeActions.changeLoginGuideString('firstToSecurity', false))
                                         dispatch(homeActions.changeLoginGuideString('firstToSob', true))
-                                        // history.push('/config/sob')
                                         dispatch(homeActions.addPageTabPane('ConfigPanes', 'Sob', 'Sob', '账套设置'))
                                         dispatch(homeActions.addHomeTabpane('Config', 'Sob', '账套设置'))
                                     }

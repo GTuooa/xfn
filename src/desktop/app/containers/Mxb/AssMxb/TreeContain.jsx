@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import Trees from './Trees.jsx'
-import { Select, Icon }  from 'antd'
+import { Select }  from 'antd'
+import { Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 import * as assmxbActions from 'app/redux/Mxb/AssMxb/assMxb.action.js'
 

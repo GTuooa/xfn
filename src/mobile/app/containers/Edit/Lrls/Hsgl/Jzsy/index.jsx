@@ -8,7 +8,7 @@ import { CategoryCom, ProjectCom, UploadFj  } from '../../components'
 import { jzsyAccountActions } from 'app/redux/Edit/Lrls/Hsgl/jzsyAccount'
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

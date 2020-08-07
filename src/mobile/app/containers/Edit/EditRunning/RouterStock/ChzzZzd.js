@@ -4,7 +4,7 @@ import { Row, Amount, XfInput, Single, Icon, ChosenPicker, Multiple } from 'app/
 import AssistSelect from './AssistSelect.jsx'
 
 import { decimal } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunningConfig.action.js'
 

@@ -6,7 +6,7 @@ import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 
 import * as allActions from 'app/redux/Home/All/aclist.actions'
 import { Cascade, ButtonGroup, Button, Container, Row, ScrollView, Icon } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import Title from './Title'
 import Ac from './Ac'
 import './ac-config.less'

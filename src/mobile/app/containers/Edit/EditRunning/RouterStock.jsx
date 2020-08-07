@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 
 import { Button, ButtonGroup, Container, Row, ScrollView, Single, Icon, Amount, TextListInput, ChosenPicker } from 'app/components'
 
-import { decimal } from 'app/utils'
+
 import Chdb from './RouterStock/Chdb.js'
 import Jzcb from './RouterStock/Jzcb.js'
 import Chtrxm from './RouterStock/Chtrxm.js'
@@ -14,7 +14,7 @@ import ChzzZzd from './RouterStock/ChzzZzd.js'
 import Chye from './RouterStock/Chye.js'
 import Xmjz from './RouterStock/Xmjz.js'
 import AssistSelect from './RouterStock/AssistSelect.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunning from 'app/constants/editRunning.js'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunningConfig.action.js'

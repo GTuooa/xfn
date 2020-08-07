@@ -1,7 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon } from 'antd'
+import { Icon } from 'app/components'
 import * as AmyebActions from 'app/redux/Yeb/AmountYeb/amountYeb.action.js'
 
 @immutableRenderDecorator

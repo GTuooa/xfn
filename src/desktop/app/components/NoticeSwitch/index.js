@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from 'react'
 import ReactDOM from 'react-dom'
 import { XfnIcon } from 'app/components'
 import { toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './noticeSwitch.less'
 
 @immutableRenderDecorator
-export default
+
 class NoticeSwitch extends Component {
     // static propTypes = {
     //     // 传入切换的时间
@@ -100,7 +100,7 @@ class NoticeSwitch extends Component {
                         <ul className="notices-list">
                             <li className="notices-tip">
                                 <XfnIcon type="notification" className="notices-tip-icon"/>
-                                <a className={urlOnly ? "text-underline" : ''} href='javascript:void(0);' onClick={() => {
+                                <a className={urlOnly ? "text-underline" : ''} href='#' onClick={() => {
                                     if (urlOnly) {
                                         thirdParty.openLink({
                                             url: urlOnly
@@ -114,7 +114,7 @@ class NoticeSwitch extends Component {
                         <ul className="notices-list">
                             <li className="notices-tip">
                                 <XfnIcon type="notification" className="notices-tip-icon"/>
-                                <a className={urlFirst ? "text-underline" : ''} href='javascript:void(0);' onClick={() => {
+                                <a className={urlFirst ? "text-underline" : ''} href='#' onClick={() => {
                                     if (urlFirst) {
                                         thirdParty.openLink({
                                             url: urlFirst
@@ -126,7 +126,7 @@ class NoticeSwitch extends Component {
                             </li>
                             <li className="notices-tip" style={Style}>
                                 <XfnIcon type="notification" className="notices-tip-icon"/>
-                                <a className={urlSecond ? "text-underline" : ''} href='javascript:void(0);' onClick={() => {
+                                <a className={urlSecond ? "text-underline" : ''} href='#' onClick={() => {
                                     if (urlSecond) {
                                         thirdParty.openLink({
                                             url: urlSecond
@@ -143,3 +143,4 @@ class NoticeSwitch extends Component {
         )
     }
 }
+export default NoticeSwitch;

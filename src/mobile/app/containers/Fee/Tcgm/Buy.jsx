@@ -1,7 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { Checkbox, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'

@@ -4,7 +4,8 @@ import { toJS, fromJS } from 'immutable'
 import moment from 'moment'
 
 import { formatDate,numberCalculate, formatMoney, debounce, decimal }	from 'app/utils'
-import { DatePicker, Input, Select, Checkbox, Button, Modal, message, Tabs, Tree, Divider, Icon, Pagination, Tooltip, Radio, Switch } from 'antd'
+import { DatePicker, Input, Select, Checkbox, Button, Modal, message, Tabs, Tree, Divider, Pagination, Tooltip, Radio, Switch } from 'antd'
+import { Icon } from 'app/components'
 const { Search } = Input
 const { RangePicker } = DatePicker
 const TreeNode = Tree.TreeNode

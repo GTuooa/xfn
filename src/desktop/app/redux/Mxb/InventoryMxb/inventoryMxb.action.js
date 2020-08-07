@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.account.js'
 
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 import { fromJS } from 'immutable'
@@ -513,7 +513,7 @@ export const changeInventoryYebChooseMorePeriods = ()=>(dispatch)=>{
     })
 }
 export const getInventoryMxbStockCategory = (issuedate,endissuedate,isType) =>(dispatch,getState)=>{
-    const categoryValue = getState().inventoryMxbState.get(categoryValue)
+    const categoryValue = getState().inventoryMxbState.get('categoryValue')
     fetchApi('getInventoryMxbStockCategory','POST',JSON.stringify({
         begin:issuedate ? issuedate.substr(4,1) ==='-' ? issuedate : `${issuedate.substr(0, 4)}-${issuedate.substr(6, 2)}`:'',
         end: endissuedate?endissuedate.substr(4,1) ==='-' ? endissuedate : `${endissuedate.substr(0, 4)}-${endissuedate.substr(6, 2)}`:'',

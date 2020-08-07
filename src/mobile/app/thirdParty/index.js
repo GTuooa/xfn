@@ -1,7 +1,8 @@
 import browserNavigator from 'app/utils/browserNavigator'
 
-if (browserNavigator.versions.DingTalk && !global.isplayground) {
-    module.exports = require('./dingding')
-} else {
-    module.exports = require('./local')
-}
+import * as dingThirdParty from './dingding'
+import * as localThirdParty from './local'
+
+const ThirdParty = browserNavigator.versions.DingTalk ? dingThirdParty : localThirdParty
+
+export default ThirdParty

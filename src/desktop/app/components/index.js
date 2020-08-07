@@ -1,64 +1,44 @@
-export XfnIcon from './Icon'
-export Title from './Title'
-export Amount from './Amount'
-export ImportModal from './ImportModal'
-export ExportModal from './ExportModal'
-export Export from './Export'
-export Price from './Price'
-export NoticeSwitch from './NoticeSwitch'
-export TableWrap from './Table'
-export TableScrollWrap from './Table/TableScrollWrap'
-export TableScroll from './Table/TableScroll'
-export TableBody from './Table/TableBody'
-export TableItem from './Table/TableItem'
-export TableItemDrag from './Table/TableItemDrag'
-export TableTitleDrag from './Table/TableTitleDrag'
-export FlexItem from './Table/FlexItem'
-export TableTitle from './Table/TableTitle'
-export TableOver from './Table/TableOver'
-export TitleKmye from './Table/TitleKmye'
-export ItemTriangle from './Table/ItemTriangle'
-export TableTree from './Table/TableTree'
-export TableAll from './Table/TableAll'
-export JxcTableAll from './Table/JxcTableAll'
-export TablePagination from './Table/TablePagination'
-//导出可选显示条数
-export TablePaginationPageSize from './Table/TablePaginationPageSize'
-export TableBottomPage from './Table/TableBottomPage'
-export CxpzTableItem from './Table/CxpzTableItem'
-export AlertModal from './AlertModal'
-
-// export ConfTitle from './ConfTitle'
-export UpperClassSelect from './UpperClassSelect'
-export ModalConfigTitle from './ModalConfigTitle'
-export JxcTree from './JxcTree'
-export SelectAc from './SelectAc'
-// export UnitModal from './UnitModal'
-export NumberInput from './NumberInput'
-export InputFour from './InputFour'
-export XfToolTip from './XfToolTip'
-//
-// export LrckTitle from './LrckTitle'
-// export TempTitle from './TempTitle'
-// export TitleKcye from './Table/TitleKcye'
-// export TitleKcmx from './Table/TitleKcmx'
-// export TitleCgye from './Table/TitleCgye'
-// export TitleSalesYe from './Table/TitleSalesYe'
-// export PurchaseModal from './PurchaseModal'
-// export SalesModal    from './SalesModal'
-// export CxkcBomb    from './CxkcBomb'
-
-export RunUpperSelect from './RunUpperSelect'
-export RunCategorySelect from './RunCategorySelect'
-export AcouontAcSelect from './AcouontAcSelect'
-
-
-// export AcouontAcSelect from './AcouontAcSelect'
-
-export RunAcMultipleSelect from './RunAcMultipleSelect'
-
-export IUTree from './IUTree'
-export XfnSelect from './XfnSelect'
-export Tab from './Tab'
+export { default as XfnIcon } from './Icon';
+export { default as Title } from './Title';
+export { default as Amount } from './Amount';
+export { default as ImportModal } from './ImportModal';
+export { default as ExportModal } from './ExportModal';
+export { default as Export } from './Export';
+export { default as Price } from './Price';
+export { default as NoticeSwitch } from './NoticeSwitch';
+export { default as TableWrap } from './Table';
+export { default as TableScrollWrap } from './Table/TableScrollWrap';
+export { default as TableScroll } from './Table/TableScroll';
+export { default as TableBody } from './Table/TableBody';
+export { default as TableItem } from './Table/TableItem';
+export { default as TableItemDrag } from './Table/TableItemDrag';
+export { default as TableTitleDrag } from './Table/TableTitleDrag';
+export { default as FlexItem } from './Table/FlexItem';
+export { default as TableTitle } from './Table/TableTitle';
+export { default as TableOver } from './Table/TableOver';
+export { default as TitleKmye } from './Table/TitleKmye';
+export { default as ItemTriangle } from './Table/ItemTriangle';
+export { default as TableTree } from './Table/TableTree';
+export { default as TableAll } from './Table/TableAll';
+export { default as JxcTableAll } from './Table/JxcTableAll';
+export { default as TablePagination } from './Table/TablePagination';
+export { default as TablePaginationPageSize } from './Table/TablePaginationPageSize';
+export { default as TableBottomPage } from './Table/TableBottomPage';
+export { default as CxpzTableItem } from './Table/CxpzTableItem';
+export { default as AlertModal } from './AlertModal';
+export { default as UpperClassSelect } from './UpperClassSelect';
+export { default as ModalConfigTitle } from './ModalConfigTitle';
+export { default as JxcTree } from './JxcTree';
+export { default as SelectAc } from './SelectAc';
+export { default as NumberInput } from './NumberInput';
+export { default as InputFour } from './InputFour';
+export { default as RunUpperSelect } from './RunUpperSelect';
+export { default as RunCategorySelect } from './RunCategorySelect';
+export { default as AcouontAcSelect } from './AcouontAcSelect';
+export { default as RunAcMultipleSelect } from './RunAcMultipleSelect';
+export { default as IUTree } from './IUTree';
+export { default as XfnSelect } from './XfnSelect';
+export { default as Tab } from './Tab';
 
 export { default as XfInput } from './XfInput';
+export { default as Icon } from './AntdIcon';

@@ -5,7 +5,7 @@ const Option = Select.Option
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class TableBottomPage extends React.Component{
 	render() {
 		const { otherComp, total, current, pageSize, onChange, className, classNameTemp,showSizeChanger,onShowSizeChange,hideOnSinglePage, pageList } = this.props
@@ -57,3 +57,5 @@ class TableBottomPage extends React.Component{
 		)
 	}
 }
+
+export default TableBottomPage;

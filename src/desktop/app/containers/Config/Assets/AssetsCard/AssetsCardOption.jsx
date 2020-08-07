@@ -11,7 +11,7 @@ import Delete from '../common/Delete'
 import { Button, Input, Select, DatePicker, Modal, message } from 'antd'
 import moment from 'moment'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { judgePermission } from 'app/utils'
 const Option = Select.Option
 import './style.less'

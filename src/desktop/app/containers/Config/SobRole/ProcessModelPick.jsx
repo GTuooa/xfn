@@ -3,7 +3,8 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, fromJS } from 'immutable'
 
 import * as Limit from 'app/constants/Limit.js'
-import { Icon, Select } from 'antd'
+import { Select } from 'antd'
+import { Icon } from 'app/components'
 
 import * as sobRoleActions from 'app/redux/Config/SobRole/sobRole.action.js'
 

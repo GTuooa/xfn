@@ -7,7 +7,7 @@ import * as Limit from 'app/constants/Limit.js'
 // import { upperClassToTree } from 'app/utils'
 import { toJS } from 'immutable'
 @immutableRenderDecorator
-export default
+
 class UpperClassSelect extends  React.Component{
 	render() {
 		const { type, className, placeholder, value, disabled, onSelect, treeData, disabledParent, disabledEnd, treeDefaultExpandAll, isLastSelect} = this.props
@@ -59,3 +59,5 @@ class UpperClassSelect extends  React.Component{
 		)
 	}
 }
+
+export default UpperClassSelect;

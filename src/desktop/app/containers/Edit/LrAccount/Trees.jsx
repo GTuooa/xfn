@@ -3,7 +3,8 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS, toJS, is } from 'immutable'
 
 import * as lrAccountActions from 'app/redux/Edit/LrAccount/lrAccount.action.js'
-import { Tree, Tooltip, Input, Icon } from 'antd'
+import { Tree, Tooltip, Input } from 'antd'
+import { Icon } from 'app/components'
 const TreeNode = Tree.TreeNode
 import * as Limit from 'app/constants/Limit.js'
 import * as homeActions from 'app/redux/Home/home.action.js'

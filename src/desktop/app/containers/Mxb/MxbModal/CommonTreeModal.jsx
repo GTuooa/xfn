@@ -1,9 +1,9 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Button, Input, Checkbox,Tree,Modal } from 'antd'
+import { Button, Input, Checkbox, Tree, Modal } from 'antd'
 const TreeNode = Tree.TreeNode
-
+import { Icon } from 'app/components'
 
 import * as Limit from 'app/constants/Limit.js'
 import { toJS ,fromJS } from 'immutable'

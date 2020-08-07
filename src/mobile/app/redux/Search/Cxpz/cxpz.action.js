@@ -2,7 +2,7 @@ import { showMessage, jsonifyDate } from 'app/utils'
 import fetchApi from 'app/constants/fetch.constant.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as ActionTypes from './ActionTypes.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 export const getPeriodAndVcListFetch = (issuedate, currentPage = 0) => dispatch => {
@@ -191,9 +191,9 @@ export const cancelChangeVcCheckBoxDisplay = () => ({
 	type: ActionTypes.CANCEL_CHANGE_VC_CHECKBOX_DISPALY
 })
 
-export const sortAndChangeVcId = () => ({
-	type: ActionTypes.SORT_AND_CHANGE_VC_ID
-})
+// export const sortAndChangeVcId = () => ({
+// 	type: ActionTypes.SORT_AND_CHANGE_VC_ID
+// })
 
 export const reverseVcList = () => ({
 	type: ActionTypes.REVERSE_VC_LIST

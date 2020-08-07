@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 import { fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { ScrollView } from 'app/components'
 

@@ -3,11 +3,12 @@ import React from 'react'
 import { Router, Route, Switch } from 'react-router-dom'
 import { browserNavigator } from 'app/utils'
 // import asyncComponent from './AsyncComponent'
+import { ConnectedRouter } from 'connected-react-router';
 
-import createHistory from 'history/createHashHistory'
-const history = createHistory()
-export { history }
-const location = history.location
+// import createHistory from 'history/createHashHistory'
+// const history = createHistory()
+// export { history }
+import { history } from 'app/utils'
 global.routerHistory = history
 
 sessionStorage.setItem("firstload", "first")
@@ -141,7 +142,7 @@ import InventoryYeb from './Yeb/InventoryYeb/index/index'
 import PreviewPdf from './components/PreviewPdf/index/index.js'
 
 const CreateRouter = () => (
-    <Router history={history}>
+    <ConnectedRouter history={history}>
         <div className={browserNavigator.versions.DingTalk && global.showOrgTrialEntry ? "body-wrap" : ''}>
             <PleasureMask/>
             <Mask/>
@@ -307,7 +308,7 @@ const CreateRouter = () => (
                 <Route path="/lrls-inventory-category" component={InventoryCategory}/>
             </Switch>
         </div>
-    </Router>
+    </ConnectedRouter>
 )
 
 export default CreateRouter

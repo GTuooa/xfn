@@ -4,7 +4,8 @@ import { connect }	from 'react-redux'
 
 import * as Limit from 'app/constants/Limit.js'
 import { RunCategorySelect, AcouontAcSelect, TableBody, TableTitle, TableItem, JxcTableAll, Amount } from 'app/components'
-import { DatePicker, Input, Select, Checkbox, Button, message, Radio, Icon, Switch, Divider } from 'antd'
+import { DatePicker, Input, Select, Checkbox, Button, message, Radio, Switch, Divider } from 'antd'
+import { Icon } from 'app/components'
 import XfIcon from 'app/components/Icon'
 const RadioGroup = Radio.Group
 const Option = Select.Option

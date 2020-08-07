@@ -28,8 +28,8 @@ class Approval extends React.Component {
         const currentPage = approvalState.getIn(['views', 'currentPage'])
 
         const conponent = ({
-            'ApprovalTemplate': () => <ApprovalTemplate history={history}/>,
-            'ApprovalCard': () => <ApprovalCard history={history}/>
+            'ApprovalTemplate': () => <ApprovalTemplate />,
+            'ApprovalCard': () => <ApprovalCard />
         }[currentPage] || (() => <div></div>))()
 
         return conponent

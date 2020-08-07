@@ -5,7 +5,7 @@ import { toJS, fromJS, Map } from 'immutable'
 import './style.less'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, Checkbox } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import findValue from 'app/containers/Config/common/func/findValue.js'
 import { throttle } from 'app/utils'
 

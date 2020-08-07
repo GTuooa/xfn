@@ -1,5 +1,5 @@
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as ActionTypes from './ActionTypes.js'
 import { DateLib } from 'app/utils'
 

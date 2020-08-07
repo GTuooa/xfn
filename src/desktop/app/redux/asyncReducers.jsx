@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+import { connectRouter } from 'connected-react-router';
+import { history } from 'app/utils'
 import homeState from './Home'
 import allState from './Home/All'
 import sobConfigState from './Config/Sob'
@@ -12,7 +14,8 @@ export default combineReducers({
     allState,
     sobConfigState,
     sobOptionState,
-    editRunningAllState
+    editRunningAllState,
+    router: connectRouter(history),
 })
 
 export function createReducer(asyncReducers) {
@@ -22,6 +25,18 @@ export function createReducer(asyncReducers) {
         sobConfigState,
         sobOptionState,
         editRunningAllState,
+        router: connectRouter(history),
         ...asyncReducers
     })
 }
+
+// import { combineReducers } from 'redux';
+// import { routerReducer } from 'react-router-redux';
+
+// export default function createReducer(asyncReducers) {
+//     const reducers = {
+//         ...asyncReducers,
+//         router: routerReducer
+//     };
+//     return combineReducers(reducers);
+// }

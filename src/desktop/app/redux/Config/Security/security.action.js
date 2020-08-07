@@ -1,7 +1,7 @@
 import { showMessage } from 'app/utils'
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 

@@ -3,7 +3,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { Select, Switch, Input, message } from 'antd'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { getCategorynameByType, numberTest, regNegative, reg } from 'app/containers/Edit/EditRunning/common/common.js'
 import { formatNum, DateLib, formatMoney } from 'app/utils'

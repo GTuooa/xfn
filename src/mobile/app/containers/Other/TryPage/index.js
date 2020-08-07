@@ -18,13 +18,16 @@ class TryPage extends React.Component {
 
 	render() {
 
+        
+
 		// const { his } = this.props
 
         // thirdParty.setTitle({title: '智能版引导'})
 		// thirdParty.setIcon({
         //     showIcon: false
         // })
-		// thirdParty.setRight({show: false})
+        // thirdParty.setRight({show: false})
+        
 
 		return (
 			<div id="customizeElement" style={{height: '64px'}}></div>

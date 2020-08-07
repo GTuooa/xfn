@@ -5,7 +5,7 @@ import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, TextList
 
 import { decimal } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 
 

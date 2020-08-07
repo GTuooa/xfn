@@ -3,9 +3,10 @@ import { Map, List } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { fromJS, toJS } from 'immutable'
-import { Icon, message } from 'antd'
+import { message } from 'antd'
+import { Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import CombAbsInput from './CombAbsInput.jsx'
 import CombInput from './CombInput.jsx'
 import CombSelect from './CombSelect.jsx'
@@ -104,7 +105,7 @@ class JvItem extends React.Component {
 				<div className="jv-mask">
 					<span>
 						<Icon
-							type="plus-circle-o"
+							type="plus-circle"
 							onClick={() => {
 
 								if (jvListLength === 30) {

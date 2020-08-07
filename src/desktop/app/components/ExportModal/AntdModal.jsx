@@ -2,7 +2,7 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Button, Modal, Radio, Checkbox, message } from 'antd'
 import fetch from 'isomorphic-fetch'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './exportmodal.less'
 const RadioGroup = Radio.Group;
 function chooseLib(callback) {
@@ -20,8 +20,8 @@ function chooseLib(callback) {
 	})
 }
 @immutableRenderDecorator
-export default
-class ExportModal extends React.Component{
+
+class AntdModal extends React.Component{
     constructor() {
 		super()
 		this.state = {
@@ -281,3 +281,5 @@ class ExportModal extends React.Component{
         )
     }
 }
+
+export default AntdModal;

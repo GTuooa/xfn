@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { Checkbox, TextListInput, Row, Icon, Button, ButtonGroup, Container, ScrollView, TextareaItem } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'

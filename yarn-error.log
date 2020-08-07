@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn add cropperjs -D
+  /usr/local/bin/node /usr/local/bin/yarn install
 
 PATH: 
   /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -8,16 +8,14 @@ Yarn version:
   1.22.4
 
 Node version: 
-  8.11.4
+  11.15.0
 
 Platform: 
   darwin x64
 
 Trace: 
-  Error: connect ECONNREFUSED 151.101.0.133:443
-      at Object._errnoException (util.js:992:11)
-      at _exceptionWithHostPort (util.js:1014:20)
-      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1186:14)
+  Error: connect ECONNREFUSED 0.0.0.0:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1088:14)
 
 npm manifest: 
   {

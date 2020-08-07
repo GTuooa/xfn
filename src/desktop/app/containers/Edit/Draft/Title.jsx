@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Icon, Select, Input, message } from 'antd'
+import { Button, Select, Input, message } from 'antd'
+import { Icon } from 'app/components'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import * as draftActions from 'app/redux/Edit/Draft/draft.action.js'
@@ -8,7 +9,7 @@ import * as homeActions from 'app/redux/Home/home.action.js'
 
 import { fromJS } from 'immutable'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { debounce, judgePermission } from 'app/utils'
 
 @immutableRenderDecorator

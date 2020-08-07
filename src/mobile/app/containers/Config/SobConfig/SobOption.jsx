@@ -7,12 +7,12 @@ import * as Limit from 'app/constants/Limit.js'
 
 import { Icon, Button, ButtonGroup, Container, Row, Form, ScrollView, TextInput, MonthPicker, SinglePicker, Single, Multiple } from 'app/components'
 import ChosenPicker from 'app/components/ChosenPicker'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { DateLib } from 'app/utils'
 import './sob-option.less'
 
 import { homeActions } from 'app/redux/Home/home.js'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 
 const { Label, Control, Item } = Form
 

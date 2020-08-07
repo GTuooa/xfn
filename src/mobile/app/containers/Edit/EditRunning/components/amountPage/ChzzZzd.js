@@ -5,7 +5,7 @@ import { Row, Amount, TextListInput, Single, Icon, ChosenPicker } from 'app/comp
 import { decimal } from 'app/utils'
 import chzzSort from './chzzSort.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunningConfig.action.js'
 

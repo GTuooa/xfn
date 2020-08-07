@@ -191,7 +191,7 @@ export function beforeSaveCheck (list, onSuccess, returnError) {
 }
 
 
-export function inputCheck (type, value,onSuccess) {
+function inputCheck (type, value,onSuccess) {
     ({
         'code': () => {
 
@@ -366,3 +366,11 @@ export function inputCheck (type, value,onSuccess) {
         }
     }[type])()
 }
+
+
+let jxcConfigCheck = {};
+jxcConfigCheck.nameCheck = nameCheck;
+jxcConfigCheck.beforeSaveCheck = beforeSaveCheck;
+jxcConfigCheck.inputCheck = inputCheck;
+
+export default jxcConfigCheck;

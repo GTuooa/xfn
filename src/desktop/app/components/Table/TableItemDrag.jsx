@@ -4,7 +4,7 @@ import './table.less'
 // import * as jxcCommonActions from 'app/actions/jxcConf/jxcCommon.action.js'
 
 @immutableRenderDecorator
-export default
+
 class TableItemDrag extends React.Component{
 	render() {
 		const { type, className, line, modaltype, uuid,dispatch,heightAuto,droping,droped} = this.props
@@ -31,3 +31,5 @@ class TableItemDrag extends React.Component{
 		)
 	}
 }
+
+export default TableItemDrag;

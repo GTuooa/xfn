@@ -1,23 +1,24 @@
 import React from 'react'
 import { connect }	from 'react-redux'
+import PropTypes from 'prop-types'
 
 import { Button, Tabs, Spin, Tooltip, Modal } from 'antd'
 import XfnIcon from 'app/components/Icon'
-
-const TabPane = Tabs.TabPane
 import Navbar from './Navbar.jsx'
 import Title from './Title.jsx'
-import * as components from 'app/containers/app.js'
+import * as components from 'app/containers/Home/app.js'
 import './style.less'
 import FuncList from './FuncList'
 import GuideModal from './GuideModal'
 import browserNavigator from 'app/utils/browserNavigator'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { XFNVERSION, ROOTURL, SERVERURL } from 'app/constants/fetch.constant.js'
 import LockFilter from 'app/containers/Other/LockFilter/index.js'
 
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as previewRunningActions from 'app/redux/Edit/RunningPreview/previewRunning.action.js'
+
+const TabPane = Tabs.TabPane
 
 @connect(state => state)
 export default
@@ -30,8 +31,13 @@ class Home extends React.Component {
 		}
 	}
 
+	static contextTypes = {
+        store: PropTypes.object
+    }
+
+
 	componentDidMount() {
-		this.props.dispatch(homeActions.getDbListFetch('first', this.props.history))
+		this.props.dispatch(homeActions.getDbListFetch('first'))
 		sessionStorage.setItem('enterLrpz', 'Home')
 	}
 	componentWillReceiveProps(nextprops) {
@@ -48,7 +54,7 @@ class Home extends React.Component {
 	}
 
 	render() {
-		const { dispatch, homeState, allState, history } = this.props
+		const { dispatch, homeState, allState } = this.props
 		const { showModal } = this.state
 
 		const panes = homeState.get('panes')
@@ -132,8 +138,8 @@ class Home extends React.Component {
 		const guideGL = homeState.getIn(['views', 'guideGL'])
 		const guideZN = homeState.getIn(['views', 'guideZN'])
 
+		// <div className="home-wrap home-wrap-filer" onDragOver={(e) => e.preventDefault()} onDrop={(e) => {
 		return (
-			// <div className="home-wrap home-wrap-filer" onDragOver={(e) => e.preventDefault()} onDrop={(e) => {
 			<div className={"home-wrap"} onDragOver={(e) => e.preventDefault()} onDrop={(e) => {
 				e.preventDefault()
 			}}>
@@ -229,7 +235,6 @@ class Home extends React.Component {
 						sobList={sobList}
 						dispatch={dispatch}
 						itemlist={noticeList}
-						history={history}
 						isPlay={isPlay}
 						packInfoList={packInfoList}
 						moduleList={moduleList}
@@ -324,7 +329,7 @@ class Home extends React.Component {
 										onSuccess : (result) => {
 											if (result.buttonIndex === 1) {
 
-												const href = location.href
+												const href = window.location.href
 												const post = href.indexOf('?')
 												const endPost = href.indexOf('#/') == -1 ? href.length : href.indexOf('#/')
 												let serverMessage = href.slice(post+1, endPost)

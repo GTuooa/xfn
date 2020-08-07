@@ -6,7 +6,7 @@ import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import * as lrpzExportActions from 'app/redux/Edit/Lrpz/lrpzExport.action.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as acAllActions from 'app/redux/Home/All/aclist.actions'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopMonthPicker, ScrollLoad } from 'app/containers/components'
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, SearchBar, Single } from 'app/components'
 

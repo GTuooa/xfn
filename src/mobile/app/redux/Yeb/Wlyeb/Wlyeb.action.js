@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 import { toJS, fromJS } from 'immutable'
 
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as allActions from 'app/redux/Home/All/other.action'
@@ -19,7 +19,8 @@ export const getPeriodAndBalanceList = (issuedate) => (dispatch,getState) => {
         cardSubUuid: '',
         relation: '',
         pageNum: 1,
-        pageSize: Limit.YEB_PAGE_SIZE,
+        // pageSize: Limit.YEB_PAGE_SIZE,
+        pageSize: '',
         getPeriod: "true"
 	}),json => {
         thirdParty.toast.hide()
@@ -88,7 +89,8 @@ export const getContactsBalanceList = (issuedate,endissuedate='',isTop,typeUuid 
         cardSubUuid,
         relation: wlRelate,
         pageNum:currentPage,
-        pageSize: Limit.YEB_PAGE_SIZE,
+        // pageSize: Limit.YEB_PAGE_SIZE,
+        pageSize: '',
         getPeriod: ""
 	}),json => {
         if(isScroll) {

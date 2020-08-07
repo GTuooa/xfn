@@ -2,8 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { toJS, fromJS } from 'immutable'
 
-import { Icon, Checkbox, message, Input, Modal, Tag } from 'antd'
-import { TableBody, TableItem, TableAll, TablePagination } from 'app/components'
+import { Checkbox, message, Input, Modal, Tag } from 'antd'
+import { TableBody, TableItem, TableAll, TablePagination, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import TreeContains from './TreeContains.jsx'

@@ -10,7 +10,7 @@ import Title from './Title.jsx'
 import TableTitle from './TableTitle'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import { toJS, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import './style/index.less'
 

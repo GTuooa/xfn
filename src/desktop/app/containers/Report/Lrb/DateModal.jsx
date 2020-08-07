@@ -4,10 +4,11 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import XfnIcon from 'app/components/Icon'
 import LrItem from './LrItem.jsx'
 import { TableWrap, TableBody, TableTitle, TableAll ,TitleKmye} from 'app/components'
+import { Icon } from 'app/components'
 import SelfLrbItem from "./SelfLrbItem"
 import * as lrbActions from 'app/redux/Report/Lrb/lrb.action.js'
 import { debounce } from 'app/utils'
-import { Select, Modal, Button, Checkbox, Input, message, Radio, DatePicker, Icon } from 'antd'
+import { Select, Modal, Button, Checkbox, Input, message, Radio, DatePicker } from 'antd'
 const CheckboxGroup = Checkbox.Group
 const RadioGroup = Radio.Group
 const { RangePicker } = DatePicker

@@ -5,7 +5,7 @@ import { toJS, fromJS } from 'immutable'
 import 'app/containers/Config/common/style/listStyle.less'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, Switch, Single, Row, Form, XfInput } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { configCheck } from 'app/utils'
 const { Item } = Form
 import TypeTreeSelect from 'app/containers/components/TypeTreeSelect'

@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import '../style.less'
 
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopDatePicker } from 'app/containers/components'
 import { Container, Row, ScrollView, Icon, ButtonGroup, Button } from 'app/components'
 import ZeroInventory from './ZeroInventory'

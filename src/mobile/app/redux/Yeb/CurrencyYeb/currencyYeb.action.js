@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as ActionTypes from './ActionTypes.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getPeriodAndCurrencyListFetch = (issuedate, endissuedate) => dispatch => {
 

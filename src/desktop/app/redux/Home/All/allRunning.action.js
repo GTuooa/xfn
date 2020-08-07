@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.account.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showMessage, DateLib } from 'app/utils'
 import { message } from 'antd'
 import { toJS, fromJS } from 'immutable'

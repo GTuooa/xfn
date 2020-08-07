@@ -8,7 +8,8 @@ import moment from 'moment'
 
 import { formatFour, formatMoney, DateLib } from 'app/utils'
 import { NumberInput, TableItem, XfnIcon } from 'app/components'
-import { DatePicker, Input, Icon, Button, Modal, Divider, Select, message } from 'antd'
+import { DatePicker, Input, Button, Modal, Divider, Select, message } from 'antd'
+import { Icon } from 'app/components'
 import InputFour from 'app/components/InputFour'
 import XfnSelect from 'app/components/XfnSelect'
 import BatchModal from 'app/containers/Config/Inventory/BatchModal.jsx'
@@ -68,7 +69,9 @@ class CommonAssist extends React.Component {
 					domlist[i].style.display = 'none'
 				}
 			}
-			this.nameInput.style.display = ''
+			if (this.nameInput) {
+				this.nameInput.style.display = ''
+			}
 		})
 	}
 	componentDidMount() {

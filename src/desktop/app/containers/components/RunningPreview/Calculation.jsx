@@ -1,6 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Collapse, Icon } from 'antd'
+import { Collapse } from 'antd'
+import { Icon } from 'app/components'
 import { formatNum, formatMoney } from 'app/utils'
 const Panel = Collapse.Panel
 

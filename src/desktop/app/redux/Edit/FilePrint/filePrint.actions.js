@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes.js'
 import { toJS } from 'immutable'
 import { showMessage,DateLib } from 'app/utils'
 import * as allActions from 'app/redux/Home/All/all.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const setPrintVcIndexAndDate = (year,month,vcIndex)=>(dispatch)=>{
     dispatch({

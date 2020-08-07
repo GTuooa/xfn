@@ -444,11 +444,6 @@ export default function handleEditRunning(state = editRunningState, action) {
 				if (v.exchange && v.exchange.indexOf('仓库非末级') > -1) {
 					v.warehouseCardCode = ''
 					v.warehouseCardName = ''
-				} else {
-					v.warehouseCardCode = v.warehouseCode
-					v.warehouseCardName = v.warehouseName
-					v.warehouseCardUuid = v.warehouseUuid
-
 				}
 				if (!v.batchUuid) {
 					v.batch = ''

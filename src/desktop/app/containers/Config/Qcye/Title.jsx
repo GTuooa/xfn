@@ -6,7 +6,7 @@ import { ImportModal, ExportModal, Tab } from 'app/components'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 import { ROOT } from 'app/constants/fetch.constant.js'
 import { judgePermission } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as qcyeActions	from 'app/redux/Config/Qcye/qcye.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'

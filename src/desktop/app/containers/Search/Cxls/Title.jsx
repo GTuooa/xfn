@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Select, TreeSelect, Button, Input, Modal, Checkbox } from 'antd'
-import { Amount, TableItem } from 'app/components'
+import { Select, TreeSelect, Button, Input, Modal, Checkbox } from 'antd'
+import { Amount, TableItem, Icon } from 'app/components'
 import { accountTreeData } from 'app/utils'
 
 import * as cxlsActions from 'app/redux/Search/Cxls/cxls.action'

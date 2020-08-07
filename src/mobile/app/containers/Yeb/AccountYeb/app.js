@@ -4,14 +4,14 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { Container, Row, ScrollView } from 'app/components'
 import { MutiPeriodMoreSelect } from 'app/containers/components'
 
 import Item from './Item'
 
-import * as accountYebActions from 'app/redux/Yeb/AccountYeb/AccountYeb.action.js'
+import * as accountYebActions from 'app/redux/Yeb/AccountYeb/accountYeb.action.js'
 import * as allActions from 'app/redux/Home/All/other.action'
 
 @connect(state => state)

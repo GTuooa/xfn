@@ -8,17 +8,17 @@ import { toJS } from 'immutable'
 const loop = data => data.map((item) => {
 	if (item.childList.length) {
 		return (
-			<TreeNode key={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`} title={`${item.name}${item.cardNumber?`(${item.cardNumber})`:''}`}>
+			<TreeNode key={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`} title={item.name}>
 				{loop(item.childList)}
 			</TreeNode>
 		)
 	} else {
-		return <TreeNode key={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`} title={`${item.name}${item.cardNumber?`(${item.cardNumber})`:''}`}/>
+		return <TreeNode key={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}`} title={item.name}/>
 	}
 })
 
 @immutableRenderDecorator
-export default
+
 class JxcTrees extends React.Component {
 	render() {
 		const {
@@ -42,3 +42,5 @@ class JxcTrees extends React.Component {
 		)
     }
 }
+
+export default JxcTrees

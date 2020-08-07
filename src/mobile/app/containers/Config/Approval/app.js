@@ -3,7 +3,7 @@ import { Map, toJS } from 'immutable'
 import { connect } from 'react-redux'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Container, Row, Column, Icon, ButtonGroup , Button, ScrollView, TipWrap } from 'app/components'
 
 import { homeActions } from 'app/redux/Home/home.js'

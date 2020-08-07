@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map } from 'immutable'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { runningStateType } from 'app/constants/editRunning.js'
 import { Container, Row, ScrollView, ButtonGroup, Button, Icon } from 'app/components'

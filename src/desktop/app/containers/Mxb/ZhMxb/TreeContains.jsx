@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import Trees from './Trees.jsx'
-import { Select, Icon, Menu, Input }  from 'antd'
+import { Select, Menu, Input }  from 'antd'
+import { Icon } from 'app/components'
 import { TableTree } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 

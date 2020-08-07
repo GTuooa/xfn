@@ -337,7 +337,8 @@ class Yysz extends React.Component {
                                 placeholder=""
                                 value={currentAmount}
                                 onFocus={() => {
-                                    let diffAmount = (diffAmount = (amount || 0) - (offsetAmount || 0)) > 0 ? diffAmount.toFixed(2) : ''
+                                    let diffAmount = (amount || 0) - (offsetAmount || 0)
+                                    diffAmount = diffAmount > 0 ? diffAmount.toFixed(2) : ''
                                     dispatch(editRunningActions.changeLrAccountCommonString('ori','currentAmount',diffAmount))
 
                                 }}

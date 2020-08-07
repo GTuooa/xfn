@@ -7,7 +7,7 @@ import { Button, ButtonGroup, Icon, Container, ScrollView, ChosenPicker, Row, Am
 
 import Item from './InventoryOpenedItem.jsx'
 import AssistSelect from './AssistSelect.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'
 
 @connect(state => state)

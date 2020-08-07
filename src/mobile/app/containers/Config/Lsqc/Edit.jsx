@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect }	from 'react-redux'
 import { toJS, fromJS, Map } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as lsqcActions from 'app/redux/Config/Lsqc/lsqc.action.js'
 import { TopMonthPicker } from 'app/containers/components'
 import { ButtonGroup, Button, Container, Row, ScrollView, Amount, Icon, MonthPicker, SinglePicker } from 'app/components'

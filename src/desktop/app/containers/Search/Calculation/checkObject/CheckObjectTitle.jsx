@@ -1,7 +1,8 @@
 import React from 'react'
-import {immutableRenderDecorator} from 'react-immutable-render-mixin'
-import {Icon, Checkbox, Popover} from 'antd'
-import {toJS} from 'immutable'
+import { immutableRenderDecorator } from 'react-immutable-render-mixin'
+import { Checkbox, Popover} from 'antd'
+import { Icon } from 'app/components'
+import { toJS } from 'immutable'
 const CheckboxGroup = Checkbox.Group;
 
 @immutableRenderDecorator

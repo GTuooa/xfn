@@ -1,4 +1,4 @@
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { browserNavigator } from 'app/utils'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 
@@ -27,13 +27,13 @@ export default function showMessage (receivedData, showSuccess, time, alertStr,h
 			return true
 		} else if (receivedData.code === 10002) {
 			thirdParty.Alert('登录信息失效，重新登录', '确认')
-			// location.reload(true) && sessionStorage.clear()
+			// window.location.reload(true) && sessionStorage.clear()
 			if (browserNavigator.versions.DingTalk) {
-				location.replace(`${ROOTURL}/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=false&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
+				window.location.replace(`${ROOTURL}/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=false&corpid=${sessionStorage.getItem('corpId')}`) && sessionStorage.clear()
 			} else if (global.isplayground) {
-				location.replace(`${ROOTURL}/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=false&isplayground=true`)
+				window.location.replace(`${ROOTURL}/index.html?dd_nav_bgcolor=FFFFFFFF&isOV=false&isplayground=true`)
 			} else {
-				location.replace(`http://localhost:4800/build/mobile/index.html`) && sessionStorage.clear()
+				window.location.replace(`http://localhost:4800/build/mobile/index.html`) && sessionStorage.clear()
 			}
 		} else if (receivedData.code <= 11000 || [12000, 13000, 14000, 15000, 16000].includes(receivedData.code) || receivedData.code >= 17000) {
 			// thirdParty.toast.info([receivedData.code,receivedData.message].join('-'), 3)

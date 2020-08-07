@@ -6,8 +6,7 @@ import * as currencyMxbActions from 'app/redux/Mxb/CurrencyMxb/currencyMxb.actio
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as currencyYebActions from 'app/redux/Yeb/CurrencyYeb/currencyYeb.action.js'
 
-import { Icon } from 'antd'
-import { TableItem, TableOver, ItemTriangle, Amount, Price } from 'app/components'
+import { TableItem, TableOver, ItemTriangle, Amount, Price, Icon } from 'app/components'
 
 @immutableRenderDecorator
 export default

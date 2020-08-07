@@ -36,7 +36,7 @@ class Search extends React.Component {
 
     render() {
 
-        const { dispatch, history, homeState, allState } = this.props
+        const { dispatch, homeState, allState } = this.props
 
         const showPzBomb = allState.get('showPzBomb')
         const showPrintModal = allState.get('showPrintModal')

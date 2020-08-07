@@ -4,8 +4,9 @@ import { Map, List, toJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import './style.less'
 
-import { Icon, Button } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import { Button } from 'antd'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 
 import PdfPreview from './PdfPreview'
 import ImgPreview from './ImgPreview'

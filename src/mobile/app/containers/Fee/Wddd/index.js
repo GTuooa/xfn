@@ -1,7 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import moment from 'moment'
 import { DateLib } from 'app/utils'
 import OrderList from './OrderList'

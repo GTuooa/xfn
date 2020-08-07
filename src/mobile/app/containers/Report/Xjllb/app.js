@@ -6,7 +6,7 @@ import { Icon, Container, ScrollView, Row }	from 'app/components'
 import { TopMonthPicker } from 'app/containers/components'
 import { createArray } from 'app/utils'
 import Line from './Line.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import './xjllb.less'
 
 import * as allActions from 'app/redux/Home/All/other.action'

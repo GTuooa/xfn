@@ -1,12 +1,14 @@
 import React, { PropTypes, Fragment } from 'react'
 import { Map, List ,fromJS} from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Icon, Radio } from 'antd'
+import { Radio } from 'antd'
+import { Icon } from 'app/components'
 const RadioGroup = Radio.Group
 const RadioButton = Radio.Button
 import './style.less'
+
 @immutableRenderDecorator
-export default
+
 class Tab extends React.Component {
     render() {
         const { tabList, addButton, addFunc, tabFunc, radius, activeKey, addKey } = this.props
@@ -52,3 +54,5 @@ class Tab extends React.Component {
         )
     }
 }
+
+export default Tab

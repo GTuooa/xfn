@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import { message } from 'antd'
 import { showMessage } from 'app/utils'
 import moment from 'moment'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Modal } from 'antd'
 
 //获取模块组合之后的价格

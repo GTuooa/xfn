@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect }	from 'react-redux'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import Title from '../components/Title'
 import { Icon, Button, ButtonGroup, Container, Row, Form, ScrollView, TextInput, MonthPicker, SinglePicker } from 'app/components'
 import EquityList from './EquityList'
@@ -37,14 +37,6 @@ class Tcxq extends React.Component {
 
         return (
             <Container className="fee">
-                {
-                    // <Title
-                    //     activeTab={currentPage}
-                    //     onClick={(value) => {
-                    //         dispatch(feeActions.switchFeeActivePage(value))
-                    //     }}
-                    // />
-                }
                 <OrderMessage />
                 <ScrollView flex='1'>
                     <div className="fee-title">

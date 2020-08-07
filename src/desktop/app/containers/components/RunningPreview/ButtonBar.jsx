@@ -2,8 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { XfnIcon } from 'app/components'
-import { Icon, Modal, DatePicker, Switch, Input, Select, message, Button, Tooltip } from 'antd'
+import { XfnIcon, Icon } from 'app/components'
+import { Modal, DatePicker, Switch, Input, Select, message, Button, Tooltip } from 'antd'
 import { categoryTypeAll, type, business, beforejumpCxToLr, runningStateType, categoryTypeName } from 'app/containers/components/moduleConstants/common'
 const Option = Select.Option
 import { formatMoney, formatDate, showImg } from 'app/utils'

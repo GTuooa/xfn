@@ -4,7 +4,7 @@ import { toJS, fromJS } from 'immutable'
 
 import { Checkbox, Button, ButtonGroup, Icon, Container, Row, ScrollView } from 'app/components'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 
 @connect(state => state)

@@ -7,7 +7,7 @@ const Option = Select.Option
 import { toJS } from 'immutable'
 
 @immutableRenderDecorator
-export default
+
 class RunCategorySelect extends React.Component{
 	render() {
 		const { className, treeData, value, placeholder, onChange, parentDisabled, disabled, insertOrModify, canBeModifyCategory } = this.props
@@ -15,7 +15,7 @@ class RunCategorySelect extends React.Component{
         const loop = (data, upperIndex) => data.map((item, i) => {
 
             if (item.childList && item.childList.length) {
-                {loop(item.childList, upperIndex + '_' + i)}
+                loop(item.childList, upperIndex + '_' + i)
             } else if (item.level != 1 || item.beSpecial) {
 				list.push(
 					<Option
@@ -28,24 +28,6 @@ class RunCategorySelect extends React.Component{
 					</Option>
 				)
 			}
-			// return <TreeNode
-			// 	title={item.name}
-			// 	value={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}${Limit.TREE_JOIN_STR}${upperIndex + '_' + i}`}
-			// 	key={item.uuid}
-			// 	disabled={parentDisabled}
-			// 	>
-			// 	{loop(item.childList, upperIndex + '_' + i)}
-			// </TreeNode>
-			// }
-			//
-			// return item.level != 1 || item.beSpecial ? <TreeNode
-			// title={item.name}
-			// // disabled={!item.acAvailable}
-			// disabled={(!item.acAvailable && (name!='内部转账' && upperIndex!=0)) || item.name =='长期资产' || item.level === 1 && !item.beSpecial }
-			// value={`${item.uuid}${Limit.TREE_JOIN_STR}${item.name}${Limit.TREE_JOIN_STR}${upperIndex + '_' + i}`}
-			// key={item.uuid}
-			// />:''
-
 
         })
 		loop(treeData.getIn([0, 'childList']).toJS(), 0 )
@@ -66,3 +48,4 @@ class RunCategorySelect extends React.Component{
 		)
 	}
 }
+export default RunCategorySelect;

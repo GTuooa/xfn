@@ -13,7 +13,7 @@ import Table from './Table.jsx'
 import AddHypeTypeModal from './AddHypeTypeModal'
 import AddCardTypeModal from './AddCardTypeModal'
 import AddCardModal from './AddCardModal'
-import AdjustAllCardlistModal from './AdjustAllCardlistModal'
+import AdjustAllCardlistModal from './AdjustAllCardListModal'
 import BatchManageModal from './BatchManageModal'
 
 import * as editInventoryCardActions from 'app/redux/Config/Inventory/editInventoryCard.action.js'

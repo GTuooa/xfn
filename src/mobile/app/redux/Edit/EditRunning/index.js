@@ -448,6 +448,7 @@ export default function handleEditRunning(state = editRunningState, action) {
 				}))
 			}
 
+			let categoryType = state.getIn(['oriTemp', 'categoryType'])
 			//项目
 			if (!['LB_GGFYFT', 'LB_CHTRXM'].includes(categoryType) && !receivedData.getIn(['jrOri', 'usedProject'])) {//流水没开启项目
 				state = state.setIn(['oriTemp', 'projectCardList'], fromJS([{amount: ''}]))
@@ -463,7 +464,6 @@ export default function handleEditRunning(state = editRunningState, action) {
 			const isFullPayment = Math.abs(receivedData.getIn(['jrOri', 'amount'])) == Math.abs(receivedData.getIn(['jrOri', 'currentAmount'])) ? true : false
 
 			//类别的处理
-			let categoryType = state.getIn(['oriTemp', 'categoryType'])
 			const oriState = state.getIn(['oriTemp', 'oriState'])
 			;({
 				'STATE_CQZC_JZSY':  () => {
@@ -582,7 +582,7 @@ export default function handleEditRunning(state = editRunningState, action) {
 				state = state.setIn(['oriTemp', 'oriState'], oriState)
 			}
 			if (['STATE_JXSEZC_FS', 'STATE_JXSEZC_TFS'].includes(oriState)) {
-				categoryType=='LB_JXSEZC'
+				categoryType = 'LB_JXSEZC'
 				let stockRange = [], propertyCostList = receivedData.getIn(['category', 'propertyCostList'])
 				if (receivedData.getIn(['category', 'relationCategoryType'])=='LB_YYZC') {
 					stockRange = receivedData.getIn(['category', 'acBusinessExpense', 'stockRange'])
@@ -1027,7 +1027,13 @@ export default function handleEditRunning(state = editRunningState, action) {
 			let usedStock = false
 			let propertyCost = '', propertyCostList = []
 			if ((item['propertyCarryover']=='SX_HW')) {
+				beProject = false
+				usedProject = false
 				usedStock = true
+			}
+			if (item['categoryType']=='LB_CQZC') {
+				beProject = false
+				usedProject = false
 			}
 			if (item['categoryType']!='LB_CQZC' && item['propertyCostList'] && item['propertyCostList'].length) {
 				propertyCost = item['propertyCostList'][0]
@@ -1035,17 +1041,15 @@ export default function handleEditRunning(state = editRunningState, action) {
 			}
 
             return state.setIn(['oriTemp', 'relationCategoryUuid'], item['uuid'])
+			.setIn(['oriTemp', 'relationCategoryUuid'], item['uuid'])
 			.setIn(['oriTemp', 'relationCategoryName'], item['name'])
-			.setIn(['oriTemp', 'relationCategoryType'], item['categoryType'])
 			.setIn(['oriTemp', 'beProject'], beProject)
 			.setIn(['oriTemp', 'usedProject'], usedProject)
-			.setIn(['oriTemp', 'projectRange'], fromJS(item['projectRange']))
 			.setIn(['oriTemp', 'projectCardList'], fromJS([{amount: ''}]))
 			.setIn(['oriTemp', 'usedStock'], usedStock)
 			.setIn(['oriTemp', 'stockCardList'], fromJS([{amount: ''}]))
 			.setIn(['oriTemp', 'propertyCost'], propertyCost)
 			.setIn(['oriTemp', 'propertyCostList'], fromJS(propertyCostList))
-			.setIn(['oriTemp', 'propertyCarryover'], item['propertyCarryover'])
 			.set('categoryTemp', fromJS({
 				usedStock: usedStock,
 				beProject: beProject,

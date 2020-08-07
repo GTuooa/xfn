@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Checkbox, Switch, Icon, message }	from 'antd'
+import { Checkbox, Switch, message }	from 'antd'
+import { Icon } from 'app/components'
 import { TableItem, TableOver } from 'app/components'
 
 import * as accountConfigActions from 'app/redux/Config/AccountConfig/accountConfig.action'

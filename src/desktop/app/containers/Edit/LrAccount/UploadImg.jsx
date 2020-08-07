@@ -2,7 +2,7 @@
 // import { Map, List, toJS, fromJS } from 'immutable'
 // import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 //
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 // import { upfile, showImg, getFileNameNoExt } from 'app/utils'
 // import { Icon, Input, Button, Menu, Dropdown, Spin, message, Radio, Modal } from 'antd'
 // const RadioGroup = Radio.Group

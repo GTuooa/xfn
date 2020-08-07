@@ -9,12 +9,13 @@ import * as draftActions from 'app/redux/Edit/Draft/draft.action.js'
 import * as printActions from 'app/redux/Edit/FilePrint/filePrint.actions.js'
 
 import { debounce } from 'app/utils'
-import { Icon, Input, Button, Menu, Tooltip, Modal, Checkbox } from 'antd'
+import { Input, Button, Menu, Tooltip, Modal, Checkbox } from 'antd'
+import { Icon } from 'app/components'
 import {  message as msg  } from 'antd'
 import { judgePermission } from 'app/utils'
 import { ROOT } from 'app/constants/fetch.constant.js'
 import { ImportModal, ExportModal } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 @immutableRenderDecorator

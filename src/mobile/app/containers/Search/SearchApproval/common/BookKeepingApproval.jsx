@@ -5,7 +5,7 @@ import '../style.less'
 
 import * as Limit from 'app/constants/Limit.js'
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopDatePicker } from 'app/containers/components'
 import { Container, Row, ScrollView, Icon, Single, ButtonGroup, Button, Switch } from 'app/components'
 
@@ -81,7 +81,6 @@ export default
         const account = approalAccountState.get('account')
 
         return (
-            // <Container className="search-approval">
             <Container className="edit-running search-approval">
                 <TopDatePicker
                     value={accountDate}

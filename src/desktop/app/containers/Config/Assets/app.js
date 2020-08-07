@@ -7,7 +7,6 @@ import AssetsCategory from './AssetsCategory'
 import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'
 
 @connect(state => state)
-export default
 class Assets extends React.Component {
 
     componentDidMount() {
@@ -21,16 +20,18 @@ class Assets extends React.Component {
 
     render() {
 
-        const { homeState, assetsState, allState, history } = this.props
+        const { homeState, assetsState, allState } = this.props
 
         const tabSelectedIndex = assetsState.get('tabSelectedIndex')
 
         const conponent = ({
-            '资产类别': () => <AssetsCategory history={history}/>,
-            '资产卡片': () => <AssetsCard history={history}/>
+            '资产类别': () => <AssetsCategory />,
+            '资产卡片': () => <AssetsCard />
         }[tabSelectedIndex] || (() => <div></div>))()
 
         return conponent
 
     }
 }
+
+export default Assets

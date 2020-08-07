@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { formatPrice } from 'app/utils'
 
 @immutableRenderDecorator
-export default
+
 class Price extends Component {
 
 	render() {
@@ -28,3 +28,4 @@ class Price extends Component {
 		)
 	}
 }
+export default Price;

@@ -4,7 +4,6 @@ import { Pagination } from 'antd'
 import './table.less'
 
 @immutableRenderDecorator
-export default
 class TablePagination extends React.Component{
 	render() {
 		const { currentPage, pageCount, paginationCallBack, className, ...others } = this.props
@@ -21,3 +20,4 @@ class TablePagination extends React.Component{
 		)
 	}
 }
+export default TablePagination;

@@ -51,3 +51,5 @@ export const EDIT_APPROVAL_PAGE = 10
 export const RUNNING_ABSTRACT_LENGTH = 64  //摘要长度限制
 export const ACCOUNT_STRING_LENGTH = 40  //摘要长度限制
 export const ACCOUNT_NAME_LENGTH = 20  //摘要长度限制
+
+export const APPROVAL_JOIN_STR = '-'

@@ -40,7 +40,7 @@ class Table extends React.Component {
 
         const titleName = activeTapKey === anotherTabName ? '往来类别': `${activeTapKey}类别`
         const manageTitleList = ['编码','名称',`${titleName}`,'启/停用']
-        const titleList = ['编码','名称',`${titleName}`,'启/停用']
+        const titleList = ['编码','名称',`${titleName}`]
 		const currentItem = fromJS({'name': activeTapKey, 'uuid': activeTapKeyUuid})
 
         let selectUuidList = []

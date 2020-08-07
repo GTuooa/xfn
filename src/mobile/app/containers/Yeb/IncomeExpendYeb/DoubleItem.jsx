@@ -6,7 +6,7 @@ import { yllsActions } from 'app/redux/Ylls'
 import * as incomeExpendYebActions from 'app/redux/Yeb/IncomeExpendYeb/incomeExpendYeb.action.js'
 import * as incomeExpendMxbActions from 'app/redux/Mxb/IncomeExpendMxb/incomeExpendMxb.action.js'
 
-import TableAmount from 'app/containers/components/table/TableAmount'
+import TableAmount from 'app/containers/components/Table/TableAmount'
 
 @immutableRenderDecorator
 export default

@@ -96,7 +96,7 @@ class Lrb extends React.Component {
 
 		const referBegin = lrbState.get('referBegin')
 		const referEnd = lrbState.get('referEnd')
-		const referglBegin = referglBegin?`${referBegin.substr(0,4)}-${referBegin.substr(4,2)}`:''
+		const referglBegin = referBegin?`${referBegin.substr(0,4)}-${referBegin.substr(4,2)}`:''
 		const referglEnd = referEnd?`${referEnd.substr(0,4)}-${referEnd.substr(4,2)}`:referglBegin
 		const extraMessageList = lrbState.get('extraMessageList')
 		const calculatePage = lrbState.get('calculatePage')

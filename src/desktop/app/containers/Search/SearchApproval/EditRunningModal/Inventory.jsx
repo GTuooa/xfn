@@ -3,8 +3,8 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
 import XfIcon from 'app/components/Icon'
-import { XfnSelect, XfInput } from 'app/components'
-import { Select, Divider, Icon, Button, Modal } from 'antd'
+import { XfnSelect, XfInput, Icon } from 'app/components'
+import { Select, Divider, Button, Modal } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 
 import AddCardModal from 'app/containers/Config/Inventory/AddCardModal.jsx'

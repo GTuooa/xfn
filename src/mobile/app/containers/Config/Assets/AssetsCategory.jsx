@@ -6,7 +6,7 @@ import { Container, ButtonGroup, Button, Icon, ScrollView, Row, Form, TextInput,
 // import { Select } from 'app/containers/All/Thirdparty'
 import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { selectAc } from 'app/utils'
 const {
 	Label,

@@ -6,8 +6,8 @@ import '../components/common.less'
 import * as Limit from 'app/constants/Limit.js'
 
 import { formatFour, formatMoney } from 'app/utils'
-import { NumberInput, TableItem } from 'app/components'
-import { DatePicker, Input, Icon } from 'antd'
+import { NumberInput, TableItem, Icon } from 'app/components'
+import { DatePicker, Input } from 'antd'
 import InputFour from 'app/components/InputFour'
 
 import * as editInventoryCardActions from 'app/redux/Config/Inventory/editInventoryCard.action.js'

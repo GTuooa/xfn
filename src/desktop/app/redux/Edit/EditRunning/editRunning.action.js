@@ -1,6 +1,6 @@
 import * as ActionTypes from './ActionTypes.js'
 import { showMessage, numberCalculate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { toJS, is ,fromJS } from 'immutable'
 import { message, Modal } from 'antd'
 const confirm = Modal.confirm
@@ -1407,7 +1407,7 @@ export const getFileUploadFetch = (form,categoryUuid,oriDate,close) => (dispatch
         } else {
             if (showMessage(json)) {
                 dispatch(getStockCardPrice(oriDate,json.data.importList.map(v =>{
-                    v.storeUuid = v.warehouseUuid
+                    v.storeUuid = v.warehouseCardUuid
                     v.cardUuid = v.inventoryUuid
                     return v;
                     }),fromJS(json.data.importList)))

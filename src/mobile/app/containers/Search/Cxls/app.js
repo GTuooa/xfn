@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect }	from 'react-redux'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { cxAccountActions } from 'app/redux/Search/Cxls'
 
 import Cxls from './Cxls'

@@ -4,7 +4,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin';
 
 import { InputItem } from 'antd-mobile'
 import { formatMoney, formatNumber } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 const reg = /^\d{0,14}(\.\d{0,2})?$/; // 正数金额
 const regNegative = /^-{0,1}\d{0,14}(\.\d{0,2})?$/; // 负数数金额

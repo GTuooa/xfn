@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { fromJS, toJS }	from 'immutable'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import Title from './Title.jsx'
 import Table from './Table.jsx'
 import './style/index.less'

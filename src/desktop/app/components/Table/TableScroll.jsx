@@ -5,7 +5,7 @@ import './table.less'
 // 外币、数量余额表专用
 
 @immutableRenderDecorator
-export default
+
 class TableScroll extends React.Component{
 	render() {
 		const { type, className } = this.props
@@ -19,3 +19,5 @@ class TableScroll extends React.Component{
 		)
 	}
 }
+
+export default TableScroll;

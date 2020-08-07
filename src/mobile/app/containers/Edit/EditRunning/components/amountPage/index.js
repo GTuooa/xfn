@@ -8,7 +8,7 @@ import SfzcCom from './sfzc.js'
 import JzcbCom from './jzcb.js'
 import ChdbCom from './chdb.js'
 import ChyeCom from './chye.js'
-import Jxsezc from './Jxsezc.js'
+import Jxsezc from './jxsezc.js'
 import ChzzCom from './Chzz.js'
 import ChzzZzdCom from './ChzzZzd.js'
 import GgfyftCom from './ggfyft.js'
@@ -19,7 +19,7 @@ import KjfpCom from './Kjfp.js'
 
 import { decimal, DateLib } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as editRunning from 'app/constants/editRunning.js'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
@@ -1067,7 +1067,7 @@ export default class AmountCom extends Component  {
             case 'LB_JXSEZC': {
                 const warehouseCardList = oriTemp.get('warehouseCardList')
                 const usedStock = oriTemp.get('usedStock')
-                const stockRange = oriTemp.get('stockRange') ? oriTemp.get('stockRange') : fromJS([])
+                const stockRange = oriTemp.get('stockRange')
                 component = <Jxsezc
                     dispatch={dispatch}
                     stockCardList={stockCardList}

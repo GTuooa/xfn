@@ -7,7 +7,7 @@ import * as assAllActions from 'app/redux/Home/All/asslist.actions'
 import './ass-option.less'
 import { Switch, TextInput, Button, ButtonGroup, Container, Form, Row, Icon, SinglePicker } from 'app/components'
 const Item = Form.Item
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

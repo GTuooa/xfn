@@ -13,8 +13,8 @@ const integer = /^\d{0,14}?$/;
 const integerNegative = /^-{0,1}\d{0,14}?$/;
 
 @immutableRenderDecorator
-export default
-    class XfInput extends React.Component {
+
+class XfInput extends React.Component {
     state = {
         formate: true
     };
@@ -184,3 +184,5 @@ export default
         // }
     }
 }
+
+export default XfInput;

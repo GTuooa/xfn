@@ -2,10 +2,11 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 
-import { Icon, Menu, Dropdown, Popover, Button, Tooltip, message } from 'antd'
+import { Menu, Dropdown, Popover, Button, Tooltip, message } from 'antd'
+import Icon from 'app/components/AntdIcon'
 import InternalFrame from 'app/containers/components/InternalFrame'
 import XfnIcon from 'app/components/Icon'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'

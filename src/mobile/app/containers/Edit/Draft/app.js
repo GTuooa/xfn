@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 import { fromJS } from 'immutable'
 
 import { Button, ButtonGroup, Icon, Container, Row, ScrollView, TextInput, SinglePicker } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as draftActions from 'app/redux/Edit/Draft/draft.action.js'
 import DraftItem from './DraftItem.jsx'

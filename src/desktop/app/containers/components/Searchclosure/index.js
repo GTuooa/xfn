@@ -3,9 +3,10 @@ import { Map, List } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import './style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showImg } from 'app/utils'
-import { Icon, message, Radio, Modal } from 'antd'
+import { message, Radio, Modal } from 'antd'
+import { Icon } from 'app/components'
 const RadioGroup = Radio.Group
 
 import UploadEnclosure from 'app/containers/components/Enclosure/UploadEnclosure.jsx'
@@ -103,7 +104,7 @@ class Searchclosure extends React.Component {
 								<span className="enclosure-item-tip">
 									{v.get('size')>=1024 ? (v.get('size')/1024).toFixed(2)+'M' :v.get('size')+'kb'}
 								</span>
-								<a className="enclosure-item-tip" onClick={() => downloadEnclosure(v.get('signedUrl'), v.get('fileName'))} href="javascript:void(0);"
+								<a className="enclosure-item-tip" onClick={() => downloadEnclosure(v.get('signedUrl'), v.get('fileName'))} href="#"
 									style={{display: permission ? '' : 'none'}}>
 									<Icon type="download" />
 								</a>

@@ -4,7 +4,8 @@ import { connect } from 'react-redux'
 import { toJS, fromJS, Map, List } from 'immutable'
 import './style.less'
 
-import { Button, message, Input, Radio, Icon, Checkbox, Select } from 'antd'
+import { Button, message, Input, Radio, Checkbox, Select } from 'antd'
+import { Icon } from 'app/components'
 const Search = Input.Search
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;

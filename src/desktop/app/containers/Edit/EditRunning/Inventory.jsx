@@ -6,7 +6,7 @@ import { connect }	from 'react-redux'
 
 import { Select, Divider, Icon, Button, Modal, message, Tooltip } from 'antd'
 import Input from 'app/components/Input'
-import { NumberInput, TableItem, InputFour, XfnSelect, XfToolTip } from 'app/components'
+import { NumberInput, TableItem, InputFour, XfnSelect } from 'app/components'
 const Option = Select.Option
 import * as Limit from 'app/constants/Limit.js'
 import XfIcon from 'app/components/Icon'
@@ -158,7 +158,7 @@ class Inventory extends React.Component {
                             const defaultPrice = priceItem.get('defaultPrice')
                             const quantity = priceItem.get('quantity')
                             if (defaultPrice) {
-                                element = <span style={{color:'white'}} key={i}>
+                                element = <span>
                                     {v.get('warehouseCardUuid') && v.get('cardUuid') && v.get('showQuantity')?`仓库数量：${formatFour(v.get('currentQuantity'))}`:''}
                                     {v.get('warehouseCardUuid') && v.get('cardUuid') && v.get('showQuantity')?<br/>:''}
                                     {`默认${words}价：${formatFour(defaultPrice)}元/${v.get('unitName')}`}
@@ -190,8 +190,7 @@ class Inventory extends React.Component {
                                 </span>
                             } else {
                                 element = <span
-                                    key={i}
-                                    style={{color:'white'}}
+
                                      onClick={() => {
                                      this.setState({
                                          showPriceModal:true,
@@ -225,7 +224,7 @@ class Inventory extends React.Component {
                             }
                         }
 
-                        return <XfToolTip title={element} placement="right" key={i}>
+                        return <Tooltip title={element} placement="right">
                         <div key={i} className={className}>
                             <InventoryDrop
                                 v={v}
@@ -517,7 +516,7 @@ class Inventory extends React.Component {
                             }
                             </span>
                         </div>
-                        </XfToolTip>
+                        </Tooltip>
                         }
                     )
                 }
@@ -685,7 +684,7 @@ class Inventory extends React.Component {
                             <div className="ls-flex-row" >
                                 {
                                     defaultPriceList.map((v,i) =>
-                                        <div className="ls-flex-row-item" key={i}>
+                                        <div className="ls-flex-row-item">
                                             <label className="ls-flex-row-label">{{1:'默认采购价：',2:'默认销售价：'}[inventory.type]}</label>
                                             <div className="ls-flex-row-input" style={{display:'flex'}}>
                                                 <InputFour

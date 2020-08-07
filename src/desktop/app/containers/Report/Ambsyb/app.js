@@ -7,7 +7,7 @@ import * as ambsybActions from 'app/redux/Report/Ambsyb/ambsyb.action.js'
 import * as homeActions from 'app/redux/Home/home.action.js'
 
 import PageSwitch from 'app/containers/components/PageSwitch'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { formatMoney } from 'app/utils'
 import { Select, Modal, Button, Checkbox, message } from 'antd'
 import { judgePermission } from 'app/utils'

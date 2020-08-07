@@ -3,8 +3,9 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, fromJS } from 'immutable'
 
 import * as Limit from 'app/constants/Limit.js'
-import { Button, Icon, TreeSelect } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import { Button, TreeSelect } from 'antd'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import { formatCommonCardList } from 'app/containers/Config/Approval/components/common.js'
 
 import SingleModal from './SingleModal'

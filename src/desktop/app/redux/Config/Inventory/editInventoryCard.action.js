@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 
 import { showMessage } from 'app/utils'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { message, Modal } from 'antd'
 

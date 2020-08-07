@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 import { fromJS, toJS } from 'immutable'
 import { Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, Checkbox, Multiple, XfInput } from 'app/components'
 import { decimal } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
 
 @connect(state => state)

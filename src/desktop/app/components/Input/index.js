@@ -5,7 +5,7 @@ import { numberTest } from 'app/containers/Edit/EditRunning/common/common'
 import { formatMoney } from 'app/utils'
 
 @immutableRenderDecorator
-export default
+
 class NumberInput extends React.Component{
 	state = {
 		formate:true
@@ -41,3 +41,5 @@ class NumberInput extends React.Component{
 		)
 	}
 }
+
+export default NumberInput

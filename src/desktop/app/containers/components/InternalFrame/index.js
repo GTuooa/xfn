@@ -1,8 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import { Menu, Dropdown, Icon, Button }	from 'antd'
-import { XfnIcon } from 'app/components'
+import { Menu, Dropdown, Button }	from 'antd'
+import { XfnIcon, Icon } from 'app/components'
 import './style.less'
 
 import * as allActions from 'app/redux/Home/All/all.action'

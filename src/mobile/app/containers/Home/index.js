@@ -11,8 +11,8 @@ import HomeSection from './HomeSection'
 import SettingSection from './SettingSection'
 
 import { homeActions } from 'app/redux/Home/home.js'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
-import * as thirdParty from 'app/thirdParty'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
+import thirdParty from 'app/thirdParty'
 import 'app/style/app.less'
 import './index.less'
 

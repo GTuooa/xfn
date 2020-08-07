@@ -4,14 +4,14 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { Tab } from 'app/components'
 import { Button, Modal } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import PageSwitch from 'app/containers/components/PageSwitch'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 
 import TaxRateConf from './TaxRateConf'
 
-import * as taxConfActions from 'app/redux/Config/Running/tax/taxConf.action'
+import * as taxConfActions from 'app/redux/Config/Running/Tax/taxConf.action.js'
 import { runningIndexActions } from 'app/redux/Config/Running/index'
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as lsqcActions	from 'app/redux/Config/Lsqc/lsqc.action.js'

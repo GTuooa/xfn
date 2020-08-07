@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Select, Icon }  from 'antd'
-import { TableTree, JxcTree } from 'app/components'
+import { Select }  from 'antd'
+import { TableTree, JxcTree, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as projectConfActions from 'app/redux/Config/Project/project.action.js'

@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 
 import { showMessage, formatDate } from 'app/utils'
 import { message, Modal } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import {
     DateLib,
@@ -1293,7 +1293,7 @@ export const insertOrModifyLrDisposal = (saveAndNew) => (dispatch, getState) => 
                 if (saveAndNew) { //保存并新增
                     dispatch(initEditCalculateTemp('saveAndNew', '', '', 'CqzcTemp'))
                     dispatch(getAssetsList('LB_JZSY', 'CqzcTemp'))
-                    dispatch(getJzsyProjectCardList(CqzcTemp.get('projectRange'),'CqzcTemp',true))
+                    dispatch(getJzsyProjectCardList(CqzcTemp.get('projectRange')))
 
                 } else { //保存
                     dispatch(initEditCalculateTemp('afterSave', CqzcTemp, json.data, 'CqzcTemp'))
@@ -1870,8 +1870,7 @@ export const insertOrModifyTaxTransfer = (saveAndNew) => (dispatch, getState) =>
     const categoryMessage = editCalculateState.getIn(['views','categoryMessage'])
     const categoryType = categoryMessage.get('categoryType')
     const propertyCostList = categoryMessage.get('propertyCostList')
-    const isBeProject = categoryMessage.get('beProject')
-    const newProjectRange = categoryMessage.get('newProjectRange')
+    const beProject = categoryMessage.get('beProject')
     const oriState = TaxTransferTemp.get('oriState')
     const oriAbstract = TaxTransferTemp.get('oriAbstract')
     const chooseWareHouseCard = TaxTransferTemp.get('chooseWareHouseCard')
@@ -1890,7 +1889,7 @@ export const insertOrModifyTaxTransfer = (saveAndNew) => (dispatch, getState) =>
     if(categoryType === 'LB_FYZC' && propertyCostList.size === 1){
         propertyCost = propertyCostList.get(0)
     }
-    const beProject = categoryType === 'LB_CQZC' ? newProjectRange.some(v => v.get('name') === '损益项目') : isBeProject
+
 
     const propertyCarryover = TaxTransferTemp.get('propertyCarryover')
     let stockAmount = 0
@@ -1914,7 +1913,7 @@ export const insertOrModifyTaxTransfer = (saveAndNew) => (dispatch, getState) =>
         oriState,
         amount,
         oriAbstract,
-        usedProject:  insertOrModify === 'insert' ? (beProject ? usedProject : false) : usedProject,
+        usedProject: propertyCarryover !== 'SX_HW' && categoryType !== 'LB_CQZC' ? (insertOrModify === 'insert' ? (beProject ? usedProject : false) : usedProject) : false,
         propertyCost,
         usedStock: stockCardList.getIn([0,'cardUuid']) ? true : false,
         stockCardList: stockCardList.toJS(),
@@ -2925,7 +2924,7 @@ export const modifyRefreshCalculate = (paymentType, saveAndNew) => (dispatch, ge
                 })
             }
             if (!saveAndNew && paymentType === 'LB_JZSY') {
-                dispatch(getJzsyProjectCardList(json.data.category.projectRange,'CqzcTemp',true))
+                dispatch(getJzsyProjectCardList(json.data.category.projectRange))
             }
             if (!saveAndNew && paymentType === 'LB_JZCB') {
 
@@ -2986,14 +2985,9 @@ export const modifyRefreshCalculate = (paymentType, saveAndNew) => (dispatch, ge
                 const propertyCarryover = json.data.category.propertyCarryover
                 const projectRange = json.data.category.projectRange
                 const acBusinessExpense = json.data.category.acBusinessExpense
-                let needCommonCard = false,needIndirect = false,needMechanical = false,needAssist = false,needMake = false
                 if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_FW' || categoryType === 'LB_FYZC'){
-                    needCommonCard = true,needIndirect = true,needMechanical = true,needAssist = true,needMake = true
+                    dispatch(getJzsyProjectCardList(projectRange,'TaxTransferTemp',true))
                 }
-                if(categoryType === 'LB_YYWZC'){
-                    needCommonCard = true
-                }
-                dispatch(getJzsyProjectCardList(projectRange,'TaxTransferTemp',needCommonCard,'',needIndirect,needMechanical,needAssist,needMake))
                 if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_HW'){
                     dispatch(getStockCategoryList(acBusinessExpense.stockRange))
                     dispatch(getCanUseWarehouseCardList({temp:'TaxTransferTemp'}))
@@ -4223,18 +4217,11 @@ export const getCategoryMessage = ( uuid ) => (dispatch) => {
                 message: data
             })
             if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_FW' || categoryType === 'LB_FYZC'){
-                dispatch(getJzsyProjectCardList(data.projectRange,'TaxTransferTemp',true,'',true,true,true,true))
-            }
-            if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_HW'){
-                dispatch(getJzsyProjectCardList(data.projectRange,'TaxTransferTemp'))
-                dispatch(getStockCategoryList(data.acBusinessExpense.stockRange))
-                dispatch(getCanUseWarehouseCardList({temp:'TaxTransferTemp'}))
-            }
-            if(categoryType === 'LB_YYWZC'){
                 dispatch(getJzsyProjectCardList(data.projectRange,'TaxTransferTemp',true))
             }
-            if(categoryType === 'LB_CQZC'){
-                dispatch(getJzsyProjectCardList(data.projectRange,'TaxTransferTemp'))
+            if(categoryType === 'LB_YYZC' && propertyCarryover === 'SX_HW'){
+                dispatch(getStockCategoryList(data.acBusinessExpense.stockRange))
+                dispatch(getCanUseWarehouseCardList({temp:'TaxTransferTemp'}))
             }
             if(categoryType === 'LB_FYZC' && data.propertyCostList.length === 1){
                 dispatch(changeEditCalculateCommonState('TaxTransferTemp','propertyCost',data.propertyCostList[0]))

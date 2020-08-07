@@ -1,9 +1,9 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Button, Menu, Dropdown, Icon, Spin, Upload, message,Progress, Modal } from 'antd'
-
+import { Button, Menu, Dropdown, Spin, Upload, message,Progress, Modal } from 'antd'
+import { Icon } from 'app/components'
 // import thirdparty from 'app/utils/thirdparty'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 // import '../components/common.less'
 import { ROOT } from 'app/constants/fetch.constant.js'
 import { Pagination, Tooltip } from 'antd'

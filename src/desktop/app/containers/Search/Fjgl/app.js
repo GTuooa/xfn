@@ -5,7 +5,7 @@ import './style/index.less'
 
 import { Button, Menu, Dropdown, Icon, Radio, Modal } from 'antd'
 import { formatMoney, judgePermission } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const RadioGroup = Radio.Group
 import EnclosurePreview from 'app/containers/components/EnclosurePreview'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
@@ -100,7 +100,7 @@ class Fjgl extends React.Component {
 					detailList={detailList}
 					// PzPermissionInfo={PzPermissionInfo}
 					changeInputValue={(value) => this.setState({inputValue: value})}
-					changeSearchValue={(value) => dispatch(fjglActions.serchForVc(value))}
+					// changeSearchValue={(value) => dispatch(fjglActions.serchForVc(value))}
 					onChange={value => dispatch(fjglActions.changeFjglIssudate(value)) && dispatch(fjglActions.getFjListFetch())}
 					onChangeLabel={value => dispatch(fjglActions.changeLabelValue(value)) && dispatch(fjglActions.getFjListFetch())}
 					intelligentStatus={intelligentStatus}

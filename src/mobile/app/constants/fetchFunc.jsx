@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { browserNavigator } from 'app/utils'
 
 // let network = 'network=wifi'
@@ -10,7 +10,7 @@ import { ROOTURL, XFNVERSION, getUrlParam } from 'app/constants/fetch.constant.j
 
 
 // console.log('dede', getUrlParam);
-const href = location.href
+const href = window.location.href
 const urlParam = getUrlParam(href)
 
 const isWebPlay = urlParam.isplayground && urlParam.isplayground === 'true'
@@ -19,12 +19,12 @@ global.isplayground = isWebPlay ? true : false
 
 const isOrgTrialEntry = urlParam.isOrgTrialEntry && urlParam.isOrgTrialEntry === 'true'
 global.isOrgTrialEntry = isOrgTrialEntry
-global.showOrgTrialEntry = isplayground && isOrgTrialEntry
+global.showOrgTrialEntry = global.isplayground && isOrgTrialEntry
 
 let fetchErrCount = 0
 
 // const start = href.lastIndexOf('&')
-// let serverMessage = location.href.substr(start+1)
+// let serverMessage = window.location.href.substr(start+1)
 // const isplaygroundName = serverMessage.substr(0, 12)
 // const isplaygroundBool = serverMessage.substr(13, 4)
 

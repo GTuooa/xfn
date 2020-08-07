@@ -10,7 +10,7 @@ import { previewEnclosureActions } from 'app/redux/Edit/PreviewEnclosure/index.j
 
 import { Checkbox, Icon, Button,SinglePicker } 	from 'app/components'
 import { Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showImg } from 'app/utils'
 
 @immutableRenderDecorator

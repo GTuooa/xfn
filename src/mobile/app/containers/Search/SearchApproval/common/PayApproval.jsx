@@ -5,7 +5,7 @@ import '../style.less'
 
 import * as Limit from 'app/constants/Limit.js'
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopDatePicker } from 'app/containers/components'
 import { Container, Row, ScrollView, Icon, Single, ButtonGroup, Button } from 'app/components'
 

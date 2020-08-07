@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import fetchApi from 'app/constants/fetch.constant.js'
 
 //

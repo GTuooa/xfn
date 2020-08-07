@@ -2,10 +2,10 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 
-import { Tooltip, TreeSelect, Select, Icon } from 'antd'
+import { Tooltip, TreeSelect, Select } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 import { getSelectJrCategoryList, receiptList } from 'app/containers/Config/Approval/components/common.js'
-import { XfInput } from 'app/components'
+import { XfInput, Icon } from 'app/components'
 import { formatMoney } from 'app/utils'
 
 import Invoice from './Invoice'

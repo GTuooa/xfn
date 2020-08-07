@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import { fromJS } from 'immutable'
 import { showMessage, upfile, DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import fetchApi from 'app/constants/fetch.account.js'
 import fetchGlApi from 'app/constants/fetch.constant.js'

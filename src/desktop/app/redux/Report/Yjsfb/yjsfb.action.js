@@ -1,7 +1,7 @@
 import * as ActionTypes from './ActionTypes.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'
-import { showMessage, jsonifyDate } from 'app/utils'
+import { showMessage } from 'app/utils'
 import fetchApi from 'app/constants/fetch.constant.js'
 
 export const getPeriodAndIncomeStatementSfbFetch = (issuedate, endissuedate) => (dispatch,getState) => {

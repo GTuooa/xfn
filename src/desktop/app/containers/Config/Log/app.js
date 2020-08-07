@@ -1,16 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import * as sobLogActions from 'app/redux/Config/SobLog/SobLog.action.js'
+import * as sobLogActions from 'app/redux/Config/SobLog/sobLog.action.js'
 import * as allActions from 'app/redux/Home/All/all.action'
 import * as homeActions from 'app/redux/Home/home.action.js'
 
 import logGetformatDate from 'app/containers/Config/Sob/logGetformatDate.js'
 import Table from './Table.jsx'
-import { Button, Checkbox, Input, Icon, DatePicker, TimePicker, message, Select } from 'antd'
+import { Button, Checkbox, Input, DatePicker, TimePicker, message, Select } from 'antd'
 const { RangePicker } = DatePicker
 import { ROOT } from 'app/constants/fetch.constant.js'
-import { ExportModal } from 'app/components'
+import { ExportModal, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 import moment from 'moment'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
@@ -81,7 +81,6 @@ export default
         }
 
         return (
-            // <div className="wrap-body kmyeb newConfigsob">
             <ContainerWrap type="config-one" className="log-config">
                 <FlexTitle>
                     <div className="flex-title-left">

@@ -23,7 +23,6 @@ export default class ProjectCom extends Component  {
         isAll: true,
         categoryValue: 'ALL',
     }
-    funcList = []
 
     componentDidMount() {
         this.props.dispatch(editRunningActions.changeLrlsData('commonProjectList', fromJS([]), true))
@@ -35,10 +34,6 @@ export default class ProjectCom extends Component  {
         }
     }
 
-    componentDidUpdate () {
-        this.funcList.forEach(v => v())
-    }
-
     render () {
         const {
             dispatch,
@@ -48,7 +43,7 @@ export default class ProjectCom extends Component  {
             usedProject,
             projectCardList,
             projectList,
-            propertyTax,
+            propertyPay,
             history,
             projectRange,
             projectCategoryList,
@@ -91,22 +86,6 @@ export default class ProjectCom extends Component  {
                 showCommon = true
                 break
             }
-            case 'LB_SFZC': {
-                showCommon = ['SX_QTSF', 'SX_QYSDS'].includes(propertyTax)
-                break
-            }
-            case 'LB_YYWSR': {
-                showCommon = true
-                break
-            }
-            case 'LB_YYWZC': {
-                showCommon = true
-                break
-            }
-            case 'LB_TZ': {
-                showCommon = handleType == 'JR_HANDLE_QDSY'
-                break
-            }
             case 'LB_JK': {
                 showCommon = true
                 showAssist = handleType == 'JR_HANDLE_CHLX' ? true : false
@@ -122,7 +101,6 @@ export default class ProjectCom extends Component  {
             }
             case 'LB_JZSY': {
                 canInsert = false
-                showCommon = true
                 break
             }
             case 'LB_JZCB': {
@@ -134,10 +112,6 @@ export default class ProjectCom extends Component  {
             }
             case 'LB_JXSEZC': {
                 canInsert = false
-                const isYyzcFw = (relationCategoryType == 'LB_YYZC' && propertyCarryover == 'SX_FW') ? true : false
-                showCommon = isYyzcFw || ['LB_FYZC', 'LB_YYWZC'].includes(relationCategoryType)
-                showSgxm = isYyzcFw || ['LB_FYZC'].includes(relationCategoryType)
-                showAssist = isYyzcFw || ['LB_FYZC'].includes(relationCategoryType)
                 break
             }
             case 'LB_CHTRXM': {
@@ -170,9 +144,6 @@ export default class ProjectCom extends Component  {
                 // if (['LB_JZCB'].includes(categoryType) && ['生产项目'].includes(v.get('name'))) {
                 //     return
                 // }
-                if (['LB_JXSEZC'].includes(categoryType) && relationCategoryType==='LB_CQZC' && ['生产项目', '施工项目'].includes(v.get('name'))) {
-                    return
-                }
                 categoryList.push(v.toJS())
             }
             if (['LB_CHTRXM', 'LB_XMJZ'].includes(categoryType)) {
@@ -203,9 +174,6 @@ export default class ProjectCom extends Component  {
             // if (['LB_JZCB'].includes(categoryType) && ['XZ_PRODUCE'].includes(v['projectProperty'])) {
             //     shouldReturn = false
             // }
-            if (['LB_JXSEZC'].includes(categoryType)  && relationCategoryType==='LB_CQZC' && ['XZ_PRODUCE', 'XZ_CONSTRUCTION'].includes(v['projectProperty'])) {
-                shouldReturn = false
-            }
             return shouldReturn
         })
 
@@ -217,15 +185,6 @@ export default class ProjectCom extends Component  {
         let showName = `${code} ${name}`
         if (['COMNCRD', 'ASSIST', 'MAKE', 'INDIRECT', 'MECHANICAL'].includes(code)) {
             showName = name
-        }
-
-        this.funcList = []
-        if (categoryType === 'LB_JXSEZC' && relationCategoryType === 'LB_CQZC' && categoryList.length === 1) {
-            //进项税额转出处理类别为长期资产时项目未勾选损益项目时不显示
-            this.funcList.push(()=>{
-                dispatch(editRunningActions.changeLrlsData(['oriTemp', 'usedProject'], false))
-            })
-            return null
         }
 
         return (

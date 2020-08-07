@@ -26,9 +26,10 @@ class Title extends React.Component {
                         onClick={() => {
                             if (isMidify) {
                                 dispatch(sobRoleActions.modifySobRoleModule())
-                            } else {
-                                dispatch(sobRoleActions.addSobRole())
                             }
+                            // else {
+                            //     dispatch(sobRoleActions.addSobRole())
+                            // }
                         }}
                     >
                         保存

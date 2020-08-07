@@ -6,7 +6,7 @@ import * as lrbActions from 'app/redux/Report/Lrb/lrb.action.js'
 import * as homeActions from 'app/redux/Home/home.action.js'
 
 import { Button, Tooltip } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import InitTable from './InitTable.jsx'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'

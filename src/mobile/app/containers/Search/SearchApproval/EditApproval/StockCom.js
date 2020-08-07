@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 
 import { Row, Icon, Amount, Switch, ChosenPicker } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as searchApprovalActions from 'app/redux/Search/SearchApproval/searchApproval.action.js'
 import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunningConfig.action.js'
@@ -22,7 +23,7 @@ const amountProps = {decimalZero: false, decimalPlaces: 4}
 
 //营业收入存货卡片
 export default class StockCom extends Component {
-    static contextTypes = { router: PropTypes.object }
+    // static contextTypes = { router: PropTypes.object }
     state = {
         isAll: true,
         visible: false,
@@ -52,7 +53,7 @@ export default class StockCom extends Component {
             amount,
         } = this.props
         const { isAll, visible, idx, categoryValue } = this.state
-        const { router } = this.context
+        // const { router } = this.context
 
         const isOne = stockList.size == 1 ? true : false
         const showSwitch = false
@@ -86,7 +87,7 @@ export default class StockCom extends Component {
                         type: 'inventory-add',
                         onClick: () => {
                             if (stockRange.size) {
-                                dispatch(editRunningConfigActions.beforeAddInventoryCardFromEditRunning(stockRange, router.history, 'searchApproval'))
+                                dispatch(editRunningConfigActions.beforeAddInventoryCardFromEditRunning(stockRange, '', 'searchApproval'))
                             } else {
                                 thirdParty.toast.info('请选择存货范围')
                             }
@@ -144,7 +145,7 @@ export default class StockCom extends Component {
                                     </div>
                                     <div className='lrls-more-card' onClick={() => {
                                         dispatch(searchApprovalActions.changeSearchApprovalString('', 'currentEditInvetoryIndex', i))
-                                        router.history.push('/searchapproval/stockedit')
+                                        dispatch(push('/searchapproval/stockedit'))
                                     }}>
                                         <div className='lrls-single'>
                                             <Row className='lrls-more-card lrls-card-bottom'>

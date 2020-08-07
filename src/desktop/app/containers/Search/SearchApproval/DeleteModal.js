@@ -2,11 +2,11 @@ import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
-import { Icon, message, Input, Modal, Tree, Button, Checkbox, Tooltip } from 'antd'
+import { message, Input, Modal, Tree, Button, Checkbox, Tooltip } from 'antd'
 const TreeNode = Tree.TreeNode
-import { TableBody, CxpzTableItem, JxcTableAll, TableTitle, TableItem } from 'app/components'
+import { TableBody, CxpzTableItem, JxcTableAll, TableTitle, TableItem, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { showAccountState, showToolTipAccountState } from 'app/containers/Search/SearchApproval/common/common.js'
 
 import * as searchApprovalActions from 'app/redux/Search/SearchApproval/searchApproval.action.js'

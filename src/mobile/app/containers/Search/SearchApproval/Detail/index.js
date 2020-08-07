@@ -3,7 +3,7 @@ import { Map, fromJS } from 'immutable'
 import { connect } from 'react-redux'
 import '../style.less'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Container, Row, ScrollView, Icon, Single, TextInput, ButtonGroup, Button, SearchBar } from 'app/components'
 import MutiDateSelect from 'app/containers/components/MutiPeriodMoreSelect/MutiDateSelect.jsx'
 import { searchTypeStr, searchNameStr, dateTypeStr, accountingTypeStr, accountingNameStr } from 'app/containers/Search/SearchApproval/common/common.js'

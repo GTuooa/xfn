@@ -104,13 +104,13 @@ export default function handleLrb(state = xmmxState, action) {
 
             return state
         },
-        [ActionTypes.CHANGE_ZHMX_MORE_PERIODS] 	 : () => {
-			if (action.chooseperiods) {
-				return state.set('chooseperiods', true)
-			} else {
-				return state.update('chooseperiods', v => !v)
-			}
-		},
+        // [ActionTypes.CHANGE_ZHMX_MORE_PERIODS] 	 : () => {
+		// 	if (action.chooseperiods) {
+		// 		return state.set('chooseperiods', true)
+		// 	} else {
+		// 		return state.update('chooseperiods', v => !v)
+		// 	}
+		// },
         [ActionTypes.ACCOUNTCONF_DETAIL_TRIANGLE_SWITCH]          : () => {
             const showLowerList = state.getIn(['flags', 'runningShowChild'])
             if (!action.showChild) {

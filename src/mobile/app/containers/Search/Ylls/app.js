@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect }	from 'react-redux'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Row, Container, ScrollView } from 'app/components'
 import Yysr from './Yysr'
 import Yyzc from './Yyzc'

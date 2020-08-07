@@ -3,7 +3,7 @@ import { Map, List, toJS, fromJS } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { Container, Row, ScrollView, Icon, Button } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { showImg, EXIF } from 'app/utils'
 import { ImagePicker, Modal, InputItem } from 'antd-mobile'
@@ -504,7 +504,7 @@ class UploadEnclosure extends React.Component {
 // import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 // import { Container, Row, ScrollView, Icon, Button } from 'app/components'
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 // import * as Limit from 'app/constants/Limit.js'
 // import { showImg, EXIF } from 'app/utils'
 // import { ImagePicker, Modal, InputItem } from 'antd-mobile'

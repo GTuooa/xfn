@@ -5,7 +5,7 @@ export const AGENTID = '26171292'
 export const XFNVERSION = '3.1.2'
 export const ROOTURL = 'http://mtst.xfannix.com'
 
-const href = location.href
+const href = window.location.href
 // 安全域名灰度
 const isPre = href.indexOf('mobile.xfannix.com') > 0
 // 从路由读取 corpid
@@ -34,7 +34,7 @@ export const USER_GUIDE_KJ = 'https://www.xfannix.com/support/mobile/app/index.h
 export const USER_GUIDE_VIDEO = 'https://www.xfannix.com/support/mobile/app/index.html'
 
 // export const USER_GUIDE = 'https://www.xfare.cn/xfn/manual/mobile/index.html'
-const nameType = 'yz'
+const nameType = 'gt'
 
 const URL = {
 	getddconfig			    : `${ROOT}/dd/config`,

@@ -9,7 +9,8 @@ import XfnSelect from 'app/components/XfnSelect'
 import { jxcConfigCheck } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
 import { UpperClassSelect, SelectAc, NumberInput, TableAll, TableBody, TableItem, Tab, TablePagination } from 'app/components'
-import { Modal, message, Radio, Icon, Tree, Input, Button, Checkbox, Select } from 'antd'
+import { Modal, message, Radio, Tree, Input, Button, Checkbox, Select } from 'antd'
+import { Icon } from 'app/components'
 const { TreeNode } = Tree
 const { confirm } = Modal
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action'

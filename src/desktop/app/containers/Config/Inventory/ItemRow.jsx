@@ -125,22 +125,25 @@ class ItemRow extends React.Component {
 						</li>
 					: null
 				}
-
-				<li className="jxc-row-switch">
-					<span className='title-category-switch-inventory-no-left'>
-						<Switch
-							className="use-unuse-style"
-							checked={item.get('used')}
-							onChange={(value) => {
-								if (editPermission) {
-									dispatch(inventoryConfActions.modifyInventoryCardUsedStatus(item.get('uuid'), value))
-								} else {
-									message.info('当前角色无该请求权限')
-								}
-							}}
-						/>
-					</span>
-				</li>
+				{
+					showLastLine ?
+						<li className="jxc-row-switch">
+							<span className='title-category-switch-inventory-no-left'>
+								<Switch
+									className="use-unuse-style"
+									checked={item.get('used')}
+									onChange={(value) => {
+										if (editPermission) {
+											dispatch(inventoryConfActions.modifyInventoryCardUsedStatus(item.get('uuid'), value))
+										} else {
+											message.info('当前角色无该请求权限')
+										}
+									}}
+								/>
+							</span>
+						</li>
+					: null
+				}
 			</TableItem>
 		)
 	}

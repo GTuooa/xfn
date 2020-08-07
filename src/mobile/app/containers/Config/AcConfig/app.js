@@ -8,7 +8,7 @@ import * as otherAllActions from 'app/redux/Home/All/other.action'
 import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import Ac from './Ac.jsx'
 import Title from './Title.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

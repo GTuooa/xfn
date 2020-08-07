@@ -2,9 +2,11 @@ import React from 'react'
 import { connect }	from 'react-redux'
 
 import * as tcxqActions from 'app/redux/Fee/Tcxq/tcxq.action.js'
+import { goBack } from 'react-router-redux'
 
-import * as thirdParty from 'app/thirdParty'
-import { Icon, Button } from 'antd'
+import thirdParty from 'app/thirdParty'
+import { Button } from 'antd'
+import { Icon } from 'app/components'
 import './style.less'
 
 @connect(state => state)
@@ -20,8 +22,7 @@ class PaySuccess extends React.Component {
 
 		const {
 			tcgmState,
-            dispatch,
-			history
+            dispatch
 		} = this.props
 		const { setintervalNum } = this.state
 
@@ -31,7 +32,7 @@ class PaySuccess extends React.Component {
 		return (
 			<div className="pay-success-submit-box">
 				<div className="pay-success-goback">
-					<Button onClick={() => history.goBack()}>返回</Button>
+					<Button onClick={() => goBack()}>返回</Button>
 				</div>
                 <div className="submit-center clearfix">
 					<div className="center-left">

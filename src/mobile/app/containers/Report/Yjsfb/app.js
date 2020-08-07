@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 
 import { Map, toJS } from 'immutable'
 import { Icon, Container, ScrollView, Row }	from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import ProfitLine from './ProfitLine.jsx'
 import { TopMonthPicker } from 'app/containers/components'

@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, message, Tooltip, Switch }	from 'antd'
-import { TableItem, TableOver } from 'app/components'
+import { Checkbox, message, Tooltip, Switch }	from 'antd'
+import { TableItem, TableOver, Icon } from 'app/components'
 
 import * as runningConfActions from 'app/redux/Config/Running/runningConf/runningConf.action'
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'

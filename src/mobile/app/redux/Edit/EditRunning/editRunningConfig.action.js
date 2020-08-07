@@ -6,8 +6,9 @@ import fetchGlApi from 'app/constants/fetch.constant.js'
 
 import { getCardList, getProjectCardList, getBatchList, getStockListByCategory } from 'app/redux/Edit/EditRunning/editRunning.action.js'
 import { getRelativeAllCardList, getProjectAllCardList, getStockAllCardList } from 'app/redux/Search/SearchApproval/searchApproval.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
+import { push } from 'react-router-redux'
 
 export const beforeAddManageTypeCardFromEditRunning = (range, history, otherPageName) => (dispatch,getState) => {
     const getIUManageListTitle =  new Promise(resolve => {
@@ -48,7 +49,7 @@ export const beforeAddManageTypeCardFromEditRunning = (range, history, otherPage
                 originTags: fromJS(originTags),
                 otherPageName: otherPageName ? otherPageName : 'editRunning', // 录入流水不传 otherPageName: editRunning \ searchApproval
             })
-            history.push('/config/relative/relativeCardInsert')
+            dispatch(push('/config/relative/relativeCardInsert'))
         })
 }
 
@@ -73,7 +74,7 @@ export const beforeAddInventoryCardFromEditRunning = (range, history, otherPageN
                         originTags: fromJS(originTags),
                         otherPageName: otherPageName ? otherPageName : 'editRunning', // 录入流水不传 otherPageName: editRunning \ searchApproval
                     })
-                    history.push('/config/inventory/inventoryInsert')
+                    dispatch(push('/config/inventory/inventoryInsert'))
                 }
             })
         }
@@ -150,7 +151,7 @@ export const beforeAddProjectCardFromEditRunning = (history, range, otherPageNam
             highTypeList,
             otherPageName: otherPageName ? otherPageName : 'editRunning', // 录入流水不传 otherPageName: editRunning \ searchApproval
         })
-        history.push('/config/project/projectCard')
+        dispatch(push('/config/project/projectCard'))
     })
 }
 

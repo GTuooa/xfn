@@ -32,7 +32,7 @@ class Tcgm extends React.Component {
 
     render() {
 
-        const { tcgmState, dispatch, homeState, history } = this.props
+        const { tcgmState, dispatch, homeState } = this.props
         const { readContractStatus, agree } = this.state
 
         const corpName = tcgmState.getIn(['data', 'payInfo', 'corpName'])
@@ -101,7 +101,6 @@ class Tcgm extends React.Component {
                     corpName={corpName}
                     orderWindowShow={orderWindowShow}
                     orderNumber={orderNumber}
-                    history={history}
                     corpId={corpId}
                     ddUserId={ddUserId}
                     agree={agree}

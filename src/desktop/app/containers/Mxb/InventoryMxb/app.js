@@ -4,7 +4,8 @@ import { fromJS, Map, List }	from 'immutable'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 import { TableWrap } from 'app/components'
-import { Select, Button, Checkbox ,Input,Icon,Radio} from 'antd'
+import { Select, Button, Checkbox ,Input, Radio} from 'antd'
+import { Icon } from 'app/components'
 const RadioButton = Radio.Button;
 const RadioGroup = Radio.Group;
 const { Option } = Select;

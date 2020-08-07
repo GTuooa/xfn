@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-// import { Button, Modal, Input, message, Tooltip, Icon  } from 'antd'
-import { Button, Modal, Input, Tooltip, Icon  } from 'antd'
-import { fromJS, toJS }	from 'immutable'
+
+import {  Modal  } from 'antd'
 import './style.less'
 
 @immutableRenderDecorator
-export default
 class AlertModal extends Component {
 
 	render() {
@@ -42,3 +40,4 @@ class AlertModal extends Component {
 		)
 	}
 }
+export default AlertModal;

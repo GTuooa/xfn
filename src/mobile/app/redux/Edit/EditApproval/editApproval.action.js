@@ -4,7 +4,7 @@ import fetchApi, { ROOTAPPROVAL } from 'app/constants/fetch.running.js'
 import fetchGlApi from 'app/constants/fetch.constant.js'
 import fetchCardApi from 'app/constants/fetch.account.js'
 import { showMessage, DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { XFNVERSION, getUrlParam, ROOTURL } from 'app/constants/fetch.constant.js'
 import * as relativeConfAction from 'app/redux/Config/Relative/relativeConf.action.js'
@@ -376,7 +376,7 @@ export const getSpaceInfo = (cb) => dispatch => {
 	// 		}
 	// 		})
 	// })
-	// const href = location.href
+	// const href = window.location.href
 	// const urlParam = getUrlParam(href)
 	// let source = 'source=desktop'
     // let network = 'network=wifi'

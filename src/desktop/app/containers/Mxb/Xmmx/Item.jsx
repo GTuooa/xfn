@@ -7,8 +7,9 @@ import * as accountActions from 'app/redux/Search/account/accountUnuse.action'
 import * as cxlsActions from 'app/redux/Search/Cxls/cxls.action'
 import * as zhmxActions from 'app/redux/Mxb/ZhMxb/zhMxb.action'
 import { Icon } from 'antd'
-import { TableItem, TableOver, Amount, Modal } from 'app/components'
+import { TableItem, TableOver, Amount } from 'app/components'
 import * as yllsActions from 'app/redux/Search/Ylls/ylls.action.js'
+
 @immutableRenderDecorator
 export default
 class Item extends React.Component {
@@ -29,21 +30,21 @@ class Item extends React.Component {
 		} = this.props
 		const beBusiness = mxitem.get('beBusiness')
 		const runningState = mxitem.get('runningState')
-		const jumpCxToLr = (callBack) => {
-			if (panes.includes('LrAccount')) {
-				Modal.confirm({
-					title: '温馨提示',
-					content: '录入流水页面有未保存数据，是否直接覆盖',
-					okText: '确定',
-					cancelText: '不',
-					onOk: () => {
-						callBack()
-					}
-				})
-			} else {
-				callBack()
-			}
-		}
+		// const jumpCxToLr = (callBack) => {
+		// 	if (panes.includes('LrAccount')) {
+		// 		Modal.confirm({
+		// 			title: '温馨提示',
+		// 			content: '录入流水页面有未保存数据，是否直接覆盖',
+		// 			okText: '确定',
+		// 			cancelText: '不',
+		// 			onOk: () => {
+		// 				callBack()
+		// 			}
+		// 		})
+		// 	} else {
+		// 		callBack()
+		// 	}
+		// }
 		return (
 			<TableItem className={className} line={line}>
 				<TableOver textAlign='left'>{mxitem.get('runningDate')}</TableOver>

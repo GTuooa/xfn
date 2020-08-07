@@ -2,9 +2,10 @@ import React from 'react'
 import { Modal } from 'antd'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
-import { Checkbox, Button, Menu, Dropdown, Icon } from 'antd'
+import { Checkbox, Button, Menu, Dropdown } from 'antd'
+import { Icon } from 'app/components'
 import XfnIcon from 'app/components/Icon'
 import OrderUpgrade from './OrderUpgrade'
 
@@ -28,7 +29,6 @@ class Upgrade extends React.Component {
 			orderNumber,
 			corpId,
 			ddUserId,
-			history,
 			agree,
 			onAgree,
 			showContract,
@@ -172,7 +172,6 @@ class Upgrade extends React.Component {
 					dispatch={dispatch}
 					orderWindowShow={orderWindowShow}
 					orderNumber={orderNumber}
-					history={history}
 					corpId={corpId}
 					ddUserId={ddUserId}
 					amount={amount}

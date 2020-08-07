@@ -4,7 +4,7 @@ import * as ActionTypes from './ActionTypes.js'
 // import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
 import * as lrpzExportActions from 'app/redux/Edit/Lrpz/lrpzExport.action.js'
 import { pushVouhcerToLrpzReducer } from 'app/redux/Search/Cxpz/cxpz.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 // 单独获取科目列表(刷新用)
@@ -94,9 +94,9 @@ export const getVcFetch = (issuedate, vcindex, history,jvlist) => dispatch => {
 	})
 }
 
-export const changeCascadeDisplay = () => ({
-	type: ActionTypes.CHANGE_CASCADE_VISIBLE
-})
+// export const changeCascadeDisplay = () => ({
+// 	type: ActionTypes.CHANGE_CASCADE_VISIBLE
+// })
 
 
 export const reverseLedgerJvlist = () => ({

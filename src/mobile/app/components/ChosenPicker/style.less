@@ -53,15 +53,19 @@
             border-bottom: 1px solid #E8E8E8;
 
             position: relative;
+
             .title-left-icon{
                 position: absolute;
                 left: 0;
                 top: 0;
                 display: inline-block;
+                width: .34rem;
+                height: .34rem;
                 padding: 0 .12rem;
                 line-height: .34rem;
                 font-size: .15rem;
                 color: #222;
+                
             }
             .icon-search{
                 color: #222;
@@ -77,6 +81,70 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 0 .1rem;
+                .chosenpicker-input{
+                    flex: 1;
+                    padding-right: .1rem;
+                    .am-list-item{
+                        border: none;
+                    }
+                }
+            }
+            .chosenpicker-cancel{
+                color: #5e81d1;
+            }
+        }
+
+        .chosenpicker-title-card {
+            height: .34rem;
+            line-height: .34rem;
+            color: #999;
+            border-bottom: 1px solid #E8E8E8;
+         
+            .chosenpicker-title-warp {
+                width: 100%;
+                position: relative;
+                text-align: center;
+            }
+
+            .title-left-icon{
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: inline-block;
+                width: .34rem;
+                height: .34rem;
+                text-align: center;
+                background-color: #ccc;
+            }
+
+            // .title-left-icon{
+            //     width: .34rem;
+            //     height: .34rem;
+            //     padding: 0 .12rem;
+            //     line-height: .34rem;
+            //     font-size: .15rem;
+            //     color: #222;
+            // }
+
+            .icon-search{
+                color: #222;
+                font-size: .2rem;
+            }
+            .no-search{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: .34rem;
+                height: .34rem;
+                line-height: .34rem;
+            }
+
+            .chosenpicker-search{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 .1rem;
+                width: 100%;
                 .chosenpicker-input{
                     flex: 1;
                     padding-right: .1rem;

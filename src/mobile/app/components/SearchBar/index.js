@@ -1,7 +1,7 @@
 import React from 'react'
 import './index.less'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { SearchBar } from 'antd-mobile';
 

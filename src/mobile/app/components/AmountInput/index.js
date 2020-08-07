@@ -1,7 +1,7 @@
 import React, { Component, PropTypes }  from 'react'
 import { fromJS, toJS } from 'immutable'
 import { List, InputItem } from 'antd-mobile'
-import { createForm } from 'rc-form'
+// import { createForm } from 'rc-form'
 import './style.less'
 
 // 通过自定义 moneyKeyboardWrapProps 修复虚拟键盘滚动穿透问题
@@ -13,10 +13,10 @@ import './style.less'
 //     }
 // }
 
-class AmountInputItem extends Component {
+class AmountInput extends Component {
 
     render() {
-        const { getFieldProps } = this.props.form
+        // const { getFieldProps } = this.props.form
         const { onChange, onBlur, value, disabled, moneyKeyboardAlign, className, placeholder, editable, onFocus, decimalPlaces } = this.props
 
         const decimalPlacesNum = decimalPlaces ? Number(decimalPlaces): 2
@@ -94,5 +94,5 @@ class AmountInputItem extends Component {
     }
 }
 
-const AmountInput = createForm()(AmountInputItem)
+// const AmountInput = createForm()(AmountInputItem)
 export default AmountInput

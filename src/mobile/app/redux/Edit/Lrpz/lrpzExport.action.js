@@ -1,6 +1,6 @@
 import { showMessage, DateLib } from 'app/utils'
 import fetchApi from 'app/constants/fetch.constant'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 const ActionTypes = {

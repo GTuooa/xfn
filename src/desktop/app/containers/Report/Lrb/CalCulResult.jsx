@@ -19,7 +19,7 @@ import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
 import './style/index.less'
 import XfnIcon from 'app/components/Icon'
-import CalCulateChar from './CalCulateChar'
+import CalCulateChar from './CalculateChar'
 import CalculateResultTable from './CalculateResultTable'
 
 @connect(state => state)

@@ -5,7 +5,7 @@ import { numberTest } from 'app/containers/Edit/EditRunning/common/common'
 import { formatFour } from 'app/utils'
 
 @immutableRenderDecorator
-export default
+
 class InuptFour extends React.Component{
 	state = {
 		formate:true
@@ -35,3 +35,5 @@ class InuptFour extends React.Component{
 		)
 	}
 }
+
+export default InuptFour;

@@ -2,9 +2,10 @@ import React, { PropTypes, Fragment } from 'react'
 import { Map,List, fromJS } from 'immutable'
 import { connect } from 'react-redux'
 
-import { Button, Tooltip, Icon, Input, DatePicker, Checkbox, message, Select, Modal } from 'antd'
+import { Button, Tooltip, Input, DatePicker, Checkbox, message, Select, Modal } from 'antd'
+import { Icon } from 'app/components'
 import { toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import moment from 'moment';
 import RolePick from './RolePick'
 import FunModal from './FunModal'

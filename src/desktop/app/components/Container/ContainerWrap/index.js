@@ -4,7 +4,6 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './index.less'
 
 @immutableRenderDecorator
-export default
 class ContainerWrap extends React.Component{
 
 	static displayName = 'ContainerWrap'
@@ -28,3 +27,5 @@ class ContainerWrap extends React.Component{
 		)
 	}
 }
+
+export default ContainerWrap

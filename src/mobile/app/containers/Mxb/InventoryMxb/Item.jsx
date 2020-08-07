@@ -3,7 +3,7 @@ import { Map,fromJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Icon, Amount } from 'app/components'
 import moment from 'moment'
-import TableAmount from 'app/containers/components/table/TableAmount'
+import TableAmount from 'app/containers/components/Table/TableAmount'
 import { runningPreviewActions } from 'app/redux/Edit/RunningPreview'
 
 @immutableRenderDecorator

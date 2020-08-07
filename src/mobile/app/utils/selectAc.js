@@ -1,5 +1,5 @@
 import { Map, List, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 function valueToIdAndName(value) {
 	let id = value.match(/^\d*/)

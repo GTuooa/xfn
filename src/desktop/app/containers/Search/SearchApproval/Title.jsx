@@ -1,14 +1,14 @@
 import React, { PropTypes } from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Select, Button, Input, Modal, DatePicker, Checkbox, Tooltip } from 'antd'
+import { Select, Button, Input, Modal, DatePicker, Checkbox, Tooltip } from 'antd'
 import moment from 'moment'
 const { RangePicker } = DatePicker
-import { Amount, TableItem } from 'app/components'
+import { Amount, TableItem, Icon } from 'app/components'
 import { accountTreeData } from 'app/utils'
 const Option = Select.Option
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import PageSwitch from 'app/containers/components/PageSwitch'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'

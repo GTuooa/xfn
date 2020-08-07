@@ -5,7 +5,7 @@ import { toJS, fromJS } from 'immutable'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, Form } from 'app/components'
 const { Item } = Form
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { configCheck } from 'app/utils'
 import TreeCom from 'app/containers/components/TreeCom/index.js'
 

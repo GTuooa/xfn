@@ -4,7 +4,7 @@ import { toJS, fromJS } from 'immutable'
 
 import { Container, ScrollView, Row, Single, Icon, Form, Switch, XfInput, ButtonGroup, Button, ChosenPicker } from 'app/components'
 import { decimal, configCheck } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { check } from './check/unit.js'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'
 import fetchApi from 'app/constants/fetch.running.js'

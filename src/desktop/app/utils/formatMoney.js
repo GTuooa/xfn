@@ -6,9 +6,10 @@ function formatMoney(number, decimalPlaces, moneySymbol, thousand, decimalSymbol
       thousand = thousand || ",";
       decimalSymbol = decimalSymbol || ".";
     //   getNumber = getNumber !== undefined ? getNumber : true
-      let negative = number < 0 ? "-" : "",
-          i = parseInt(number = Math.abs(+number || 0).toFixed(decimalPlaces), 10) + "",
-          j = (j = i.length) > 3 ? j % 3 : 0;
+      let negative = number < 0 ? "-" : ""
+      let i = parseInt(number = Math.abs(+number || 0).toFixed(decimalPlaces), 10) + ""
+      let j = i.length
+      j = j > 3 ? j % 3 : 0;
       return moneySymbol + negative + (j ? i.substr(0, j) + thousand : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousand) + (decimalPlaces ? decimalSymbol + Math.abs(number - i).toFixed(decimalPlaces).slice(2) : "");
     //   let decimalSymbolIndex = number === '' ? 0 : number.findIndex('.'),
     //       integer = decimalSymbolIndex ? number.substr(0, decimalSymbolIndex) : '',

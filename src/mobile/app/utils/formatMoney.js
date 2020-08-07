@@ -8,9 +8,10 @@ function formatMoney(number, decimalPlaces, moneySymbol = '', decimalZero=true) 
     //moneySymbol 金钱符号列如 ￥ $等
     //decimalZero是否显示小数点后无意义的0 true显示 false的话.3030 表示为.303
 
-    let negative = number < 0 ? "-" : "",
-    i = parseInt(number = Math.abs(+number || 0).toFixed(decimalPlaces), 10) + "",
-    j = (j = i.length) > 3 ? j % 3 : 0;
+    let negative = number < 0 ? "-" : ""
+    let i = parseInt(number = Math.abs(+number || 0).toFixed(decimalPlaces), 10) + ""
+    let j = i.length
+    j = j > 3 ? j % 3 : 0;
 
     let decimalNumber = `${String(decimal(Math.abs(number - i), decimalPlaces, decimalZero)).slice(1)}`
     if (!decimalZero) {//不显示小数点后无意义的0

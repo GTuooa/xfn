@@ -5,7 +5,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { TableWrap, TableBody, TableTitle, TableAll } from 'app/components'
 import { Button, Modal, Input, message  } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import Item from './Item'
 

@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { Map, toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as allActions from 'app/redux/Home/All/soblist.action'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 import { Checkbox, Icon }	from 'app/components'
 
 @immutableRenderDecorator

@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 
 import {  Checkbox, Row, Icon, Button, ButtonGroup, Container, ScrollView } from 'app/components'
 import { DateLib, configCheck } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'
 

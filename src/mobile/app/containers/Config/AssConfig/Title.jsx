@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react'
 import { List, toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import * as assconfigActions from 'app/redux/Config/Ass/assconfig.action'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Icon, SinglePicker } from 'app/components'
 
 @immutableRenderDecorator

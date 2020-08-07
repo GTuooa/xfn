@@ -4,7 +4,7 @@ import './table.less'
 
 
 @immutableRenderDecorator
-export default
+
 class TableTree extends React.Component{
 	render() {
 		const { type, className, titleList, onClick, textAlign, style } = this.props
@@ -16,3 +16,5 @@ class TableTree extends React.Component{
 		)
 	}
 }
+
+export default TableTree;

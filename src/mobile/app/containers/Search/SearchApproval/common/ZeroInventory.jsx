@@ -3,7 +3,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 import { fromJS, toJS } from 'immutable'
 
 import { Row, Single, Icon, Switch, ChosenPicker } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { systemProJectCodeCommon, propertyCostNameJson } from 'app/containers/Config/Approval/components/common.js'
 

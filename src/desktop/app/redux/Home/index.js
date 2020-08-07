@@ -1,7 +1,7 @@
 import { fromJS }	from 'immutable';
 import * as ActionTypes	from './ActionTypes.js';
 import { tabNames, allPermission, loginInfo } from './moduleConstants.js';
-import * as thirdParty from 'app/thirdParty';
+import thirdParty from 'app/thirdParty';
 import { XFNVERSION } from 'app/constants/fetch.constant.js';
 
 //生产环境应当设置为空

@@ -2,8 +2,8 @@ import React, { PropTypes } from 'react'
 import { Map } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Icon, Amount } from 'app/components'
-import moment from 'moment'
-import TableAmount from 'app/containers/components/table/TableAmount'
+// import moment from 'moment'
+import TableAmount from 'app/containers/components/Table/TableAmount.js'
 
 import { runningPreviewActions } from 'app/redux/Edit/RunningPreview'
 

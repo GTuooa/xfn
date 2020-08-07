@@ -1,6 +1,6 @@
 // import React from 'react'
 // import { Container, Row, ScrollView, Icon } from 'app/components'
-// import * as thirdParty from 'app/thirdParty'
+// import thirdParty from 'app/thirdParty'
 // import { fromJS,toJS }	from 'immutable'
 // import './index.less'
 //

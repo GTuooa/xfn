@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 import { fromJS, toJS ,size} from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Icon } from 'antd'
+import { Switch, Input, Select, Checkbox, Button, Modal, message } from 'antd'
 const Option = Select.Option
 const confirmModal = Modal.confirm;
 const CheckboxGroup = Checkbox.Group;
 import { jxcConfigCheck } from 'app/utils'
-import { SelectAc, Tab } from 'app/components'
+import { SelectAc, Tab, Icon } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as relativeConfActions from 'app/redux/Config/Relative/relative.action.js'

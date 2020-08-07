@@ -3,8 +3,8 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 // import AclistTree from './AclistTree.jsx'
 import Trees from './Trees.jsx'
-import { Tag, Icon } from 'antd'
-import { Tabs, Tree } from 'antd'
+import { Tabs, Tag } from 'antd'
+import { Icon } from 'app/components'
 const TabPane = Tabs.TabPane
 import * as Limit from 'app/constants/Limit.js'
 import { fromJS, toJS }	from 'immutable'

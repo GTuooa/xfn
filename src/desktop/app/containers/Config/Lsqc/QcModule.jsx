@@ -2,10 +2,10 @@ import React, { Fragment }  from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, fromJS } from 'immutable'
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOT } from 'app/constants/fetch.constant.js'
-import { Table, Icon, InputNumber, Button, Modal } from 'antd'
-import { Amount, TableItem } from 'app/components'
+import { Table, InputNumber, Button, Modal } from 'antd'
+import { Amount, TableItem, Icon } from 'app/components'
 
 import QcItem from './QcItem.jsx'
 

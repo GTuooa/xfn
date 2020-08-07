@@ -11,7 +11,7 @@ import { ROOTPKT } from 'app/constants/fetch.account.js'
 
 
 @connect(state => state)
-export default
+
 class RegretModal extends React.Component {
     state = {
         cardCategory:this.props.categoryList.get(0),
@@ -560,7 +560,7 @@ class ConfirmModal extends React.Component {
                         !regretConfirm?
                         <Button
                             type='primary'
-                            disabled={!RUNNING}
+                            disabled={RUNNING}
                             onClick={() => {
                                 downloadBefore(cardList)
                             }}>
@@ -593,3 +593,4 @@ class ConfirmModal extends React.Component {
         )
     }
 }
+export default RegretModal;

@@ -3,12 +3,13 @@ import { fromJS, toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import { ROOT } from 'app/constants/fetch.constant.js'
-import { Button, Menu, Select, Tooltip, Icon, Modal, Radio, Input, message } from 'antd'
+import { Button, Menu, Select, Tooltip, Modal, Radio, Input, message } from 'antd'
+import { Icon } from 'app/components'
 const { Option } = Select;
 const RadioGroup = Radio.Group
 import { ImportModal, ExportModal } from 'app/components'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import ReversAssDetail from './ReversAssDetail.jsx'
 
 import * as allActions from 'app/redux/Home/All/all.action'

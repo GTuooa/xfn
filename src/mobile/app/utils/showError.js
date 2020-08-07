@@ -1,4 +1,4 @@
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 // 提取错误全局显示的方法
 export default function showError (json, deletitem) {

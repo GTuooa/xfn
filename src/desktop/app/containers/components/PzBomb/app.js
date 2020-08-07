@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import { fromJS }	from 'immutable'
 import './bomb.less'
 
-import { Modal, Button, Icon } from 'antd'
+import { Modal, Button } from 'antd'
 import { chineseAmount, draggable, judgePermission } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import { Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import { debounce } from 'app/utils'
 const voidAmount = ' '.repeat(12).split('')
 import EnclosurePreview from 'app/containers/components/EnclosurePreview'

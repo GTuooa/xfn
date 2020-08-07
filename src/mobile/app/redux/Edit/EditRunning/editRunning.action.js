@@ -5,7 +5,7 @@ import { upfile, decimal, showMessage, DateLib } from 'app/utils'
 import { save, getCard, oriDateFunc, oriStateFunc, handleTypeFunc } from './EditFunc/index.js'
 
 import * as ActionTypes from './ActionTypes.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import * as editRunning from 'app/constants/editRunning.js'
 
@@ -1596,7 +1596,7 @@ export const getJxsezcCategory =  () => (dispatch, getState) => {
 	const lastCategory = getState().allState.get('oriCategory').toJS()
 	let categoryList = []
 	for (let item of lastCategory) {
-		if (['LB_YYZC', 'LB_FYZC', 'LB_CQZC', 'LB_YYWZC'].includes(item['categoryType'])) {
+		if (['LB_YYZC', 'LB_FYZC', 'LB_CQZC'].includes(item['categoryType'])) {
 			categoryList.push(item)
 		}
 	}
@@ -1612,9 +1612,8 @@ export const changeHandleCategory = (item) => (dispatch, getState) => {
 	fetchApi('getRunningDetail', 'GET', `uuid=${item['uuid']}`, json => {
 		if (showMessage(json)) {
 			const data = json.data.result
-			if (data['beProject']) {
+			if (data['beProject'] && data['propertyCarryover']!='SX_HW' && data['categoryType']!='LB_CQZC') {
 				dispatch(getProjectCardList(json.data.result['projectRange']))
-				dispatch(getProjectTreeList())
 			}
 			if (data['propertyCarryover']=='SX_HW') {
 				dispatch(changeLrlsData(['oriTemp', 'stockRange'], data.acBusinessExpense.stockRange))

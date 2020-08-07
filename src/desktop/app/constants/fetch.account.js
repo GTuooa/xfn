@@ -1,4 +1,4 @@
-import 'es6-shim'
+// import 'es6-shim'
 import fetchFunc from './fetchFunc'
 
 import { SERVERURL } from './fetch.constant.js'

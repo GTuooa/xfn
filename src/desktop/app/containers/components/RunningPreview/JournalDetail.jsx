@@ -1,12 +1,12 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
-import { Collapse, Icon, Button, Modal, DatePicker, Input, Select, Switch, message, Tooltip } from 'antd'
+import { Collapse, Button, Modal, DatePicker, Input, Select, Switch, message, Tooltip } from 'antd'
+import { Icon } from 'app/components'
 import { formatNum, formatMoney, formatDate, numberTest } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
 import moment from 'moment'
 import { categoryTypeAll, type, business, beforejumpCxToLr } from 'app/containers/components/moduleConstants/common'
-const Panel = Collapse.Panel
 import NumberInput from 'app/components/Input'
 import AccountPoundage from 'app/containers/Search/SearchRunning/AccountPoundage'
 import { accountPoundage } from './app'
@@ -14,6 +14,9 @@ import * as previewRunningActions from 'app/redux/Edit/RunningPreview/previewRun
 import * as searchRunningActions from 'app/redux/Search/SearchRunning/searchRunning.action'
 import SearchModal from 'app/containers/components/Searchclosure/SearchModal'
 import { searchRunningAllActions } from 'app/redux/Search/SearchRunning/searchRunningAll.js'
+const Panel = Collapse.Panel
+const Option = Select.Option
+
 @immutableRenderDecorator
 export default
 class JournalDetail extends React.Component {
@@ -235,11 +238,12 @@ class JournalDetail extends React.Component {
                                     dispatch(searchRunningActions.getBusinessJzsyModal(item,fromJS({jrJvUuid:item.get('jrJvUuid')}),() => {this.setState({
                                         jzsyModal:true
                                     })}))
-                                } else {
-                                    dispatch(searchRunningActions.getBusinessCarryoverModal(item,fromJS({jrJvUuid:item.get('jrJvUuid')}),() => {this.setState({
-                                        carryoverModal:true
-                                    })}))
                                 }
+                                // else {
+                                //     dispatch(searchRunningActions.getBusinessCarryoverModal(item,fromJS({jrJvUuid:item.get('jrJvUuid')}),() => {this.setState({
+                                //         carryoverModal:true
+                                //     })}))
+                                // }
                             }}>结转
                         </Button>
                     </div>

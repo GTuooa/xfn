@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class TableWrap extends React.Component{
 	render() {
 		const { type, className, changeStyle, notPosition } = this.props
@@ -25,3 +25,5 @@ class TableWrap extends React.Component{
 		)
 	}
 }
+
+export default TableWrap;

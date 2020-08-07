@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import * as acconfigActions from 'app/redux/Config/Ac/acconfig.action'
 import '../AcConfig/ac-option.less'
 import { TextInput, Button, ButtonGroup, Icon, Container, Row, Form, Amount } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const { Label, Item } = Form
 
 @connect(state => state)

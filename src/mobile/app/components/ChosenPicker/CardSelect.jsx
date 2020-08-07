@@ -217,15 +217,19 @@ export default class CardSelect extends Component {
                     }}
                 >
                     <div className={`chosenpicker-popup ${show ? 'chosenpicker-popup-animate' : 'chosenpicker-popup-none-animate'}`}>
-                        <div className='chosenpicker-title' onClick={(e) => e.stopPropagation()}>
-                            {!isSearch && icon ? <span className='title-left-icon' onClick={()=> { icon.onClick() }}>
-                                <Icon type={icon['type']}/>
-                            </span> : null }
+                        <div className='chosenpicker-title-card' onClick={(e) => e.stopPropagation()}>
 
-                            <div style={{display: isSearch ? 'none' : ''}}>
+                            <div className='chosenpicker-title-warp' style={{display: isSearch ? 'none' : ''}}>
+                                {
+                                    icon ? <span className="title-left-icon" onClick={() => { icon.onClick() }}>
+                                            <Icon type={icon['type']} />
+                                        </span>
+                                    : <span className="title-left-icon"></span>
+                                }
                                 <span>{title ? title : '请选择'}</span>
                                 <Icon type='search' className='no-search' onClick={() => this.setState({isSearch: true})}/>
                             </div>
+                            
                             <div className='chosenpicker-search' style={{display: isSearch ? '' : 'none'}}>
                                 <Icon type='search'/>
                                 <TextListInput

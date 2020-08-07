@@ -1,6 +1,7 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
-import { Icon ,Tooltip} from 'antd'
+import { Tooltip} from 'antd'
+import { Icon } from 'app/components'
 import * as kmmxbActions from 'app/redux/Mxb/Kmmxb/kmmxb.action.js'
 @immutableRenderDecorator
 export default

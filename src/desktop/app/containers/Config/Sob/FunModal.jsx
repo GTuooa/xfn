@@ -4,7 +4,7 @@ import { toJS } from 'immutable'
 
 import { ROOT } from 'app/constants/fetch.constant.js'
 import { Button, Icon, Tooltip, message, Checkbox } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action.js'
 import * as homeActions from 'app/redux/Home/home.action.js'

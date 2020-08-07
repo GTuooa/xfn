@@ -3,7 +3,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 //获取数据
 export const getDraftListFetch = (value) => (dispatch) => {

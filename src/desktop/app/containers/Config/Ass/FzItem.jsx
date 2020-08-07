@@ -1,8 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox }	from 'antd'
-import { TableItem, TableOver } from 'app/components'
+import { Checkbox }	from 'antd'
+import { TableItem, TableOver, Icon } from 'app/components'
 
 import * as fzhsActions from 'app/redux/Config/Ass/assConfig.action.js'
 

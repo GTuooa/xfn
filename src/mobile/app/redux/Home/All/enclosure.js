@@ -2,7 +2,7 @@ import { fromJS } from 'immutable'
 import fetchApi from 'app/constants/fetch.running.js'
 import fetchGlApi from 'app/constants/fetch.constant.js'
 import { showMessage, decimal } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 
 const enclosureState = fromJS({

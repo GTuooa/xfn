@@ -3,7 +3,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class FlexItem extends React.Component{
 	render() {
 		const { type, className, line, onClick } = this.props
@@ -18,3 +18,4 @@ class FlexItem extends React.Component{
 {/* <ul className={line !== 'hide' && line%2 === 0 ? `${className} table-item-color table-item` : `${className} table-item`} style={{display: line !== 'hide' ? '' : 'none'}} onClick={onClick}>
 	{this.props.children}
 </ul> */}
+export default FlexItem;

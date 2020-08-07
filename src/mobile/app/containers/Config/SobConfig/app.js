@@ -5,9 +5,9 @@ import { connect }	from 'react-redux'
 import { Button, ButtonGroup, Container, ScrollView, Row, Icon } from 'app/components'
 import './sob-config.less'
 import Sob from './Sob.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 import { homeActions } from 'app/redux/Home/home.js'
 
 @connect(state => state)

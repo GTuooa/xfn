@@ -5,11 +5,11 @@ export default
 class BrowserIndex extends React.Component {
 
 	componentDidMount() {
-		const href = location.href
+		const href = window.location.href
 
 		const urlParam = this.getUrlParam(href)
 		// const start = href.indexOf('?')
-		// let serverMessage = location.href.slice(start+1).split('&')
+		// let serverMessage = window.location.href.slice(start+1).split('&')
 		// const corpId = serverMessage[1] ? serverMessage[1].slice(7) : ''
 		// const code = serverMessage[2] ? serverMessage[2].slice(5) : ''
 		const corpId = urlParam.corpid
@@ -46,7 +46,7 @@ class BrowserIndex extends React.Component {
 
 	render() {
 
-		const href = location.href
+		const href = window.location.href
 
 		const urlParam = this.getUrlParam(href)
 		const corpId = urlParam.corpid

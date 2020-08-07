@@ -10,7 +10,7 @@ import Ass from './Ass.jsx'
 import Title from './Title.jsx'
 
 import { Button, ButtonGroup, Container, Row, ScrollView, Icon, Collapse } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 @connect(state => state)
 export default

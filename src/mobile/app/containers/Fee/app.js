@@ -3,7 +3,7 @@ import { connect }	from 'react-redux'
 
 import Tcgm from './Tcgm'
 import Tcxq from './Tcxq'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as tcgmActions from 'app/redux/Fee/Tcgm/tcgm.action.js'
 import { homeActions } from 'app/redux/Home/home.js'

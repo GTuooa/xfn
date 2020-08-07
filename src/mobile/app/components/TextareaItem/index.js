@@ -1,13 +1,13 @@
 import React, { Component, PropTypes }  from 'react'
 import { fromJS, toJS } from 'immutable'
 import { TextareaItem, List } from 'antd-mobile'
-import { createForm } from 'rc-form'
+// import { createForm } from 'rc-form'
 import './style.less'
 
-class AntdTextareaItem extends Component {
+class AntdTextarea extends Component {
 
     render() {
-        const { getFieldProps } = this.props.form
+        // const { getFieldProps } = this.props.form
 
         const { onChange, value, placeholder, className, ...other } = this.props
 
@@ -15,7 +15,7 @@ class AntdTextareaItem extends Component {
             <List className={`my-textarea${className ? ' ' + className : ''}`}>
                 <TextareaItem
                     {...other}
-                    {...getFieldProps('control')}
+                    // {...getFieldProps('control')}
                     value={value}
                     placeholder={placeholder}
                     autoHeight={true}
@@ -29,5 +29,5 @@ class AntdTextareaItem extends Component {
     }
 }
 
-const AntdTextarea = createForm()(AntdTextareaItem)
+// const AntdTextarea = createForm()(AntdTextareaItem)
 export default AntdTextarea

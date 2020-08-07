@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react'
 import { connect }	from 'react-redux'
 import { toJS, Map } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { TopMonthPicker } from 'app/containers/components'
 import { ButtonGroup, Button, Container, Row, ScrollView , Select} from 'app/components'
 import { Icon, Input } from 'app/components'

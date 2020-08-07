@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { fromJS, toJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Icon } from 'antd'
+import { Switch, Input, Select, Checkbox, Button, Modal, message } from 'antd'
+import { Icon } from 'app/components'
 const Option = Select.Option
 const confirmModal = Modal.confirm;
 const CheckboxGroup = Checkbox.Group;
@@ -154,22 +155,6 @@ class AddHypeTypeModal extends React.Component {
 								}}
 								addKey={'plus'}
 							/>
-							{/* {reserveTags.map((v,i) =>
-								<span
-									key={v.get('uuid')}
-									className={`title-conleft ${activeInventoryType === v.get('name') ? 'title-selectd' : ''}`}
-									onClick={() => dispatch(inventoryConfActions.changeInventoryModalActiveHighType(v))}
-									>
-									{v.get('name')}
-								</span>
-							)}
-							<span
-								key={'addType'}
-								className={`title-conleft ${activeInventoryType === '' ? 'title-selectd' : ''}`}
-								onClick={() => dispatch(inventoryConfActions.beforeAddInventoryHighType())}
-								>
-								<Icon type="plus" />
-							</span> */}
 						</div>
 					</div>
 

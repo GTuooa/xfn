@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon } from 'antd'
+import { Icon } from 'app/components'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import * as currencyYebActions from 'app/redux/Yeb/CurrencyYeb/currencyYeb.action.js'

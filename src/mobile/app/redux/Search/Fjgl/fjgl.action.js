@@ -1,7 +1,7 @@
 import { jsonifyDate, showMessage } from 'app/utils'
 import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 //获取附件的数据
@@ -50,9 +50,9 @@ export const selectFjVcItem = idx => ({
 })
 
 // 让每一条的checkboxDisplay都与selectall的值相等，来达到选择全部的目的
-export const selectFjVcAll = () => ({
-	type: ActionTypes.SELECT_FJ_VC_ALL
-})
+// export const selectFjVcAll = () => ({
+// 	type: ActionTypes.SELECT_FJ_VC_ALL
+// })
 
 //选择附件的选择框
 export const selectFjItem = (idx,fjIdx) => ({

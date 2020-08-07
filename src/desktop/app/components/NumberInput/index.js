@@ -7,7 +7,7 @@ import { jxcConfigCheck } from 'app/utils'
 
 // jxcConfig 专用 将中文状态下的“。”换成英文的‘.’
 @immutableRenderDecorator
-export default
+
 class NumberInput extends React.Component {
 	render() {
 		const {
@@ -39,3 +39,4 @@ class NumberInput extends React.Component {
 		)
     }
 }
+export default NumberInput;

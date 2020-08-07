@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import { message } from 'antd'
 import { showMessage } from 'app/utils'
 import moment from 'moment'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Modal } from 'antd'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 
@@ -109,7 +109,7 @@ export const cancelShowOrderTcsj = () => ({
     type: ActionTypes.CANCEL_SHOW_ORDER_TCSJ
 })
 
-export const payment = (corpId, ddUserId, orderNo, history) => dispatch => {
+export const payment = (corpId, ddUserId, orderNo) => dispatch => {
     thirdParty.openLink({
         url: `${ROOTURL}/index.html#/paycode?corpId=${corpId}&ddUserId=${ddUserId}&orderNo=${orderNo}`
     })

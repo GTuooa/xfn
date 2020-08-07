@@ -4,7 +4,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 import { toJS, fromJS } from 'immutable'
 
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 import * as Limit from 'app/constants/Limit.js'
 import { formatDate } from 'app/utils'
@@ -448,23 +448,23 @@ export const  currentPz = (year, month, vcIndexList) =>  ({
 
 
 
-// 单条收款准备
-export const beforeRunningPayOrReceive = (payDirection, assList, notHandleAmount, uuidList, runningList) => dispatch => {
+// // 单条收款准备
+// export const beforeRunningPayOrReceive = (payDirection, assList, notHandleAmount, uuidList, runningList) => dispatch => {
 
-	if (notHandleAmount < 0) {
-		notHandleAmount = -notHandleAmount
-		payDirection = payDirection === '收' ? '付' : '收'
-	}
+// 	if (notHandleAmount < 0) {
+// 		notHandleAmount = -notHandleAmount
+// 		payDirection = payDirection === '收' ? '付' : '收'
+// 	}
 
-	dispatch({
-		type: ActionTypes.BEFORE_RUNNING_PAY_OR_RECEIVE,
-		payDirection,
-		assList,
-		notHandleAmount,
-		uuidList,
-		runningList
-	})
-}
+// 	dispatch({
+// 		type: ActionTypes.BEFORE_RUNNING_PAY_OR_RECEIVE,
+// 		payDirection,
+// 		assList,
+// 		notHandleAmount,
+// 		uuidList,
+// 		runningList
+// 	})
+// }
 
 export const getBusinessPayment = (item, stateType,uuidList) => (dispatch) => {
   dispatch({type: ActionTypes.SWITCH_LOADING_MASK})
@@ -877,14 +877,14 @@ export const jumpCalculateCxToLr = (item, insertOrModify, paymentType,uuidList) 
 
 
 // 分页
-export const changeCurrentPage = (assList, value) => dispatch => {
-	dispatch({
-		type: ActionTypes.CHANGE_CURRENT_PAGE_FZHE,
-		assList,
-		value
-	})
+// export const changeCurrentPage = (assList, value) => dispatch => {
+// 	dispatch({
+// 		type: ActionTypes.CHANGE_CURRENT_PAGE_FZHE,
+// 		assList,
+// 		value
+// 	})
 
-}
+// }
 
 export const changeCxAccountCommonString = (tab, place, value) => (dispatch) => {
   let placeArr = typeof place === 'string'?[`${tab}Temp`,place]:[`${tab}Temp`, ...place]

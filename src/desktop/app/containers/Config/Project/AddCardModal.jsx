@@ -7,8 +7,8 @@ import * as Limit from 'app/constants/Limit.js'
 
 import { jxcConfigCheck } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
-import { UpperClassSelect, SelectAc, XfInput } from 'app/components'
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Radio, Icon, Tooltip } from 'antd'
+import { UpperClassSelect, SelectAc, XfInput, Icon } from 'app/components'
+import { Switch, Input, Select, Checkbox, Button, Modal, message, Radio, Tooltip } from 'antd'
 const Option = Select.Option
 const CheckboxGroup = Checkbox.Group;
 const RadioGroup = Radio.Group;

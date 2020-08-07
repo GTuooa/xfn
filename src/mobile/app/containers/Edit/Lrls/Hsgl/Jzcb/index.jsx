@@ -5,7 +5,7 @@ import { toJS, fromJS } from 'immutable'
 import { Radio, TextListInput, Row, Icon, Button, ButtonGroup, Container, ScrollView, Amount, SinglePicker, TextareaItem } from 'app/components'
 import { TopDatePicker } from 'app/containers/components'
 import { CategoryCom, UploadFj } from '../../components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { DateLib } from 'app/utils'
 import * as Limit from 'app/constants/Limit.js'
 

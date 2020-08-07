@@ -6,7 +6,7 @@ import { Button, ButtonGroup, Icon, Container, ScrollView, Form, Switch, XfInput
 const { Label, Item } = Form
 
 import { configCheck } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'
 
 @connect(state => state)

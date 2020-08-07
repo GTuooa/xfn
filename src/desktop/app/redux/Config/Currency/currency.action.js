@@ -5,7 +5,7 @@ import { showMessage } from 'app/utils'
 import { message } from 'antd'
 import { showError } from 'app/redux/Home/All/all.action.js'
 import * as Limit from 'app/constants/Limit.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const getFCListFetch = () => dispatch => {
     dispatch({type: ActionTypes.SWITCH_LOADING_MASK})

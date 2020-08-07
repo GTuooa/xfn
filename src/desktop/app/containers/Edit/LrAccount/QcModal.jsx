@@ -1,7 +1,8 @@
 import React from 'react'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
-import { Icon, Checkbox, Button, message, Tooltip, Input, Modal, Tag, Tree } from 'antd'
+import { Checkbox, Button, message, Tooltip, Input, Modal, Tag, Tree } from 'antd'
+import { Icon } from 'app/components'
 const TreeNode = Tree.TreeNode
 import {TableBody, TableItem, ItemTriangle, TableOver,Amount, TableAll} from 'app/components'
 import * as lrAccountActions from 'app/redux/Edit/LrAccount/lrAccount.action.js'

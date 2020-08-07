@@ -7,9 +7,10 @@ import './style/index.less'
 import PageSwitch from 'app/containers/components/PageSwitch'
 import ContainerWrap from 'app/components/Container/ContainerWrap'
 import FlexTitle from 'app/components/Container/ContainerWrap/FlexTitle'
-import { Button, Dropdown, Menu, Icon } from 'antd'
+import { Button, Dropdown, Menu } from 'antd'
+import { Icon } from 'app/components'
 import { typeList, typeStr } from './commom.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import Table from './Table'
 import AccountModifyModal from './AccountModifyModal'
@@ -99,7 +100,7 @@ class AccountCongig extends React.Component {
 							新增
 						</Button>
 						<Button
-							disabled={!editPermission || !accountSelect.size}
+							disabled={!editPermission}
 							className="title-right"
 							type="ghost"
 							onClick={() => dispatch(accountConfigActions.deleteAccountConfAccount())}

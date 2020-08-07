@@ -4,7 +4,7 @@ import * as ActionTypes from './ActionTypes.js'
 import { fromJS } from 'immutable'
 import { showMessage } from 'app/utils'
 import { message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 import * as homeActions from 'app/redux/Home/home.action.js'

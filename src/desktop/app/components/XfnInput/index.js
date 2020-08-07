@@ -5,7 +5,7 @@ import { Input } from 'antd'
 import { formatMoney } from 'app/utils'
 
 @immutableRenderDecorator
-export default
+
 class XfnInput extends React.Component {
 
     constructor(props) {
@@ -89,3 +89,5 @@ class XfnInput extends React.Component {
 		)
 	}
 }
+
+export default XfnInput;

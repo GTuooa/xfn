@@ -2,8 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { Icon, Checkbox, Button, Tooltip, Dropdown, Menu }	from 'antd'
-import { CxpzTableItem, TableOver } from 'app/components'
+import { Checkbox, Button, Tooltip, Dropdown, Menu }	from 'antd'
+import { CxpzTableItem, TableOver, Icon } from 'app/components'
 import { XfnIcon } from 'app/components'
 import { formatNum, formatMoney, judgePermission } from 'app/utils'
 

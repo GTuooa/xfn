@@ -3,7 +3,7 @@ import fetchApi from 'app/constants/fetch.account.js'
 import { toJS, fromJS } from 'immutable'
 
 import { showMessage, jsonifyDate } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { message } from 'antd'
 
 import * as allRunningActions from 'app/redux/Home/All/allRunning.action'

@@ -6,7 +6,7 @@ import { TextListInput, Row, SinglePicker, Icon, Button, ButtonGroup, Container,
 import { TopDatePicker } from 'app/containers/components'
 import { Account, CategoryCom, ContancsCom, UploadFj  } from '../../components'
 import { DateLib } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import { sfglAccountActions } from 'app/redux/Edit/Lrls/Hsgl/sfglAccount'
 import { homeAccountActions } from 'app/redux/Edit/Lrls/homeAccount'

@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { AGENTID } from 'app/constants/fetch.constant.js'
 import * as Limit from 'app/constants/Limit.js'
 

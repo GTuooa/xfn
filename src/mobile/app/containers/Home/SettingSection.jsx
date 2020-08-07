@@ -4,13 +4,13 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import Icon from 'app/components/Icon'
 import { Carousel } from 'antd-mobile'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 import { DateLib } from 'app/utils'
 
 import { homeActions } from 'app/redux/Home/home.js'
 import { feeActions } from 'app/redux/Fee'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 
 @immutableRenderDecorator
 export default

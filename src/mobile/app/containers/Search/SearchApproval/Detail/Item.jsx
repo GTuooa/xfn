@@ -3,7 +3,7 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { Icon, Checkbox } from 'app/components'
 import { receiptList, hideCategoryCanSelect } from 'app/containers/Config/Approval/components/common.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import ApprovalDetaliItem from '../common/ApprovalDetaliItem'
 

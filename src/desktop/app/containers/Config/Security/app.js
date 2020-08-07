@@ -11,7 +11,7 @@ import * as middleActions from 'app/redux/Home/middle.action.js'
 import CompanySettings from './CompanySettings';
 import PersonalSettings from './PersonalSettings';
 import TabTitle from 'app/containers/components/TabTitle/index.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { Button, Tooltip, Icon, Input } from 'antd'
 import './style.less'
 

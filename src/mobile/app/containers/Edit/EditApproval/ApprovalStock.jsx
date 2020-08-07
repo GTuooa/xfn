@@ -4,7 +4,7 @@ import { fromJS, toJS } from 'immutable'
 import { Button, ButtonGroup, Container, Row, ScrollView, Single, Icon, Amount, TextListInput, ChosenPicker } from 'app/components'
 
 import { decimal, formatMoney } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as inventoryConfAction from 'app/redux/Config/Inventory/inventoryConf.action.js'
 import * as editApprovalActions from 'app/redux/Edit/EditApproval/editApproval.action.js'
 

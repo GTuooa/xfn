@@ -4,7 +4,7 @@ import { toJS, fromJS } from 'immutable'
 import { Icon, Container, Form, ScrollView, Checkbox, Switch, ButtonGroup, Button } from 'app/components'
 const { Item } = Form
 
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as editRunning from 'app/constants/editRunning.js'
 import * as runningConfActions from 'app/redux/Config/Running/runningConf/runningConf.action'
 

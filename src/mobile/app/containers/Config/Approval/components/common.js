@@ -1,6 +1,6 @@
 import * as Limit from 'app/constants/Limit.js'
 import { toJS, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export function getCategorynameByType (categoryType) {
     let  propertyShow, categoryTypeObj

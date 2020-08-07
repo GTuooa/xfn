@@ -3,7 +3,7 @@ import { toJS, fromJS } from 'immutable'
 
 import { ChosenPicker, Row, Icon } from 'app/components'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 const loop = (data) => {
     data.forEach(v => {

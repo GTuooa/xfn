@@ -3,7 +3,7 @@ import { Map, toJS } from 'immutable'
 import { connect }	from 'react-redux'
 
 import * as allActions from 'app/redux/Home/All/soblist.action'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+import * as sobConfigActions from 'app/redux/Config/Sob/sobconfig.action'
 import { Checkbox, Icon, Container, ScrollView, ButtonGroup, Button, TextInput } from 'app/components'
 
 @connect(state => state)

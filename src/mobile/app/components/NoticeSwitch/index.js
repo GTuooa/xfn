@@ -102,7 +102,7 @@ class NoticeSwitch extends Component {
                             />
                             {/* <li className="notices-tip">
                                 <Icon type="tongzhi" className="notices-tip-icon" size="14" style={{margin: '0 .05rem 0 0'}}/>
-                                <a className={urlOnly ? "text-underline" : ''} href={`${urlOnly ? urlOnly : 'javascript:void(0);'}`}>
+                                <a className={urlOnly ? "text-underline" : ''} href={`${urlOnly ? urlOnly : '#'}`}>
                                     {itemlist.getIn([0, 'content']).length > Limit.NOTICE_TEXT_LENGTH ? itemlist.getIn([0, 'content']).substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : itemlist.getIn([0, 'content'])}
                                 </a>
                             </li> */}
@@ -110,7 +110,7 @@ class NoticeSwitch extends Component {
                         <ul className="notices-list">
                             {/* <li className="notices-tip">
                                 <Icon type="tongzhi" className="notices-tip-icon" size="14" style={{margin: '0 .05rem 0 0'}}/>
-                                <a className={urlFirst ? "text-underline" : ''} href={`${urlFirst ? urlFirst : 'javascript:void(0);'}`}>
+                                <a className={urlFirst ? "text-underline" : ''} href={`${urlFirst ? urlFirst : '#'}`}>
                                     {contentFirst.length > Limit.NOTICE_TEXT_LENGTH ? contentFirst.substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : contentFirst}
                                 </a>
                             </li> */}
@@ -120,7 +120,7 @@ class NoticeSwitch extends Component {
                             />
                             {/* <li className="notices-tip" style={Style}>
                                 <Icon type="tongzhi" className="notices-tip-icon" size="14" style={{margin: '0 .05rem 0 0'}}/>
-                                <a className={urlSecond ? "text-underline" : ''} href={`${urlSecond ? urlSecond : 'javascript:void(0);'}`}>
+                                <a className={urlSecond ? "text-underline" : ''} href={`${urlSecond ? urlSecond : '#'}`}>
                                     {contentSecond > Limit.NOTICE_TEXT_LENGTH ? contentSecond.substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : contentSecond}
                                 </a>
                             </li> */}
@@ -148,10 +148,10 @@ class NoticeItem extends Component {
                 <Icon type="tongzhi" className="notices-tip-icon" size="14" style={{margin: '0 .05rem 0 0'}}/>
                 {
                     item.get('type') === 'local' ?
-                        <a className="text-underline" href='javascript:void(0);' onClick={() => history.push('/payguide')}>
+                        <a className="text-underline" href='#' onClick={() => history.push('/payguide')}>
                             {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                         </a> :
-                        <a className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : 'javascript:void(0);'}`}>
+                        <a className={item.get('url') ? "text-underline" : ''} href={`${item.get('url') ? item.get('url') : '#'}`}>
                             {item.get('content').length > Limit.NOTICE_TEXT_LENGTH ? item.get('content').substr(0, Limit.NOTICE_TEXT_LENGTH) + '...' : item.get('content')}
                         </a>
                 }

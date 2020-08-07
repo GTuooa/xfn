@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes.js'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage } from 'app/utils'
 import { message }	from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as allActions from 'app/redux/Home/All/all.action'
 
 // 进入辅助核算页，以及修改类别时获取辅助核算列表

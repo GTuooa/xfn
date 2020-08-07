@@ -127,6 +127,7 @@ class SearchRunning extends React.Component {
 		const lrPermissionInfo = homeState.getIn(['permissionInfo', 'LrAccount'])
 		const label = searchRunningAllState.get('label');// 附件标签
 		// 附件上传
+		const moduleInfo = homeState.getIn(['data', 'userInfo', 'sobInfo', 'moduleInfo'])
 		const enCanUse = moduleInfo ? (moduleInfo.indexOf('ENCLOSURE_RUN') > -1 ? true : false) : true
 		const checkMoreFj = homeState.getIn(['data', 'userInfo', 'checkMoreFj']) === 'TRUE' ? true : false
 		
@@ -135,9 +136,8 @@ class SearchRunning extends React.Component {
 		const pzDealSchedule = pzDealList.size  ? (pzDealNum * 100 / pzDealList.size ).toFixed(2) : 0
 
 		// intelligentStatus  true为智能总账
-		const moduleInfo = homeState.getIn(['data', 'userInfo', 'sobInfo', 'moduleInfo'])
+		
 		const intelligentStatus = moduleInfo ? (moduleInfo.indexOf('RUNNING_GL') > -1 ? true : false) : false
-
 		const searchRunningPreviewVisibility = allState.getIn(['views', 'searchRunningPreviewVisibility'])
 		const accountPoundage = allState.get('accountPoundage')
 

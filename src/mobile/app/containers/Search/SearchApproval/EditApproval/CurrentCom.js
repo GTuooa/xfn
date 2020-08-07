@@ -1,8 +1,9 @@
 import React, { Component }  from 'react'
 import { toJS, fromJS } from 'immutable'
 import PropTypes from 'prop-types'
+import { push } from 'react-router-redux'
 import { Row, ChosenPicker, Icon, Switch } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as editRunningConfigActions from 'app/redux/Edit/EditRunning/editRunningConfig.action.js'
 import * as searchApprovalActions from 'app/redux/Search/SearchApproval/searchApproval.action.js'
@@ -18,7 +19,7 @@ const loop = (data) => {
 }
 //往来单位组件
 export default class CurrentCom extends Component {
-    static contextTypes = { router: PropTypes.object }
+    // static contextTypes = { router: PropTypes.object }
     state = {
         isAll: true,
         categoryValue: 'ALL'
@@ -41,7 +42,7 @@ export default class CurrentCom extends Component {
             contactSourceCardList,
         } = this.props
         const { isAll, categoryValue } = this.state
-        const { router } = this.context
+        // const { router } = this.context
         //noInsert 不需要新增卡片  true-不需要（收付管理）
 
         const cardObj = currentCardList.get(0)
@@ -74,7 +75,7 @@ export default class CurrentCom extends Component {
                             type: 'current-add',
                             onClick: () => {
                                 if (contactsRange.size) {
-                                    dispatch(editRunningConfigActions.beforeAddManageTypeCardFromEditRunning(contactsRange, router.history, 'searchApproval'))
+                                    dispatch(editRunningConfigActions.beforeAddManageTypeCardFromEditRunning(contactsRange, '', 'searchApproval'))
                                 } else {
                                     thirdParty.toast.info('请选择往来范围')
                                 }

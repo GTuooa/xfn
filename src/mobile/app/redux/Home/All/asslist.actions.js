@@ -2,7 +2,7 @@ import * as ActionTypes from './ActionTypes'
 import fetchApi from 'app/constants/fetch.constant.js'
 import { showMessage, showError, DateLib, configCheck } from 'app/utils'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as assconfigActions from 'app/redux/Config/Ass/assconfig.action'
 import * as Limit from 'app/constants/Limit.js'
 

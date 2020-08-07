@@ -2,9 +2,9 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { fromJS } from 'immutable'
 
-import { Icon, Checkbox, Button, message, Tooltip, Modal, DatePicker, Input, Select, Dropdown, Menu, Switch }	from 'antd'
-import { TableItem, ItemTriangle, TableOver, Amount, DateLib } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import { Checkbox, Button, message, Tooltip, Modal, DatePicker, Input, Select, Dropdown, Menu, Switch }	from 'antd'
+import { TableItem, ItemTriangle, TableOver, Amount, DateLib, Icon } from 'app/components'
+import thirdParty from 'app/thirdParty'
 import moment from 'moment'
 // yezi
 import { formatNum, formatDate, formatMoney, numberTest } from 'app/utils'

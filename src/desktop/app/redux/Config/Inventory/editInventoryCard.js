@@ -197,15 +197,15 @@ export default function handleEditInventoryCard(state = inventoryCardState, acti
             return state
         },
         // 保存卡片之后----录入流水
-		[ActionTypes.SAVE_INVENTORY_CONF_CARD_RUNNING]                         : () => {
-            // state = state.set('cardList', fromJS(action.list))
+		// [ActionTypes.SAVE_INVENTORY_CONF_CARD_RUNNING]                         : () => {
+        //     // state = state.set('cardList', fromJS(action.list))
 
-            if (action.flag === 'insertAndNew') {
-                state = state.setIn(['inventoryCardTemp', 'name'], '')
-                             .setIn(['inventoryCardTemp', 'code'], action.autoIncrementCode)
-            }
-            return state
-        },
+        //     if (action.flag === 'insertAndNew') {
+        //         state = state.setIn(['inventoryCardTemp', 'name'], '')
+        //                      .setIn(['inventoryCardTemp', 'code'], action.autoIncrementCode)
+        //     }
+        //     return state
+        // },
 		// [ActionTypes.INIT_UNIT_STATE]                         : () => {
         //     return state.set('unit',inventoryCardState.getIn(['inventoryCardTemp','unit']))
         // },

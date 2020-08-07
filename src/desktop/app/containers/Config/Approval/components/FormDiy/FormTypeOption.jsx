@@ -4,8 +4,8 @@ import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import * as Limit from 'app/constants/Limit.js'
 import { formDiyList, componentName } from '../common'
-import { Input, Checkbox, Radio, Icon, message } from 'antd'
-
+import { Input, Checkbox, Radio, message } from 'antd'
+import { Icon } from 'app/components'
 
 const ComponentSelectInput = ({ jrComponentType, selectValueList, onChange, addOption, deleteOption, canModify }) => {
 

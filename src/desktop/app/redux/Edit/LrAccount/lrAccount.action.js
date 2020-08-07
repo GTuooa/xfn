@@ -7,7 +7,7 @@ import * as allActions from 'app/redux/Home/All/all.action'
 import * as homeActions from 'app/redux/Home/home.action.js'
 import * as lrCalculateActions from 'app/redux/Edit/LrAccount/lrCalculate/lrCalculate.action'
 import { fromJS, toJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 const confirm = Modal.confirm;
 

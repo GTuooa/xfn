@@ -6,7 +6,7 @@ import { Container, ButtonGroup, Button, Icon, ScrollView, Row } from 'app/compo
 // import Searchbar from './Searchbar.jsx'
 
 import AssetsItem from './AssetsItem.jsx'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 import * as allActions from 'app/redux/Home/All/other.action'
 import * as assetsActions from 'app/redux/Config/Assets/assets.action.js'

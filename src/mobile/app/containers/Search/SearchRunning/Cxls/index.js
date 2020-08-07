@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 
 import * as searchRunningActions from 'app/redux/Search/SearchRunning/searchRunning.action.js'
 import { runningPreviewActions } from 'app/redux/Edit/RunningPreview'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { DateLib, debounce } from 'app/utils'
 
 import { TopMonthPicker, ScrollLoad, TopDatePicker } from 'app/containers/components'

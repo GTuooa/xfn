@@ -3,7 +3,7 @@ import { Map, List } from 'immutable'
 import { immutableRenderDecorator } from 'react-immutable-render-mixin'
 
 import { Modal, Button } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 
 import * as homeActions from 'app/redux/Home/home.action.js'

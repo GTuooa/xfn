@@ -6,8 +6,8 @@ import '../components/common.less'
 
 import { jxcConfigCheck } from 'app/utils'
 import placeholderText from 'app/containers/Config/placehoderText'
-import { UpperClassSelect, SelectAc, NumberInput } from 'app/components'
-import { Switch, Input, Select, Checkbox, Button, Modal, message, Icon } from 'antd'
+import { UpperClassSelect, SelectAc, NumberInput, Icon } from 'app/components'
+import { Switch, Input, Select, Checkbox, Button, Modal, message } from 'antd'
 const Option = Select.Option
 const CheckboxGroup = Checkbox.Group;
 
@@ -228,61 +228,26 @@ class AddCardModal extends React.Component {
 							</div>
 						</div>
 					</div>
-					{/* <div className="jxc-config-card-modal-row" style={isFromOtherpage ? {display: 'none'} : {}}>
+					<div className="jxc-config-card-modal-row">
 						<div className="jxc-config-card-modal-item">
-							<label className="jxc-config-card-modal-label">往来关系：</label>
+							<label className="jxc-config-card-modal-label">所属分类：</label>
 							<div className="jxc-config-card-modal-input">
-								<span>
-									<label className="checkbox-box">
-										<Checkbox
-											checked={isPayUnit}
-											onChange={(e)=> {
-												dispatch(editRelativeCardActions.changeRelativeCardRelative('isPayUnit', e.target.checked))
-												dispatch(editRelativeCardActions.changeRelativeCardRelative('enablePrepaidAc', e.target.checked))
-											}}
-										/>
-										<span className="checkbox-option">向他付款</span>
-									</label>
-									<label className="checkbox-box">
-										<Checkbox
-											checked={isReceiveUnit}
-											onChange={(e)=> {
-												dispatch(editRelativeCardActions.changeRelativeCardRelative('isReceiveUnit', e.target.checked))
-												dispatch(editRelativeCardActions.changeRelativeCardRelative('enableAdvanceAc', e.target.checked))
-											}}
-										/>
-										<span className="checkbox-option">向他收款</span>
-									</label>
-								</span>
+								{
+									reserveTags.map((item,index) => {
+										return (
+											<label key={index} className="checkbox-box">
+												<Checkbox
+													checked={item.get('checked')}
+													onChange={(e)=> dispatch(editRelativeCardActions.changeRelativeCardCategoryStatus(item, e.target.checked))}
+												/>
+												<span>{item.get('name')}</span>
+											</label>
+										)
+									})
+								}
 							</div>
 						</div>
-					</div> */}
-					{/* {
-						isPayUnit || isReceiveUnit ? */}
-							<div className="jxc-config-card-modal-row">
-								<div className="jxc-config-card-modal-item">
-									<label className="jxc-config-card-modal-label">所属分类：</label>
-									<div className="jxc-config-card-modal-input">
-										{
-											reserveTags.map((item,index) => {
-												// let styleDisplay = (isPayUnit && item.get('isPayUnit')) || (isReceiveUnit && item.get('isReceiveUnit'))
-												return (
-													// <label style={{display:styleDisplay ? '' : 'none'}} key={index} className="checkbox-box">
-													<label key={index} className="checkbox-box">
-														<Checkbox
-															checked={item.get('checked')}
-															onChange={(e)=> dispatch(editRelativeCardActions.changeRelativeCardCategoryStatus(item, e.target.checked))}
-														/>
-														<span>{item.get('name')}</span>
-													</label>
-												)
-											})
-										}
-									</div>
-								</div>
-							</div>
-						{/* : null
-					} */}
+					</div>
 					<div className="category-box">
 						{
 							reserveTags.map((item,index) => {

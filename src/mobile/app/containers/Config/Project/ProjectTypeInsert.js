@@ -4,7 +4,7 @@ import { connect }	from 'react-redux'
 import { toJS, fromJS } from 'immutable'
 
 import { Button, ButtonGroup, Icon, Container, ScrollView, XfInput, Form } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const { Item } = Form
 import TypeTreeSelect from 'app/containers/components/TypeTreeSelect'
 

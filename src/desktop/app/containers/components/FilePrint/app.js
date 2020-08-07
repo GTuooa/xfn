@@ -7,7 +7,7 @@ import * as Limit from 'app/constants/Limit.js'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 
 import { Modal, Button, Icon ,Radio,Checkbox, Input, message } from 'antd'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import EnclosurePreview from 'app/containers/components/EnclosurePreview'
 import { DateLib,judgePermission } from 'app/utils'
 // import * as homeActions from 'app/redux/Home/home.action.js'

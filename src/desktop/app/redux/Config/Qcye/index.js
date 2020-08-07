@@ -1,6 +1,6 @@
 import { fromJS, toJS }	from 'immutable'
 import * as ActionTypes from './ActionTypes.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 
 const qcyeState = fromJS({

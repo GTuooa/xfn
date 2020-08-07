@@ -163,9 +163,11 @@ export const lossProjectTest = (oriTemp,projectList) => {
         if (categoryType === 'LB_FYZC' && oriState !=='STATE_FY_DJ'
         || categoryType === 'LB_YYSR' && oriState !=='STATE_YYSR_DJ'
         || categoryType === 'LB_YYZC' && propertyCarryover === 'SX_FW' && oriState !== 'STATE_YYZC_DJ'
-        || ['SX_QYSDS','SX_QTSF'].includes(propertyTax)
-        || ['LB_XCZC','LB_YYWSR','LB_YYWZC'].includes(categoryType)
-        || ['JR_HANDLE_CHLX','JR_HANDLE_QDSY'].includes(handleType)
+        // || ['SX_QYSDS','SX_QTSF'].includes(propertyTax)
+        // || ['LB_XCZC','LB_YYWSR','LB_YYWZC'].includes(categoryType)
+        || ['LB_XCZC'].includes(categoryType)
+        // || ['JR_HANDLE_CHLX','JR_HANDLE_QDSY','JR_HANDLE_CZ'].includes(handleType)
+        || ['JR_HANDLE_CHLX'].includes(handleType)
         ) {// && (oriState === 'STATE_JK_JTLX' || !beAccrued && oriState === 'STATE_JK_ZFLX')
             return true
         } else if (v.get('code') === 'COMNCRD') {

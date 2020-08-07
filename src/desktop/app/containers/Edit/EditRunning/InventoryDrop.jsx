@@ -8,15 +8,18 @@ import moment from 'moment'
 
 import { formatFour, formatMoney, DateLib } from 'app/utils'
 import { NumberInput, TableItem, XfnIcon } from 'app/components'
-import { DatePicker, Input, Icon, Button, Modal, Divider, Select, message } from 'antd'
+import { DatePicker, Input, Button, Modal, Divider, Select, message } from 'antd'
+import { Icon } from 'app/components'
 import InputFour from 'app/components/InputFour'
 import XfnSelect from 'app/components/XfnSelect'
 import BatchModal from 'app/containers/Config/Inventory/BatchModal.jsx'
 
 import * as configCallbackActions from 'app/redux/Edit/EditRunning/configCallback.action.js'
 import * as editRunningActions from 'app/redux/Edit/EditRunning/editRunning.action'
-let warehouseTotalAmount = 0
 import XfnInput from 'app/components/Input'
+let warehouseTotalAmount = 0
+const Option = Select.Option
+
 export default
 class InventoryDrop extends React.Component {
 	state={
@@ -35,11 +38,12 @@ class InventoryDrop extends React.Component {
 	closeFocus = e => {
 		let t = e.target || e.srcElement, list = [];
 		let i = 1
-		if (t.className && t.className.indexOf('ant-modal-wrap') > -1) {
+		// if (t t.className && t.className.indexOf('ant-modal-wrap') > -1) {
+		if (t && t.className && t.className.indexOf('ant-modal-wrap') > -1) {
 			return
 		}
 		while(t.parentNode && i < 20) {
-			if (t.parentNode.className && t.parentNode.className.indexOf(`inventory-are-for-dom`) > -1) {
+			if (t && t.parentNode.className && t.parentNode.className.indexOf(`inventory-are-for-dom`) > -1) {
 				// this.setState({focus:true})
 				return
 			}
@@ -68,7 +72,9 @@ class InventoryDrop extends React.Component {
 					domlist[i].style.display = 'none'
 				}
 			}
-			this.nameInput.style.display = ''
+			if (this.nameInput) {
+				this.nameInput.style.display = ''
+			}
 		})
 	}
 	componentDidMount() {

@@ -2,7 +2,7 @@ import React from 'react'
 import { toJS, fromJS } from 'immutable'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { Form, Radio, Icon, Single } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 const { Label, Control, Item } = Form
 
 import * as runningConfActions from 'app/redux/Config/Running/runningConf/runningConf.action'

@@ -1,9 +1,9 @@
 import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
-import { Drawer, Modal, Button, Icon, message, DatePicker, Input, Select, Switch } from 'antd'
+import { Drawer, Modal, Button, message, DatePicker, Input, Select, Switch } from 'antd'
 import { fromJS } from 'immutable'
-import { XfnIcon } from 'app/components'
+import { XfnIcon, Icon } from 'app/components'
 import moment from 'moment'
 import * as Limit from 'app/constants/Limit.js'
 import { categoryTypeAll, type, business, beforejumpCxToLr, runningStateType, categoryTypeName } from 'app/containers/components/moduleConstants/common'

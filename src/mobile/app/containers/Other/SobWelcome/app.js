@@ -5,7 +5,7 @@ import { connect }	from 'react-redux'
 
 import { homeActions } from 'app/redux/Home/home.js'
 import * as allActions from 'app/redux/Home/All/other.action'
-import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
+// import * as sobConfigActions from 'app/redux/Config/Sob/sobConfig.action'
 import { Button, ButtonGroup, Container, ScrollView, ExperienceModal } from 'app/components'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 import * as thirdParty from 'app/thirdParty/dingding'

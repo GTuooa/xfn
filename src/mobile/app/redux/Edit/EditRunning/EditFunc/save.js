@@ -1,5 +1,5 @@
 import { toJS, fromJS } from 'immutable'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import fetchApi from 'app/constants/fetch.running.js'
 

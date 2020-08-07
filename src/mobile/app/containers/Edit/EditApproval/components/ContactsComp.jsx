@@ -2,7 +2,7 @@ import React,{ Fragment } from 'react'
 import { Row, Icon, ChosenPicker, Single, DatePicker } from 'app/components'
 import CommonRow from './CommonRow'
 import * as editApprovalActions from 'app/redux/Edit/EditApproval/editApproval.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import { ROOTURL } from 'app/constants/fetch.constant.js'
 import * as Limit from 'app/constants/Limit.js'
 

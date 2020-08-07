@@ -16,10 +16,20 @@ const webpackConfigDev = {
     entry:{
         xfnidx: [
             'webpack/hot/only-dev-server',
-            `webpack-dev-server/client?http://localhost:${DEVICE_TYPE === 'mobile' ? 4800 : 3800}`,
+            `webpack-dev-server/client?http://localhost:${DEVICE_TYPE === 'mobile' ? 4800 : 3500}`,
             path.resolve(APP_PATH, 'containers/index')
         ] //入口文件
     },
+    // output:{        
+    //     path: BUILD_DEVICE_PATH, //输出目录的配置，模板、样式、脚本、图片等资源的路径配置都相对于它
+    //     // publicPath: '../', //模板、样式、脚本、图片等资源对应的的路径
+    //     publicPath: './', //模板、样式、脚本、图片等资源对应的的路径
+    //     filename: `js${timestamp}/[name].js`, //每个页面对应的主js的生成配置
+    //     // chunkFilename: 'js/[id][hash:8].chunk.js' //chunk生成的配置
+    // },
+    // resolve:{
+    //     extensions:['.js','.jsx','json','.css'], //需要编译的文件类型
+    // },
     plugins:[
         // new openBrowserPlugin({url:"http://localhost:3800/build/desktop/app/index.html"}),
         new webpack.DefinePlugin({
@@ -40,8 +50,20 @@ const webpackConfigDev = {
         hot: true,
         inline: true,
         host: '0.0.0.0',
-        port: DEVICE_TYPE === 'mobile' ? 4800 : 3800
-    }
+        port: DEVICE_TYPE === 'mobile' ? 4500 : 3500
+    },
+    // optimization: {
+    //     // Automatically split vendor and commons
+    //     // https://twitter.com/wSokra/status/969633336732905474
+    //     // https://medium.com/webpack/webpack-4-code-splitting-chunk-graph-and-the-splitchunks-optimization-be739a861366
+    //     splitChunks: {
+    //       chunks: 'all',
+    //       name: false,
+    //     },
+    //     // Keep the runtime chunk seperated to enable long term caching
+    //     // https://twitter.com/wSokra/status/969679223278505985
+    //     runtimeChunk: true,
+    // },
 }
 module.exports = merge(webpackConfigBase, webpackConfigDev);
 

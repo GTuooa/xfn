@@ -45,6 +45,7 @@ class CategorySelect extends React.Component{
                 dropdownStyle={{ maxHeight: 400, overflow: 'auto' }}
                 treeDefaultExpandAll
                 onChange={onChange}
+                dropdownMatchSelectWidth={155}
             >
 				<TreeNode
 					title={'全部'}

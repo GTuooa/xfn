@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import { toJS, is ,fromJS } from 'immutable'
 
-import { Drawer, Icon } from 'antd'
+import { Drawer } from 'antd'
+import { Icon } from 'app/components'
 // import Enclosure from './Enclosure'
 
 import * as lsItemComponents from './LsItem'

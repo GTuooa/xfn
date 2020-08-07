@@ -114,9 +114,9 @@ class RelativeYeb extends React.Component {
 										dispatch(relativeYebActions.getRelativeYebBalanceListFromSwitchPeriod(issuedate, endissuedate, currentRelativeItem,currentRunningItem))
 									}}
 								>
-									<Option key={'a'} value={''}>{'总览'}</Option>
-									<Option key={'b'} value={'HAPPEN'}>{'发生额'}</Option>
-									<Option key={'c'} value={'PAYMENT'}>{'收付额'}</Option>
+									<Select.Option key={'a'} value={''}>{'总览'}</Select.Option>
+									<Select.Option key={'b'} value={'HAPPEN'}>{'发生额'}</Select.Option>
+									<Select.Option key={'c'} value={'PAYMENT'}>{'收付额'}</Select.Option>
 									{
 										// <Option key={'d'} value={'RECEIVABLE'}>{'应收应付额'}</Option>
 									}

@@ -6,7 +6,7 @@ import * as Limit from 'app/constants/Limit.js'
 import { toJS } from 'immutable'
 
 @immutableRenderDecorator
-export default
+
 class IUTree extends React.Component {
 	render() {
 		const {
@@ -79,3 +79,5 @@ class IUTree extends React.Component {
 		)
     }
 }
+
+export default IUTree

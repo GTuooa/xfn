@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { toJS, fromJS } from 'immutable'
 
 import { Row, Single, Icon, Amount, Switch, TextListInput } from 'app/components'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { decimal } from 'app/utils'
 import { systemProJectCodeCommon } from 'app/containers/Config/Approval/components/common.js'

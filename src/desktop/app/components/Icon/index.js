@@ -4,7 +4,7 @@ import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 import './icon.less'
 
 @immutableRenderDecorator
-export default
+
 class Icon extends React.Component{
 	render() {
 		const { type, className, size, style, disabled, onClick } = this.props
@@ -22,3 +22,4 @@ class Icon extends React.Component{
 		)
 	}
 }
+export default Icon

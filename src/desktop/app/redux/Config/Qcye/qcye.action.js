@@ -2,7 +2,7 @@ import fetchApi from 'app/constants/fetch.constant.js'
 import * as ActionTypes from './ActionTypes.js'
 import { toJS } from 'immutable'
 import { showMessage } from 'app/utils'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 
 export const changeQcyeTabPane = (category) => ({
 	type: ActionTypes.CHANGE_QCYE_TAB_PANE,

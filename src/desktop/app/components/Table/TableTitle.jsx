@@ -4,7 +4,7 @@ import { Checkbox } from 'antd'
 import './table.less'
 
 @immutableRenderDecorator
-export default
+
 class TableTitle extends React.Component{
 
 	render() {
@@ -29,3 +29,5 @@ class TableTitle extends React.Component{
 		)
 	}
 }
+
+export default TableTitle;

@@ -2,14 +2,13 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { StoreContext } from './context.js'
 import { injectAsyncReducer } from 'app/utils/customStore'
 import './load.less'
 
 export default class Bundle extends Component {
 
-    static contextTypes = {
-        store: PropTypes.object
-    }
+    static contextType = StoreContext
 
     state = {
       mod: null
@@ -44,8 +43,7 @@ export default class Bundle extends Component {
         props.load((mod) => {
             const { reducer, view } = mod
 
-            injectAsyncReducer(this.context.store, reducer)
-
+            injectAsyncReducer(this.context, reducer)
             if (this._isMounted) {
                 this.setState({
                     mod: view['default'] ? view['default'] : view,
@@ -55,10 +53,6 @@ export default class Bundle extends Component {
     }
 
     render() {
-        /*
-         将存在状态中的 mod 组件作为参数传递给当前包装组件的'子'
-        */
-
         return this.state.mod ? this.props.children(this.state.mod) : <div className="load-page">加载中。。。长时间未加载，请刷新</div>
     }
 }

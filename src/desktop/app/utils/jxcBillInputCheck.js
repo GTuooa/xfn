@@ -1,6 +1,6 @@
 import { message } from 'antd'
 
-export function billInputCheck (type, value, onSuccess) {
+function billInputCheck (type, value, onSuccess) {
     const reg = /^\d*\.?\d{0,2}$/g;
 
     ({
@@ -63,3 +63,9 @@ export function billInputCheck (type, value, onSuccess) {
         }
     }[type])()
 }
+
+
+let jxcBillInputCheck = {};
+jxcBillInputCheck.billInputCheck = billInputCheck;
+
+export default jxcBillInputCheck;

@@ -2,7 +2,8 @@ import React from 'react'
 import { immutableRenderDecorator }	from 'react-immutable-render-mixin'
 
 import * as configActions from 'app/redux/Config/Ac/acConfig.action.js'
-import { Icon, Checkbox, Button, message, Tooltip }	from 'antd'
+import { Checkbox, Button, message, Tooltip }	from 'antd'
+import { Icon } from 'app/components'
 import { TableItem, ItemTriangle, TableOver } from 'app/components'
 
 @immutableRenderDecorator

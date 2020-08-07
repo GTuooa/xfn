@@ -2,7 +2,7 @@ import { showMessage, jsonifyDate } from 'app/utils'
 import fetchApi from 'app/constants/fetch.account'
 import * as ActionTypes from './ActionTypes.js'
 // import * as lrpzActions from 'app/redux/Edit/Lrpz/lrpz.action.js'
-import * as thirdParty from 'app/thirdParty'
+import thirdParty from 'app/thirdParty'
 import * as Limit from 'app/constants/Limit.js'
 import { fromJS } from 'immutable'
 export const getInventoryMxbDataFromYeb = (issuedate,endissuedate,uuid,name,stockCategoryValue,
