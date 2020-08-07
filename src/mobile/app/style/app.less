@@ -1,0 +1,93 @@
+@import "./common.css";
+
+// @media screen and (min-width: 320px) {
+@media screen and (min-width: 320px) {
+    html {
+        font-size: 100px !important;
+    }
+}
+
+@media screen and (min-width: 360px) {
+    html {
+        font-size: 117.5px !important;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    html {
+        font-size: 125px !important;
+    }
+}
+
+@media screen and (min-width: 440px) {
+    html {
+        font-size: 137.5px !important;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    html {
+        font-size: 150px !important;
+    }
+}
+
+body {
+	background-color: #f1f1f1;
+    overflow: hidden;
+}
+
+.clearfix {
+	overflow: hidden;
+
+	&:after {
+		content: '';
+    	display: table;
+		clear: both;
+		visibility: hidden;
+		overflow: hidden;
+		_zoom: 1;
+	}
+}
+
+input::-webkit-input-placeholder{
+    font-size: .12rem!important;
+    // line-height: .2rem!important;
+    // color: #ccc!important;
+    color: #999!important;
+
+}
+
+.form {
+    &-tip {
+        position: relative;
+    	font-size: .11rem;
+    	color: #8b939e;
+    	padding-top: .08rem;
+    	&-item {
+    		margin: .03rem .1rem 0 .2rem;
+    		position: relative;
+    		&::before {
+    			content: '';
+    			position: absolute;
+    			width: .03rem;
+    			height: .1rem;
+    			display: block;
+    			background-color: #93cdf7;
+    			top: .03rem;
+    			left: -.1rem;
+    		}
+    	}
+    }
+}
+
+.form-tip-hide {
+    height: 30px;
+    overflow: hidden;
+    padding-right: 30px;
+}
+
+.form-tip-switch {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}

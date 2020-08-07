@@ -1,0 +1,94 @@
+.cxkcModalTitle{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &-line{
+        display: flex;
+        justify-content: space-between;
+        color: #666;
+        padding: 5px 16px;
+    }
+    &-center{
+        background:#eef3fa;
+        height:40px;
+        font-size: 16px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+    }
+
+}
+
+.cxkcModalBody{
+    border: 1px solid #555;
+    margin-top: 85px;
+    position: relative;
+    &-title{
+        overflow-y: scroll;
+    }
+    &-shadow{
+        position: absolute;
+        top: 0px;
+        right: 1px;
+        width: 17px;
+        height: 34px;
+        z-index: 9;
+        background: #fff;
+    }
+
+    &-title,
+    &-item{
+        display: flex;
+        border-bottom: 1px solid #555;
+        & > li{
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border-right: 1px solid #555;
+            overflow : hidden;
+            &:last-child{
+                border-right: 0;
+            }
+            & > span{
+              display: block;
+              overflow: hidden;
+              white-space:nowrap;
+              text-overflow:ellipsis;
+            }
+        }
+        &-triangle-icon {
+            margin-left: 5px;
+        }
+    }
+    &-item-wrap{
+        height: 250px;
+        overflow-y: scroll;
+    }
+    &-title{
+        & > li{
+            display: flex;
+            justify-content: center !important;
+        }
+    }
+}
+
+.cxkcModalFooter{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    display: flex;
+    & > span {
+        flex: 1;
+    }
+    & > span:last-child {
+        text-align: right;
+    }
+}
+
+.cxkcModal{
+    .ant-modal-footer{
+        text-align: center;
+    }
+}

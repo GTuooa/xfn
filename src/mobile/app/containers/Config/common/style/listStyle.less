@@ -1,0 +1,127 @@
+.border-top {
+    border-top: 1px solid #f1f1f1;
+}
+
+.config-top-title-wrap {
+    width: 100%;
+    color: #333;
+    font-size: 0.12rem;
+    background-color: white;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+
+    .config-top-title-item {
+        min-width: 1.1rem;
+        height: 0.31rem;
+        line-height: 0.31rem;
+        text-align: center;
+        padding: 0 .04rem;
+    }
+    .config-top-title-item-select {
+        border-bottom: 2px solid #5d81d1;
+        color: #5e81d1;
+    }
+}
+
+.config-type-tree-choose { // 类别选择样式
+    width: 100%;
+    height: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    font-size: 0.12rem;
+    color: #323334;
+    line-height:0.31rem;
+    padding: 0 0.1rem;
+    border-bottom: 1px solid #d8d8d8;
+}
+
+// 手机端设置的显示列表统一样式
+.config-list-item-wrap-style {
+    background-color: white;
+    padding-left: .1rem;
+
+    .config-list-item-style {
+        display: flex;
+        align-items: center;
+        padding: .05rem .1rem .05rem 0;
+        border-bottom: 1px solid #eee;
+    }
+    .config-list-item-checkbox-style { // checkbox
+        width: .18rem;
+        display: flex;
+        align-items: center;
+    }
+    .config-list-item-info-style { // 名称之类的
+        flex: 1;
+        color: #666;
+        font-size: .13rem;
+        padding: 7px 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .config-list-item-arrow-style { // 箭头
+        font-size: .13rem;
+        color: #ccc;
+    }
+}
+
+.config-form-item-input-style { // 表单输入
+    input {
+        text-align: right;
+    }
+}
+.config-form-item-input-style-disabled{
+    input {
+        text-align: right;
+        color:#ccc !important;
+    }
+}
+.config-form-item-select-item {
+    display: flex;
+    justify-content:flex-end;
+}
+.config-form-item-select-item-holder {
+    color: #999;
+}
+
+.config-form-sub-title {
+    width: 100%;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    font-size: 0.11rem;
+    color: #666;
+    padding-left: 0.1rem;
+}
+
+.config-form-item-auto-heigth-row { // 高度不定的样式
+    display: flex;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 0 .1rem;
+    align-items: center;
+    min-height: .4rem;
+
+    .config-form-item-auto-height-row-item {
+        flex: 1;
+        font-size: .13rem;
+        color: #333;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-left: .1rem;
+        .config-form-item-type-choose-lable {
+            padding-left: .08rem;
+            line-height: .25rem;
+        }
+    }
+}
+.config-form-item-disabled {
+    color: #ccc;
+}

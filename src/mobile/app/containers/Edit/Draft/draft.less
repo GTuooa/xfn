@@ -1,0 +1,137 @@
+.draft{
+	&-locked-icon{
+		position: absolute;
+		// left: 1.8rem;
+		left: 1.5rem;
+		top: 0;
+		z-index: 9;
+	}
+	.model {
+		background-color: white;
+		padding: 0 .1rem;
+		margin: .1rem .05rem;
+		border-radius: .05rem;
+		position: relative;
+
+		&-info {
+			height: .27rem;
+			border-bottom: 1px solid #ddd;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: .12rem;
+			color: #222;
+
+			&-date {
+				font-size: .1rem;
+				color: #999;
+			}
+		}
+
+		&-jv {
+			border-bottom: 1px solid #eee;
+			padding: .05rem 0;
+
+			&-info {
+				display: flex;
+				font-size: .12rem;
+				color: #222;
+				justify-content: space-between;
+			}
+
+			&-ass {
+				font-size: .1rem;
+				color: #666;
+			}
+
+			&-abstract {
+				font-size: .1rem;
+				color: #999;
+			}
+		}
+	}
+
+	.draft-select{
+		background: #fff;
+		padding: 0 .1rem;
+		height: .35rem;
+		display: flex;
+		align-items: center;
+
+		&-select {
+			display: flex;
+			color: #222;
+			flex: 1;
+			margin-right: .05rem;
+
+
+			&-text {
+				display: flex;
+				flex: 1;
+				width: 0;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+			}
+
+			&-trangle {
+				margin-top: .04rem;
+				color: #ccc;
+			}
+		}
+		&-inputwrap {
+			position: relative;
+			display: flex;
+			flex: 3;
+			height: .26rem;
+			// padding-left: .07rem;
+			margin-left: .07rem;
+			font-size: .14rem;
+			border-bottom: 1px solid #ddd;
+
+			&:before {
+				content: '';
+				width: 1px;
+				height: .20rem;
+				background: #ddd;
+				position: absolute;
+				// left: 0;
+				left: -0.07rem;
+				top: .03rem;
+			}
+		}
+		&-icon {
+			position: absolute;
+			// left: .1rem;
+			// top: .07rem;
+			left: 0.05rem;
+    		top: .06rem;
+			color: #ccc;
+			z-index: 4;
+		}
+		&-input {
+			display: flex;
+			width: 100%;
+			// background: #eee;
+			background: #fff;
+			border: 0 none;
+			text-indent: .17rem;
+			// height: .26rem;
+			height: .25rem;
+
+			&:focus {
+				box-shadow: 0 0;
+			}
+		}
+		.input-text{
+			padding-left: 2px;
+		}
+	}
+	&-locked{
+		& > span,
+		.model-info-date{
+			color: #ccc
+		}
+
+	}
+}

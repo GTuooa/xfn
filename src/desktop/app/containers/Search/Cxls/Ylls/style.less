@@ -1,0 +1,219 @@
+@import '~app/style/themes/common.less';
+.ylls-wrap {
+    .ant-drawer-body {
+        padding: 0;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        .ylls-drawer-content {
+            flex: 1;
+            overflow: auto;
+        }
+    }
+
+    .ylls-title {
+        height: 39px;
+        background: #edf3fa;
+        border-bottom: 1px solid #ddd;
+        padding: 0 19px;
+        display: flex;
+        align-items: center;
+        color: #555;
+
+        .ylls-title-text {
+            font-size: 14px;
+            flex: 1;
+        }
+
+        .ylls-title-icon {
+            font-size: 16px;
+        }
+    }
+
+    .ylls-opration-wrap {
+        height: 43px;
+        border-bottom: 1px #f5efef solid;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 20px;
+        align-items: center;
+        position: relative;
+        .ylls-opration-icon {
+            margin-left: 20px;
+            font-size: 20px;
+        }
+
+        .ylls-opration-icon-disabled {
+            color: #ccc;
+            margin-left: 20px;
+            font-size: 20px;
+            .icon {
+                cursor: not-allowed;
+            }
+        }
+    }
+
+    .ylls-item-detail {
+        margin: 10px 20px;
+
+        & > li,& > div >li {
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+    }
+
+    .ylls-item-child-list {
+        margin: 0 20px;
+
+        // .ant-collapse-borderless > .ant-collapse-item {
+        //     border-bottom: 0;
+        // }
+
+        .ant-collapse > .ant-collapse-item.ant-collapse-no-arrow > .ant-collapse-header {
+            padding-left: 0;
+        }
+        .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+            padding: 0;
+        }
+        .ant-collapse-content > .ant-collapse-content-box {
+            padding: 0;
+        }
+
+        .ylls-item-child-title,
+        .ylls-item-child-title-no {
+            font-size: 12px;
+            padding: 4px 0 4px 0;
+            display: flex;
+
+            & > span:nth-child(1) {
+                color: #246eae;
+                flex: 1;
+            }
+
+            & > span:nth-child(2) {
+                color: #333;
+            }
+        }
+
+        .ylls-item-child-title {
+            border-bottom: 1px solid #ddd;
+        }
+
+        .ylls-item-child-item {
+            border-top: 1px solid #ddd;
+            padding: 10px;
+
+            & > div {
+                display: flex;
+                font-size: 12px;
+                color: #333;
+
+                & > span:nth-child(1) {
+                    flex: 1;
+                }
+            }
+
+            & > div:nth-child(1) {
+                margin-bottom: 5px;
+            }
+
+            &:first-child {
+                border-top: 0;
+            }
+        }
+        .ylls-item-content {
+            display: flex;
+            font-size: 12px;
+            color: #333;
+            margin-bottom: 10px;
+            flex-direction: column;
+            & > span {
+                flex: 1;
+                padding: 10px 0 0 10px;
+            }
+        }
+    }
+
+
+    .upload{
+        float: left;
+        width: 218px;
+        height: 70px;
+        margin: 8px 10px;
+        padding: 10px 0;
+        background:#ffffff;
+        position: relative;
+        font-size: 12px;
+        & .plus{
+            font-size: 51px;
+            line-height: 50px;
+            text-align: center;
+        }
+        &>div:first-child{
+            width:50px;
+            height: 50px;
+            float: left;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &>div:nth-child(2){
+            width:160px;
+            height: 50px;
+            float: left;
+            padding-left: 10px;
+            & p{
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+                padding-bottom: 10px;
+            }
+            & span,& a{
+                color: #666;
+                line-height: 30px;
+                margin-right: 10px;
+            }
+            & .tag{
+                height: 25px;
+                width: 55px;
+                padding: 0;
+                margin: 0;
+                float: right;
+                line-height: 23px;
+                border-radius: 6px;
+                border: @border;
+                text-align: center;
+                background: #f4f4f4;
+            }
+        }
+        &>.icon-close{
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+    
+    .ylls-title-btn {
+        position: absolute;
+        &:nth-of-type(1){
+            left: 20px;
+        }
+        &:nth-of-type(2){
+            left: 80px;
+        }
+        &:nth-of-type(3){
+            left: 140px;
+        }
+        height: 43px;
+        line-height: 43px;
+        .ant-btn {
+            margin: 0;
+            height: 28px;
+            width: 50px;
+            border-radius: 5px;
+        }
+    }
+}

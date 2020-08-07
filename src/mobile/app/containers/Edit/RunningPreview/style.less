@@ -1,0 +1,259 @@
+@import '~app/style/public.less';
+@import '~app/style/theme.less';
+
+.running-preview {
+    font-size: .11rem;
+    @font-size-small: .1rem;
+    @font-size-middle: .12rem;
+    @font-size-large: .13rem;
+    background-color: #F1F1F1;
+
+    .date-header-wrap{
+        font-size: @font-size-large;
+    }
+
+    .running-preview-header-left,
+    .running-preview-header-right {
+        margin: 0 .08rem;
+    }
+
+    .running-preview-bold {
+        font-weight: bold;
+    }
+
+    .running-preview-gray {
+        color: #888888;
+    }
+    .running-preview-light-gray{
+        color: #A0A0A0;
+    }
+
+    .running-preview-blue {
+        color: #5E81D1;
+    }
+    .running-preview-middle{
+        font-size: @font-size-middle;
+    }
+    .running-preview-top-line {
+        border-top: 1px solid @theme-gray;
+    }
+
+    .running-preview-line {
+        padding: .05rem 0;
+        border-bottom: 1px solid @theme-gray;
+    }
+
+    .running-preview-commom-card {
+        background-color: @bgColor;
+        color: #222;
+        padding: .03rem .08rem;
+        position: relative;
+
+        .title-item-icon{
+			position: absolute;
+			right: .4rem;
+			top: .2rem;
+		}
+    }
+
+    .running-preview-bottom-card {
+        color: #222;
+        padding: .03rem .08rem;
+        background-color: @bgColor;
+    }
+
+    .running-preview-item {
+        display: flex;
+        padding: .03rem 0;
+        .running-preview-item-title{
+            width: .6rem;
+            color: #666;
+            text-align: right;
+            .spot{
+                color: #5E81D1;
+            }
+        }
+        .running-preview-item-content{
+            flex: 1;
+        }
+        .state-button{
+            margin-left: .1rem;
+            align-self: center;
+            .button,
+    		.disabled {
+    			display: inline-block;
+    			width: auto;
+    	    	height: auto;
+    	    	padding: .02rem .08rem;
+    			background-color: #fff;
+    			line-height: normal;
+    			font-size: .1rem;
+    			border-radius: .04rem;
+                color: #222;
+    		}
+    		.disabled {
+    			color: #999;
+    		}
+        }
+    }
+
+    .running-preview-card-item {
+        color: #222;
+        background-color: @bgColor;
+        padding: .03rem .08rem;
+        margin-top: .05rem;
+    }
+    .running-preview-state{
+        display: inline-block;
+        color: #fff;
+        background-color: #5e81d1;
+        border-radius: .02rem;
+        font-size: @font-size-small;
+        margin-left: .03rem;
+        padding: 0 .02rem;
+    }
+    .running-preview-title{
+        padding: .03rem 0;
+        display: flex;
+        align-items: center;
+        .running-preview-category{
+            font-weight: bold;
+            font-size: @font-size-large;
+        }
+    }
+    .running-preview-toggle{
+        display: flex;
+        align-items: center;
+        padding: .07rem .08rem;
+        font-size: @font-size-small;
+        justify-content: space-between;
+
+        &-left{
+            display: flex;
+            border: .01rem solid #d8d8d8;
+            border-radius: .02rem;
+            font-weight: bold;
+
+            & > div{
+                padding: .02rem .05rem;
+            }
+            .active{
+                color: #fff;
+                background-color: #5e81d1;
+            }
+        }
+    }
+    .running-preview-four{
+        display: flex;
+        padding: .03rem 0;
+        &-item{
+            flex: 161;
+        }
+        .center{
+            flex: 182;
+            text-align: right;
+        }
+        .right{
+            flex: 190;
+            text-align: right;
+            padding-right: .03rem;
+        }
+        &-wrap{
+            padding: .03rem 0;
+            border-top: 1px solid #d8d8d8;
+        }
+    }
+    .running-preview-child{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: .03rem;
+        &-wrap{
+            background-color: #f8f8f8;
+            padding: .03rem .03rem 0;
+            border-top: 1px solid #d8d8d8;
+            margin-top: .03rem;
+        }
+    }
+    .running-preview-dotted{
+        border-top: 1px dashed #d8d8d8;
+    }
+    .running-preview-bgColor{
+        background-color: #f8f8f8;
+    }
+    .running-preview-other{
+        display: flex;
+        justify-content: space-between;
+        padding: .08rem;
+        font-size: @font-size-small;
+    }
+    .icon-arrow-down{
+        height: .09rem!important;
+    }
+    .running-preview-padding {
+        padding: .03rem 0;
+    }
+
+    .running-preview-fj-title{
+        background-color: #f8f8f8;
+        padding: .03rem .08rem;
+        color: #5e81d1;
+    }
+    .running-preview-fj{
+        padding: 0.05rem;
+        font-size: @font-size-middle;
+        background-color: #fff;
+        .upload{
+            border-bottom: 1px solid #eee;
+            padding: .05rem 0;
+            display: flex;
+            &:last-child{
+                border-bottom: none;
+            }
+            & .icon-close{
+                padding-right: 10px;
+                align-self: center;
+                color: red;
+                margin-right: .05rem;
+            }
+            & img{
+                width: .3rem;
+                height: .3rem;
+                align-self: center;
+            }
+            & ul{
+                flex: 1;
+                margin: 0 .05rem;
+                font-size: @font-size-small;
+                align-items: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            & .fj-label{
+                align-self: center;
+                padding: 0 .1rem;
+                font-size: .11rem;
+            }
+        }
+    }
+    .ylls-process-info-wrap {
+        padding: .06rem .08rem;
+        display: flex;
+        font-size: .11rem;
+        background: #fff;
+        align-items: center;
+    }
+    .ylls-process-info-text {
+        flex: 1;
+        width: 0;
+        color: #666;
+        text-decoration: underline;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .ylls-process-info-code {
+        font-size: .1rem;
+        color: #888;
+    }
+}

@@ -1,0 +1,241 @@
+@import '~app/style/themes/common.less';
+@bouble-background    : #f4f4f4;
+
+.runningType-mxb {
+    .ant-tree li{
+       padding: 2px 0 0 0;
+    }
+    .runningType-mxb-top-search {
+        margin-left: 8px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        & > span{
+            display: flex;
+            &:nth-child(2){
+                .cxls-serch-input{
+                    padding-right: 35px;
+                }
+                .normal-search-delete{
+                    position: absolute;
+                    top: 8px;
+                    right: 25px;
+                    z-index: 3;
+                    color: rgba(0, 0, 0, 0.25);
+                }
+                .cxpz-serch-icon{
+                    position: absolute;
+                    top: 8px;
+                    right: 5px;
+                    z-index: 3;
+                }
+                &:before {
+                    content: '';
+               		position: absolute;
+               		width: 1px;
+               		height: 18px;
+               		background: #ddd;
+               		top: 5px;
+               		right: 20px;
+               		z-index: 4;
+                }
+            }
+        }
+        .runningType-mxb-top-search-select {
+            width: 120px;
+        }
+    }
+    .runningType-mxb-title {
+        display: flex;
+        border-top: @border;
+    	border-left: @border;
+    	border-right: @border;
+        background: @bouble-background;
+    	height: 30px;
+    	line-height: 30px;
+    	padding-left: 4px;
+    }
+
+    .runningType-mxb-table-width {
+        & > li {
+    		&:nth-child(1) {
+    			min-width: 76px;
+    			max-width: 76px;
+    			flex: 76;
+    		}
+    		&:nth-child(2) {
+    			min-width: 60px;
+    			max-width: 60px;
+    			flex: 60;
+    		}
+    		&:nth-child(3) {
+    			min-width: 212px;
+    			max-width: 452px;
+    			flex: 212;
+                }
+    		&:nth-child(6) {
+    			min-width: 32px;
+    			max-width: 32px;
+    			flex: 32;
+    		}
+    		&:nth-child(4),
+    		&:nth-child(5),
+    		&:nth-child(7) {
+    			min-width: 70px;
+    			max-width: 110px;
+    			flex: 110;
+                justify-content: flex-end;
+                & > span {
+                    padding-right: 4px;
+                }
+    		}
+    	}
+        .runningType-mxb-table-item-amount{
+            min-width: 320px;
+            max-width: 480px;
+            flex: 480;
+            flex-direction: column;
+            & > div {
+                display: flex;
+                flex-direction: row;
+                span{
+                    flex: 1;
+                    text-align: center;
+                }
+                &:nth-child(1){
+                    span{
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: 1px solid #d9d9d9;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        height: 32px;
+                        line-height: 32px;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .runningType-mxb-table-item-balance{
+            min-width: 160px;
+            max-width: 240px;
+            flex: 240;
+            flex-direction: column;
+            & > div {
+                display: flex;
+                flex-direction: row;
+                span{
+                    flex: 1;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                &:nth-child(1){
+                    span{
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: 1px solid #d9d9d9;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        height: 34px;
+                        line-height: 34px;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+    .runningType-mxb-table-content{
+        & > ul {
+            & > li {
+                &:nth-child(3) {
+                    & > span {
+                        display: inline-block;
+                        padding-left: 4px;
+                        width: 100%;
+                        text-align: left;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        -o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                    }
+                    }
+            }
+        }
+    }
+
+    .runningType-mxb-table-justify {
+        .runningType-mxb-table-item-debit-amount,
+        .runningType-mxb-table-item-credit-amount,
+        .runningType-mxb-table-item-closed-amount {
+            & > span {
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+    }
+
+    .runningType-tree-title-handle{
+        padding: 10px 5px 0;
+        margin-bottom: 8px;
+    }
+    .runningType-right-tree{
+        padding-left: 2px;
+        & > ul{
+            padding-left: 5px;
+        }
+    }
+
+    .runningType-mxb-tree-contain {
+        padding: 0;
+        // .runningType-mxb-left-tab,
+        // .runningType-mxb-right-tab {
+        //     width: 50%;
+        //     text-align: center;
+        // }
+        .runningType-mxb-left-tab {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .runningType-mxb-table-right-top {
+        height: 35px;
+        line-height: 35px;
+        padding-left: 31px;
+        border-bottom: @border;
+        & > span {
+            cursor: pointer;
+        }
+    }
+
+    .runningType-mxb-table-right-tree {
+        flex: 1;
+        overflow: scroll;
+    }
+
+    .runningType-mxb-table-right-top-current {
+        color: #1890ff;
+    }
+}

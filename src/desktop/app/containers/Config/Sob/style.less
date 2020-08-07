@@ -1,0 +1,154 @@
+.sob-wrap{
+    height: 100%;
+    // overflow: scroll;
+    display: flex;
+    flex-direction: column;
+}
+// .btn-box{
+//     .ant-btn{
+//         height: 28px;
+//     	background-color: #ffffff;
+//     	border-radius: 2px;
+//     	border: solid 1px #dddddd;
+//     	font-size: 13px;
+//     	line-height: 28px;
+//     	color: #333333;
+//         text-align: center;
+//         float: right;
+//         margin: 16px 0;
+//     }
+//     .refresh-btn{
+//         width: 60px;
+//         margin-left: 8px;
+//         margin-right: 20px;
+//     }
+//     .add-sob-btn{
+//         width: 99px;
+//     }
+//     .creat-sob-btn{
+//         margin-right: 8px
+//     }
+// }
+.sob-list{
+    // clear: both;
+    flex: 1;
+    padding-right: 20px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+
+    & > div{
+        margin-left: 20px;
+        width: 400px;
+        height: 200px;
+        background-color: #fefffe;
+    	box-shadow: 0px 1px 2px 1px
+    		rgba(0, 0, 0, 0.15);
+    	border-radius: 6px;
+        margin-bottom: 20px;
+        float: left;
+    }
+}
+.sob-info{
+    width: 347px;
+    padding-left: 20px;
+    float: left;
+    .company-name{
+    	font-size: 20px;
+    	font-weight: normal;
+    	font-stretch: normal;
+    	letter-spacing: 0px;
+    	color: #222222;
+        margin: 20px 0 15px;
+        overflow: hidden;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .sob-time,.sob-admin,.sob-fun{
+        margin-bottom: 4px;
+        font-size: 14px;
+    	font-weight: normal;
+    	font-stretch: normal;
+    	letter-spacing: 0px;
+    	color: #222222;
+    }
+    .sob-admin{
+        margin-bottom: 4px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .sob-fun{
+        margin-bottom: 6px;
+        width: 78px;
+        height: 60px;
+        float: left;
+    }
+    .sob-fun-list{
+        & > label{
+            height: 20px;
+            font-size: 14px;
+        	font-weight: normal;
+        	font-stretch: normal;
+        	letter-spacing: 0px;
+        	color: #222222;
+            margin-right: 20px;
+            width: 80px;
+            float: left;
+            .red-circle{
+                background-color: #a90101;
+                width: 6px;
+                height: 6px;
+                display: inline-block;
+                margin-right: 4px;
+                position: relative;
+                top:-2px;
+                border-radius: 100%;
+            }
+        }
+    }
+}
+.sob-btn{
+    width: 53px;
+    float: right;
+    padding: 28px 20px 0px 0;
+    & > div{
+        margin-bottom: 25px;
+        height: 20px;
+        clear: both;
+        cursor: pointer;
+        & > i{
+            float: right;
+            font-size: 20px;
+        }
+
+        &:nth-last-child(1){
+            margin-bottom: 0px;
+        }
+    }
+    .not-limit{
+        color: #c0b9b9;
+    }
+
+    .sob-btn-download {
+        float: right;
+        .anticon {
+            float: right;
+            font-size: 20px;
+        }
+    }
+}
+
+.contract {
+    line-height: 24px;
+    height: 400px;
+    overflow-y: scroll;
+    &-info {
+        margin-top: 8px;
+        &>span:nth-child(1) {
+            color: #333333;
+        }
+    }
+
+}

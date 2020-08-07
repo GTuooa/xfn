@@ -1,0 +1,310 @@
+.sob-option-wrap {
+    height: 100%;
+    // overflow: scroll;
+    // margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.tab-box-wrap {
+
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+
+    .tab-box-wrap {
+        flex: 1;
+    }
+
+    .tab-box{
+        // width: 154px;
+    	height: 30px;
+    	border-radius: 2px;
+    	border: solid 1px #d9d9d9;
+        display: flex;
+        margin:20px auto;
+        .tab-selected{
+            color: #fff;
+            background-color: #A90202;
+        }
+        & > div{
+            display: flex;
+            width: 77px;
+            justify-content: center;
+            align-items: center;
+        	font-family: PingFangSC-Regular;
+        	font-size: 16px;
+        	font-weight: normal;
+        	font-stretch: normal;
+        	letter-spacing: 0px;
+        	color: #666666;
+            background-color: #fff;
+            cursor: pointer;
+        }
+    }
+}
+
+.sob-option-row-wrap {
+    flex: 1;
+    overflow-y: auto;
+}
+.sob-option-row,
+.sob-option-row-role,
+.sob-option-row-tip {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+    min-width: 1060px;
+    & > label{
+        width: 150px;
+        font-size: 14px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 32px;
+        color: #222;
+        & >span{
+            color: #A90202;
+            font-size: 20px;
+            line-height: 2;
+            height: 32px;
+        }
+    }
+    & > input{
+        width: 300px;
+    }
+    &  > .ant-calendar-picker{
+        .ant-calendar-picker-icon{
+            margin-top: -9px;
+        }
+    }
+}
+
+.sob-option-row-role {
+    .sob-option-row-role-lable {
+        flex-direction: column;
+        height: 64px;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+    .sob-option-row-role-set-btn {
+        color: #A90202;
+        margin-right: 28px;
+    }
+}
+
+.sob-option-list {
+    min-width: 1060px;
+    .sob-option-show-hide-tip {
+        color: #A90202;
+        padding-left: 80px;
+        margin: 10px 0;
+        font-size: 14px;
+    }
+    .sob-option-row-role {
+        margin-bottom: 2px;
+    }
+    .sob-option-show-hide-tip-bottom {
+        color: #A90202;
+        padding-left: 150px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+.sob-option-row-tip {
+    & > span{
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        height: 32px;
+        color: #222;
+        margin-left: 65px;
+        & >span{
+            color: #A90202;
+            font-size: 20px;
+            line-height: 2;
+            height: 32px;
+        }
+    }
+}
+
+.sob-option-choosen-modal {
+    .sob-option-choosen-label {
+        margin-right: 20px;
+    }
+    .sob-option-choosen-right-or-not {
+        padding-left: 71px;
+    }
+    .sob-option-choosen-copy-warp {
+        display: flex;
+        margin: 20px 0;
+    }
+    .sob-option-choosen-copy-list {
+        flex: 1;
+        margin-left: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .sob-option-choosen-copy-item {
+        width: 50%;
+    }
+    .sob-option-choosen-copy-way {
+        color: #1890ff;
+    }
+}
+
+.fun-modal-checkbox{
+    // display: flex;
+    width: 900px;
+    margin-top: 6px;
+    & > div {
+        display: flex;
+        & > span {
+            width: 115px;
+            margin: 0 10px 10px 0;
+            height: 21px;
+            .ant-checkbox-wrapper{
+                margin: 0;
+                color: #222;
+                .ant-checkbox-checked {
+                    .ant-checkbox-inner{
+                        background-color: #a90101;
+                        border-color: #a90101;
+                    }
+                }
+                .ant-checkbox-checked.ant-checkbox-disabled {
+                    .ant-checkbox-inner{
+                        background-color: #ccc;
+                        border-color: #ccc;
+                    }
+                }
+            }
+        }
+        .not-limit-check{
+            .ant-checkbox-wrapper{
+                & > span:nth-child(1){
+                   color: #c0b9b9;
+               }
+            }
+        }
+    }
+    .more-fun-buy{
+        height: 20px;
+    	font-family: PingFangSC-Regular;
+    	text-decoration: underline;
+    	font-size: 14px;
+    	font-weight: normal;
+    	font-stretch: normal;
+    	letter-spacing: 0px;
+    	color: #a90202;
+        cursor: pointer;
+    }
+}
+
+.role-limit-box{
+    margin-top: 12px;
+    padding: 1px;
+    width: 900px;
+
+    .role-limit-item-wrap {
+        display: flex;
+    }
+
+    .role-limit {
+        width: 299px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid #ded7d7;
+        margin: 0px -1px -1px 0px;
+        // top:0;
+        // left: 0;
+        min-height: 144px;
+        background: #fff;
+
+        .role-title{
+            height: 20px;
+            font-family: PingFangSC-Regular;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            letter-spacing: 0px;
+            color: #222222;
+            padding: 10px 0 15px 10px;
+        }
+        .role-list-name{
+            width: 260px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            & > p {
+                width: 118px;
+                margin-bottom: 15px;
+                cursor: pointer;
+                font-size: 12px;
+                & > span{
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 100%;
+                    border: solid 1px #bfb9b9;
+                    color: #bfb9b9;
+                    text-align: center;
+                    line-height: 16px;
+                    margin-right: 2px;
+                }
+                & > i{
+                    font-style: normal;
+                    font-size: 16px;
+                }
+            }
+            .permissioned{
+                & > span{
+                    color: #222;
+                    border: solid 1px #212121;
+                }
+            }
+            .span-hide{
+                & > span{
+                    visibility:hidden
+                }
+            }
+        }
+        .add-role-btn{
+            width: 54px;
+            height: 24px;
+            margin: 15px 0;
+            font-size: 12px;
+            padding: 0px;
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+        }
+       
+        .role-limit-left{
+            border-right: 1px solid #ded7d7;
+        }
+        .role-limit-line{
+            height: 144px;
+            width: 1px;
+            background-color: #ded7d7;
+        }
+    }
+}
+
+.save-btn{
+    width: 222px;
+    height: 50px;
+    line-height: 50px;
+    background-image: linear-gradient(180deg,#cd3131 2%,#a90101 90%);
+	border-radius: 2px;
+    font-family: PingFangSC-Semibold;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ffffff;
+    text-align: center;
+    margin: 80px auto 0;
+    cursor: pointer;
+}

@@ -1,0 +1,65 @@
+@import '~app/style/themes/common.less';
+
+.runningType-yeb {
+    .runningType-yeb-table-width {
+    	& > li {
+    		&:nth-child(1) {
+    			min-width: 168px;
+                max-width: 328px;
+                flex: 168;
+    			align-items: c denter;
+                .table-item-cur{
+                    width: 100%;
+                    .runningType-yeb-category{
+                        // display: inherit;
+                        width: 100%;
+                        // padding-right: 20px;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        // text-overflow: ellipsis;
+                    }
+                }
+
+    		}
+    		&:nth-child(2) {
+    			min-width: 32px;
+                max-width: 32px;
+                flex: 32;
+    			align-items: center;
+    		}
+    		&:nth-child(3) {
+                min-width: 560px;
+                max-width: 880px;
+                flex: 880;
+    		}
+    	}
+        .runningType-yeb-item-category{
+            padding-right: 20px;
+        }
+
+    }
+
+    .runningType-yeb-table-item {
+        & > li {
+            &:nth-child(3) {
+                display: flex;
+    			flex-direction: row;
+
+    			& > span {
+    				flex: 1;
+    				border-left: @border;
+    				overflow: hidden;
+    				padding: 0 4px 0 0;
+
+    				&:first-child {
+    					border-left: 0;
+    				}
+
+    				.over-ellipsis {
+    					text-align: right;
+    				}
+    			}
+    		}
+        }
+    }
+}

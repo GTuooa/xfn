@@ -1,0 +1,66 @@
+@import '~app/style/themes/common.less';
+
+.initlrb-table {
+	width: 750px;
+}
+.initlrb-table-width {
+	& > li {
+
+		font-size: 12px;
+		color: #333;
+
+        &:nth-child(1) {
+            width: 350px;
+			// white-space: pre;
+        }
+        &:nth-child(2) {
+            width: 50px;
+        }
+        &:nth-child(3) {
+            flex: 1;
+        }
+    }
+}
+
+.initlrb-tabel-justify {
+	& > li{
+        &:nth-child(1) {
+            justify-content: flex-start;
+			padding-left: 4px;
+        }
+		&:nth-child(3) {
+			align-items: center;
+			padding: 0 4px;
+			.ant-input {
+				text-align: right;
+				color: #666;
+				font-size: 12px;
+			}
+        }
+	}
+}
+
+.initlrb-amount-line {
+	text-align: right;
+}
+
+// .title-left-lrb {
+// 	float: left;
+// 	margin-left: 10px;
+// }
+//
+// .lrb-title-date {
+// 	margin-left: 10px;
+// }
+//
+// .title-lrb-rule {
+// 	color: #38acff;
+// 	margin-left: 10px;
+// 	cursor: pointer;
+// 	text-decoration: underline;
+// }
+//
+// .title-lrb-tip {
+// 	color: #858e99;
+// 	margin-left: 10px;
+// }

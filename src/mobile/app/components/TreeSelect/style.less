@@ -1,0 +1,120 @@
+.xfn-tree{
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-weight: 100;
+    color: #222;
+    height: 100%;
+    transition: background-color .2s ease-in;
+    &-animate{
+        background-color: rgba(0, 0, 0, .4);
+        pointer-events: auto;
+    }
+    &-none-animate{
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;//元素永远不会成为鼠标事件的target
+    }
+    &-caption{
+        height: .3rem;
+        line-height: .3rem;
+        color: #ccc;
+        background-color: #fff;
+        padding-left: .1rem;
+    }
+    &-popup {
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        font-size: .13rem;
+        transition: transform .2s;
+        &-animate{
+            transform: translateY(0%);
+        }
+        &-none-animate{
+            transform: translateY(100%);
+        }
+        .xfn-tree-title{
+            height: .34rem;
+            line-height: .34rem;
+            text-align: center;
+            color: #999;
+            border-bottom: 1px solid #E8E8E8;
+        }
+        .xfn-tree-select{
+            color: #5e81d1;
+            height: .42rem;
+            padding: 0 .1rem;
+            border-top: 1px solid #E8E8E8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .overElli{
+                flex: 1;
+            }
+        }
+        .xfn-tree-content{
+            width: 100%;
+            flex: 1;
+            display: flex;
+        }
+        .xfn-tree-item{
+            width: 50%;
+            height: 100%;
+            flex: 0 0 50%;
+            padding: 0 .1rem;
+            overflow-y: auto;
+            & > div{
+                height: .42rem;
+                border-bottom: 1px solid #E8E8E8;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .icon{
+                    margin-left: .1rem;
+                }
+            }
+            &-active{
+                color: #5e81d1;
+            }
+            &-disabled{
+                color: #ccc;
+            }
+
+        }
+        .xfn-tree-item:nth-child(2n){
+            background-color: #f8f8f8;
+        }
+        .xfn-tree-select-title{
+            display: flex;
+            font-size: .12rem;
+            & > li{
+                padding: .05rem .1rem;
+            }
+            &-active{
+                color: #5e81d1;
+                border-bottom: 2px solid #5e81d1;
+            }
+        }
+        .xfn-tree-next{
+            transform: translate(-50%);
+        }
+        .xfn-tree-pre{
+            transform: translate(0);
+        }
+        .xfn-tree-next-next{
+            transform: translate(-100%);
+        }
+        .xfn-tree-move-animate{
+            transition: transform .2s;
+        }
+    }
+}

@@ -1,0 +1,132 @@
+.account-yeb {
+	.ba {
+		@vertical-padding: .04rem;
+		background: #fff;
+		// border-top: 1px solid #eee;
+		margin-bottom: 1px;
+		padding: 0 .1rem @vertical-padding 0;
+		// padding: 0.01rem .1rem .04rem 0;
+
+		&-title {
+			display: flex;
+			left:0;
+			padding: 0 .1rem 0 0;
+			height: .3rem;
+			line-height: .3rem;
+			background: #FFDBA6;
+			font-size: .13rem;
+			color: #222;
+
+			&-item {
+				text-align: right;
+				flex:1;
+				width: 0;
+			}
+		}
+
+		& > div {
+			display: flex;
+			color: #999;
+			font-size: .12rem;
+
+			& > .name {
+				// display: flex;
+				// flex: 10;
+				color: #222;
+				font-size: .12rem;
+				padding: .07rem 0 .01rem .1rem;
+				margin-right: .05rem;
+				text-decoration: underline;
+				word-break:break-all;
+				flex-direction: row;
+
+				.ba-flag {
+					display: flex;
+					position:relative;
+					margin: .05rem .05rem 0 0;
+					height: .08rem;
+					background: #D1C0A5;
+					bottom: .01rem;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 0;
+						height: 0;
+						border-width: .04rem .03rem .04rem 0;
+						border-style:solid;
+						border-color:transparent #FFF3E3 transparent transparent;
+					}
+				}
+			}
+			& > .name-asscategory {
+				text-decoration: none;
+			}
+
+			& > .btn {
+				display: flex;
+				flex: 1;
+				min-width: .12rem;
+				justify-content: flex-end;
+				align-items: center;
+				color: #b4b4b4;
+			}
+
+			& > .zhye-category-type{
+				width: 52px;
+				border: 1px solid #969696;
+				// border-radius: 0.03rem;
+				padding: 0  0.07rem 0 0.03rem;
+				height: 17px;
+				font-size: 12px;
+				line-height: 17px;
+				margin: .07rem 0 4px 0;
+				text-align: center;
+				position: relative;
+				& > .account-type-icon{
+					position: absolute;
+					right: -11px;
+					top: -6px;
+					border-left: 1px solid #969696;
+					border-top: 1px solid #969696;
+					display: inline-block;
+					width:11px;
+					height:11px;
+					margin:10px 0 0 10px;
+					-webkit-transform-origin:0 100%;
+					-moz-transform-origin:0 100%;
+					-o-transform-origin:0 100%;
+					-ms-transform-origin:0 100%;
+					transform-origin:0 100%;
+					-webkit-transform:rotate(-45deg);
+					-moz-transform:rotate(-45deg);
+					-o-transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg);
+					transform:rotate(-45deg);
+					background:#fff;
+
+
+				}
+			}
+
+			&.ba-info span {
+				display: flex;
+				justify-content: flex-end;
+				width: 0;
+				flex: 1;
+				color:#222;
+				font-size: .11rem;
+			}
+		}
+	}
+
+	.upacid {
+		.name {
+			.name-name {
+				color: #999;
+			}
+		}
+	}
+}

@@ -1,0 +1,564 @@
+@import '~app/style/public.less';
+@import '~app/style/theme.less';
+
+.iuManage-config,
+.inventory-config{
+    .lrls-paddingRight{
+        padding-right: .05rem;
+    }
+    .am-list-body:after,
+    .am-list-body:before {
+        height: 0px !important;
+    }
+    .border-top{
+        border-top: 1px solid @theme-gray;
+    }
+}
+.iuManage-lrls{
+    font-size: .12rem;
+    .iuManage-padding{
+        padding: .08rem;
+    }
+    .iuManage-item{
+        padding: .08rem;
+        background-color: @bgColor;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid @theme-gray;
+        & > div{
+            flex: 1;
+        }
+        & > span{
+            margin-left: .1rem;
+        }
+    }
+}
+
+.iuManage-config{
+    font-size: 0.12rem;
+    color: #222;
+    ul{
+        margin-bottom: 0;
+    }
+    .iuManage-config-title{
+        width: 100%;
+        // height: 0.31rem;
+        background-color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        & > li{
+            min-width: 1.1rem;
+            line-height: 0.31rem;
+            text-align: center;
+        }
+        & > .iuManage-config-title-selected{
+            border-bottom: 2px solid #5d81d1;
+            color: #5e81d1
+        }
+    }
+
+    .iuManage-choose-type{
+        width: 100%;
+        height: 0.31rem;
+        background-color: #fff;
+        color: #323334;
+        line-height:0.31rem;
+        text-align: left;
+        padding-left: 0.1rem;
+        border-top: 1px solid #d8d8d8;
+        & > i{
+            float: right;
+            padding-right: 0.1rem;
+            padding-top: 0.1rem;
+        }
+    }
+
+    .iuManage-config-card{
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+        & > li{
+            background-color: #fff;
+            border-top: 1px solid #d8d8d8;
+            & > div{
+                width: 100%;
+                padding: .08rem .1rem;
+                color: #030303;
+                display: flex;
+                align-items: center;
+                & > div{
+                    display: flex;
+                    flex: 1;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > span{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        flex: 1;
+                    }
+                    // & > i{
+                    //     font-size: 0.1rem;
+                    // }
+                }
+            }
+            &:last-child{
+                & > div{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .iuManage-card-base{
+        .iuManage-card-base-row{
+            width: 100%;
+            padding: .08rem .1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-bottom: 1px solid #d8d8d8;
+            color: #333;
+            & > label{
+                min-width: 0.71rem;
+                color: #666;
+            }
+            .select-input-placeholder{
+                text-align: right;
+            }
+            .select-check-box{
+                max-width: calc(100% - 0.71rem);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: flex;
+                align-items: center;
+                & > .text-flow{
+                    min-width: calc(100% - 0.12rem);
+                    width: calc(100% - 0.12rem);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex: 1;
+                    display: block;
+                }
+                .type-choose-lable{
+                    // padding-left: 0.1rem;
+                }
+            }
+            .antd-mobile-text-input-wrap{
+                width: 76%;
+            }
+            .iuManage-card-used{
+                float: right;
+                line-height: 0.35rem;
+            }
+            .am-list-item{
+                height: 0!important;
+            }
+            .antd-single-picker{
+                height: 0.34rem;
+            }
+        }
+        .iuManage-modal-title{
+            width: 100%;
+            height: 0.28rem;
+            line-height: 0.28rem;
+            font-size: 0.11rem;
+            color: #666;
+            padding-left: 0.1rem;
+        }
+    }
+    .iuManage-config-high-type{
+        & > div {
+            background-color: white;
+            border-bottom: 1px solid #d8d8d8;
+            padding: .08rem .1rem;
+            display: flex;
+            align-items: center;
+            .checkbox-checkbox,
+            .checkbox-checked {
+                margin-right: .1rem;
+            }
+            .high-type-name{
+                flex: 1;
+                display: block;
+            }
+        }
+    }
+    .choose-type{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .choose-type-modal,.choose-type-modal-home{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .choose-type-modal{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card-tree{
+            flex: 1;
+            height: calc(100% - 0.38rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    .choose-type-modal-home{
+        top:0.62rem;
+        max-height: 234px;
+        overflow-y: auto;
+    }
+    .type-list{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #d8d8d8;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 0.1rem;
+        .touch-range-name{
+            flex: 1;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            & > .high-type-name{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+        .touch-range-icon{
+            width: 0.6rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: right;
+        }
+    }
+    .iuManage-type-tree{
+        margin-top: 0px;
+        & > div {
+            background-color: #fff;
+        }
+        .swap-position-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+        }
+        .add-type-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+            margin-right: 8px;
+        }
+        .swap-position-block{
+            width: 0.2rem;
+            height: 0.25rem;
+            background-color: #fff;
+        }
+    }
+    .touch-type-icon{
+        min-width: 0.5rem;
+        height: 0.28rem;
+        text-align: center;
+        line-height: 0.28rem;
+        .touch-type-icon-transform{
+            transform:rotate(180deg);
+        }
+    }
+    .border-top{
+        border-top: 1px solid #d8d8d8;
+    }
+}
+
+.inventory-config{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.12rem;
+    color: #222;
+    ul{
+        margin-bottom: 0;
+    }
+    .inventory-config-title{
+        width: 100%;
+        // height: 0.31rem;
+        background-color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        & > li{
+            font-size: 0.12rem;
+            color: #333;
+            min-width: 1.1rem;
+            line-height: 0.31rem;
+            text-align: center;
+        }
+        & > .inventory-config-title-selected{
+            border-bottom: 2px solid #5d81d1;
+            color: #5e81d1
+        }
+    }
+
+    .inventory-choose-type{
+        width: 100%;
+        height: 0.31rem;
+        background-color: #fff;
+        font-size: 0.12rem;
+        color: #323334;
+        line-height:0.31rem;
+        text-align: left;
+        padding-left: 0.1rem;
+        border-top: 1px solid #d8d8d8;
+        & > i{
+            float: right;
+            padding-right: 0.1rem;
+            padding-top: 0.1rem;
+        }
+    }
+
+    .inventory-config-card{
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+        & > li{
+            background-color: #fff;
+            border-top: 1px solid #d8d8d8;
+            & > div {
+                width: 100%;
+                padding: .08rem .1rem;
+                display: flex;
+                align-items: center;
+                & > div{
+                    display: flex;
+                    flex: 1;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > span{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        flex: 1;
+                    }
+                    // & > i{
+                    //     font-size: 0.1rem;
+                    // }
+                }
+            }
+            &:last-child{
+                & > div{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .inventory-btn-bottom{
+        width: 100%;
+        height: 0.38rem;
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        align-items: center;
+        border-top: 1px solid #d8d8d8;
+        & > div{
+            flex: 1;
+            font-size: 0.12rem;
+            color: #333;
+            text-align: center;
+            line-height: 0.16rem;
+            height: 0.16rem;
+            & > i{
+                margin: 0 0.07rem;
+                font-size: 0.13rem;
+            }
+        }
+        & > .right-border{
+            border-right: 1px solid #858e99;
+        }
+        & > .left-border{
+            border-left: 1px solid #858e99;
+        }
+    }
+    .inventory-card-base{
+        .inventory-card-base-row{
+            width: 100%;
+            padding: .08rem .1rem;
+            display: flex;
+            justify-content: space-between;
+            background-color: #fff;
+            border-bottom: 1px solid #d8d8d8;
+            & > label{
+                min-width: 0.71rem;
+                color: #666;
+            }
+            .select-input-placeholder{
+                text-align: right;
+            }
+            .select-check-box{
+                max-width: calc(100% - 0.71rem);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: flex;
+                align-items: center;
+                & > .text-flow{
+                    min-width: calc(100% - 0.12rem);
+                    width: calc(100% - 0.12rem);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex: 1;
+                    display: block;
+                }
+            }
+            .antd-mobile-text-input-wrap{
+                width: 76%;
+            }
+            .am-list-item{
+                height: 0!important;
+            }
+            .antd-single-picker{
+                height: auto;
+            }
+        }
+        .inventory-modal-title{
+            width: 100%;
+            height: 0.28rem;
+            line-height: 0.28rem;
+            font-size: 0.11rem;
+            color: #666;
+            padding-left: 0.1rem;
+        }
+    }
+    .inventory-config-high-type{
+        & > div {
+            background-color: white;
+            border-bottom: 1px solid #d8d8d8;
+            padding: .08rem .1rem;
+            display: flex;
+            align-items: center;
+            .checkbox-checkbox,
+            .checkbox-checked {
+                margin-right: .1rem;
+            }
+            .high-type-name{
+                flex: 1;
+                display: block;
+            }
+        }
+    }
+    .choose-type{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .choose-type-modal,.choose-type-modal-home{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .choose-type-modal{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card-tree{
+            flex: 1;
+            height: calc(100% - 0.38rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    .choose-type-modal-home{
+        top:0.62rem;
+        max-height: 234px;
+        overflow-y: auto;
+    }
+    .type-list{
+        width: 100%;
+        height: 40px;
+        font-size: 0.12rem;
+        color: #333;
+        border-bottom: 1px solid #d8d8d8;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 0.1rem;
+        .touch-range-name{
+            flex: 1;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            & > .high-type-name{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+        .touch-range-icon{
+            width: 0.6rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: right;
+        }
+    }
+    .inventory-type-tree{
+        margin-top: 0px;
+        & > div {
+            background-color: #fff;
+        }
+        .swap-position-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+        }
+        .add-type-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+            margin-right: 8px;
+        }
+        .swap-position-block{
+            width: 0.2rem;
+            height: 0.25rem;
+            background-color: #fff;
+        }
+    }
+    .touch-type-icon{
+        min-width: 0.5rem;
+        height: 0.28rem;
+        text-align: center;
+        line-height: 0.28rem;
+        .touch-type-icon-transform{
+            transform:rotate(180deg);
+        }
+    }
+    .border-top{
+        border-top: 1px solid #d8d8d8;
+    }
+}
+

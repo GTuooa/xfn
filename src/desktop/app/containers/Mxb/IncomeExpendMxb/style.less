@@ -1,0 +1,286 @@
+@import '~app/style/themes/common.less';
+@bouble-background    : #f4f4f4;
+
+.incomeExpend-mxb {
+    // .table-title-shadow{
+    //     &::before{
+    //         content: '';
+    //         position: absolute;
+    //         z-index: 10;
+    //         top: 24px;
+    //         right: 0;
+    //         width: 16px;
+    //         height: 29px;
+    //         background: #f4f4f4;
+    //     }
+    //     &::after{
+    //         content: '';
+    //         position: absolute;
+    //         z-index: 10;
+    //         top: 24px;
+    //         right: 0;
+    //         width: 16px;
+    //         height: 29px;
+    //         background: #f4f4f4;
+    //     }
+    // }
+    .ant-tree{
+        li{
+            padding: 2px 0 0 0;
+        }
+    }
+    .incomeExpend-mxb-top-search {
+        margin-left: 8px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        & > span{
+            display: flex;
+            &:nth-child(2){
+                .cxls-serch-input{
+                    padding-right: 30px;
+                }
+                .normal-search-delete{
+                    position: absolute;
+                    top: 8px;
+                    right: 25px;
+                    z-index: 3;
+                    color: rgba(0, 0, 0, 0.25);
+                }
+                .cxpz-serch-icon{
+                    position: absolute;
+                    top: 8px;
+                    right: 5px;
+                    z-index: 3;
+                }
+                &:before {
+                    content: '';
+               		position: absolute;
+               		width: 1px;
+               		height: 18px;
+               		background: #ddd;
+               		top: 5px;
+               		right: 20px;
+               		z-index: 4;
+                }
+            }
+        }
+    }
+    .incomeExpend-mxb-title {
+        display: flex;
+        border-top: @border;
+    	border-left: @border;
+    	border-right: @border;
+        background: @bouble-background;
+    	height: 30px;
+    	line-height: 30px;
+    	padding-left: 4px;
+    }
+
+    .incomeExpend-mxb-table-width {
+        & > li{
+            &:nth-child(1){
+                min-width: 76px;
+                max-width: 76px;
+                text-align: center;
+                flex: 76;
+            }
+            &:nth-child(2){
+                min-width: 60px;
+                max-width: 60px;
+                flex: 60;
+                padding: 0 4px 0 2px;;
+            }
+            &:nth-child(3){
+                min-width: 149px;
+                max-width: 449px;
+                flex: 149;
+                align-items: center;
+            }
+            &:nth-child(4),
+            &:nth-child(5){
+                min-width: 140px;
+                max-width: 220px;
+                flex: 220px;
+                & > span{
+                    flex: 1;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: right;
+                    border-left: 1px solid #d9d9d9;
+                    box-sizing: border-box;
+                    padding: 0 4px 0 0;
+                    overflow: hidden;
+                    &:first-child{
+                        border-left: none;
+                    }
+                    & >span{
+                        text-align: right;
+                    }
+                }
+            }
+            &:nth-child(6){
+                min-width: 32px;
+                max-width: 32px;
+                flex: 32;
+            }
+            &:nth-child(7){
+                min-width: 160px;
+                max-width: 220px;
+                flex: 220px;
+                & > span{
+                    flex: 1;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: right;
+                    border-left: 1px solid #d9d9d9;
+                    box-sizing: border-box;
+                    padding: 0 4px 0 0;
+                    overflow: hidden;
+                    &:first-child{
+                        border-left: none;
+                    }
+                    & >span{
+                        text-align: right;
+                    }
+                }
+            }
+
+        }
+        .incomeExpend-mxb-table-item-abstract{
+            & > span {
+                display: inline-block;
+                width: 100%;
+                text-align: left;
+                padding-left: 4px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+        // .incomeExpend-mxb-table-item-amount{
+        //     min-width: 140px;
+        //     max-width: 220px;
+        //     flex: 220;
+        //     flex-direction: column;
+        //     & > div {
+        //         display: flex;
+        //         flex-direction: row;
+        //         span{
+        //             flex: 1;
+        //             text-align: center;
+        //         }
+        //         &:nth-child(1){
+        //             span{
+        //                 height: 24px;
+        //                 line-height: 24px;
+        //                 border-bottom: 1px solid #d9d9d9;
+        //                 border-left: 1px solid #d9d9d9;
+        //                 &:first-child{
+        //                     border-left: none;
+        //                 }
+        //             }
+        //         }
+        //         &:nth-child(2){
+        //             span{
+        //                 height: 32px;
+        //                 line-height: 32px;
+        //                 border-left: 1px solid #d9d9d9;
+        //                 &:first-child{
+        //                     border-left: none;
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+
+        .incomeExpend-mxb-table-item-balance{
+            min-width: 160px;
+            max-width: 220px;
+            flex: 220;
+            flex-direction: column;
+            & > div {
+                display: flex;
+                flex-direction: row;
+                span{
+                    flex: 1;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                &:nth-child(1){
+                    span{
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: 1px solid #d9d9d9;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+                &:nth-child(2){
+                    span{
+                        height: 34px;
+                        line-height: 34px;
+                        border-left: 1px solid #d9d9d9;
+                        &:first-child{
+                            border-left: none;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .incomeExpend-mxb-table-justify {
+        .incomeExpend-mxb-table-item-debit-amount,
+        .incomeExpend-mxb-table-item-credit-amount,
+        .incomeExpend-mxb-table-item-closed-amount {
+            & > span {
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+    }
+
+    .incomeExpend-tree-title-handle{
+        padding: 10px 5px 0;
+        margin-bottom: 8px;
+    }
+    .incomeExpend-right-tree{
+        padding-left: 2px;
+    }
+
+    .incomeExpend-mxb-tree-contain {
+        padding: 0;
+        // .incomeExpend-mxb-left-tab,
+        // .incomeExpend-mxb-right-tab {
+        //     width: 50%;
+        //     text-align: center;
+        // }
+        .incomeExpend-mxb-left-tab {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .incomeExpend-mxb-table-right-top {
+        height: 35px;
+        line-height: 35px;
+        padding-left: 31px;
+        border-bottom: @border;
+        & > span {
+            cursor: pointer;
+        }
+    }
+
+    .incomeExpend-mxb-table-right-tree {
+        flex: 1;
+        overflow: scroll;
+    }
+
+    .incomeExpend-mxb-table-right-top-current {
+        color: #1890ff;
+    }
+}

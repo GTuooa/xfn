@@ -1,0 +1,130 @@
+@import '~app/style/themes/common.less';
+
+.lsqc {
+
+	.lsqc-top-title {
+		font-size: 16px;
+		color: #333;
+	}
+
+	.lsqc-top-title-month {
+		overflow: hidden;
+		& > label {
+			height: 29px;
+			line-height: 29px;
+			float: left;
+		}
+		color: #666;
+		font-size: 12px;
+		.lsqc-top-date{
+			border-bottom: 1px solid #666;
+		}
+	}
+
+	.lsqc-tabel-width {
+		display: flex;
+		height: 35px;
+		line-height: 35px;
+		text-align: center;
+		justify-content: space-around;
+
+		& > li {
+			padding: 0 4px;
+			flex: 30;
+			.lsqc-acconfig-icon {
+				& > i{
+					width: 8px;
+					height: 4px;
+				}
+				text-overflow: inherit;
+			}
+			& > input {
+				height: 30px;
+				text-align: right;
+				margin: 2px auto;
+			}
+			& > span {
+				.acconfig-plus {
+					margin-right: 0;
+				}
+				& > input {
+					text-align: right;
+				}
+			}
+			&:nth-child(1) {
+				// text-align: left;
+				// min-width: 228px;
+				// max-width: 348px;
+				flex: 228;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				& > .name-name {
+					text-align: left;
+				}
+				& > .name-icon {
+					width: 12px;
+					padding-right: 0;
+				}
+			}
+			&:nth-child(2) {
+				min-width: 200px;
+				max-width: 300px;
+				flex: 200;
+			}
+			&:nth-child(3) {
+				min-width: 200px;
+				max-width: 300px;
+				flex: 200;
+			}
+			&:nth-child(4) {
+				min-width: 80px;
+				max-width: 80px;
+				flex: 80;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			&:last-child {
+				min-width: 120px;
+				max-width: 130px;
+			}
+		}
+	}
+
+	.table-body .table-item .table-item-with-triangle {
+		.table-item-triangle-account-wrap{
+			text-overflow: clip;
+			padding-right: 4px;
+		}
+		.table-item-name{
+			overflow: hidden;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		}
+	}
+}
+
+
+.lsqc-module {
+	color: #333;
+}
+ .over-ellipsis {
+	text-align: right;
+}
+
+.lsqc-aggregate-amount{
+    width: 100%;
+	text-align: right;
+	font-size: 12px;
+}
+// 弹窗分页样式
+.lsqc-card-modal-pagination{
+	& > ul {
+		& > li {
+			min-width: 26px;
+		    height: 26px;
+		    line-height: 26px;
+		}
+	}
+}

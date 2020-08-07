@@ -1,0 +1,80 @@
+@import '~app/style/public.less';
+@import '~app/style/variable.less';
+@import '~app/style/theme.less';
+
+.top-date-picker-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: @rowHiegth;
+    background: @rowColor;
+}
+
+
+.date-header {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: .13rem;
+	height: .32rem;
+	// margin: 0 .05rem .05rem .05rem;
+	//margin-bottom: .05rem;
+	//border-radius: 0 0 .05rem .05rem;
+	//background-color: @datepickerBackground;
+
+	// .header-left {
+	// 	transform: rotate(180deg);
+	// }
+	& > .date-header-btn-wrap {
+		margin: 0 .1rem;
+	}
+	& > .icon,
+	.header-left,
+	.header-right {
+		color: @datepickerFontcolor;
+		margin: .1rem .1rem;
+		//padding: 0 .1rem;
+	}
+
+    .thirdparty-date-select {
+    	// width: .9rem;
+    	color: @datepickerFontcolor;
+    	text-align: center;
+		margin: 0 .08rem;
+
+        .thirdparty-date-date {
+            margin-right: .05rem;
+        }
+    }
+	&-wrap{
+		position: relative;
+		height: .32rem;
+		// margin: 0 .05rem .05rem .05rem;
+		margin-bottom: .05rem;
+		border-radius: 0 0 .05rem .05rem;
+		background-color: @datepickerBackground;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+    .antd-single-picker{
+        width: auto;
+        color: @datepickerFontcolor;
+    }
+}
+.topBarSwitch{
+	width: 51px;
+	position: absolute;
+	top: .06rem;
+	right: .05rem;
+	//margin-right: .05rem;
+	& > span{
+		font-size: 12px;
+	}
+}
+.topBarIcon{
+    position: absolute;
+	top: .08rem;
+	right: .1rem;
+}

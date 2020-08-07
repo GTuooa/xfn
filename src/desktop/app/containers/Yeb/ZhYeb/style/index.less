@@ -1,0 +1,174 @@
+@import '~app/style/themes/common.less';
+.zhyeb-table{
+  .over-ellipsis{
+    text-align: right;
+  }
+}
+.table-normal .table-title-amountzhye{
+  height: 60px
+}
+
+.zhyeb{
+    .title{
+        height: 28px;
+        line-height: 28px;
+        margin: 12px 0;
+        font-size: 12px;
+        color: #333;
+        min-width: 760px;
+        max-width: 1280px;
+        box-sizing: border-box;
+        .title-date{
+            width: 120px;
+            height: 28px;
+            .ant-select-selection{
+                height: 28px;
+                font-size: 12px;
+                color: #333;
+                .ant-select-selection__rendered{
+                    line-height: 28px;
+                }
+            }
+        }
+        .refresh-btn{
+            height: 28px;
+    		border-radius: 6px;
+    	    padding: 0 10px;
+    	    font-size: 12px;
+    	    color: #222;
+    	    background: #fff;
+    	    margin-left: 10px;
+        }
+    }
+}
+
+.amountzhye-table-width {
+    overflow-x: hidden;
+    overflow-y: scroll;
+	& > li {
+		&:nth-child(1) {
+            flex: 360;
+			align-items: center;
+		}
+		&:nth-child(2) {
+			min-width: 80px;
+            max-width: 200px;
+            flex: 80;
+			align-items: center;
+		}
+		&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+			align-items: center;
+		}
+        & > span{
+            font-size: 12px;
+            color: #333;
+            height: 35px;
+            padding-right: 4px!important;
+        }
+        .over-ellipsis{
+          text-align: right;
+        }
+	}
+}
+.amountzhye-table-width-footer{
+    & > li {
+		&:nth-child(1) {
+            flex: 360;
+			align-items: center;
+		}
+		&:nth-child(2) {
+			min-width: 80px;
+            max-width: 200px;
+            flex: 80;
+			align-items: center;
+		}
+		&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+			align-items: center;
+		}
+        & > span{
+            font-size: 12px;
+            color: #333;
+            height: 35px;
+            padding-right: 4px!important;
+        }
+        .over-ellipsis{
+          text-align: right;
+        }
+	}
+}
+
+
+.amountzhye-title-cell {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	overflow: hidden;
+
+	& > div > span {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+
+	.amountzhye-item-first {
+		height: 30px;
+		line-height: 30px;
+		border-bottom: @border;
+        width: 100%;
+	}
+
+
+}
+.shadow-title-amountzhye {
+	position: absolute;
+	width: 16px;
+	height: 25px;
+	top: 1px;
+	right: 1px;
+	background: @bouble-background;
+}
+
+
+.zh-balance-running-tabel-width{
+     & > li{
+         &:nth-child(1) {
+             flex: 360;
+ 			align-items: center;
+            text-decoration: underline;
+ 		}
+ 		&:nth-child(2) {
+ 			min-width: 80px;
+             max-width: 200px;
+             flex: 80;
+ 			align-items: center;
+ 		}
+ 		&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(6){
+             min-width: 80px;
+             max-width: 120px;
+             flex: 80;
+ 			align-items: center;
+ 		}
+
+        & > span{
+            height: 35px;
+            font-size: 12px;
+            color: #333;
+            padding-right: 4px!important;
+        }
+        .table-item-triangle-account-wrap{
+            float: right;
+            padding-right: 4px;
+        }
+        .over-ellipsis{
+          text-align: right;
+        }
+    }
+}

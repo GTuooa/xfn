@@ -1,0 +1,210 @@
+.inventoryYeb{
+    .ba-ass {
+		background: rgb(254, 243, 227);
+	}
+    .ba-level {
+		background: #fff;
+	}
+    .ba {
+		@vertical-padding: .04rem;
+		margin-bottom: 1px;
+		padding: 0 .1rem 0 0;
+
+		&-title {
+			display: flex;
+			left:0;
+			padding: 0 .1rem ;
+			height: .3rem;
+			line-height: .3rem;
+			background: #FFDBA6;
+			font-size: .13rem;
+			color: #222;
+
+			&-item {
+				text-align: right;
+				flex:1;
+			}
+		}
+
+		& > div {
+			display: flex;
+			color: #999;
+			font-size: .12rem;
+			justify-content: space-between;
+
+			& > .name {
+				display: flex;
+				color: #222;
+				font-size: .12rem;
+				padding-left: .1rem;
+                padding-top: .09rem;
+				text-decoration: underline;
+				word-break:break-all;
+				flex-direction: row;
+			}
+			& > .name-asscategory {
+				text-decoration: none;
+			}
+
+			& > .btn {
+				display: flex;
+				flex: 1;
+				min-width: .12rem;
+				justify-content: flex-end;
+				align-items: center;
+				color: #b4b4b4;
+			}
+            .ba-flag {
+                display: inline-block;
+                position:relative;
+                margin: .05rem .05rem 0 0;
+                height: .08rem;
+                background: #D1C0A5;
+                bottom: .01rem;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 0;
+                    border-width: .04rem .03rem .04rem 0;
+                    border-style:solid;
+                    border-color:transparent #FFF3E3 transparent transparent;
+                }
+            }
+
+			&.ba-info{
+                padding-left: .1rem;
+                padding-top: .09rem;
+                padding-bottom: .07rem;
+                div {
+    				width: 100%;
+    				flex: 1;
+    				color:#666;
+    				font-size: .11rem;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    .amount-color{
+                        color:rgb(65,102,184);
+                    }
+                    .ba-begin{
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            //width: 100%;
+                            // white-space: nowrap;
+                            // overflow: hidden;
+                            // text-overflow: ellipsis;
+                        }
+                    }
+                    .ba-amount{
+                        text-align: right;
+                        height: .16rem;
+                        span{
+                            width: 100%;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+    			}
+            }
+		}
+	}
+    .inventoryYeb-search{
+        display: flex;
+        padding: .05rem 0;
+        justify-content: space-between;
+        background-color: #fff;
+        font-size: .12rem;
+        color: #222;
+        align-items: center;
+        height: 38px;
+        .icon-triangle{
+            //color: #ccc;
+            margin-left: .03rem;
+        }
+        .select-change-table{
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-between;
+            border-right: 1px solid #d8d8d8;
+            padding: 0 5px 0 .1rem;
+            & > span {
+                //padding: 0 2px;
+            }
+        }
+        .inventoryYeb-stock-quantity{
+            flex: 1;
+            overflow: hidden;
+            padding: 0 5px 0 .1rem;
+            border-right: 1px solid #ddd;
+            .stock-quantity{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        }
+        .inventoryYeb-stock-catogory{
+            flex: 1;
+            overflow: hidden;
+            padding: 0 5px 0 .1rem;
+            .stock-category-label{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+        .inventoryYeb-stock-store{
+            flex: 1;
+            overflow: hidden;
+            padding: 0 5px 0 .1rem;
+            border-left: 1px solid #ddd;
+            .stock-store-label{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+        .inventoryYeb-type-list{
+            flex: 1;
+            overflow: hidden;
+            padding: 0 5px 0 .1rem;
+            border-left: 1px solid #ddd;
+            .type-list-label{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+        }
+        .more-ass{
+            flex: 2;
+            padding-left: .05rem;
+            margin-left: .05rem;
+            border-left: 1px solid #ddd;
+        }
+    }
+    .inventoryYeb-date{
+        position: relative;
+        .date-header{
+            margin-right: 0!important;
+        }
+        .topBarSwitch{
+            display: none;
+        }
+        .icon-date{
+            position: absolute;
+            right: .1rem;
+            top: .08rem;
+            font-size: .15rem;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+@import '~app/style/index.less';
+
+.bombTitle{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &-line{
+        display: flex;
+        // justify-content: space-between;
+        color: #666;
+        padding: 5px 16px;
+
+        & > div:first-child {
+            flex: 1;
+        }
+
+        & > div:nth-child(3) {
+            margin-left: 15px;
+        }
+    }
+    &-center{
+        background:#eef3fa;
+        height:40px;
+        font-size: 16px;
+        color: #555;
+        line-height: 40px;
+        text-align: center;
+    }
+    &-account{
+        position: absolute;
+        right: 180px;
+        top: 20px;
+        font-size: 20px;
+        font-weight: 900;
+        line-height: normal;
+        color: rgb(184, 39, 70);
+        padding: 3px 12px;
+        border: 3px solid rgb(184, 39, 70);
+        border-radius: 1px;
+        transform: rotate(-3deg);
+    }
+}
+.bombBody{
+    border: 2px solid #000;
+    border-right: 1px solid #000;
+    margin-top: 50px;
+    position: relative;
+    &-title{
+        border-right: 1px solid #000;
+    }
+    &-title,
+    &-item{
+        display: flex;
+        & > .bomb-text{
+            flex: 1.36;
+        }
+        & > .fjAndWb{
+            flex: 0.5;
+            & > span{
+                flex: 1;
+                padding-left: 1px;
+            }
+        }
+        & > li{
+            flex: 1;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+        }
+        & > li:first-child{
+            flex: 1.06;
+        }
+        & > li:last-child{
+            border-right: 0;
+        }
+        &-amount{
+            display: flex;
+            flex-direction: column;
+            & > span{
+                height: 25px;
+                line-height: 25px;
+            }
+            & > ul{
+                flex: 1;
+                display: flex;
+                & > li{
+                    flex: 1;
+                    line-height: 25px;
+                    text-align: center;
+                    font-weight: bold;
+                    position: relative;
+                    z-index: 10;
+                    border-top: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                }
+                & >li:nth-child(4),
+				& >li:nth-child(7){
+					border-right:  @border-blue;
+				}
+				& >li:nth-child(10){
+					border-right:  @border-red;
+				}
+				& >li:last-child{
+					border-right: 0;
+				}
+            }
+        }
+    }
+    &-item-wrap{
+        height: 360px;
+        overflow-y: scroll;
+        border-right: 1px solid #000;
+    }
+    &-item{
+        & > li{
+            min-height: 50px;
+            height: 72px;
+            text-align: left;
+            line-height: normal;
+            & > ul > li{
+                line-height: 50px;
+            }
+        }
+        & > li:first-child{
+            display: flex;
+            align-items: center;
+            word-break: break-all;
+            & > span{
+                padding: 2px;
+            }
+        }
+        & .bomb-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            &>span{
+                display: flex;
+                align-items: center;
+                line-height: 12px;
+                &>span{
+                    line-height: none;
+                    padding: 0 1px;
+                    word-wrap: break-word;
+        			word-break:break-all;
+                }
+            }
+            &-fzhs{
+                color: #aaa;
+            }
+        }
+    }
+    &-summary{
+        display: flex;
+        overflow-y: scroll;
+        position: relative;
+        & > li{
+            flex: 1;
+        }
+        & > li:first-child{
+            padding-left: 1px;
+        }
+        & > li:first-child,
+        & > li:nth-child(2){
+            border-right: 1px solid #000;
+        }
+        .summary-amount > li{
+            line-height: 50px;
+        }
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+        border-right: 1px solid #000;
+    }
+    &-title{
+        overflow-y: scroll;
+    }
+    &-shadow{
+        position: absolute;
+        top: 0px;
+        right: 1px;
+        width: 17px;
+        height: 49px;
+        z-index: 9;
+        background: #fff;
+    }
+    .summary-shadow{
+        top: auto;
+        bottom: 0px;
+        height: 50px;
+    }
+}
+.bombFooter{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    display: flex;
+    & > span {
+        flex: 1;
+    }
+    & > span:last-child {
+        text-align: right;
+    }
+}
+.pzBomb{
+    .ant-modal-body{
+        padding-bottom: 0;
+    }
+    .ant-modal-footer{
+        text-align: center;
+    }
+    .ant-btn-lg{
+        font-size: 12px;
+    }
+    .preview{
+        margin-top: 0;
+    }
+}
+
+//移除HTML5 input在type="number"时的上下小箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+//Firefox下：
+input[type="number"]{-moz-appearance:textfield;}
+.ant-radio{
+    padding-right: 10px;
+}
+
+.ant-modal {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}

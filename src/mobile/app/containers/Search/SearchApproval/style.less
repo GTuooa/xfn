@@ -1,0 +1,472 @@
+@import '~app/containers/Edit/EditRunning/style.less';
+
+@border: 1px solid #ddd;
+@search-margin-normon: .09rem;
+@active-color: #5e81d1;
+.search-text-overflow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search-approval {
+
+    .search-approval-title-wrap {
+        background: #fff;
+        border-bottom: @border;
+        height: .32rem;
+    }
+    .search-approval-title-switch-wrap {
+        display: flex;
+    }
+    .search-approval-title-switch-list {
+        flex: 1;
+        width: 0;
+        height: .32rem;
+        display: flex;
+        font-size: .13rem;
+    }
+    .search-approval-title-switch-item-cur,
+    .search-approval-title-switch-item {
+        flex: 1;
+        width: 0;
+        line-height: .3rem;
+        text-align: center;
+    }
+    .search-approval-title-switch-item {
+       color: #222;
+    }
+    .search-approval-title-switch-item-cur {
+        display: flex;
+        color: @active-color;
+        border-bottom: .02rem solid @active-color;
+        align-items: center;
+        justify-content: center;
+    }
+    .search-approval-title-switch-item-single {
+        position: relative;
+        max-width: .8rem;
+        padding-right: .15rem;
+        .search-text-overflow;
+    }
+    .search-approval-title-switch-item-single-triangle {
+        position: absolute;
+        top: .09rem;
+        right: 0;
+    }
+    .search-approval-title-switch-i,
+    .search-approval-title-search-i {
+        display: inline-block;
+        height: .2rem;
+        background: #ddd;
+        width: 1px;
+    }
+    .search-approval-title-switch-i {
+        margin-top: .05rem;
+    }
+    .search-approval-title-switch-search {
+        width: .32rem;
+        text-align: center;
+        line-height: .32rem;
+        color: #000;
+        font-size: .16rem;
+    }
+    .search-approval-title-search-wrap {
+        display: flex;
+        padding: 0 @search-margin-normon;
+        align-items: center;
+        height: .32rem;
+    }
+    .search-approval-title-search-single {
+        width: .8rem;
+        font-size: .13rem;
+        color: #222;
+    }
+    // .search-approval-title-search-icon {
+    //     width: .3rem;
+    //     text-align: center;
+    // }
+    .search-approval-title-search-input {
+        flex: 1;
+        width: 0;
+        .am-search {
+            height: .31rem;
+            padding: 0;
+            background-color: #fff;
+        }
+        .am-search-input {
+            margin-top: .03rem;
+            height:.28rem;
+            line-height: .28rem;
+            
+        }
+       
+        input::-webkit-input-placeholder {
+            color: transparent !important;
+        }
+        input:-moz-placeholder {
+            color: transparent !important;
+        }
+        input::-moz-placeholder {
+            color: transparent !important;
+        }
+        input:-ms-input-placeholder {
+            color: transparent !important;
+        }
+      
+        .am-search-cancel  {
+            height: .31rem;
+            line-height: .31rem;
+            color: @active-color;
+        }
+    }
+    
+    // 单个审批
+    .approval-all-item-wrap {
+        background: #fff;
+        padding-left: @search-margin-normon;
+    }
+    .approval-all-item-container {
+        border-bottom: @border;
+    }
+    .approval-all-item-main {
+        display: flex;
+        padding-top: .15rem;
+    }
+    .approval-all-item-main-avatar {
+        width: .3rem;
+        margin-right: @search-margin-normon;
+    }
+    .approval-all-item-main-avatar-img {
+        width: .3rem;
+        border-radius: 50%;
+    }
+    .approval-all-item-main-avatar-skeleton {
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        border-radius: 50%;
+        background: #ddd;
+    }
+    .approval-all-item-main-list {
+        flex: 1;
+        width: 0;
+        margin-right: @search-margin-normon;
+    }
+    .approval-all-item-main-example-list {
+        margin: .05rem 0;
+    }
+    .approval-all-item-main-example-item {
+        font-size: .12rem;
+        color: #999;
+        .search-text-overflow;
+    }
+    .approval-all-item-main-title-wrap {
+        display: flex;
+        overflow: hidden;
+    }
+    .approval-all-item-main-title {
+        font-size: .13rem;
+        color: #222;
+        flex: 1;
+        width: 0;
+        .search-text-overflow;
+    }
+    .approval-all-item-main-createtime {
+        font-size: .11rem;
+        color: #999;
+        width: .7rem;
+        text-align: right;
+    }
+    .approval-all-item-main-showchild-wrap {
+        display: flex;
+        font-size: .12rem;
+        margin-bottom: .05rem;
+    }
+    .approval-all-item-main-showchild-finishtime {
+        flex: 1;
+        width: 0;
+        color: #ff8348;
+    }
+    .approval-all-item-main-showchild-icon {
+        width: .5rem;
+        color: @active-color;
+        text-align: right;
+    }
+    .approval-all-item-child-list {
+        margin: 0 @search-margin-normon 0 .39rem;
+    }
+    .approval-all-item-child-item {
+        border-top: @border;
+    }
+    .approval-all-item-child-title-wrap {
+        display: flex;
+        font-size: .12rem;
+        color: #222;
+        margin: .05rem 0 .03rem;
+    }
+    .approval-all-item-child-title-type {
+        flex: 1;
+        width: 0;
+        .search-text-overflow;
+    }
+    .approval-all-item-child-title-amount {
+        width: 1rem;
+        text-align: right;
+    }
+    .approval-all-item-child-title-date {
+        font-size: .11rem;
+        color: #999;
+        margin-bottom: .08rem;
+    }
+    .approval-all-item-child-handled-tit-wrap {
+        height: .46rem;
+    }
+    .approval-all-item-child-handled-tit {
+        display: flex;
+        color: #999;
+    }
+    .approval-all-item-child-handled-tit-left {
+        flex: 1;
+        width: 0;
+        font-size: .13rem;
+        color: @active-color;
+    }
+    .approval-all-item-child-handled-tit-rigth {
+        font-size: .12rem;
+        width: .56rem;
+        text-align: right;
+    }
+    .approval-all-item-child-operate_username {
+        font-size: .11rem;
+        color: #999;
+        padding-bottom: .1rem;
+    }
+    .approval-all-item-child-separate {
+        color: #ddd;
+        margin: 0 .05rem;
+    }
+
+    .approval-all-item-child-btn-wrap{
+        text-align: right;
+        height: .46rem;
+        // padding-bottom: .1rem;
+    }
+    .approval-all-item-child-btn {
+        display: inline-block;
+        background-color: #fff;
+        border: 1px solid @active-color;
+        border-radius: .04rem;
+        color: @active-color;
+        font-size: .12rem;
+        width: .5rem;
+        height: .3rem;
+        line-height: .3rem;
+        margin-left: .1rem;
+        text-align: center;
+        line-height: .3rem;
+    }
+    .approval-all-item-child-btn-disabled {
+        border: .01rem #d9d9d9 solid; 
+        background-color: #f4f4f4;
+        cursor: not-allowed;
+        color: #d9d9d9;
+    }
+
+    .approval-datail-list-item {
+        background: #fff;
+        margin-bottom: .1rem;
+        padding: 0 @search-margin-normon;
+    }
+    .approval-datail-item-title-wrap {
+        display: flex;
+        color: #999;
+        align-items: center;
+        height: .28rem;
+    }
+    .approval-datail-item-title-checkbox {
+        padding-right: .03rem;
+        padding-bottom: .05rem;
+    }
+    .approval-datail-item-title {
+        flex: 1;
+        width: 0;
+        font-size: .12rem;
+        .search-text-overflow;
+    }
+    .approval-datail-item-code {
+        width: 1.9rem;
+        font-size: .11rem;
+        text-align: right;
+    }
+    .approval-datail-item-title-icon {
+        font-size: .11rem;
+    }
+
+    // 预览
+    .date-header-wrap{
+        font-size: .13rem;
+    }
+
+    .running-preview-header-left,
+    .running-preview-header-right {
+        margin: 0 .08rem;
+    }
+
+    .running-preview-bold {
+        font-weight: bold;
+    }
+
+    .running-preview-gray {
+        color: #888888;
+    }
+    .running-preview-light-gray{
+        color: #A0A0A0;
+    }
+    .search-approval-preview {
+        position: relative;
+        background: #fff;
+        padding: 0 @search-margin-normon;
+        margin-bottom: .05rem;
+    }
+    .search-approval-preview-dealState {
+        position: absolute;
+        top: .2rem;
+        right: .4rem;
+        color: #ff8348;
+        font-size: .8rem;
+    }
+    .search-approval-preview-title-wrap {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        color: #999;
+        padding: .05rem 0;
+        align-items: center;
+    }
+    .search-approval-preview-title-text {
+        font-size: .13rem;
+        flex: 1;
+        width: 0;
+        .search-text-overflow;
+    }
+    .search-approval-preview-title-icon {
+        width: .25rem;
+        text-align: right;
+        font-size: .12rem;
+    }
+    .search-approval-preview-type {
+        color: #222;
+        font-size: .13rem;
+        padding: .1rem 0 .05rem 0;
+    }
+    .search-approval-preview-detail-list {
+        font-size: .12rem;
+        padding-bottom: .05rem;
+    }
+    .search-approval-preview-detail-item {
+        display: flex;
+        line-height: .25rem;
+    }
+    .search-approval-preview-detail-label {
+        color: #999;
+        width: .6rem;
+        text-align: right;
+    }
+    .search-approval-preview-detail-text-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .search-approval-preview-detail-text {
+        color: #222;
+        flex: 1;
+        line-height: 1.5;
+        margin-top: .04rem;
+    }
+    .search-approval-preview-detail-item-bgColor {
+        background-color: #f8f8f8;
+    }
+    // 核算
+    .search-approval-calculate-wrap {
+        display: flex;
+        background: #fff;
+        margin-bottom: .1rem;
+        padding: .05rem @search-margin-normon;
+        align-items: center;
+    }
+    .search-approval-calculate-jr {
+        flex: 1;
+        width: 0;
+    }
+    .search-approval-calculate-jr-index {
+        color: @active-color;
+        font-size: .12rem;
+    }
+    .search-approval-calculate-jr-oriDate {
+        font-size: .12rem;
+        color: #999;
+        .search-text-overflow;
+    }
+    .search-approval-calculate-state {
+        width: 1rem;
+        text-align: right;
+    }
+    .search-approval-calculate-state-jrState {
+        font-size: .12rem;
+        color: #999;
+    }
+    .search-approval-calculate-state-btn {
+        display: inline-block;
+        width: .45rem;
+        font-size: .12rem;
+        border-color: @active-color;
+        color: @active-color;
+        background-color: #fff;
+        margin-left: .05rem;
+        height: .25rem;
+        line-height: .25rem;
+    }
+    // 编辑流水类别
+
+    .search-approval-poundage-amount {
+        display: flex;
+        padding-top: .1rem;
+    }
+    .search-approval-poundage-amount-item {
+        flex: 1;
+        border: @border;
+        border-radius: .03rem;
+        padding: .08rem .06rem; 
+
+        &:first-child {
+            margin-right: .1rem;
+        }
+    }
+    .search-approval-poundage-amount-item-cur {
+        border: 1px solid #FF8348;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-bottom: .1rem solid transparent;
+            border-top: .1rem solid #FF8348;
+            border-right: .1rem solid #FF8348;
+            border-left: .1rem solid transparent;
+            height: 0;
+            width: 0;
+            z-index: 1;
+        }
+        .search-approval-poundage-check {
+            position: absolute;
+            right: .01rem;
+            top: .01rem;
+            z-index: 2;
+            color: #fff;
+            font-size: .11rem;
+        }
+    }
+}
+

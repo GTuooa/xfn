@@ -1,0 +1,481 @@
+@import "./mixins.less";
+
+// @bodybackground    : #F8FBFF;
+@bodybackground    : #F8FBFF;
+body,
+html{
+    background: @bodybackground;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+.ant-tabs {
+    font-size: 12px;
+}
+// 全局style
+@body-margin-right : 20px;
+@body-margin-left  : 17px;
+@body-margin-botton: 85px;
+@body-margin-top   : 45px;
+@body-table-bg     : #fff;
+@top-li-bg         : #f4f4f4;
+@line-height       : 34px;
+@home-icon-color   : #38ADFF;
+// title
+@hometopbarHeight: 41px;
+@top-btn-gap     : 8px;
+@other-top-bar-height: 28px;
+@bar-hei         : 30px;
+@table-bacolor   : #fff;
+// 公共设置
+@border-color    : #d9d9d9;
+@border          : 1px solid #d9d9d9;
+@hover-bg        : rgba(248, 255, 148, .3);
+@click-bg        : rgba(248, 255, 148, .3);
+@doule-background: #f8f8f8;
+// shadow
+@shadow-offset-top  : 45px;
+@shadow-offset-right: 22px;
+@shadow-wight       : 16px;
+@shadow-height      : 32px;
+//lrpz
+@border-second      : #ccc solid 1px;
+@border-red         : #FF0000 solid 1px;
+@border-blue        : #0000FF solid 1px;
+@inout-box-shadow   : inset 0 1px 1px rgba(0,0,0,.075),0 0 3px rgba(0,0,0,.6);
+@hover-blue         : #d5f1fd;
+
+@bouble-background    : #f4f4f4;
+
+@activeColor        : #57c5f7;
+
+@table-min-width: 88px;
+@table-max-width: 120px;
+
+// 灰底，带点的列表
+.greycontainer {
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+
+    &-title {
+        font-weight: bold;
+    }
+
+    &-item {
+        position: relative;
+        margin-top: 6px;
+        color: #888;
+        padding-left: 15px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #999;
+            top: 7px;
+            left: 5px;
+        }
+    }
+}
+.ant-modal-body{
+    padding: 12px 20px;
+    font-size: 12px;
+    color: #333;
+}
+// 文字加下滑线
+.text-underline {
+    text-decoration: underline;
+}
+//辅助核算禁用时改变颜色
+.fzhs-item-disable,
+.assmxb-fzhs-disable .ant-tree-switcher::after,
+.assmxb-fzhs-disable>a>span,
+.assmxb-fzhs-disable .ant-tree-child-tree>li>a>span{
+	color: #ccc!important;
+}
+.assmxb-fzhs-disable {
+    .ant-tree-title {
+        color: #ccc;
+    }
+}
+.ant-modal-mask{
+    background: rgba(0,0,0,.4);
+}
+.ant-modal-header{
+    background-color: #eef3fa;
+}
+
+//新开页调整
+// .initLrb,
+// .initQcye,
+// .initZcfzb,
+// .newConfigsob{
+// 	// position: fixed;
+// 	// width: 100%;
+// 	// height: 100%;
+// 	// top: 85px;
+// 	// z-index: 11;//9
+// 	// background: rgb(248,251,255)
+//     min-width: 800px;
+//     max-width: 1120px;
+// }
+//弹框嵌套弹框 给被嵌套的弹框加包裹
+.modalBomb{
+	position: fixed;
+	top: 0;
+    left: 0;
+	right: 0;
+	bottom: 0;
+    z-index: 1001;
+    background-color: rgba(0,0,0,.5);
+}
+//鼠标移上的效果
+.hoverUnderLine{
+    &:hover{
+        color: @activeColor;
+        cursor: pointer;
+    }
+    text-decoration: underline;
+}
+//超出部分...
+.overElli{
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    // overflow : hidden;
+    // text-overflow: ellipsis;
+    // display: -webkit-box;
+    // -webkit-line-clamp: 1;
+    // -webkit-box-orient: vertical;
+    // word-break: break-all;
+}
+
+//三个字按钮
+// .three-word-btn {
+//     width: 50px;
+//     padding: 4px 0!important;
+//     text-align: center;
+// }
+//四／五个字按钮
+// .four-word-btn {
+//     width: 76px;
+//     padding: 4px 0!important;
+//     text-align: center;
+// }
+//时间选择器去掉删除按钮
+.ant-calendar .ant-calendar-clear-btn{
+    display: none;
+}
+
+.uses-tip {
+    background-size: cover;
+    & > li {
+        position: relative;
+        color: #666;
+        font-size: 12px;
+        margin: 5px;
+        margin-left: 10px;
+        font-weight: normal;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 3px;
+            height: 12px;
+            background-color: #38adff;
+            left: -10px;
+            top: 3px;
+            opacity: .4;
+        }
+    }
+    .uses-tip-blod {
+        font-weight: bold;
+    }
+    .uses-tip-dark {
+        font-weight: 400;
+        color: #555;
+    }
+    .uses-tip-dark-blod {
+        font-weight: bold;
+        color: #555;
+    }
+}
+
+.table-title-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+//全局modal选择内容样式
+.select-modal{
+    .ant-modal-close-x{
+        height: 40px;
+        line-height: 40px;
+    }
+    .ant-modal-header{
+        padding: 10px 20px;
+        height: 40px;
+        & > .ant-modal-title{
+            height: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    }
+    .ant-modal-body{
+        padding: 0px;
+        font-size: 12px;
+        color: #333;
+    }
+}
+
+//弹窗底部按钮
+.footer-btn{
+    height: 28px;
+    line-height: 28px;
+    font-size: 12px;
+    color: #333;
+}
+.ant-input{
+    height: 28px;
+    line-height: 28px;
+    color: #333;
+    font-size: 12px;
+}
+.ant-btn{
+    height: 28px;
+    font-size: 12px;
+    color: #333;
+    padding: 0 8px;
+}
+.ant-btn-primary{
+    color: white;
+    background-color: #1db6f8;
+    border-color: #1db6f8;
+}
+.ant-btn-danger{
+    color: white;
+    background-color: #ff4d4f;
+    border-color: #ff4d4f;
+}
+.ant-select-arrow{
+    right: 4px;
+}
+.ant-select-selection--single{
+    height: 28px;
+    .ant-select-selection__rendered{
+        line-height: 26px;
+        font-size: 12px;
+        color: #333;
+    }
+}
+.ant-select-selection-selected-value{
+    padding-right: 0px;
+}
+.use-unuse-style.ant-switch-checked{
+    background-color: rgb(255, 131, 80);
+    border-color: rgb(255, 131, 80);
+}
+.ant-tree{
+    color: #333;
+    font-size: 12px;
+}
+.ant-select-tree li .ant-select-tree-node-content-wrapper{
+    font-size: 12px;
+    color: #333;
+}
+.lend-bg{
+    background-color: rgb(94, 129, 209);
+}
+
+.ant-tabs,
+.ant-select,
+.ant-select-tree,
+.ant-calendar-picker,
+.ant-input,
+.ant-tree,
+.ant-modal,
+.ant-select-dropdown,
+.ant-radio-wrapper,
+.ant-radio {
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+.ant-tooltip-placement-top {
+    z-index: 100000;
+}
+
+// card
+.lsqc-contacts-card-top{
+	overflow: hidden;
+    padding: 13px 20px 20px;
+	.table-title-wrap{
+		margin-top: 10px;
+		& > button{
+			border-radius: 0px;
+			border-left: none;
+		}
+        .cursor {
+            cursor: pointer;
+        }
+	}
+	.table-tree-container{
+        width: 242px;
+        max-height: 635px;
+        overflow-y: scroll;
+        margin-left: 0;
+        padding: 0px;
+        .table-title-shadow {
+            display: none;
+        }
+		.table-right-tree{
+			margin: 0;
+			border: none;
+		}
+        span{
+            font-size: 12px;
+            color: #333;
+        }
+	}
+    .contacts-table-width{
+    	& > li{
+    		&:nth-child(1){
+    			flex: 81;
+    			& > span{
+    				line-height: 35px;
+    			}
+    		}
+    		&:nth-child(2){
+    			flex: 165;
+                text-align: left;
+                display: inline-block;
+                padding-left: 5px;
+    		}
+    	}
+    }
+    .contacts-table-width-charge{
+    	& > li{
+    		&:nth-child(1){
+    			flex: 1;
+    			& > span{
+    				line-height: 35px;
+    			}
+    		}
+    		&:nth-child(2){
+    			flex: 2;
+    		}
+            &:nth-child(3){
+    			flex: 3;
+                text-align: left;
+                display: inline-block;
+                padding-left: 5px;
+    		}
+    	}
+    }
+    .contacts-table-right{
+    	width: 508px;
+        margin-left: 10px;
+        .lsqc-serch{
+            width: 100%;
+            height: 30px;
+            position: relative;
+            .lsqc-icon{
+                position: absolute;
+                top: 7px;
+                left: 4px;
+                z-index: 99;
+                font-size: 12px;
+                color: #333;
+            }
+            .lsqc-serch-icon{
+                position: absolute;
+                top: 8px;
+                right: 4px;
+                z-index: 99;
+                font-size: 14px;
+            }
+            .lsqc-serch-input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+                padding: 0 5px;
+                font-size: 12px;
+            }
+        }
+        & > .table-title-shadow{
+            top: 42px!important;
+        }
+    	.table-title-wrap{
+            font-size: 12px;
+            color: #333;
+    		.table-title{
+    			& > li{
+    				&:nth-child(1){
+    					flex: 81;
+    					& > span{
+    						line-height: 35px;
+    					}
+    				}
+    				&:nth-child(2){
+    					flex: 165;
+                        padding-left: 5px;
+    				}
+    			}
+    		}
+            .table-title-charge {
+                & > li{
+    				&:nth-child(1){
+    					flex: 1;
+    					& > span{
+    						line-height: 35px;
+    					}
+    				}
+    				&:nth-child(2){
+    					flex: 2;
+                        padding-left: 0;
+    				}
+                    &:nth-child(3){
+    					flex: 3;
+                        padding-left: 5px;
+    				}
+    			}
+            }
+    	}
+        .table-body{
+            font-size: 12px;
+            color: #333;
+            & > .table-item{
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+
+.charge-chosen-project {
+    padding:0 20px;
+    margin-bottom: 10px;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+    white-space: pre-wrap;
+    .ant-tag {
+        margin-bottom: 5px;
+    }
+}
+
+.ant-checkbox+span, .ant-checkbox-wrapper+span {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.ant-drawer-right.ant-drawer-open.no-mask {
+    transform: none;
+}

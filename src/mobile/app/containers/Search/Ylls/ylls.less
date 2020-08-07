@@ -1,0 +1,96 @@
+@import '~app/style/public.less';
+@import '~app/style/theme.less';
+
+.ylls{
+    font-size: .13rem;
+    &-gray{
+        color: @theme-gray;
+    }
+    &-blue{
+        color: @theme-blue;
+    }
+    &-bold{
+        font-weight: bold;
+        font-size: .13rem;
+    }
+    &-line{
+        padding: .05rem 0;
+        border-bottom: 1px solid @theme-gray;
+    }
+    &-padding{
+        padding: .03rem 0;
+    }
+    &-top-line{
+        border-top: 1px solid @theme-gray;
+    }
+    & > .icon{
+		margin: 0 .08rem;
+	}
+}
+.ylls-item{
+    display: flex;
+    justify-content: space-between;
+    & > div{
+        flex: 1;
+    }
+    & > div:nth-child(2){
+        text-align: right;
+    }
+}
+.ylls-card{
+    background-color: @bgColor;
+    color: #222;
+    margin-bottom: .08rem;
+    padding: .08rem;
+    font-size: .12rem;
+    //box-shadow:0 2px 2px 0 rgba(0,0,0,0.10);
+    //border-radius:6px;
+}
+.ylls-fj{
+    margin: 0 0.05rem 0.1rem;
+    padding: 0.05rem;
+    font-size: 0.12rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background-color: #fff;
+    .upload{
+        border-bottom: 1px solid #eee;
+        padding: .05rem 0;
+        display: flex;
+        &:last-child{
+            border-bottom: none;
+        }
+        & .icon-close{
+            padding-right: 10px;
+            align-self: center;
+            color: red;
+            margin-right: .05rem;
+        }
+        & img{
+            width: .3rem;
+            height: .3rem;
+            align-self: center;
+        }
+        & ul{
+            flex: 1;
+            margin: 0 .05rem;
+            font-size: .1rem;
+            align-items: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        & .fj-label{
+            display: flex;
+            justify-content: center;
+            width: .7rem;
+            height: .25rem;
+            line-height: .25rem;
+            align-self: center;
+            padding: 0 .1rem;
+            font-size: .11rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+    }
+}

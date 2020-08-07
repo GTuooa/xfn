@@ -1,0 +1,122 @@
+.kmyeb {
+	.assetsItem {
+		@vertical-padding: .04rem;
+		background: #fff;
+		border-bottom: 1px solid #eee;
+		padding: 0 .1rem @vertical-padding 0;
+		// padding: 0.01rem .1rem .04rem 0;
+
+
+		& > div {
+			display: flex;
+			color: #999;
+			font-size: .12rem;
+			justify-content: space-between;
+
+			& > .name {
+				color: #222;
+				font-size: .12rem;
+				padding: .07rem 0 .01rem .1rem;
+				.name-name {
+					text-decoration: underline;
+				}
+
+				.ba-flag {
+					position:relative;
+					float: left;
+					margin: .05rem .05rem 0 0;
+					height: .08rem;
+					background: #D1C0A5;
+					bottom: .01rem;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						width: 0;
+						height: 0;
+						border-width: .04rem .03rem .04rem 0;
+						border-style:solid;
+						border-color:transparent #FFF3E3 transparent transparent;
+					}
+				}
+			}
+
+			& > .btn {
+				display: flex;
+				flex: 1;
+				justify-content: flex-end;
+				align-items: center;
+				color:#b4b4b4;
+			}
+
+			&.assetsitem-info span {
+				display: flex;
+				justify-content: flex-end;
+				width: 0;
+				flex: 1;
+				color:#666;
+				font-size: .11rem;
+			}
+		}
+	}
+
+	.upacid {
+		.name {
+			.name-name {
+				color: #999;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+.assetsItem-title, .assetsmx-title {
+	&-self {
+		margin-top: .05rem;
+	}
+
+	display: flex;
+	left:0;
+	padding: 0 .1rem 0 0;
+	height: .3rem;
+	line-height: .3rem;
+	background: #FFDBA6;
+	font-size: .13rem;
+	color: #222;
+
+	&-item {
+		text-align: right;
+		flex:1;
+		width: 0;
+	}
+}
+.mxb-amont-underline {
+	text-decoration: underline;
+	margin-left: .1rem;
+}
+
+.assetsmx-jv-content, .assetsmx-botton {
+	font-size: .11rem;
+}
+
+.assetsmx-jv-content > * {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+}
+.assetsmx-botton {
+	padding-left: 0;
+}
+.assets-main-list {
+	& > div {
+		padding-left: 0;
+	}
+}
+.assets-info-select {
+	padding-bottom: .03rem;
+	span {
+		color: #999;
+	}
+}

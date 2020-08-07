@@ -1,0 +1,419 @@
+@import '~app/style/themes/common.less';
+
+.approval-template-table-width {
+    &>li {
+        &:nth-child(1) {
+            width: 28px;
+        }
+
+        &:nth-child(2) {
+            min-width: 250px;
+            max-width: 350px;
+            flex: 250;
+            align-items: center;
+        }
+
+        &:nth-child(3) {
+            min-width: 250px;
+            max-width: 350px;
+            flex: 250;
+        }
+
+        &:nth-child(4) {
+            flex: 156;
+        }
+
+        &:nth-child(5) {
+            width: 58px;
+            align-items: center;
+        }
+        &:nth-child(6) {
+            width: 80px;
+            align-items: center;
+        }
+    }
+}
+
+.approval-template-table-style {
+    
+    &>li {
+        &:nth-child(2) {
+            justify-content: flex-start;
+
+            & > span {
+                padding-right: 4px;
+                padding-left: 4px;
+
+                .approval-card-table-click {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    .overflow;
+
+                    &:hover {
+                        color: #52c2ec;
+                    }
+                }
+
+                .approval-card-table-click-icon {
+                    cursor: pointer;
+                    width: 20px;
+
+                    &:hover {
+                        color: #52c2ec;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            .overflow;
+        }
+    }
+}
+.approval-card-table-click-disabled {
+    color: #999;
+}
+
+.approval-card-table-style {
+    &>li {
+        &:nth-child(2) {
+            cursor: pointer;
+            .overflow;
+        }
+
+        &:nth-child(3) {
+            .overflow;
+        }
+    }
+}
+
+.approval-card-table-width {
+    &>li {
+        &:nth-child(1) {
+            width: 28px;
+        }
+
+        &:nth-child(2) {
+            flex: 1;
+        }
+
+        &:nth-child(3) {
+            flex: 1;
+        }
+    }
+}
+
+.approval-modal-wrap {
+    font-size: 13px;
+    color: #222;
+
+    .approval-modal-title {
+        height: 29px;
+        line-height: 28px;
+        border-bottom: @border;
+
+        .approval-modal-title-item {
+            display: inline-table;
+            width: 68px;
+            height: 28px;
+            text-align: center;
+            border-top: @border;
+            border-left: @border;
+            color: #666;
+
+            &:last-child {
+                border-right: @border;
+            }
+        }
+
+        .approval-modal-title-item-cur {
+            color: #fff;
+            background: #5e81d1;
+        }
+    }
+
+    .approval-base-config-wrap {
+
+        max-height: 540px;
+        overflow: scroll;
+
+        .approval-card-input-wrap {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .approval-card-input-tip {
+            width: 69px;
+
+            &-right {
+                width: 100px;
+                margin-left: 20px;
+            }
+        }
+
+        .approval-card-input {
+            display: inline-block;
+            flex: 1;
+
+            .ant-calendar-picker,
+            .ant-select {
+                width: 100%;
+            }
+
+            .approval-card-input-item-wrap {
+                min-height: 32px;
+                cursor: text;
+                padding-bottom: 3px;
+                zoom: 1;
+
+                outline: none;
+                user-select: none;
+                box-sizing: border-box;
+                display: flex;
+                background-color: #fff;
+                border-radius: 4px;
+                border: 1px solid #d9d9d9;
+                border-top-width: 1.02px;
+                transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+                .approval-card-input-item-container {
+                    margin-left: 5px;
+                    margin-bottom: -3px;
+                    height: auto;
+                    line-height: 30px;
+
+                    & > li {
+                        user-select: none;
+
+                        color: rgba(0, 0, 0, 0.65);
+                        background-color: #fafafa;
+                        border: 1px solid #e8e8e8;
+                        border-radius: 2px;
+                        cursor: default;
+                        float: left;
+                        margin-right: 4px;
+                        max-width: 99%;
+                        position: relative;
+                        overflow: hidden;
+                        transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                        padding: 0 20px 0 10px;
+
+                        margin-top: 3px;
+                        height: 24px;
+                        line-height: 22px;
+
+                        .anticon {
+                            font-size: 12px;
+                            font-style: normal;
+                            vertical-align: -0.125em;
+                            text-align: center;
+                            text-transform: none;
+                            line-height: 0;
+                            text-rendering: optimizeLegibility;
+                            color: rgba(0, 0, 0, 0.45);
+                            line-height: inherit;
+                            cursor: pointer;
+                            font-weight: bold;
+                            transition: all 0.3s;
+                            display: inline-block;
+                            font-size: 12px;
+                            font-size: 10px \9;
+                            transform: scale(0.83333333) rotate(0deg);
+                            position: absolute;
+                            right: 4px;
+                            top: 1px;
+                        }
+                    }
+                }
+            }
+            .approval-card-input-item-wrap-disabled {
+                background: #f5f5f5;
+                cursor: not-allowed;
+            }
+        }
+        .approval-card-input-prefix {
+            
+            position: relative;
+            &:after {
+                position: absolute;
+                content: '小番-';
+                font-size: 12px;
+                top: 5px;
+                left: 10px;
+            }
+            .ant-input {
+                padding-left: 38px;
+            }
+        }
+
+        .approval-card-input-choosen {
+            position: relative;
+            &:hover .approval-card-chosen-word {
+                color: #40a9ff;
+            }
+        }
+
+        .approval-card-chosen-word {
+            position: absolute;
+            top: 7px;
+            right: 7px;
+            color: #999;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .approval-card-break {
+            height: 0;
+            border-bottom: #dfdfdf dashed 1px;
+        }
+    }
+}
+
+// .approval-conf-car-select-wrap {
+
+//     .approval-contacts-card-top{
+//         overflow: hidden;
+//         height: 480px;
+//         padding: 13px 20px 0;
+//         .table-title-wrap{
+//             margin-top: 10px;
+//             & > button{
+//                 border-radius: 0px;
+//                 border-left: none;
+//             }
+//             .cursor {
+//                 cursor: pointer;
+//             }
+//         }
+//         .table-tree-container{
+//             width: 245px;
+//             overflow-y: scroll;
+//             margin-left: 0;
+//             height: 460px;
+//             padding: 0px;
+//             .table-title-shadow {
+//                 display: none;
+//             }
+//             .table-right-tree{
+//                 margin: 0;
+//                 border: none;
+//             }
+//             span{
+//                 font-size: 12px;
+//                 color: #333;
+//             }
+//         }
+//         .contacts-table-width{
+//             & > li{
+//                 &:nth-child(1){
+//                     width: 28px;
+//                 }
+//                 &:nth-child(2){
+//                     flex: 81;
+//                     & > span{
+//                         line-height: 35px;
+//                     }
+//                 }
+//                 &:nth-child(3){
+//                     flex: 165;
+//                 }
+//             }
+//         }
+//         .contacts-table-width-charge{
+//             & > li{
+//                 &:nth-child(1){
+//                     width: 28px;
+//                 }
+//                 &:nth-child(2){
+//                     flex: 1;
+//                     & > span{
+//                         line-height: 35px;
+//                     }
+//                 }
+//                 &:nth-child(3){
+//                     flex: 2;
+//                 }
+//                 &:nth-child(4){
+//                     flex: 3;
+//                 }
+//             }
+//         }
+//         .contacts-table-right{
+//             width: 500px;
+//             margin-left: 10px;
+//             .lsqc-serch{
+//                 width: 100%;
+//                 height: 30px;
+//                 position: relative;
+//                 .lsqc-icon{
+//                     position: absolute;
+//                     top: 7px;
+//                     left: 4px;
+//                     z-index: 99;
+//                     font-size: 12px;
+//                     color: #333;
+//                 }
+//                 .lsqc-serch-icon{
+//                     position: absolute;
+//                     top: 8px;
+//                     right: 4px;
+//                     z-index: 99;
+//                     font-size: 14px;
+//                 }
+//                 .lsqc-serch-input{
+//                     position: absolute;
+//                     top: 0;
+//                     left: 0;
+//                     width: 100%;
+//                     height: 30px;
+//                     padding-left: 32px;
+//                     font-size: 12px;
+//                 }
+//             }
+//             & > .table-title-shadow{
+//                 top: 42px!important;
+//             }
+//             .table-title-wrap{
+//                 font-size: 12px;
+//                 color: #333;
+//                 .table-title{
+//                     & > li{
+//                         &:nth-child(1){
+//                             width: 28px;
+//                         }
+//                         &:nth-child(2){
+//                             flex: 81;
+//                             & > span{
+//                                 line-height: 35px;
+//                             }
+//                         }
+//                         &:nth-child(3){
+//                             flex: 165;
+//                         }
+//                     }
+//                 }
+//             }
+//             .table-body{
+//                 max-height: 384px;
+//                 font-size: 12px;
+//                 color: #333;
+//                 & > .table-item{
+//                     height: 35px;
+//                     line-height: 35px;
+//                 }
+//             }
+//         }
+//     }
+//     .approval-contacts-card-bottom {
+//         margin: 0 20px 10px;
+//         max-height: 200px;
+//         overflow: auto;
+//         .approval-contacts-card-contain {
+//             .ant-tag {
+//                 margin-bottom: 5px;
+//             }
+//         }
+//     }
+// }

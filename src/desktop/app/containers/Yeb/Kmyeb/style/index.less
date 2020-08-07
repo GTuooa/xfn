@@ -1,0 +1,94 @@
+@import '~app/style/themes/common.less';
+
+.kmyeb-table-width {
+	width: 100%;
+	& > li {
+		font-size: 12px;
+        color: #333;
+		&:nth-child(1) {
+			max-width: 94px;
+			min-width: 72px;
+			flex: 2;
+		}
+		&:nth-child(2) {
+			min-width: 57px;
+			max-width: 195px;
+			flex: 1;
+			text-decoration: underline;
+		}
+		&:nth-child(3) {
+			flex: 8;
+			max-width: 960px;
+			min-width: 640px;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+
+			& > span {
+				flex: 1;
+				border-left: @border;
+				overflow: hidden;
+				padding: 0 4px 0 0;
+
+				&:first-child {
+					border-left: 0;
+				}
+
+				.over-ellipsis {
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+.kmyeb {
+	.title{
+		// width: 100%;
+		min-width: 800px;
+		max-width: 1280px;
+		height: 28px;
+		padding: 0 20px;
+		margin: 12px 0;
+	}
+	.title-date{
+		width: 120px;
+		height: 28px;
+		font-size: 12px;
+		.ant-select-selection{
+			height: 28px;
+			.ant-select-selection__rendered{
+				line-height: 28px;
+			}
+		}
+	}
+	.title-checkboxtext {
+		height: 28px;
+		margin-right: 0px;
+		.title-checkbox{
+			line-height: 28px;
+		}
+		& > span{
+			line-height: 28px;
+		}
+	}
+	.refresh-btn{
+		height: 28px;
+		border-radius: 6px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	    color: #222;
+	    background: #fff;
+	    margin-left: 10px;
+	}
+	.title-dropdown{
+		color: #222;
+		background: #fff;
+	}
+	.bg-color-gray{
+		background-color: #f4f4f4;
+	}
+	.bg-color-white{
+		background-color: #fff;
+	}
+}

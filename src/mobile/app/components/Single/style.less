@@ -1,0 +1,132 @@
+.xfn-single{
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-weight: 100;
+    height: 100%;
+    transition: background-color .2s ease-in;
+    &-animate{
+        background-color: rgba(0, 0, 0, .4);
+        pointer-events: auto;
+    }
+    &-none-animate{
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;//元素永远不会成为鼠标事件的target
+    }
+    &-caption{
+        height: .3rem;
+        line-height: .3rem;
+        color: #ccc;
+        background-color: #fff;
+        padding-left: .1rem;
+    }
+    &-popup {
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        font-size: .14rem;
+        transition: transform .2s;
+
+        max-height: 75%;
+        min-height: 2.3rem;
+        display: flex;
+        flex-direction: column;
+
+        &-animate{
+            transform: translateY(0%);
+        }
+        &-none-animate{
+            transform: translateY(100%);
+        }
+        .xfn-single-title{
+            height: .34rem;
+            line-height: .34rem;
+            text-align: center;
+            color: #999;
+            border-bottom: 1px solid #E8E8E8;
+            position: relative;
+            .icon{
+                color: #222;
+                font-size: .2rem;
+            }
+            .no-search{
+                position: absolute;
+                top: 50%;
+                right: .1rem;
+                transform: translateY(-50%);
+            }
+            .xfn-single-search{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 .1rem;
+                .xfn-single-input{
+                    flex: 1;
+                    padding-right: .1rem;
+                    .am-list-item{
+                        border: none;
+                    }
+                }
+            }
+            .title-left-icon{
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: inline-block;
+                padding: 0 .1rem;
+                line-height: .34rem;
+                font-size: .15rem;
+                color: #222;
+                .icon{
+                    vertical-align: middle;
+                }
+                .icon-account-add{
+                    font-size: .16rem;
+                }
+                .icon{
+                    vertical-align: middle;
+                }
+            }
+            .icon-two{
+                left: .4rem;
+            }
+        }
+        .xfn-single-content{
+            // min-height: 2.31rem;
+            // max-height: 3.57rem;
+            //height: 3.57rem;
+            flex: 1;
+            overflow-y: auto;
+            color: #222;
+            .xfn-single-item{
+                height: .42rem;
+                padding: 0 .1rem;
+                border-bottom: 1px solid #E8E8E8;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .icon{
+                    margin-left: .1rem;
+                }
+                .muti-line-ellipsis{
+                    white-space: normal;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    word-break: break-all;
+                }
+            }
+        }
+        .xfn-single-select{
+            color: #5E81D1;
+        }
+    }
+}

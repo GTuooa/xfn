@@ -1,0 +1,271 @@
+.regret-content {
+        overflow: hidden;
+    .ant-pagination {
+        float: right;
+        margin-top: 10px;
+    }
+    .regret-page {
+        clear: both;
+        padding: 10px 0px;
+        position: relative;
+        display: flex;
+        border-bottom: 1px solid #99999999;
+        .ant-pagination {
+            flex: 1;
+            margin-top: 0;
+            line-height: 28px;
+        }
+    }
+    .regret-page-confirm {
+        border-bottom: none;
+        padding-bottom: 0;
+        display: block;
+        .ant-pagination {
+            float: right;
+        }
+    }
+    .ant-checkbox-wrapper {
+        font-size: 12px;
+        color: #333;
+    }
+    &-item {
+        display: flex;
+        margin-bottom: 10px;
+        align-items: center;
+        label {
+            width: 83px;
+        }
+        .ant-select {
+            flex: 1;
+        }
+        .regret-input {
+            flex: 1;
+        }
+    }
+    .regret-title {
+        padding: 0 6px;
+        padding: 0 6px;
+        position: relative;
+        bottom: 0;
+        display: flex;
+        background: #fff;
+        z-index: 99;
+        border: 1px solid #dddddd;
+        border-bottom: 0;
+        margin-top: 0 !important;
+        & > span {
+            margin: 0 5px;
+            overflow: hidden;
+            -ms-flex-item-align: end;
+            align-self: flex-end;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            height: 28px;
+            line-height: 28px;
+        }
+    }
+    .regret-check-content {
+        border: solid 1px #dddddd;
+        padding: 0 6px;
+        max-height: 400px;
+        overflow-y: auto;
+        position: relative;
+        .ant-checkbox-wrapper {
+            line-height: 28px;
+            margin-right: 8px;
+        }
+        & > div {
+            display: flex;
+            margin-bottom: 5px;
+            .border-span {
+                border-bottom: 1px solid #d9d9d9;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                color: #999999;
+                line-height: 28px;
+                .icon-big-plus {
+                    cursor: auto;
+                }
+            }
+            & > span {
+                margin: 0 5px;
+                overflow: hidden;
+                align-self: flex-end;
+                display: flex;
+                height: 28px;
+                line-height: 28px;
+                .icon-big-plus {
+                    float: right;
+                    line-height: 28px;
+                    color: #1eb6f8;
+                }
+            }
+        }
+        .ant-select,.ant-input {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        input:focus {
+            outline:none;
+            box-shadow: none;
+        }
+        .ant-select-selection,.ant-input {
+            border: none;
+            border-radius: 0 !important;
+            border-bottom: 1px solid rgb(217, 217, 217);
+            height: auto;
+            line-height: 18px;
+            .ant-select-selection__rendered {
+                margin-left: 0;
+                margin-right: 0;
+                align-items: center;
+                display: flex;
+            }
+        }
+        .ant-select-arrow {
+            right: 0;
+        }
+        .ant-select-selection__placeholder {
+            display: inherit;
+        }
+
+    }
+    .regret-check-unify-content {
+        & > div {
+            &:nth-child(1){
+                margin-top: 28px;
+            }
+            & > span {
+                &:nth-child(1) {
+                    width: 277px;
+
+                }
+                &:nth-child(2) {
+                    width: 88px;
+
+                }
+                &:nth-child(3) {
+                    width: 59px;
+
+                }
+                &:nth-child(4) {
+                    width: 69px;
+
+                }
+                &:nth-child(5) {
+                    width: 96px;
+                }
+                &:nth-child(6) {
+                    width: 88px;
+
+                }
+            }
+        }
+    }
+    .regret-check-no-unify-content {
+        & > div {
+            display: flex;
+            &:nth-child(1){
+                margin-top: 28px;
+            }
+            & > span {
+                &:nth-child(1) {
+                    width: 455px;
+
+                }
+                &:nth-child(2) {
+                    width: 98px;
+
+                }
+                &:nth-child(3) {
+                    width: 59px;
+
+                }
+                &:nth-child(4) {
+                    width: 88px;
+                }
+            }
+        }
+    }
+    .regret-confirm {
+        & > div {
+            display: flex;
+            &:nth-child(1){
+                margin-top: 28px;
+            }
+            & > span {
+                &:nth-child(1) {
+                    width:204px;
+
+                }
+                &:nth-child(2) {
+                    width: 88px;
+
+                }
+                &:nth-child(3) {
+                    width: 88px;
+
+                }
+
+            }
+        }
+    }
+    .regret-result {
+        & > div {
+            display: flex;
+            &:nth-child(1){
+                margin-top: 28px;
+            }
+            & > span {
+                &:nth-child(1) {
+                    width:135px;
+
+                }
+                &:nth-child(2) {
+                    width: 88px;
+
+                }
+                &:nth-child(3) {
+                    width: 88px;
+
+                }
+                &:nth-child(4) {
+                    width: 59px;
+
+                }
+
+            }
+        }
+    }
+    .regret-check {
+        display: flex;
+        margin:10px 0;
+        .ant-checkbox-wrapper {
+            width: 80px;
+            margin-right: 45px;
+            line-height: 28px;
+        }
+        .regret-unify {
+            display: flex;
+            flex: 1;
+            padding-right: 0;
+            .ant-btn {
+                margin-left: 10px;
+            }
+        }
+    }
+    .tips {
+        margin: 10px 0;
+        color: #999999;
+        border-left: 2px solid #addeff;
+        line-height: 12px;
+        padding-left: 5px;
+        clear: both;
+    }
+    .regret-progress {
+        margin-bottom: 10px;
+    }
+}

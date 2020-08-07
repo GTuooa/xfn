@@ -1,0 +1,65 @@
+// 提示
+.notices {
+    &-wrap {
+        height: .23rem;
+        overflow: hidden;
+        // animation: wrapshow 1s;
+        // -moz-animation: wrapshow 1s;	/* Firefox */
+        // -webkit-animation: wrapshow 1s;	/* Safari 和 Chrome */
+        // -o-animation: wrapshow 1s;
+        padding: 0 .1rem;
+        background-color: #fff;
+    }
+    &-tip {
+        font-size: .11rem;
+        color: #222;
+        background-color: #fff;
+        .icon-tongzhi {
+            margin-left: 0;
+        }
+    }
+}
+.notices-list {
+    position: relative;
+    width: 100%;
+    // color: #fff;
+    color: #38ADFF;
+    height: 18px;
+    .notices-tip{
+        height: 18px;
+        display: flex;
+        overflow: hidden;
+        & > .notices-content{
+            flex-wrap: nowrap;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            .content-first{
+                & > a {
+                    width: 100%;
+                    height: 18px;
+                    color: #222;
+                    display: block;
+                }
+            }
+            .content-sec{
+                & > a {
+                    width: 100%;
+                    height: 18px;
+                    color: #222;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.notices-list > li {
+    position: absolute;
+    width: 100%;
+
+    & > a {
+        color: #222;
+        text-decoration: none;
+    }
+
+}

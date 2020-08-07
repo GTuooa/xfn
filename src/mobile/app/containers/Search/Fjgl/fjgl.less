@@ -1,0 +1,136 @@
+.fjgl {
+	&-shenhe-icon {
+		position: absolute;
+		left: 1.8rem;
+		top: 0;
+		z-index: 9;
+	}
+	.vc {
+		background-color: white;
+		padding: 0 .1rem;
+		margin: .1rem .05rem;
+		border-radius: .05rem;
+		position: relative;
+
+		&-info {
+			height: .27rem;
+			border-bottom: 1px solid #ddd;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: .12rem;
+			color: #222;
+
+			&-date {
+				font-size: .1rem;
+				color: #999;
+			}
+		}
+		&-info-bottom {
+			border-bottom: 0;
+		}
+
+		&-fj {
+			border-bottom: 1px solid #eee;
+			padding: .05rem 0;
+			display: flex;
+			& .fjCheck{
+				padding-right: 10px;
+				align-self: center;
+			}
+			& img{
+				width: .3rem;
+				height: .3rem;
+				align-self: center;
+			}
+			& ul{
+				flex: 1;
+				margin: 0 .05rem;
+				font-size: .1rem;
+				align-items: center;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				& > li{
+					overflow: hidden;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+				}
+			}
+			& .fj-label{
+				width: auto;
+				height: .3rem;
+				align-self: center;
+				padding: 0 .1rem;
+				font-size: .11rem;
+			}
+		}
+	}
+	.vc:first-child{
+		margin-top: 0;
+	}
+	.loadingmorevc {
+		display: block;
+		font-size: .12rem;
+		color: #999;
+		width: 100%;
+		text-align: center;
+		margin-bottom: .05rem;
+		background: #eee;
+		border: 0 none;
+	}
+	&-top{
+		display: flex;
+		height: .3rem;
+		background-color: white;
+		padding: 0 .1rem;
+		margin: 0 0 .05rem 0;
+		& > div{
+			flex: 2;
+			line-height: .3rem;
+			font-size: .15rem;
+			& > i{
+				float: right;
+				margin: .1rem .1rem 0 0;
+				color: #ccc;
+			}
+		}
+		& > ul{
+			flex: 3;
+			font-size: .13rem;
+			& > li{
+				& > span{
+					float:right;
+				}
+				& > div{
+					width: 100%;
+					background: #EAEAEA;
+					height: .05rem;
+					margin: .03rem;
+					border-radius: .05rem;
+					overflow: hidden;
+					& > div{
+						background: #FFB28B;
+						height: .05rem;
+						border-radius: .05rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+.vc-jv-ass {
+	&-showtext {
+		margin-left: .45rem;
+		&-tip {
+			position: relative;
+			&:before {
+				position: absolute;
+				content: '辅助核算:';
+				top: 0;
+				left: -.45rem;
+			}
+		}
+	}
+}

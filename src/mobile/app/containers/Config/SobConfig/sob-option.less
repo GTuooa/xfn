@@ -1,0 +1,184 @@
+@import '~app/style/variable.less';
+@import "~app/style/moduleCommom/sobOptionTitle.less";
+
+.sob-option {
+
+	.sob-option-title-tip {
+		text-align: center;
+		font-size: .12rem;
+		color: #999;
+		padding: .1rem;
+	    border-bottom: #d7d7d7 1px solid;
+	    background: #fff;
+		margin-bottom: .1rem;
+	}
+
+	.sob-option-input-wrap-role {
+		& > li:nth-child(1) {
+			border-top: @border;
+		}
+	}
+
+	.sob-option-input-wrap {
+
+		& > li,
+		.sob-option-input {
+			.form-common-variable-auto;
+			min-height: .4rem;
+			border-bottom: @border;
+			display: flex;
+			align-items: center;
+		}
+
+		.sob-option-input-lable {
+			.main-sub-font-variable;
+			.sob-option-input-label-main {
+				color: #222;
+			}
+		}
+
+		.sob-option-input-input {
+			flex: 1;
+			justify-content: flex-end;
+			.main-font-variable;
+
+			input {
+				text-align: right;
+			}
+		}
+
+		.sob-option-month-picker-wrap {
+			.main-font-variable;
+			flex: 1;
+			text-align: right;
+		}
+		.sob-option-month-picker-wrap-placeholder {
+			.input-placeholder-variable;
+		}
+
+		.sob-option-input-month {
+			& > div {
+				display: flex;
+				flex: 1;
+				justify-content: flex-end;
+			}
+		}
+
+		.sob-option-input-singlepicker {
+			display: flex;
+			flex: 1;
+			.main-font-variable;
+
+			.sob-option-input-singlepicker-inner {
+				display: flex;
+				justify-content: flex-end;
+			}
+
+			.sob-option-input-single-inner {
+				display: inline-block;
+				width: 100%;
+				text-align: right;
+			}
+		}
+
+		.sob-option-input-fun {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+
+			.sob-option-input-fun-detail {
+				display: flex;
+				flex: 1;
+				flex-wrap: wrap;
+				justify-content: flex-end;
+				margin: .05rem 0 .05rem;
+				.main-font-variable;
+
+				& > span {
+					display: inline-block;
+				}
+			}
+
+			.sob-option-input-fun-role {
+				display: flex;
+				flex: 1;
+				overflow: hidden;
+				margin-left: .05rem;
+				justify-content: flex-end;
+			}
+
+			.sob-option-input-fun-role-list {
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				.main-font-variable;
+			}
+		}
+
+		.sob-option-input-fun-role-placeholder {
+			flex: 1;
+			text-align: right;
+			.input-placeholder-variable;
+		}
+	}
+
+	.sob-option-role-title {
+		height: .3rem;
+		line-height: .3rem;
+		padding: 0 .1rem;
+		.sub-font-variable;
+	}
+
+	.sob-option-choosen-copy-list {
+		border-top: #eee 1px solid;
+		background: #fff;
+	}
+	.sob-option-choosen-copy-item {
+		display: flex;
+		align-items: center;
+		padding: .05rem .12rem .05rem 0;
+		border-bottom: #eee 1px solid;
+		margin-left: .12rem;
+		height: .35rem;
+	}
+	.sob-option-choosen-copy-item-text {
+		flex: 1;
+		color: #222;
+		font-size: .12rem;
+	}
+	.sob-option-copy-input {
+		.am-list-item {
+			height: .4rem !important;
+		}
+	}
+	.sob-option-choosen-right-or-not {
+		font-size: .11rem;
+		padding-left: .12rem;
+		margin-bottom: .1rem;
+	}
+	.sob-option-choosen-tip {
+		font-size: .11rem;
+		padding-left: .12rem;
+		color: #999;
+		height: .18rem;
+		line-height: .18rem;
+	}
+}
+
+.sob-fun-select-list {
+
+	& > .sob-fun-select-item {
+		.form-common-variable;
+		display: flex;
+		align-items: center;
+		border-bottom: @border;
+		.main-font-variable;
+
+		.sob-fun-select-label {
+			flex: 1;
+		}
+
+		.app-antd-mobile-switch;
+	}
+}

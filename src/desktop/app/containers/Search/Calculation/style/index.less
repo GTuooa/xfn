@@ -1,0 +1,646 @@
+@import '~app/style/themes/common.less';
+.calculate-box{
+    & > .title{
+        min-width: 800px;
+        max-width: 1280px;
+    }
+    .account-flowNumber{
+        text-decoration: underline;
+        &:hover {
+            color:#52c2ec;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.account-check-table-width {
+    min-height: 55px;
+    & > li {
+
+        min-height: 54px;
+        align-items: center;
+        font-size: 12px;
+        color: #333;
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 76px;
+            max-width: 76px;
+            flex: 76;
+        }
+        &:nth-child(3) {
+		    min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 50px;
+            max-width: 150px;
+            flex: 150;
+        }
+        &:nth-child(5) {
+            min-width: 66px;
+            max-width: 153px;
+            flex: 73;
+        }
+        &:nth-child(6) {
+            min-width: 26px;
+            max-width: 80px;
+            flex: 80;
+        }
+        &:nth-child(7) {
+            flex: 201;
+            max-width: 201px;
+            min-width: 121px;
+            & > div{
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                display: flex;
+                & > div{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    flex: 1;
+                    &:nth-child(2){
+                        border-left: 1px solid #d8d8d8;
+                    }
+                }
+                & > .amount-left{
+                    text-align: left;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    color: #ff8350;
+                }
+                & > .amount-right{
+                    text-align: right;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
+                & > .padding-no-content{
+                    padding: 0 4px;
+                }
+            }
+            & > .amountlsye-item-first {
+        		min-height: 30px;
+        		line-height: 30px;
+        		border-bottom: @border;
+                width: 100%;
+                justify-content: center;
+        	}
+            & > .amountlsye-item-second-two{
+                min-height: 24px;
+                line-height: 24px;
+            }
+        }
+        &:nth-child(8) {
+            flex: 201;
+            max-width: 201px;
+            min-width: 121px;
+            & > div{
+                width: 100%;
+                height: 35px;
+                line-height: 35px;
+                display: flex;
+                & > div{
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    flex: 1;
+                    &:nth-child(2){
+                        border-left: 1px solid #d8d8d8;
+                    }
+                }
+                & > .amount-left{
+                    text-align: left;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                    color: #ff8350;
+                }
+                & > .amount-right{
+                    text-align: right;
+                    padding-left: 4px;
+                    padding-right: 4px;
+                }
+                & > .padding-no-content{
+                    padding: 0 4px;
+                }
+            }
+            & > .amountlsye-item-first {
+        		min-height: 30px;
+        		line-height: 30px;
+        		border-bottom: @border;
+                width: 100%;
+                justify-content: center;
+        	}
+            & > .amountlsye-item-second-two{
+                min-height: 24px;
+                line-height: 24px;
+            }
+        }
+        &:nth-child(9) {
+            min-width: 50px;
+            max-width: 150px;
+            flex: 150;
+        }
+
+        &:nth-child(10) {
+            min-width: 81px;
+            max-width: 100px;
+            flex: 100;
+            & > div{
+                width: 100%;
+                & > div{
+                    width: 100%;
+                    padding: 0 4px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > button{
+                        height: 14px;
+                        line-height: 14px;
+                        margin-left: 0px;
+                        padding: 0px!important;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.account-object-table-width {
+
+    & > li {
+      min-height: 34px;
+      align-items: center;
+      &:nth-child(1) {
+          width: 28px;
+    justify-content: center;
+    align-items: center;
+      }
+      &:nth-child(2) {
+          width: 76px;
+      }
+      &:nth-child(3) {
+          width: 100px;
+      }
+      &:nth-child(4) {
+          flex: 60;
+      }
+      &:nth-child(5) {
+          flex: 69;
+      }
+      &:nth-child(6) {
+          width: 80px;
+      }
+        &:nth-child(7) {
+            flex: 48;
+            max-width: 85px;
+            min-width: 60px;
+
+        }
+        &:nth-child(8) {
+            flex: 48;
+            max-width: 85px;
+            min-width: 60px;
+        }
+        &:nth-child(9) {
+          flex: 48;
+          max-width: 85px;
+          min-width: 60px;
+        }
+        &:nth-child(10) {
+          flex: 48;
+          max-width: 85px;
+          min-width: 60px;
+        }
+
+        &:nth-child(11) {
+            width: 84px;
+        }
+        &:nth-child(12) {
+            width: 84px;
+            align-items: center;
+        }
+    }
+}
+
+.amountlsye-title-cell {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	overflow: hidden;
+
+	& > div > span {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	.amountlsye-item-second-one,
+    .amountlsye-item-second-two {
+		display: flex;
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+		& > span {
+			display: flex;
+			border-left: @border;
+			justify-content: center;
+            flex: 1;
+			&:nth-child(1) {
+				border-left: 0;
+			}
+		}
+	}
+}
+
+.cxls-account-sfgl-table-width{
+    font-size: 12px !important;
+    color: #333;
+    & > li {
+
+        min-height: 34px;
+        align-items: center;
+        & > span{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 76px;
+            max-width: 76px;
+            flex: 76;
+        }
+        &:nth-child(3) {
+		    min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 100px;
+            max-width: 150px;
+            flex: 150;
+        }
+        &:nth-child(5) {
+            flex: 295;
+            min-width: 53px;
+            max-width: 295px;
+        }
+        &:nth-child(6) {
+            min-width: 50px;
+            max-width: 80px;
+            flex: 80;
+        }
+        &:nth-child(7) {
+            min-width: 86px;
+            max-width: 120px;
+            flex: 120;
+            & > div {
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+                padding-right: 4px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .amount-left{
+                text-align: left;
+                padding-left: 4px;
+                color: #ff8350;
+            }
+            .amount-right{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(8) {
+            min-width: 86px;
+            max-width: 120px;
+            flex: 120;
+            & > div {
+                width: 100%;
+                & > p{
+                    width: 100%;
+                    height: 34px;
+                    line-height: 34px;
+                    padding-right: 4px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .amount-left{
+                text-align: left;
+                padding-left: 4px;
+                color: #ff8350;
+            }
+            .amount-right{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(9) {
+            flex: 170;
+            max-width: 170px;
+            min-width: 80px;
+            .ant-btn {
+                line-height: 100%;
+                height: 100%;
+                font-size:12px;
+            }
+        }
+        &:nth-child(10) {
+            flex: 100;
+            max-width: 100px;
+            min-width: 100px;
+            & > div{
+                width: 100%;
+                & > div{
+                    width: 100%;
+                    padding: 0 4px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > button{
+                        height: 14px;
+                        line-height: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cxls-account-cbjz-table-width{
+    font-size: 12px !important;
+    color: #333;
+    & > li {
+
+        min-height: 34px;
+        align-items: center;
+        & > span{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 76px;
+            max-width: 76px;
+            flex: 76;
+        }
+        &:nth-child(3) {
+		    min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 130px;
+            max-width: 250px;
+            flex: 250;
+        }
+        &:nth-child(5) {
+            min-width: 205px;
+            max-width: 525px;
+            flex: 525;
+        }
+        &:nth-child(6) {
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+        }
+        &:nth-child(7) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 120;
+        }
+        &:nth-child(8) {
+            min-width: 60px;
+            max-width: 60px;
+            flex: 60;
+        }
+    }
+}
+
+.cxls-account-fprz-table-width{
+    font-size: 12px !important;
+    color: #333;
+    & > li {
+        min-height: 34px;
+        align-items: center;
+        & > span{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 76px;
+            max-width: 76px;
+            flex: 76;
+        }
+        &:nth-child(3) {
+		    min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 80px;
+            max-width: 220px;
+            flex: 220;
+        }
+        &:nth-child(5) {
+            min-width: 135px;
+            max-width: 395px;
+            flex: 395;
+        }
+        &:nth-child(6) {
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+        }
+        &:nth-child(7) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 120;
+            & > span{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(8) {
+            min-width: 40px;
+            max-width: 40px;
+            flex: 40;
+        }
+        &:nth-child(9) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 120;
+            & > span{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(10) {
+            min-width: 60px;
+            max-width: 60px;
+            flex: 60;
+        }
+    }
+}
+
+.cxls-account-kjfp-table-width{
+    font-size: 12px !important;
+    color: #333;
+    & > li {
+        min-height: 34px;
+        align-items: center;
+        & > span{
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 76px;
+            max-width: 76px;
+            flex: 76;
+        }
+        &:nth-child(3) {
+		    min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 80px;
+            max-width: 220px;
+            flex: 220;
+        }
+        &:nth-child(5) {
+            min-width: 135px;
+            max-width: 395px;
+            flex: 395;
+        }
+        &:nth-child(6) {
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+        }
+        &:nth-child(7) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 120;
+            & > span{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(8) {
+            min-width: 40px;
+            max-width: 40px;
+            flex: 40;
+        }
+        &:nth-child(9) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 120;
+            & > span{
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+        &:nth-child(10) {
+            min-width: 60px;
+            max-width: 60px;
+            flex: 60;
+        }
+    }
+}
+.cxls-sfgl-serch{
+  margin-right: 8px;
+  float: left;
+   width: 140px;
+   position: relative;
+   .cxpz-serch-icon{
+       position: absolute;
+       top: 8px;
+   }
+   .cxls-serch-input{
+      padding-left:68px;
+      height: 28px;
+      line-height: 28px;
+      font-size: 12px;
+      color: #333;
+   }
+   .cxls-type-choose{
+     position: absolute;
+     left: 1px;
+     top: 0;
+     z-index: 9;
+     & > span{
+       height: 24px;
+       border-left: none;
+       border-top: none;
+       border-bottom: none;
+       border-radius: 0;
+       border-top-left-radius: 6px;
+       border-bottom-left-radius: 6px
+     }
+   }
+   .ant-select-selection--single{
+       height: 28px;
+       .ant-select-selection__rendered{
+           line-height: 28px;
+           font-size: 12px;
+           color: #333;
+       }
+   }
+}
+.check-account{
+    line-height: 28px;
+    font-size: 12px;
+    color: #333;
+}
+.min-height{
+    min-height: 36px;
+    & > li{
+        min-height: 34px;
+    }
+}

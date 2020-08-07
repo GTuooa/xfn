@@ -1,0 +1,166 @@
+@import '~app/style/themes/common.less';
+
+
+@bouble-background    : #f4f4f4;
+
+.assmxz-table-title {
+	display: flex;
+    border-bottom: @border;
+    background: @bouble-background;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 4px;
+}
+
+.assmxz-table-width {
+	& > li {
+		&:nth-child(1) {
+			min-width: 76px;
+			max-width: 80px;
+			flex: 80;
+		}
+		&:nth-child(2) {
+			min-width: 58px;
+			max-width: 82px;
+			flex: 82;
+			text-decoration: underline;
+		}
+		&:nth-child(3) {
+			min-width: 171px;
+			max-width: 372px;
+			flex: 412;
+		}
+		&:nth-child(6) {
+			min-width: 52px;
+			max-width: 52px;
+			flex: 52;
+		}
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(7) {
+			min-width: 80px;
+			max-width: 120px;
+			flex: 120;
+		}
+	}
+
+	& > li {
+		&:nth-child(3) {
+			justify-content: flex-start;
+		}
+
+		&:nth-child(6) {
+			align-items: center;
+		}
+
+		&:nth-child(4),
+		&:nth-child(5),
+		&:nth-child(7) {
+			& > span {
+				text-align: right;
+				padding-right: 4px;
+			}
+		}
+	}
+}
+
+@assmxz:assmxz;
+
+.@{assmxz}{
+
+	&-left{
+
+		&-table{
+			&-first-tit,
+			&-second-tit {
+				height:25px;
+				line-height: 25px;
+				padding-left: 5px;
+				border-left: @border;
+				border-right: @border;
+				background: @top-li-bg;
+				span{
+					margin-left: 10px;
+				}
+			}
+			&-first-tit {
+				border-top: @border;
+			}
+		}
+	}
+}
+.title-left {
+	float:left;
+
+	&-back {
+		margin-right: 45px;
+	}
+}
+.assmxbcategory-select {
+	float: left;
+	&-title{
+		margin-left: 8px;
+		font-size: 12px;
+		color: #333;
+	}
+	&-item{
+		width: 100px;
+
+		& > .ant-select-selection--single{
+			height: 28px;
+			& > .ant-select-selection__rendered{
+				line-height: 28px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+	}
+}
+
+.assMxb{
+	.title{
+		min-width: 800px;
+		max-width: 1280px;
+	}
+	.title-date{
+		.ant-select-selection--single{
+			height: 28px;
+			.ant-select-selection__rendered{
+				line-height: 28px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+	}
+	.title-checkboxtext{
+		margin-left: 8px;
+		& > span{
+			line-height: 28px;
+			padding-right: 0px;
+		}
+	}
+	.refresh-btn{
+		height: 28px;
+		border-radius: 6px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	    color: #222;
+	    background: #fff;
+	    margin-left: 10px;
+	}
+	.title-dropdown{
+		color: #222;
+		background: #fff;
+	}
+
+	.table-title{
+		overflow-x: hidden;
+		overflow-y: scroll;
+		& >li:nth-child(2){
+			text-decoration: none;
+		}
+	}
+	.table-right-table-input{
+		height: 28px;
+	}
+}

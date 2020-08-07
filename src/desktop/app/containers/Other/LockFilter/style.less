@@ -1,0 +1,47 @@
+.lock-wrap {
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    background: rgba(0,0,0,0.1);
+
+    .lock-container {
+        margin: 50px 0 0 160px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        & > div:nth-child(1) {
+            flex: 2;
+        }
+        & > div:nth-child(2) {
+            flex: 1;
+        }
+    }
+
+    .lock-password-input {
+        margin: auto;
+        width: 300px;
+        height: 100px;
+        background: #fff;
+        border-radius: 3px;
+        box-shadow:0 0 0 1px hsla(0,0%,100%,.3) inset,0 9px 18px rgba(0,0,0,0.2);
+        text-shadow:0 1px 1px hsla(0,0%,100%,.3);
+        padding: 15px;
+
+        .lock-password-input-tip {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .ant-input-password {
+            width: 210px;
+            margin-right: 10px;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+@import '~app/containers/Edit/Lrls/index.less';
+
+.cxhsgl{
+    font-size: .12rem;
+    color: #222;
+    &-flex{
+        display: flex;
+        margin: .05rem 0;
+        padding: .05rem;
+        align-items: center;
+        background-color: #fff;
+        .top-flex{
+            flex: 1;
+            margin: 0 .05rem;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            & > div{
+                flex: 1;
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+            }
+            & > i{
+                color: #666;
+                font-size: 13px;
+            }
+        }
+        .left-line{
+            padding-left: .1rem;
+            border-left: 1px solid #d7d7d7;
+        }
+
+    }
+    &-item{
+        background-color: #fff;
+        padding: .05rem .05rem 0.01rem .05rem;
+        margin: 0 .05rem .05rem;
+        border-radius: .03rem;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, .3);
+        &-line{
+            border-bottom: 1px solid #d7d7d7;
+        }
+        &-margin-left{
+            margin-left: .1rem;
+        }
+        &-border{
+            border: 1px solid #d7d7d7;
+            padding: 0rem .1rem 0rem .03rem;
+            display: inline-block;
+
+            border-right: 1px solid transparent;
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: .1rem;
+                background-color: #d7d7d7;
+                transform: rotate(30deg);
+                transform-origin: left top;
+            }
+            &:before{
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                right: 0px;
+                width: 1px;
+                height: .1rem;
+                background-color: #d7d7d7;
+                transform: rotate(-30deg);
+                transform-origin: left bottom;
+            }
+        }
+        &-flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: .03rem;
+            & > div {
+                flex: 1;
+            }
+            & > div:nth-child(2) {
+                text-align: right;
+                .button,
+        		.disabled {
+        			display: inline-block;
+        			width: .55rem;
+        	    	height: auto;
+        			color: #222;
+        	    	padding: .05rem 0rem;
+        			background-color: #fff;
+        			line-height: normal;
+        		}
+        		.button {
+        			border-color: #222;
+        		}
+        		.disabled {
+        			color: #999;
+        		}
+            }
+        }
+        &-flex-column{
+            display: flex;
+            flex-direction: column;
+
+        }
+        &-bottom{
+            border-top: 1px solid #d7d7d7;
+            padding-top: .05rem;
+        }
+    }
+    &-disabled{
+        color: #999;
+        font-size: .11rem;
+        font-weight: 100;
+    }
+
+}
+// 蚂蚁组件样式修改
+.my-tab{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    &-content-wrap{
+        height: calc(100% - 43.5px);
+        left: 0!important;
+    }
+    &-pane-wrap-active{
+        height: 100%;
+    }
+    &-pane-wrap-inactive{
+        display: none;
+    }
+}

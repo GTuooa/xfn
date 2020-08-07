@@ -1,0 +1,243 @@
+@import '~app/style/themes/common.less';
+
+.table-tree-wrap{
+    overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.assets-mxb-table-width {
+    & > li {
+        &:nth-child(1){
+			min-width: 42px;
+            max-width: 42px;
+            flex: 42;
+			// align-items: center;
+			// justify-content: flex-start;
+            text-decoration: underline;
+		}
+		&:nth-child(2){
+            min-width: 26px;
+            max-width: 246px;
+			flex: 246;
+            text-decoration: underline;
+		}
+		&:nth-child(4){
+            min-width: 40px;
+            max-width: 60px;
+            flex: 60;
+		}
+
+        &:nth-child(7),&:nth-child(10){
+            max-width: 120px;
+			min-width: 90px;
+			flex: 120;
+		}
+		&:nth-child(6){
+            max-width: 80px;
+			min-width: 58px;
+			flex: 80;
+		}
+
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(11) {
+            max-width: 120px;
+			min-width: 80px;
+			flex: 120;
+		}
+    }
+}
+.assets-mxb-table-justify {
+    & > li {
+        &:nth-child(4),
+        &:nth-child(6) {
+            justify-content: flex-end;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10),
+        &:nth-child(11) {
+            & > span {
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+    }
+}
+
+
+
+@assetscardmxb: assetscardmxb;
+.@{assetscardmxb}{
+	&-main{
+		.clearfix();
+	}
+	&-left{
+		float: left;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 84%;
+		border:@border;
+		background: #fff;
+
+		ul{
+			li{
+				padding: 0 5px;
+				overflow: hidden;
+			}
+			&:hover {
+				li:nth-child(1),
+				li:nth-child(2) {
+					text-decoration: underline;
+				}
+
+			}
+		}
+		ul{
+			.clearfix();
+			border-bottom: @border;
+			display: flex;
+		}
+		ul:nth-child(2n){
+			background: #f8f8f8;
+		}
+		li{
+			float: left;
+			height: 34px;
+			line-height: 34px;
+			text-align: right;
+			border-right: @border;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		li:nth-child(1){
+			width: 55px;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		li:nth-child(2){
+			flex: 8;
+			justify-content: flex-start;
+		}
+		li:nth-child(3){
+			flex: 4;
+		}
+		li:nth-child(4){
+			max-width: 74px;
+			width: 6%;
+		}
+		li:nth-child(5){
+			flex: 4;
+		}
+		li:nth-child(6){
+			max-width: 64px;
+			width: 6%;
+		}
+		li:nth-child(7){
+			flex: 4;
+		}
+		li:nth-child(8){
+			flex: 4;
+		}
+		li:nth-child(9){
+			flex: 4;
+		}
+		li:nth-child(10){
+			flex: 4;
+		}
+		li:nth-child(11){
+			flex: 4;
+		}
+		li:last-child{
+			border-right:0 none;
+		}
+	}
+}
+.assetscardmxb-left-title {
+	li {
+		justify-content: center !important;
+	}
+}
+
+.assetscardmxb-left-title {
+	li:nth-child(1),
+	li:nth-child(2){
+		text-align: center;
+	}
+	& > li {
+		text-align: center;
+	}
+}
+
+.assetsmxb-label {
+	font-size: 14px;
+	margin: 5px 0 0 5px;
+}
+
+.assetsmxb-bottom-tree {
+	.ant-tree-title {
+		text-decoration: underline;
+	}
+}
+
+.assetsMxb{
+    .title{
+		max-width: 1600px;
+	}
+    .title-date{
+		.ant-select-selection--single{
+			height: 28px;
+			.ant-select-selection__rendered{
+				line-height: 28px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+	}
+	.title-checkboxtext{
+		margin-left: 8px;
+		& > span{
+			line-height: 28px;
+			padding-right: 0px;
+		}
+	}
+	.refresh-btn{
+		height: 28px;
+		border-radius: 6px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	    color: #222;
+	    background: #fff;
+	    margin-left: 10px;
+	}
+	.title-dropdown{
+		color: #222;
+		background: #fff;
+	}
+
+	.table-title{
+		overflow-x: hidden;
+		overflow-y: scroll;
+        & >li:nth-child(1),& >li:nth-child(2){
+			text-decoration: none;
+		}
+	}
+    .table-right-table-input{
+		height: 28px;
+	}
+    .assets-mxb-table-sumarry{
+        & > li:nth-child(2){
+            text-decoration: none;
+        }
+    }
+}

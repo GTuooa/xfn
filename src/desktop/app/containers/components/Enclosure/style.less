@@ -1,0 +1,158 @@
+@import '~app/style/index.less';
+
+//图片上传
+.enclosure-upload-part {
+    padding: 10px 10px 10px 20px;
+    font-size: 15px;
+    color: #555;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+    .enclosure-wrap-title {
+        line-height: 15px;
+    }
+
+    .enclosure-list-wrap {
+        display: flex;
+        flex-wrap: wrap;
+
+        .enclosure-item {
+            position: relative;
+            width: 250px;
+        	height: 70px;
+          	margin: 8px 20px 8px 0;
+        	padding: 10px;
+            background:#ffffff;
+            display: flex;
+
+            .enclosure-item-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 51px;
+                line-height: 50px;
+                text-align: center;
+                width: 51px;
+            }
+            .enclosure-item-detail {
+                width:170px;
+                height: 50px;
+                margin-left: 5px;
+
+                .enclosure-item-filename {
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    padding-bottom: 10px;
+                    font-size: 12px;
+                }
+
+                .enclosure-item-tip {
+                    color: #666;
+                    font-size: 12px;
+                    line-height: 30px;
+                    margin-right: 10px;
+                }
+
+                .enclosure-tag {
+                    height: 25px;
+                    width: 70px;
+                    padding: 0;
+                    margin: 0;
+                    float: right;
+                    font-size: 12px;
+                    line-height: 23px;
+                    border-radius: 6px;
+                    border: @border;
+                    text-align: center;
+                    background: #f4f4f4;
+                    cursor: pointer;
+                }
+            }
+            .icon-close {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                font-size: 12px;
+                top: 5px;
+                right: 5px;
+            }
+        }
+
+        .enclosure-add-file {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            background: #ffffff;
+            color: #ccc;
+            font-size: 50px;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .enclosure-item-input {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width:70px;
+                height:70px;
+                opacity: 0;
+            }
+        }
+    }
+    .enclosure-radio {
+        display: block;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .enclosure-clipboard-add-file {
+        position: relative;
+        z-index:1;
+    }
+    .enclosure-clipboard-add-btn {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 160px;
+        height: 70px;
+        display: inline-block;
+        opacity: 0;
+        z-index: 10;
+        // background-color: #ccc;
+    }
+    .enclosure-clipboard-add-fake-btn {
+        border: 1px dashed #d8d8d8;
+        display: block;
+        height: 70px;
+        width: 160px;
+        line-height: 30px;
+        background-color: #fff;
+        font-size: 12px;
+        color: #333;
+        font-size: 13px;
+        padding: 5px;
+        margin: 8px 20px 8px 0;
+        text-align: center;
+    }
+    .enclosure-clipboard-add-fake-btn-text {
+        color: #999;
+    }
+}
+
+.clip-board-preview-img {
+    width: 100%;
+    text-align: center;
+}
+.clip-board-preview-name {
+    display: flex;
+    margin: 15px 0;
+    height: 28px;
+    line-height: 28px;
+    .clip-board-preview-name-input {
+        flex: 1;
+    }
+}

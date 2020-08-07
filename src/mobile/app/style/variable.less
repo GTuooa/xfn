@@ -1,0 +1,105 @@
+@shodow-color: rgba(0, 0, 0, .25);
+@font-normal-color: #666;
+
+@font-big-size: 14px;
+@font-normal-size: 14px;
+@font-small-size: 12px;
+
+@bg-color: #38acff;
+
+/*头部日期显示的颜色*/
+// @datepickerBackground: #5ec9f6;
+// @datepickerFontcolor: #fff;
+
+@datepickerBackground: #fff;
+@datepickerFontcolor: #222;
+
+// -------------以上是历史用到的--------------------------
+// @import '~app/style/variable.less';
+// 整个应用的背景颜色
+@app-background: #f1f1f1;
+// 有内容时的背景颜色
+@item-background: #fff;
+// 左右留白
+@padding-both-sides: .1rem;
+// 边框
+@border: 1px solid #eee;
+// 主题红
+@active-color: #a90101;
+// 正文字体
+.main-font-variable {
+    color: #222;
+    font-size: .13rem;
+}
+// 正文灰色字体
+.main-sub-font-variable {
+    color: #666;
+    font-size: .13rem;
+}
+// 副文字体
+.sub-font-variable {
+    color: #666;
+    font-size: .11rem;
+}
+
+// checkbox选中时的样式
+.app-checkbox-variable {
+    .checkbox-checked .checkbox-inner {
+        border-color: #5d81d1;
+        background-color: #5d81d1;
+    }
+}
+// 模拟 input placeholder字体
+.input-placeholder-variable {
+    color: #999;
+    font-size: .13rem;
+}
+input::-webkit-input-placeholder{
+    font-size: .13rem!important;
+    color: #999!important;
+}
+
+// 蚂蚁 switch 样式调整
+.app-antd-mobile-switch {
+    .checkbox {
+        height: .2rem;
+        width: .38rem;
+    }
+
+    .am-switch .checkbox:before {
+        height: .17rem;
+        width: .35rem;
+    }
+
+    .am-switch .checkbox:after {
+        height: .17rem;
+        width: .17rem;
+    }
+
+    .am-switch input[type="checkbox"]:checked + .checkbox {
+        background: #ff8348;
+    }
+}
+
+// 账套设置和购买页面
+// 表单高度
+@form-item-heigth: .4rem;
+// 表单固有的样式
+.form-common-variable {
+    height: @form-item-heigth;
+    background: @item-background;
+    padding: 0 @padding-both-sides;
+}
+// 不定高表单固有的样式
+.form-common-variable-auto {
+    background: @item-background;
+    padding: .05rem @padding-both-sides;
+}
+// 两个类似表单数据之间要加的一些附标题
+@sub-title-heigth: .3rem;
+// 副标题固有的样式
+.sub-title-common-variable {
+    padding: 0 @padding-both-sides;
+    height: @sub-title-heigth;
+    line-height: @sub-title-heigth;
+}

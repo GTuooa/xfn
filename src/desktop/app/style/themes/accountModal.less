@@ -1,0 +1,51 @@
+.accountConf-modal-list {
+
+    .accountConf-modal-list-item {
+        display: flex;
+        // height: 26px;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 10px 0;
+
+        & > label {
+            width: 100px;
+        }
+
+        & > div {
+            flex: 1;
+            display: flex;
+
+            .ant-select {
+                width: 100%;
+            }
+
+            .ant-checkbox {
+                margin-right: 8px;
+            }
+
+            .ant-input-wrapper {
+                width: 100%;
+            }
+            .ant-calendar-picker {
+                width: 100%;
+            }
+        }
+    }
+
+    .accountConf-modal-list-add-item {
+        & > div {
+            .ant-select {
+                width: 329px;
+            }
+        }
+        .ant-btn {
+            margin-left: 10px;
+        }
+    }
+}
+
+.accountConf-separator {
+    background: #d8d8d8;
+    width: 100%;
+    height: 1px;
+}

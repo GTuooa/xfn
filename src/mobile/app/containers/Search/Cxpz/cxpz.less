@@ -1,0 +1,151 @@
+.cxpz {
+	&-shenhe-icon {
+		position: absolute;
+		left: 1.8rem;
+		top: 0;
+		z-index: 9;
+	}
+	.vc {
+		background-color: white;
+		padding: 0 .1rem;
+		margin: .1rem .05rem;
+		border-radius: .05rem;
+		position: relative;
+
+		&-info {
+			height: .27rem;
+			border-bottom: 1px solid #ddd;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: .12rem;
+			color: #222;
+
+			&-date {
+				font-size: .1rem;
+				color: #999;
+			}
+		}
+		&-info-bottom {
+			border-bottom: 0;
+		}
+
+		&-jv {
+			border-bottom: 1px solid #eee;
+			padding: .05rem 0;
+
+			&-info {
+				display: flex;
+				font-size: .12rem;
+				color: #222;
+				// justify-content: space-between;
+			}
+
+			&-direction {
+				display: flex;
+				flex: 1;
+				word-break:break-all;
+			}
+
+			&-amount {
+				display: flex;
+				margin-left: .05rem;
+			}
+
+			&-ass {
+				font-size: .1rem;
+				color: #666;
+			}
+
+			&-abstract {
+				font-size: .1rem;
+				color: #999;
+			}
+		}
+	}
+	.vc:first-child{
+		margin-top: 0;
+	}
+	.loadingmorevc {
+		display: block;
+		font-size: .12rem;
+		color: #999;
+		width: 100%;
+		text-align: center;
+		margin-bottom: .05rem;
+		background: #eee;
+		border: 0 none;
+	}
+	.cxpz-flex{
+		font-size: .12rem;
+		display: flex;
+		background-color: #fff;
+		align-items: center;
+		justify-content: space-between;
+		padding: .05rem;
+		.overElli{
+			max-width: 90%;
+		}
+		.left{
+			flex: 1.5;
+		}
+		.icon-search{
+			font-size: .2rem;
+			color: #999;
+		}
+		.search-right{
+			border-left: 2px solid #ddd;
+			padding: 0 .05rem;
+			flex: 3;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			.am-search{
+				padding-left: 0;
+				flex: 1;
+				height: auto;
+				background-color: #fff;
+
+				.am-search-synthetic-ph{
+					padding-left: 0;
+				}
+				.am-search-input input[type="search"] {
+					padding-left: 20px;
+				}
+			}
+			.am-search-cancel{
+				display: none;
+			}
+			input::-webkit-input-placeholder {
+				color: transparent !important;
+			}
+			input:-moz-placeholder {
+				color: transparent !important;
+			}
+			input::-moz-placeholder {
+				color: transparent !important;
+			}
+			input:-ms-input-placeholder {
+				color: transparent !important;
+			}
+		}
+	}
+	.cxpz-margin-bottom{
+		margin-bottom: .05rem;
+	}
+}
+
+.vc-jv-ass {
+	&-showtext {
+		margin-left: .45rem;
+		&-tip {
+			position: relative;
+			&:before {
+				position: absolute;
+				content: '辅助核算:';
+				top: 0;
+				left: -.45rem;
+			}
+		}
+	}
+}

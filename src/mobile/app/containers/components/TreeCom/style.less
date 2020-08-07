@@ -1,0 +1,110 @@
+.config-tree-com {
+    .choose-type{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .choose-type-modal,.choose-type-modal-home{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .choose-type-modal{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card-tree{
+            flex: 1;
+            height: calc(100% - 0.38rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    .choose-type-modal-home{
+        top:0.62rem;
+        max-height: 234px;
+        overflow-y: auto;
+    }
+    .tree-com-type-list {
+        width: 100%;
+        height: .35rem;
+        font-size: 0.12rem;
+        color: #333;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 0.1rem;
+        background: #fff;
+        border-bottom: 1px solid #eee;
+
+        .tree-com-touch-range-name{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            & > .tree-com-high-type-name {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+                flex: 1;
+            }
+        }
+        .tree-com-touch-range-icon{
+            width: 0.6rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: right;
+        }
+
+        .swap-position-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+        }
+        .add-type-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+            margin-right: 8px;
+        }
+        .swap-position-block{
+            width: 0.2rem;
+            height: 0.25rem;
+            background-color: #fff;
+        }
+    }
+
+    .touch-type-icon{
+        min-width: 0.5rem;
+        height: 0.28rem;
+        text-align: center;
+        line-height: 0.28rem;
+        .touch-type-icon-transform{
+            transform:rotate(180deg);
+        }
+    }
+    .ac-flag {
+    	position: relative;
+    	margin: .0 .05rem;
+    	height: .08rem;
+
+    	&:after {
+    		content: "";
+    		position: absolute;
+    		top: 0;
+    		right: 0;
+    		width:0;
+    		height:0;
+    		border-width: .04rem .04rem .04rem 0;
+    		border-style:solid;
+    		border-color:transparent #FFF transparent transparent;
+    	}
+    }
+}

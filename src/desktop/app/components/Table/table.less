@@ -1,0 +1,1034 @@
+
+@border          : 1px solid #d9d9d9;
+@bouble-background    : #f4f4f4;
+@hover-bg        : rgba(248, 255, 148, .3);
+@borderLrkc      : 1px solid #555;
+
+.table-contaner {
+    display: flex;
+    width: 100%;
+    flex: 1;
+	padding: 0 20px 0;
+    margin-bottom: 26px; // 谷歌浏览器调节表格高度
+    height: calc(100% - 79px); // 钉钉里调节表格高度
+}
+
+.table-scroll-wrap { // 滚动型外框 外币和数量余额表
+    display: flex;
+    width: 100%;
+    flex: 1;
+	padding: 0 20px;
+    margin-bottom: 26px; // 谷歌浏览器调节表格高度
+    height: calc(100% - 79px); // 钉钉里调节表格高度
+}
+.table-scroll-contaner-wrap {
+    width: 100%;
+    height: 100%;
+    border: @border;
+    overflow-x: scroll;
+    .table-scroll-contaner { // 和上面配套使用
+        position: relative;
+        height: 100%;
+        display: flex;
+    }
+}
+
+.position-contaner {
+    position: absolute;
+	right: 20px;
+	left: 20px;
+	bottom: 35px;
+	top: 52px;
+    zoom: 1;
+    color: #333;
+
+    &:before,
+    &:after {
+      content: " ";
+      display: table;
+    }
+    &:after {
+      clear: both;
+      visibility: hidden;
+      font-size: 0;
+      height: 0;
+    }
+}
+
+.table-max-width-first {
+    min-width: 750px;
+    max-width: 1090px;
+}
+
+.table-max-width-second {
+    min-width: 750px;
+    max-width: 1250px;
+}
+
+.table-max-width-third {
+    min-width: 750px;
+    max-width: 1490px;
+}
+
+//进销存表格样式
+.table-max-width-four {
+    min-width: 750px;
+    max-width: 1250px;
+}
+
+//新版表格样式
+.table-normal-with-new{
+    min-width: 760px;
+    max-width: 1240px;
+}
+.table-normal-width-new{
+    min-width: 760px;
+    max-width: 1280px;
+}
+
+// .table-running-report{
+    // min-width: 760px;
+    // max-width: 1080px;
+// }
+.tabel-card-config{
+    min-width: 800px;
+    max-width: 1120px;
+}
+.table-normal-zccongfig-table {
+    // min-width: 748px;
+    // max-width: 1110px;
+    flex: 748;
+}
+.table-normal-currency-config{
+    // min-width: 588px;
+    // max-width: 790px;
+    flex: 588;
+}
+.table-normal-jxc {
+
+    .table-title-wrap {
+        border-left: @border;
+        border-right: @border;
+        border-top: @border;
+    }
+    .table-title {
+
+        & > li {
+            display: flex;
+            justify-content: center !important;
+            border-left: @border;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+    }
+
+    .table-title {
+        height: 35px;
+        line-height: 35px;
+
+        & > li {
+            overflow: hidden;
+
+            & > span {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
+
+    }
+}
+
+.table-normal {
+    // position: relative;
+    // border: @border;
+    // background: #fff;
+    // width: 100%;
+    // height: 100%;
+    // display: flex;
+    // flex-direction: column;
+    // max-width: 1130px;
+    // float: left;
+
+    position: relative;
+    // border: @border;
+    // background: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // max-width: 1130px;
+    float: left;
+
+    // 表格字体默认值
+    font-size: 12px;
+    color: #333;
+}
+
+.table-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // flex: 1;
+    height: 100%;
+    width: 100%;
+
+    float: left;
+    // 表格字体默认值
+    font-size: 12px;
+    color: #333;
+}
+
+.table-normal,
+.table-wrap {
+
+    .table-title-shadow {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 16px;
+        height: 33px;
+        z-index: 9;
+        background: @bouble-background;
+    }
+
+    .table-bottom-shadow {
+        position: absolute;
+        bottom: 1px;
+        right: 1px;
+        width: 16px;
+        height: 33px;
+        z-index: 9;
+        background: @bouble-background;
+    }
+
+    .table-title-kmye-shadow {
+        position: absolute;
+        z-index: 10;
+        top: 1px;
+        right: 1px;
+        width: 16px;
+        height: 24px;
+        border-bottom: @border;
+        background: @bouble-background;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            top: 24px;
+            right: 0;
+            width: 16px;
+            height: 29px;
+            background: @bouble-background;
+        }
+    }
+    .table-title-szye-shadow {
+        position: absolute;
+        z-index: 10;
+        top: 30px;
+        right: 1px;
+        width: 16px;
+        height: 24px;
+        border-top: @border;
+        background: @bouble-background;
+            &::before{
+                content: '';
+                position: absolute;
+                z-index: 10;
+                top: -30px;
+                right: 0;
+                width: 16px;
+                height: 29px;
+                background: #f4f4f4;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                z-index: 10;
+                top: 23px;
+                right: 0;
+                width: 16px;
+                height: 33px;
+                background: #f4f4f4;
+                border-top: @border;
+            }
+    }
+
+    .table-title-kcmxb-shadow {
+        position: absolute;
+        z-index: 10;
+        top: 1px;
+        right: 1px;
+        width: 16px;
+        height: 30px;
+        border-bottom: @border;
+        background: @bouble-background;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            top: 30px;
+            right: 0;
+            width: 16px;
+            height: 23px;
+            background: @bouble-background;
+        }
+    }
+    .table-title-kcyeb-shadow{
+        position: absolute;
+        z-index: 10;
+        top: 1px;
+        right: 1px;
+        width: 16px;
+        height: 24px;
+        border-bottom: @border;
+        background: @bouble-background;
+        &:before {
+            content: '';
+            position: absolute;
+            z-index: 10;
+            top: 24px;
+            right: 0;
+            width: 16px;
+            height: 32px;
+            background: @bouble-background;
+        }
+    }
+    .table-title-zhye-shadow {
+        position: absolute;
+        z-index: 10;
+        top: 1px;
+        right: 1px;
+        width: 16px;
+        height: 56px;
+        background: @bouble-background;
+    }
+    // .table-title-kmye-shadow1 {
+    //     height: 24px;
+    //
+    // }
+    // .table-title-kmye-shadow2 {
+    //     height: 29px;
+    //     top: 24px;
+    // }
+    .table-title-wrap {
+        border-left: @border;
+        border-right: @border;
+        border-top: @border;
+    }
+
+    .table-title-kmyeb,
+    .table-title-kcyeb,
+    .table-title-kcyebTwo,
+    .table-title-salesYeb,
+    .table-title-salesYebStock,
+    .table-title-kcmxb,
+    .table-title-cgyeb,
+    .table-title-cgyebStock,
+    .table-title {
+
+        & > li {
+            display: flex;
+            justify-content: center !important;
+            border-left: @border;
+            //
+            // overflow: hidden;
+            // white-space: nowrap;
+            // text-overflow: ellipsis;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+    }
+
+    .table-title {
+        height: 35px;
+        line-height: 35px;
+
+        & > li {
+            overflow: hidden;
+            &:last-child {
+                position: relative;
+                z-index: 10;
+            }
+
+            & > span {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: center;
+            }
+        }
+
+    }
+    .table-title-kmyeb-width {
+        & > li {
+            &:nth-child(1) {
+                max-width: 94px;
+    			min-width: 72px;
+                flex: 2;
+            }
+            &:nth-child(2) {
+                min-width: 57px;
+                max-width: 195px;
+                flex: 1;
+            }
+            &:nth-child(3) {
+                flex: 8;
+    			max-width: 960px;
+    			min-width: 640px;
+            }
+        }
+    }
+    .table-title-kmyeb {
+        height: 57px;
+        line-height: 57px;
+        font-size: 12px;
+        color: #333;
+        & > li {
+            &:nth-child(1) {
+    			// max-width: 94px;
+    			// min-width: 72px;
+                // flex: 2;
+                .kmyeDown{
+                    font-size: 14px;
+                    color: #b8b8b8;
+                    margin-left: 2px;
+                }
+                .kmyeUp{
+                    font-size: 13px;
+                    margin-left: 3px;
+                    &:before{
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                // min-width: 57px;
+                // max-width: 195px;
+                // flex: 1;
+                & > span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:nth-child(3) {
+                // flex: 8;
+    			// max-width: 960px;
+    			// min-width: 640px;
+    			padding: 0;
+    			display: flex;
+    			flex-direction: column;
+
+                & > div {
+
+                    display: flex;
+                    flex-direction: row;
+
+                    & > span {
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        border-left: @border;
+
+                        &:first-child {
+                            border-left: 0;
+                        }
+                    }
+                }
+
+                & > div:nth-child(1) {
+                    & > span {
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: @border;
+                    }
+                }
+                & > div:nth-child(2) {
+                    & span {
+                        height: 32px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .table-title-kcmxb {
+        height: 55px;
+        line-height: 54px;
+
+        & > li {
+            &:nth-child(1) {
+                flex: 1;
+            }
+            &:nth-child(2) {
+                flex: 1;
+                overflow: hidden;
+                & > span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:nth-child(3) {
+                flex: 1;
+                overflow: hidden;
+                & > span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:nth-child(4) {
+                flex: 1;
+                overflow: hidden;
+                & > span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            &:nth-child(5) {
+                display: flex;
+                flex-direction: column;
+                flex: 6;
+
+                & > div {
+                    display: flex;
+                    flex-direction: row;
+
+                    & > span {
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        border-left: @border;
+
+                        &:first-child {
+                            border-left: 0;
+                        }
+                    }
+                }
+
+                & > div:nth-child(1) {
+                    & > span {
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: @border;
+                    }
+                }
+                & > div:nth-child(2) {
+                    & span {
+                        height: 30px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.table-kmye {
+    .table-title {
+        height: 54px;
+        line-height: 54px;
+    }
+}
+
+.table-normal-mxb {
+    min-width: 589px;
+    max-width: 950px;
+    font-size: 12px;
+    color: #333;
+    flex: 589;
+}
+.table-normal-kmmxb {
+    min-width: 590px;
+    max-width: 990px;
+    font-size: 12px;
+    color: #333;
+    flex: 590;
+}
+.table-wrap-mutil-column-table{
+    min-width: 1080px;
+    max-width: 1720px;
+    font-size: 12px;
+    color: #333;
+    flex: 590;
+}
+.table-wrap-mutil-column-table-spread{
+    min-width: 3000px;
+    font-size: 12px;
+    color: #333;
+    flex: 590;
+}
+.table-wrap-mxb {
+    min-width: 589px;
+    max-width: 950px;
+    font-size: 12px;
+    color: #333;
+    flex: 589;
+}
+
+.table-wrap-lsmxb {
+    min-width: 760px;
+    max-width: 1280px;
+    font-size: 12px;
+    color: #333;
+    flex: 760;
+}
+.table-wrap-kcmxb {
+    min-width: 910px;
+    max-width: 1390px;
+    font-size: 12px;
+    color: #333;
+    flex: 910;
+}
+// .table-wrap-kcmxb {
+//     min-width: 760px;
+//     max-width: 1280px;
+//     font-size: 12px;
+//     color: #333;
+//     flex: 870;
+// }
+
+.table-normal-max-mxb {
+    min-width: 748px;
+    max-width: 1270px;
+    font-size: 12px;
+    color: #333;
+    flex: 748;
+}
+
+.table-normal-more-max-mxb {
+    min-width: 908px;
+    max-width: 1270px;
+    font-size: 12px;
+    color: #333;
+    flex: 908;
+}
+.table-normal-kcyeb {
+    min-width: 760px;
+    max-width: 1240px;
+    font-size: 12px;
+    color: #333;
+    flex: 589;
+}
+.table-normal-amount-mxb{
+    min-width: 908px;
+    max-width: 1430px;
+}
+
+.table-flex-mxb{
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+}
+
+// .table-config-flex{
+// 	flex: 1;
+// 	padding: 0 20px;
+// 	overflow: hidden;
+// 	display: flex;
+// 	& > .table-normal{
+// 		flex: 1;
+// 		height: auto;
+// 	}
+// }
+
+.table-normal-amountmxb,
+.table-normal-currencyMxb {
+	width: 81%;
+
+}
+
+.table-normal-currencyConfig {
+    width: 68%;
+}
+
+.table-title,
+.table-title-kmyeb,
+.table-title-kcyeb,
+.table-title-kcyebTwo,
+.table-title-salesYeb,
+.table-title-salesYebStock,
+.table-title-kcmxb,
+.table-title-cgyeb,
+.table-title-cgyebStock,
+.ammountyeb-table-title,
+.currencyYeb-table-title,
+.currencyYeb-table-title-spread,
+.currencyYeb-table-title-noSpread,
+.ammountyeb-table-title-spread,
+.ammountyeb-table-title-noSpread ,
+.inventoryyeb-table-title-spread,
+.inventoryyeb-table-title-noSpread,
+.inventoryyeb-table-title-noSpread-other{
+    display: flex;
+    border-bottom: @border;
+    background: @bouble-background;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.table-body {
+    flex: 1;
+    border-left: @border;
+    border-right: @border;
+    border-bottom: @border;
+    background: #fff;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    .table-item-height {
+        height: 36px;
+        line-height: 36px;
+    }
+
+    .table-item {
+        display: flex;
+        flex-direction: row;
+
+        border-bottom: @border;
+
+        & > li {
+            display: flex;
+            justify-content: center;
+            border-left: @border;
+            // padding: 0 4px;
+            overflow: hidden;
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+        .table-item-with-triangle {
+            position: relative;
+            justify-content: flex-start;
+            & > .table-item-triangle-account-wrap {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                padding-right: 10px;
+            }
+            .table-item-triangle {
+                position: absolute;
+                top: 11px;
+                right: 6px;
+                &:hover {
+                    color: #57c5f7;
+                    cursor: pointer;
+                }
+            }
+        }
+        .haveChild{
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .notHave{
+            &:hover {
+                cursor: default;
+            }
+        }
+    }
+
+    // 不定高度度表格
+    .table-item-flex-height {
+        display: flex;
+        flex-direction: row;
+        min-height: 34px;
+        align-items: center;
+        border-bottom: @border;
+
+        & > li {
+            display: flex;
+            justify-content: center;
+            border-left: @border;
+            // padding: 0 4px;
+
+
+            &:first-child {
+                border-left: 0;
+            }
+        }
+    }
+
+    .table-item-color {
+        background: @bouble-background;
+    }
+    .table-item,
+    .table-item-color,
+    .vc-table-item {
+        &:hover {
+            background: @hover-bg;
+        }
+    }
+    .table-item,
+    .vc-table-item {
+        .table-item-cur{
+            text-decoration: underline;
+        }
+        &:hover {
+            .table-item-cur {
+                cursor: pointer;
+            }
+        }
+        .table-item-cur:hover {
+            color: #52c2ec;
+        }
+    }
+    .table-item-underline{
+        text-decoration: underline;
+    }
+}
+
+.vc-table-item {
+    border-bottom: @border;
+    display: flex;
+
+    & > li {
+        border-left: @border;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        & > .table-item-line,
+        & > .table-item-line-amonut {
+
+            height: 34px;
+            line-height: 34px;
+            border-bottom: @border;
+
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            padding: 0 0 0 4px;
+
+            &:last-child {
+                border-bottom: 0;
+                height: 33px;
+                line-height: 33px;
+            }
+        }
+        & > .table-item-line-amonut {
+            padding: 0 4px 0 0;
+
+        }
+
+    }
+    & > li:nth-child(1) {
+        border-left: 0;
+    }
+}
+
+
+.over-ellipsis {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.table-tree-container {
+    display: flex;
+    float: left;
+    min-width: 162px;
+    max-width: 280px;
+    background: #fff;
+    border: @border;
+    margin-left: 10px;
+    flex-direction: column;
+    position: relative;
+    flex: 162;
+    padding: 10px;
+    .table-right-table-input-search {
+        position: absolute;
+        top: 20px;
+        left: 16px;
+    }
+    .input-with-setting{
+        width: calc(100% - 28px);
+    }
+
+    // 齿轮
+    .icon-right-add-type{
+    	font-size: 18px;
+    	position: absolute;
+    	top:14px;
+    	right: 10px;
+    	cursor: pointer;
+    }
+}
+
+
+.table {
+	&-right{
+		&-tree{
+
+			flex: 1;
+			border:@border;
+			overflow: auto;
+
+            &:nth-child(3){
+                flex: 2;
+            }
+
+            &:nth-child(4){
+                margin-top: 10px;
+            }
+
+            ul{
+                font-size: 12px;
+                li{
+                    font-size: 12px;
+                    color: #333;
+                    span{
+                        color: #333;
+                    }
+                }
+            }
+            &-title {
+                height: 34px;
+                line-height: 34px;
+                padding-left: 4px;
+                font-size: 13px;
+                border-bottom: @border;
+                background: @bouble-background;
+            }
+            .ant-tree li{
+                padding: 4px 0 0 0;
+            }
+            & > div{
+                & > ul{
+                    & > li{
+                        .ant-tree-switcher {
+                            width: 12px;
+                        }
+                        ul{
+                            padding-left: 13px;
+                        }
+                    }
+                }
+            }
+		}
+	}
+
+
+    &-right-table-input {
+
+        .ant-select-selection {
+            .ant-select-selection__rendered {
+                margin-left: 20px;
+                font-size: 12px;
+                color: #333;
+                .ant-select-search {
+                    .ant-select-search__field__wrap {
+                        .ant-select-search__field__placeholder {
+                            left: 22px;
+                        }
+                    }
+                }
+            }
+        }
+    	width: 100%;
+        margin-bottom: 10px;
+        height: 32px;
+    	span{
+    		width: 100%;
+    	}
+    }
+
+}
+
+.table-pagination-wrap {
+    height: 35px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+//pageSize高度修改
+.ant-pagination-pagesize{
+    .ant-select-selection{
+        height: 32px;
+        line-height: 32px;
+        padding-top: 2px;
+    }
+}
+
+.lrkc{
+    .table-title-wrap {
+        border-left: @borderLrkc;
+        border-right: @borderLrkc;
+        border-top: @borderLrkc;
+    }
+    .table-title {
+        border-bottom: @borderLrkc;
+        & > li {
+            border-left: @borderLrkc;
+        }
+    }
+    .table-body {
+        flex: 1;
+        border-left: @borderLrkc;
+        border-right: @borderLrkc;
+        border-bottom: @borderLrkc;
+        .table-item {
+            border-bottom: @borderLrkc;
+            & > li {
+                border-left: @borderLrkc;
+                &:first-child {
+                    border-left: 0;
+                }
+            }
+        }
+    }
+}
+.table-item-triangle-account-wrap:hover{
+    cursor: pointer;
+}
+
+.page-bottom-table-select{
+    display: flex;
+    border-bottom: @border;
+    border-left: @border;
+    border-right: @border;
+    height: 48px;
+    line-height: 48px;
+    padding-left: 4px;
+    & > .table-pagination{
+        display: flex;
+        flex: 2;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    & > .table-pagination-other{
+        flex: 1;
+    }
+
+    .ant-pagination-prev,
+    .ant-pagination-next,
+    .ant-pagination-jump-prev,
+    .ant-pagination-jump-next,
+    .ant-pagination-item{
+        min-width: 26px;
+        height: 26px;
+        line-height: 26px;
+        margin-right: 4px;
+    }
+    // .anticon{
+    //     vertical-align: 0.145em;
+    // }
+    .page-bottom-table-pagesize{
+        min-width: 60px;
+    }
+}

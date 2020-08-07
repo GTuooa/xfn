@@ -1,0 +1,95 @@
+@import '~app/style/themes/common.less';
+
+@jz:jz;
+.@{jz}{
+	&-list{
+		width: 100%;
+		min-width: 300px;
+		// max-width: 870px;
+		height: auto;
+		margin-bottom: 10px;
+		.clearfix;
+		line-height: 28px;
+		& > div{
+			float: left;
+		}
+		&-left{
+			width: 30%;
+		}
+		&-right{
+			padding: 0 5px;
+			border-radius: 5px;
+			width: 70%;
+			border: @border;
+		}
+	}
+	&-uses-tip{
+		margin: 5px 20px;
+	}
+	&-rate {
+		padding-left: 10px;
+		font-size: 13px;
+		line-height: 30px;
+		&>span:nth-child(1) {
+			color: #555555;
+			cursor: pointer;
+		}
+		&-circle {
+			display: inline-block;
+			width: 17px;
+			height: 17px;
+			border: 1px solid #cccccc;
+			border-radius: 50%;
+			margin: 0px 5px;
+		}
+	}
+}
+.jzlayer{
+	margin: 0 20px;
+	border: @border;
+	background: @body-table-bg;
+	padding: 10px 10px 0 10px;
+	max-width: 1090px;
+	min-width: 368px;
+}
+
+.rate-tabel-width {
+	& > li{
+        &:nth-child(1) {
+            width: 110px;
+        }
+		&:nth-child(2) {
+            flex: 2;
+			padding-left: 2px;
+			justify-content: flex-start;
+        }
+		&:nth-child(3),
+		&:nth-child(4) {
+			padding-right: 2px;
+			min-width: 180px;
+			flex: 1;
+		}
+		&:nth-child(4) {
+			align-items: center;
+		}
+    }
+	.ant-input-wrapper {
+		display: block;
+		width: 100%;
+    	text-align: center;
+	}
+	&-input {
+		width: 85%;
+		text-align: right;
+	}
+}
+.table-jz-wrap .table-body .rate-tabel-item-none {
+	display: none;
+}
+
+.table-jz-wrap .rate-tabel-width > li:nth-child(3) {
+	justify-content: flex-end;
+}
+.table-jz-wrap {
+	margin-top: 10px;
+}

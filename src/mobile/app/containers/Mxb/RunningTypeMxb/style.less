@@ -1,0 +1,178 @@
+.running-type-mxb{
+    font: .12rem/1.5 PingFangSC-Regular, 'Microsoft YaHei','微软雅黑',arial,simsun;
+    background-color: #F1F1F1;
+    .running-type-mxb-select{
+        display: flex;
+        background-color: #fff;
+        font-size: 14px;
+        padding: 1px 0;
+        .select-account{
+            display: flex;
+            flex: 3;
+            border-right: 1px solid #ddd;
+            padding: 0 5px;
+            align-items: center;
+            & > div {
+                flex: 1;
+                .row{
+                    display: flex;
+                    align-items: center;
+                    white-space: nowrap;
+                    & > span{
+                        flex:9;
+                    }
+                    & > i {
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        .select-category{
+            display: flex;
+            flex: 5;
+            padding: 0 5px;
+            align-items: center;
+            .select-category-box{
+                flex: 1;
+                padding: 7px 5px;
+                .antd-single-picker{
+                    height: auto;
+                }
+                & > div {
+                    flex: 1;
+                    & > div{
+                        display: flex;
+                        align-items: center;
+                        white-space: nowrap;
+                        height: 100%;
+                        & > span {
+                            flex: 9;
+                        }
+                        & > i{
+                            flex: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .item-title-qc{
+        display: flex;
+        left:0;
+        padding: 0 .1rem 0 .1rem;
+        height: .3rem;
+        line-height: .3rem;
+        background: #FFDBA6;
+        font-size: .12rem;
+        color: #222;
+
+        & >.qc-title-item {
+            text-align: right;
+            width: 0;
+            &:nth-child(1){
+                flex:1;
+                text-align: left;
+            }
+            &:nth-child(2){
+                flex:2;
+            }
+            .qc-title-direction{
+                color: #948f8f;
+            }
+        }
+    }
+    .ba {
+        @vertical-padding: .04rem;
+        background: #fff;
+        // border-top: 1px solid #eee;
+        margin-bottom: 1px;
+        padding: 0 .1rem @vertical-padding .1rem;
+        // padding: 0.01rem .1rem .04rem 0;
+
+        &-title {
+            display: flex;
+            left:0;
+            padding: 0 .1rem 0 0;
+            height: .3rem;
+            line-height: .3rem;
+            background: #FFDBA6;
+            font-size: .13rem;
+            color: #222;
+
+            &-item {
+                text-align: right;
+                flex:1;
+                width: 0;
+            }
+        }
+
+
+        & > div {
+            display: flex;
+            color: #999;
+            font-size: .12rem;
+            justify-content: space-between;
+
+            & > .name {
+                display: flex;
+                flex: 10;
+                color: #999;
+                font-size: .12rem;
+                padding: .07rem 0 .01rem;
+                word-break:break-all;
+                flex-direction: row;
+
+                .ba-flag {
+                    display: flex;
+                    position:relative;
+                    margin: .05rem .05rem 0 0;
+                    height: .08rem;
+                    background: #D1C0A5;
+                    bottom: .01rem;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 0;
+                        height: 0;
+                        border-width: .04rem .03rem .04rem 0;
+                        border-style:solid;
+                        border-color:transparent #FFF3E3 transparent transparent;
+                    }
+                }
+            }
+            & > .name-asscategory {
+                text-decoration: none;
+            }
+
+            & > .btn {
+                display: flex;
+                flex: 1;
+                min-width: .12rem;
+                justify-content: flex-end;
+                align-items: center;
+                color: #b4b4b4;
+            }
+            &.ba-info span {
+                display: flex;
+                justify-content: center;
+                width: 0;
+                flex: 1;
+                color: #222;
+                font-size: .11rem;
+                align-items: flex-end;
+                &:nth-child(1){
+                    justify-content: flex-start;
+                }
+                &:nth-child(3),&:nth-child(4){
+                    justify-content: flex-end;
+                    flex: 2;
+                }
+            }
+
+
+        }
+    }
+}

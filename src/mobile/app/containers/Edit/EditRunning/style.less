@@ -1,0 +1,643 @@
+@import '~app/style/public.less';
+@import '~app/style/theme.less';
+
+.edit-running{
+    font-size: .12rem;
+    color: #222;
+    background-color: #F1F1F1;
+    .antd-single-picker{
+        height: auto;
+    }
+    .topBarSwitch{
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: 6px;
+    }
+    .threeTextSwitch,
+    .fourTextSwitch{
+        margin-left: 6px;
+    }
+    .accountSwitch{
+        .switch-text-switch{
+            background-color: #d8d8d8;
+        }
+    }
+    .choose-type-modal-home{//核算管理结转损益 折旧摊销选类别用
+        top: 0;
+        height: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        .tree-com{
+            flex: 1;
+            overflow-y: auto;
+        }
+    }
+    .lrls{
+        &-account{//账户专用
+            height: 32px;//.27rem;
+            line-height: 32px;//.27rem;
+            & > i{
+                color: #222;
+            }
+            & > span{
+                flex: 1;
+            }
+        }
+        &-home-account{
+            & > div{
+                padding-right: 10px;
+            }
+        }
+        &-bottom-line{
+            border-bottom: 1px solid @theme-gray;
+        }
+        &-margin-left{
+            margin-left: 10px;
+        }
+        &-more-account{
+            & > div{
+                padding: 0 10px;
+                border: @border;
+            }
+        }
+        &-single{
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+    .lrls-row{
+        background-color: @bgColor;
+        margin-bottom: 6px;
+        padding: 6px 10px;
+    }
+
+    .lrls-type{//类别专用
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .row,
+        & > div{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid @theme-gray;
+            padding: 6px;
+            overflow: hidden;
+            & > i{
+                font-size: 13px;
+            }
+            & > span{
+                flex: 1;
+                overflow: hidden;
+                white-space:nowrap;
+                text-overflow:ellipsis;
+            }
+        }
+        .row{
+            border: none;
+            padding: 0;
+        }
+        & > label{
+            width: .6rem;
+        }
+    }
+
+    .lrls-category{//下拉专用
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: @border;
+        & > span{
+            flex: 1;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+        & > i{
+            color: #222;
+            font-size: 13px;
+        }
+    }
+
+    .lrls-card{
+        background-color: @bgColor;
+        margin-bottom: 6px;
+        padding: 10px;
+
+        .radio-group{
+            padding-left: .6rem;
+            justify-content: space-between;
+            .radio-wrapper{
+                flex: 1;
+                margin-right: 0;
+                padding-top: 10px;
+                .radio-text{
+                    padding: 0 5px;
+                    height: 17px;
+                }
+            }
+        }
+        .radio-list-double{
+            justify-content: flex-start;
+            .radio-wrapper{
+                width: 33.3%;
+                flex: none;
+            }
+        }
+    }
+
+    .lrls-line{//摘要
+        display: flex;
+        align-items: center;
+        & > label{
+            width: .6rem;
+            align-self: flex-start;
+        }
+        .antd-mobile-text-input-wrap{
+            flex: 1;
+        }
+        .am-list-item {
+            padding-left: 2px;
+        }
+        .am-input-control{
+            border-bottom: 1px solid @theme-gray;
+        }
+
+        .am-list-item{
+            line-height: normal;
+        }
+        .my-textarea{
+            flex: 1;
+            padding-bottom: 5px;
+            border-bottom: 1px solid @theme-gray;
+            .am-list-body:after,
+            .am-list-body:before{
+                height: 0;
+            }
+        }
+
+    }
+
+    .lrls-margin-bottom{
+        margin-bottom: 4px;
+    }
+    .lrls-bottom{
+        margin-bottom: 10px;
+    }
+
+    .lrls-margin-top{
+        margin-top: 10px;
+    }
+    .lrls-card-bottom{
+        margin-bottom: 6px;
+    }
+
+    .lrls-padding-top{
+        padding-top: 10px;
+    }
+    .lrls-padding{
+        padding: 6px;
+    }
+    .lrls-padding-right{
+        padding-right: 10px;
+    }
+    .lrls-one-third{
+        min-width: 33.3%;
+    }
+
+    .margin-top-bot{
+        margin: 10px 0;//.05rem 0;
+    }
+    .lrls-placeholder{//灰色
+        color: #999;
+    }
+    .lrls-blue{
+        color: #5e81d1;
+    }
+
+    .yysr-amount{
+        display: flex;
+        align-items: center;
+        & > div,
+        & > span {
+            flex: 1;
+        }
+        & > div {
+            margin-left: 10px;
+            padding-left: 10px;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            border: @border;
+        }
+        & > .antd-mobile-text-input-wrap{//span
+            margin-left: 0px;//新增
+            padding-left: 0px;//新增的
+
+            border: @border;
+            .am-list-item {
+                padding-left: 10px;
+
+                .am-list-line{
+                    overflow: auto;
+                }
+            }
+        }
+        .amount{
+            border: none;
+            padding-right: 10px;
+        }
+        .antd-single-picker,
+        .lrls-single{
+            padding-right: 6px;//原来10px
+            margin-left: 0;
+        }
+        & > div:nth-child(3) {
+            padding-right: 6px;//原来10px
+            flex: 1.5;
+            margin-left: 10px;
+        }
+        .am-list-item{
+            overflow-y: auto;
+            line-height: normal;
+        }
+        & > label{
+            width: .6rem;
+        }
+        .chey-serial{
+            border: none;
+            margin-left: 0; 
+            padding-left: 0;
+        }
+    }
+
+    .yysr-carryover{//结转成本
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .yysr-bill{//发票
+        display: flex;
+        align-items: center;
+        & > div{
+            flex: 1;
+            overflow: hidden;
+        }
+    }
+    .jt-amount{//计提金额
+        padding: 6px 0;
+        text-align: right;
+        .select-color{
+            color: @theme-blue;
+        }
+    }
+    .lrls-button{
+        border: @border;
+        border-radius: 6px;
+        padding: 6px 10px;
+        color: #858e99;
+        display: inline-block;
+        background-color: @bgColor;
+        font-size: .14rem;
+        &-wrap{
+
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+    .lrls-modify-button{
+        border: @border;
+        border-radius: 6px;
+        padding: 6px 10px;
+        color: #858e99;
+        display: inline-block;
+        background-color: @bgColor;
+        margin-top: .1rem;
+    }
+    .text-align-center{
+        text-align: center;
+    }
+    .lrls-duble-category{
+        display: flex;
+        margin-top: 6px;
+        & > div{
+            flex: 1;
+            overflow: hidden;
+            &:nth-child(1){
+                border-right: 2px solid #999;
+                padding-right: 10px;
+            }
+            &:nth-child(2){
+                padding-left: 10px;
+            }
+        }
+    }
+    .lrls-flex{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > .icon {
+            margin-top: -6px;
+            font-size: .13rem;
+        }
+        & > div{
+            margin-right: 10px;
+            flex: 1;
+            &:nth-child(2){
+                display: flex;
+                align-items: center;
+                & > span{
+                    border: @border;
+                    flex: 1;
+                }
+            }
+
+        }
+    }
+    .lrls-more-card{//选择项目 往来 存货卡片时用
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & > label{
+            width: .6rem;
+        }
+        .antd-single-picker{
+            flex: 1;
+            overflow: hidden;
+        }
+        .antd-mobile-text-input-wrap{
+            flex: 1;
+            .am-list-item {
+                padding-left: 10px;
+                border: @border;
+                // .am-list-line{
+                //     overflow: auto;
+                // }
+            }
+        }
+    }
+    .lrls-jzsy{//结转损益字数较长
+        & > label{
+            width: .85rem;
+        }
+    }
+
+    .lrls-switch,
+    .lrls-type{//项目的按钮样式
+        .switch-text-switch{
+            background-color: #fff;
+            border: 1px solid #ccc;
+            &:after{
+                box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
+            }
+        }
+        .switch-text-switchChecked {
+            border: 1px solid #FF8348;
+            background-color: #FF8348;
+        }
+    }
+    .zjtx{
+        .lrls-card{
+            padding: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .jr-title{
+        padding: .08rem;
+        text-align: center;
+        position: relative;
+        color: #666666;
+        border-bottom: 1px solid @theme-gray;
+        .jr-cancel{
+            position: absolute;
+            right: .08rem;
+            top:.08rem;
+            color: #5e81d1;
+        }
+    }
+    .jr-card{
+        background-color: @bgColor;
+        padding: 0 .08rem .03rem;
+        .jr-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: .03rem;
+            &-item{
+                flex: 1;
+            }
+        }
+        .jr-line{
+            border-bottom: 1px dashed #E8E8E8;
+            padding-bottom: .03rem;
+        }
+        .sfgl-input{
+            margin:.06rem 0rem;
+            .antd-mobile-text-input-wrap{
+                .am-list-item {
+                    padding-left: 5px;
+                    [name=antd-mobile-text-input]{
+                        font-size: .1rem;
+                    }
+                }
+            }
+        }
+        .sfgl-input-left{
+            margin-right: .03rem;
+        }
+        .sfgl-input-right{
+            margin-left: .03rem;
+        }
+    }
+    .hx-title{
+        padding: .05rem 0;
+    }
+    .hx-top-line{
+        border-top: 1px solid @theme-gray;
+    }
+    .dashed-line{
+        border-top: 1px solid @theme-gray;//dashed
+        padding-bottom: .03rem;
+    }
+    .hx-bold{
+        font-weight: bold;
+        font-size: .13rem;
+    }
+    .lrls-stock-bottom{
+        display: flex;
+        align-items: center;
+        .noTextSwitch{
+            margin-left: .2rem;
+        }
+    }
+    .xfn-tree-popup{
+        .scroll-view{
+            padding: 0 .08rem;
+            background-color: #FFF;
+            .jr-card{
+                padding: 0 0 .03rem;
+                // border-bottom: 1px solid @theme-gray;
+                .border_bottom(@theme-gray);
+            }
+        }
+    }
+    .am-list-item{
+        height: 32px !important;
+    }
+    .right{
+        text-align: right;
+    }
+    .center{
+        text-align: center;
+    }
+    .sfgl{
+        background-color: #FFF;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #E8E8E8;
+        .left-line{
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 20px;
+                background-color: #E8E8E8;
+                left: 0;
+                top: 5px;
+            }
+        }
+        .zszf-single{
+            position: relative;
+            padding: 0 .1rem;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 20px;
+                background-color: #E8E8E8;
+                right: 0;
+                top: 5px;
+            }
+        }
+        &-name{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            .overElli{
+                flex: 1;
+            }
+        }
+        &-item{
+            flex: 1;
+            overflow: hidden;
+        }
+        &-search{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 .1rem;
+        }
+        &-search-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 .1rem;
+            .xfn-multiple-input{
+                flex: 1;
+                padding-right: .1rem;
+                .am-list-item{
+                    border: none;
+                }
+            }
+            .xfn-multiple-cancel{
+                color: #5e81d1;
+            }
+            .icon{
+                color: #222;
+                font-size: .2rem;
+            }
+        }
+    }
+    .code-repeat-select{
+		flex: 1;
+		.radio-group {
+			flex-direction: column;
+			padding-left: 0.1rem;
+			.radio-wrapper{
+				font-size: 0.12rem;
+				color: #333;
+				&:nth-child(1){
+					margin-bottom: 0.1rem;
+				}
+			}
+		}
+	}
+    .text-decoration{
+        text-decoration: underline;
+        color: #5E81D1;
+    }
+    .title-left{
+        display: inline-block;
+        width: .6rem;
+    }
+    .lrls-poundage{
+        border: @border;
+        flex: 1;
+        padding: .08rem 0 .08rem .08rem;
+        position: relative;
+        border-radius: .03rem;
+
+        .triangle{
+            width: 0;
+            height: 0;
+            border-top: .2rem solid #FF8348;
+            border-left: .2rem solid transparent;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .icon{
+            color: #FFF;
+            font-size: .1rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    .sn{
+        &:before{
+            content: 'SN';
+            border: 1px solid #5e81d1;
+            font-size: .1rem;
+            color: #5e81d1;
+            display: inline-block;
+            height: .11rem;
+            line-height: .11rem;
+            border-radius: .02rem;
+            font-weight: 100;
+        }
+    }
+    .serial{
+        text-align: right;
+        text-decoration: underline;
+        color: #5e81d1;
+    }
+    .ggfyft{
+        background-color: #fff;
+        .item{
+            padding: .08rem;
+            text-align: center;
+        }
+        .active{
+            color: #5e81d1;
+            border-bottom: 2px solid #5e81d1;;
+        }
+    }
+}

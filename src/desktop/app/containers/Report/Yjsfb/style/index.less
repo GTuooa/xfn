@@ -1,0 +1,78 @@
+@import '~app/style/themes/common.less';
+
+.sfb-table-width {
+	& > li{
+		&:nth-child(1) {
+            min-width: 518px;
+			max-width: 838px;
+			flex: 518;
+			justify-content: flex-start;
+			padding-left: 4px;
+        }
+        &:nth-child(2),
+		&:nth-child(3) {
+			min-width: 120px;
+			max-width: 120px;
+			flex: 120;
+			& > span {
+				text-align: right;
+				padding-right: 4px;
+			}
+        }
+    }
+}
+
+.sfb-ruler-wrap {
+	max-height: 310px;
+	overflow-y: auto;
+}
+
+.title-sfb-rule {
+	color: #38acff;
+	margin-left: 8px;
+	cursor: pointer;
+	text-decoration: underline;
+	line-height: 28px;
+}
+
+.yjsfb{
+	font-size: 12px;
+	color: #333;
+	// min-width: 800px;
+	// max-width: 1120px;
+	.title{
+		.ant-select-selection--single{
+			height: 28px;
+			.ant-select-selection__rendered{
+				line-height: 28px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+	}
+	.title-checkboxtext{
+		margin-left: 8px;
+		& > span{
+			line-height: 28px;
+			padding-right: 0px;
+		}
+	}
+	.refresh-btn{
+		height: 28px;
+		border-radius: 6px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	    color: #222;
+	    background: #fff;
+	    margin-left: 10px;
+	}
+	.title-dropdown{
+		color: #222;
+		background: #fff;
+	}
+
+	.table-title{
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+}

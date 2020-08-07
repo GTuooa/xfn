@@ -1,0 +1,273 @@
+@border          : 1px solid #d9d9d9;
+@bouble-background    : #f4f4f4;
+@hover-bg        : rgba(248, 255, 148, .3);
+@borderLrkc      : 1px solid #555;
+
+.sob-role-wrap {
+    .sob-role-table-wrap {
+        display: flex;
+        // flex: 1;
+        height: 100%;
+        width: 100%;
+        // 表格字体默认值
+        font-size: 12px;
+        color: #333;
+
+        .ant-checkbox-wrapper, 
+        .ant-radio-wrapper {
+            font-size: 12px;
+            color: #333;
+            font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
+        }
+        .ant-radio-wrapper {
+            margin-right: 60px;
+        }
+
+        .sob-role-list-wrap {
+            flex: 1;
+            min-width: 140px;
+            border: @border;
+            margin-right: 10px;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+
+            .sob-role-list {
+                flex: 1;
+                height: 0;
+                overflow-y: scroll;
+                padding: 10px 10px 60px;
+
+                .sob-role-item,
+                .sob-role-item-current {
+                    display: flex;
+                    align-items: center;
+                    height: 24px;
+                    width: 100%;
+                    border-radius: 2px;
+                    padding: 0 4px;
+                    margin-bottom: 8px;
+
+                    .sob-role-item-name {
+                        flex: 1;
+                        width: 0;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    } 
+                }
+                .sob-role-item-current {
+                    background: #bae7ff;
+                }
+                .sob-role-item {
+                    &:hover {
+                        background: #e5f8ff;
+                    }
+                }
+            }
+            .sob-role-new-wrap {
+                height: 55px;
+                text-align: center;
+                line-height: 55px;
+            }
+            .sob-role-new-btn {
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                padding: 0 10px;
+                border-radius: 5px;
+                color: #1790ff;
+                box-shadow: 2px 2px 10px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
+        .sob-role-detail-wrap {
+            flex: 4;
+            border: @border;
+            background: #fff;
+            min-width: 953px;
+            display: flex;
+            flex-direction: column;
+
+            .sob-role-detail-title-wrap {
+                display: flex;
+                height: 55px;
+                align-items: center;
+                border-bottom: @border;
+                padding: 0 20px;
+
+                .sob-role-detail-title {
+                    flex: 1;
+                    font-size: 14px;
+                }
+                .sob-role-detail-title-btn {
+                    margin-left: 8px;
+                }
+            }
+            .sob-role-detail-list-wrap {
+                padding: 0 20px;
+                font-size: 12px;
+                color: #333;
+                flex: 1;
+                height: 0;
+                overflow-y: scroll;
+
+                .sob-role-detail-item {
+                    display: flex;
+                    border-bottom: 1px solid #ddd;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                }
+                .sob-role-detail-item-title {
+                    width: 162px;
+                    line-height: 40px;
+                }
+                .sob-role-detail-item-wrap {
+                    flex: 1;
+                }
+                .sob-role-detail-item-radio-wrap {
+                    display: flex;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                .sob-role-detail-item-checkbox {
+                    border-top: 1px solid #ddd;
+                    height: 40px;
+                    line-height: 40px;
+                    display: flex;
+
+                    .ant-checkbox-wrapper + .ant-checkbox-wrapper {
+                        margin-left: 45px;
+                    }
+                }
+                .sob-role-detail-item-range-wrap {
+                    // height: 40px;
+                    line-height: 32px;
+                    display: flex;
+                    margin-bottom: 10px;
+                }
+                .sob-role-detail-item-placehoder {
+                    display: inline-block;
+                    width: 165px;
+                }
+                .sob-role-detail-item-range {
+                    flex: 1;
+                    text-align: right;
+                    text-decoration: underline;
+                }
+                .sob-role-detail-item-range-disabled {
+                    color: #ccc;
+                }
+            }
+        }
+    }
+}
+.sob-role-edit-wrap {
+    display: flex;
+    align-items: center;
+    .sob-role-edit-lable {
+        width: 100px;
+    }
+    .sob-role-edit-input {
+        width: 100%;
+    }
+}
+
+.sob-role-detail-input-lable-right {
+    margin-left: 10px;
+}
+.sob-role-detail-input {
+    display: inline-block;
+    flex: 1;
+    position: relative;
+   
+    .sob-role-detail-input-item-wrap {
+        min-height: 32px;
+        cursor: text;
+        padding-bottom: 3px;
+        zoom: 1;
+
+        outline: none;
+        user-select: none;
+        box-sizing: border-box;
+        display: flex;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #d9d9d9;
+        border-top-width: 1.02px;
+        transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        .approval-card-input-item-container {
+            margin-left: 5px;
+            margin-right: 20px;
+            margin-bottom: -3px;
+            height: auto;
+            line-height: 30px;
+
+            & > li {
+                user-select: none;
+
+                color: rgba(0, 0, 0, 0.65);
+                background-color: #fafafa;
+                border: 1px solid #e8e8e8;
+                border-radius: 2px;
+                cursor: default;
+                float: left;
+                margin-right: 4px;
+                max-width: 99%;
+                position: relative;
+                overflow: hidden;
+                transition: padding 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+                padding: 0 20px 0 10px;
+
+                margin-top: 3px;
+                height: 24px;
+                line-height: 22px;
+
+                .anticon {
+                    font-size: 12px;
+                    font-style: normal;
+                    vertical-align: -0.125em;
+                    text-align: center;
+                    text-transform: none;
+                    line-height: 0;
+                    text-rendering: optimizeLegibility;
+                    color: rgba(0, 0, 0, 0.45);
+                    line-height: inherit;
+                    cursor: pointer;
+                    font-weight: bold;
+                    transition: all 0.3s;
+                    display: inline-block;
+                    font-size: 12px;
+                    font-size: 10px;
+                    transform: scale(0.83333333) rotate(0deg);
+                    position: absolute;
+                    right: 4px;
+                    top: 1px;
+                }
+            }
+        }
+        
+    }
+    &:hover .sob-role-detail-chosen-word {
+        color: #40a9ff;
+    }
+    .sob-role-detail-chosen-word {
+        position: absolute;
+        top: 0;
+        right: 7px;
+        color: #999;
+        &:hover {
+            cursor: pointer;
+        }
+    }  
+}
+.sob-role-detail-self-checkbox {
+    margin-left: 9px;
+}
+.sob-role-detail-delete-icon {
+    font-size: 14px;
+    padding: 9px 5px 0;
+}

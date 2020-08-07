@@ -1,0 +1,45 @@
+@TextInput-height: .27rem;
+
+// 调整 蚂蚁的金额和文字输入框的样式
+// 调整为 高度为 @TextInput-height，字体大小为 .12rem, 只有左边距，为 .15rem
+
+.antd-single-picker {
+    width: 100%;
+}
+
+.am-list-item {
+    width: 100%;
+    min-height: .15rem;
+    height: @TextInput-height !important;
+	line-height: @TextInput-height;
+
+    .am-input-control .fake-input-container .fake-input {
+        height: @TextInput-height;
+		line-height: @TextInput-height;
+		font-size: .12rem;
+    }
+
+    .am-input-control .fake-input-container .fake-input-placeholder {
+        font-size: .12rem;
+        color: #999;
+    }
+
+
+    .am-input-control {
+        input {
+            font-size: .12rem;
+        }
+    }
+
+    .am-list-line::after {
+        height: 0 !important;
+    }
+}
+
+.am-list-item .am-list-line {
+    padding-right: 0;
+}
+
+.am-list-item.am-input-item {
+    padding-left: .15rem;
+}

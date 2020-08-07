@@ -1,0 +1,621 @@
+@import '~app/style/public.less';
+@import '~app/style/theme.less';
+
+.lrls{
+    font-size: .12rem;
+    color: #222;
+    .antd-single-picker{
+        height: auto;
+    }
+    &-account{//账户专用
+        height: .27rem;
+        line-height: .27rem;
+        & > i{
+            color: #222;
+        }
+        & > span{
+            flex: 1;
+        }
+    }
+    &-home-account{
+        & > div{
+            padding-right: 10px;
+        }
+    }
+    &-bottom-line{
+        border-bottom: 1px solid @theme-gray;
+    }
+    &-margin-left{
+        margin-left: 10px;
+    }
+    &-more-account{
+        & > div{
+            padding: 0 10px;
+            border: @border;
+        }
+    }
+
+    .topBarSwitch{
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-left: 6px;
+    }
+    .threeTextSwitch{
+        margin-left: 6px;
+    }
+    .switch-text-switch{
+        height: 25px;
+        line-height: 23px;
+        &:after{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .switch-text-switchChecked {
+        height: 25px;
+        line-height: 23px;
+        &:after{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .choose-type-modal-home{//核算管理结转损益 折旧摊销选类别用
+        top: 0;
+        height: 100%;
+        max-height: 100%;
+        display: flex;
+        flex-direction: column;
+        .tree-com{
+            flex: 1;
+            overflow-y: auto;
+        }
+    }
+}
+.lrls-row{
+    background-color: @bgColor;
+    margin-bottom: 6px;
+    padding: 6px 10px;
+}
+
+.lrls-type{//类别专用
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding: .08rem;
+    .row,
+    & > div{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid @theme-gray;
+        padding: 6px;
+        overflow: hidden;
+        & > i{
+            font-size: 13px;
+        }
+        & > span{
+            flex: 1;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow:ellipsis;
+        }
+    }
+    .row{
+        border: none;
+        padding: 0;
+    }
+}
+
+.lrls-category{//下拉专用
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: @border;
+    & > span{
+        flex: 1;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+    & > i{
+        color: #222;
+        font-size: 13px;
+    }
+}
+
+.lrls-card{
+    background-color: @bgColor;
+    margin-bottom: 6px;
+    padding: 10px;
+
+    .radio-group{
+        padding-top: 10px;
+        justify-content: center;
+        .radio-wrapper{
+            margin-right: .2rem;
+        }
+    }
+}
+
+.lrls-line{//摘要
+    display: flex;
+    align-items: center;
+    & > label{
+        width: .6rem;
+        align-self: flex-start;
+    }
+    .antd-mobile-text-input-wrap{
+        flex: 1;
+    }
+    .am-list-item {
+        padding-left: 2px;
+    }
+    .am-input-control{
+        border-bottom: 1px solid @theme-gray;
+    }
+
+    .am-list-item{
+        line-height: normal;
+    }
+    .my-textarea{
+        flex: 1;
+        padding-bottom: 5px;
+        border-bottom: 1px solid @theme-gray;
+        .am-list-body:after,
+        .am-list-body:before{
+            height: 0;
+        }
+    }
+
+}
+
+.lrls-margin-bottom{
+    margin-bottom: 4px;
+}
+.lrls-bottom{
+    margin-bottom: 10px;
+}
+
+.lrls-margin-top{
+    margin-top: 10px;
+}
+
+.lrls-padding-top{
+    padding-top: 10px;
+}
+.lrls-padding{
+    padding: 6px;
+}
+
+.margin-top-bot{
+    margin: 10px 0;//.05rem 0;
+}
+.lrls-placeholder{//灰色
+    color: #999;
+}
+.lrls-blue{
+    color: #5e81d1;
+}
+
+.yysr-amount{
+    display: flex;
+    align-items: center;
+    & > div,
+    & > span {
+        flex: 1;
+    }
+    & > div {
+        margin-left: 10px;
+        padding-left: 10px;
+        overflow: hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        border: @border;
+    }
+    & > .antd-mobile-text-input-wrap{//span
+        margin-left: 0px;//新增
+        padding-left: 0px;//新增的
+        border: 0;//新增的
+        .am-list-item {
+            padding-left: 10px;
+            border: @border;
+            .am-list-line{
+                overflow: auto;
+            }
+        }
+    }
+    .amount{
+        border: none;
+        padding-right: 10px;
+    }
+    .antd-single-picker {
+        padding-right: 6px;//原来10px
+        margin-left: 0;
+    }
+    & > div:nth-child(3) {
+        padding-right: 6px;//原来10px
+        flex: 1.5;
+        margin-left: 10px;
+    }
+    .am-list-item{
+        overflow-y: auto;
+        line-height: normal;
+    }
+    & > label{
+        width: .6rem;
+    }
+}
+
+.yysr-carryover{//结转成本
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.yysr-bill{//发票
+    display: flex;
+    align-items: center;
+    & > div{
+        flex: 1;
+        overflow: hidden;
+    }
+}
+.jt-amount{//计提金额
+    padding: 6px 0;
+    text-align: right;
+    .select-color{
+        color: @theme-blue;
+    }
+}
+.lrls-button{
+    border: @border;
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: #858e99;
+    display: inline-block;
+    background-color: @bgColor;
+    font-size: .14rem;
+    &-wrap{
+        // padding: .08rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+.lrls-duble-category{
+    display: flex;
+    margin-top: 6px;
+    & > div{
+        flex: 1;
+        overflow: hidden;
+        &:nth-child(1){
+            border-right: 2px solid #999;
+            padding-right: 10px;
+        }
+        &:nth-child(2){
+            padding-left: 10px;
+        }
+    }
+}
+.lrls-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > .icon {
+        margin-top: -6px;
+        font-size: .13rem;
+    }
+    & > div{
+        margin-right: 10px;
+        flex: 1;
+        &:nth-child(2){
+            display: flex;
+            align-items: center;
+            & > span{
+                border: @border;
+                flex: 1;
+            }
+        }
+
+    }
+}
+.lrls-more-card{//选择项目 往来 存货卡片时用
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & > label{
+        width: .6rem;
+    }
+    .antd-single-picker{
+        flex: 1;
+        overflow: hidden;
+    }
+    .antd-mobile-text-input-wrap{
+        flex: 1;
+        .am-list-item {
+            padding-left: 10px;
+            border: @border;
+            .am-list-line{
+                overflow: auto;
+            }
+        }
+    }
+}
+.lrls-jzsy{//结转损益字数较长
+    & > label{
+        width: .85rem;
+    }
+}
+
+.lrls-switch,
+.lrls-type{//项目的按钮样式
+    .switch-text-switch{
+        background-color: #fff;
+        border: 1px solid #ccc;
+        &:after{
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.21);
+        }
+    }
+    .switch-text-switchChecked {
+        border: 1px solid #FF8348;
+        background-color: #FF8348;
+    }
+}
+.zjtx{
+    .lrls-card{
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.iuManage-config{
+    font-size: 0.12rem;
+    color: #222;
+    ul{
+        margin-bottom: 0;
+    }
+    .iuManage-config-title{
+        width: 100%;
+        // height: 0.31rem;
+        background-color: white;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        & > li{
+            min-width: 1.1rem;
+            line-height: 0.31rem;
+            text-align: center;
+        }
+        & > .iuManage-config-title-selected{
+            border-bottom: 2px solid #5d81d1;
+            color: #5e81d1
+        }
+    }
+
+    .iuManage-choose-type{
+        width: 100%;
+        height: 0.31rem;
+        background-color: #fff;
+        color: #323334;
+        line-height:0.31rem;
+        text-align: left;
+        padding-left: 0.1rem;
+        border-top: 1px solid #d8d8d8;
+        & > i{
+            float: right;
+            padding-right: 0.1rem;
+            padding-top: 0.1rem;
+        }
+    }
+
+    .iuManage-config-card{
+        width: 100%;
+        flex: 1;
+        overflow-y: auto;
+        & > li{
+            background-color: #fff;
+            border-top: 1px solid #d8d8d8;
+            & > div{
+                width: 100%;
+                padding: .08rem .1rem;
+                color: #030303;
+                display: flex;
+                align-items: center;
+                & > div{
+                    display: flex;
+                    flex: 1;
+                    justify-content: space-between;
+                    align-items: center;
+                    & > span{
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        flex: 1;
+                    }
+                    // & > i{
+                    //     font-size: 0.1rem;
+                    // }
+                }
+            }
+            &:last-child{
+                & > div{
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+    .iuManage-card-base{
+        .iuManage-card-base-row{
+            width: 100%;
+            padding: .08rem .1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            border-bottom: 1px solid #d8d8d8;
+            color: #333;
+            & > label{
+                min-width: 0.71rem;
+                color: #666;
+            }
+            .select-input-placeholder{
+                text-align: right;
+            }
+            .select-check-box{
+                max-width: calc(100% - 0.71rem);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: flex;
+                align-items: center;
+                & > .text-flow{
+                    min-width: calc(100% - 0.12rem);
+                    width: calc(100% - 0.12rem);
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    flex: 1;
+                    display: block;
+                }
+                .type-choose-lable{
+                    // padding-left: 0.1rem;
+                }
+            }
+            .antd-mobile-text-input-wrap{
+                width: 76%;
+            }
+            .iuManage-card-used{
+                float: right;
+                line-height: 0.35rem;
+            }
+            .am-list-item{
+                height: 0!important;
+            }
+            .antd-single-picker{
+                height: 0.34rem;
+            }
+        }
+        .iuManage-modal-title{
+            width: 100%;
+            height: 0.28rem;
+            line-height: 0.28rem;
+            font-size: 0.11rem;
+            color: #666;
+            padding-left: 0.1rem;
+        }
+    }
+    .iuManage-config-high-type{
+        & > div {
+            background-color: white;
+            border-bottom: 1px solid #d8d8d8;
+            padding: .08rem .1rem;
+            display: flex;
+            align-items: center;
+            .checkbox-checkbox,
+            .checkbox-checked {
+                margin-right: .1rem;
+            }
+            .high-type-name{
+                flex: 1;
+                display: block;
+            }
+        }
+    }
+    .choose-type{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: black;
+        opacity: 0.4;
+    }
+    .choose-type-modal,.choose-type-modal-home{
+        width: 100%;
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .choose-type-modal{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .card-tree{
+            flex: 1;
+            height: calc(100% - 0.38rem);
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+    }
+    .choose-type-modal-home{
+        top:0.62rem;
+        max-height: 234px;
+        overflow-y: auto;
+    }
+    .type-list{
+        width: 100%;
+        height: 40px;
+        border-bottom: 1px solid #d8d8d8;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 0 0.1rem;
+        .touch-range-name{
+            flex: 1;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            white-space: nowrap;
+            & > .high-type-name{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: block;
+            }
+        }
+        .touch-range-icon{
+            width: 0.6rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            text-align: right;
+        }
+    }
+    .iuManage-type-tree{
+        margin-top: 0px;
+        & > div {
+            background-color: #fff;
+        }
+        .swap-position-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+        }
+        .add-type-icon{
+            color: #5d81d1;
+            font-size: 0.2rem;
+            margin-right: 8px;
+        }
+        .swap-position-block{
+            width: 0.2rem;
+            height: 0.25rem;
+            background-color: #fff;
+        }
+    }
+    .touch-type-icon{
+        min-width: 0.5rem;
+        height: 0.28rem;
+        text-align: center;
+        line-height: 0.28rem;
+        .touch-type-icon-transform{
+            transform:rotate(180deg);
+        }
+    }
+    .border-top{
+        border-top: 1px solid #d8d8d8;
+    }
+}

@@ -1,0 +1,275 @@
+@import '~app/style/themes/common.less';
+
+.project-yeb {
+    .title-select-container{
+        display: flex;
+        flex: 1;
+    }
+    .title-checkboxtext{
+        margin: 0 0 0 8px;
+    }
+    .table-title-kmye-shadow{
+        &::before{
+            height: 32px;
+        }
+    }
+    .flex-title-left{
+        display: flex;
+    }
+    // .project-yeb-top-search-type {
+    //     display: flex;
+    //     margin-left: 8px;
+    //     flex: 100px;
+    //     max-width: 200px;
+    //     overflow: hidden;
+    //     & > span {
+    //         display: flex;
+    //         align-items: center;
+    //     }
+    //     .project-yeb-top-search-select {
+    //         display: inline-block;
+    //         flex: 1;
+    //         max-width: 200px;
+    //         overflow: hidden;
+    //     }
+    // }
+    .project-yeb-top-search{
+        // display: flex;
+        margin-left: 8px;
+        flex: 124px;
+        min-width: 124px;
+        max-width: 220px;
+        .project-yeb-top-search-select {
+            width: calc(100% - 65px)
+        }
+    }
+    .project-yeb-change-type{
+        margin-left: 8px;
+        width: 88px;
+        display: inline-block;
+        & > div {
+            .ant-radio-button-wrapper{
+                height: 28px;
+                line-height: 28px;
+                font-size: 12px;
+                padding: 0 10px;
+                text-align: center;
+            }
+            .ant-radio-button-wrapper-checked{
+                border-color: #ddd;
+                background-color: #f4f4f4;
+                color: #333;
+                box-shadow: -1px 0 0 0 #ddd;
+                &:hover{
+                    box-shadow: -1px 0 0 0 #ddd;
+                }
+            }
+            .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused{
+                color: #333;
+                background-color: #f4f4f4;
+
+            }
+        }
+    }
+
+    // 表头 与总的是一致的，可能需要提取
+    .table-title-project-yeb {
+        height: 57px;
+        line-height: 57px;
+
+        & > li {
+            &:nth-child(1) {
+                .kmyeDown{
+                    font-size: 14px;
+                    color: #b8b8b8;
+                    margin-left: 2px;
+                }
+                .kmyeUp{
+                    font-size: 13px;
+                    margin-left: 3px;
+                    &:before{
+                        position: relative;
+                        top: 1px;
+                    }
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+    			padding: 0;
+    			display: flex;
+    			flex-direction: column;
+
+                & > div {
+                    display: flex;
+                    flex-direction: row;
+                    & > span {
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        border-left: @border;
+
+                        &:first-child {
+                            border-left: 0;
+                        }
+                    }
+                }
+
+                & > div:nth-child(1) {
+                    & > span {
+                        height: 24px;
+                        line-height: 24px;
+                        border-bottom: @border;
+                    }
+                }
+                & > div:nth-child(2) {
+                    & span {
+                        height: 32px;
+                        line-height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .project-yeb-table-width {
+    	& > li {
+            &:nth-child(1) {
+                min-width: 180px;
+                max-width: 360px;
+                flex: 180;
+    			align-items: center;
+                & > span {
+                    display: inline-block;
+                    padding-right: 15px;
+                    overflow:hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+    		}
+    		&:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                min-width: 140px;
+                max-width: 220px;
+                flex: 220;
+    		}
+            &:nth-child(5) {
+                min-width: 160px;
+                max-width: 220px;
+                flex: 220;
+    		}
+    	}
+    }
+
+    .project-yeb-table-item {
+        & > li {
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5) {
+                display: flex;
+                display: flex;
+    			flex-direction: row;
+
+    			& > span {
+    				flex: 1;
+    				border-left: @border;
+    				overflow: hidden;
+    				padding: 0 4px 0 0;
+
+    				&:first-child {
+    					border-left: 0;
+    				}
+
+    				.over-ellipsis {
+    					text-align: right;
+    				}
+    			}
+    		}
+        }
+    }
+
+    .project-yeb-table-pay-receive-width {
+    	& > li {
+    		&:nth-child(1) {
+                min-width: 180px;
+                max-width: 472px;
+                flex: 180;
+    			align-items: center;
+                & > span {
+                    display: inline-block;
+                    padding-right: 15px;
+                    overflow:hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+    		}
+    		&:nth-child(2),
+            &:nth-child(3){
+                min-width: 286px;
+                max-width: 385px;
+                flex: 286;
+                display: flex;
+                .table-title-child-name {
+                    & > span {
+                        &:nth-child(1),
+        				&:nth-child(2){
+                            flex: 110;
+                        }
+        				&:nth-child(3){
+                            flex: 167;
+                            min-width: 127px;
+                        }
+        				padding: 0 4px 0 0;
+                    }
+                }
+    		}
+    	}
+    }
+    .project-yeb-table-pay-receive-item {
+        & > li {
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: flex;
+    			flex-direction: row;
+
+    			& > span {
+                    &:nth-child(1),
+    				&:nth-child(2){
+                        flex: 110;
+                    }
+    				&:nth-child(3){
+                        display: flex;
+                        flex: 167;
+                        min-width: 127px;
+                        & > label {
+                            display: flex;
+                            border-right: @border;
+                            width: 58px;
+                            justify-content: center;
+                        }
+                        & > span {
+                            flex: 110;
+                        }
+                    }
+    				border-left: @border;
+    				overflow: hidden;
+    				padding: 0 4px 0 0;
+
+
+
+    				&:first-child {
+    					border-left: 0;
+    				}
+
+    				.over-ellipsis {
+    					text-align: right;
+    				}
+    			}
+    		}
+        }
+    }
+}

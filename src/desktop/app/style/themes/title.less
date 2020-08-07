@@ -1,0 +1,346 @@
+@import "./common.less";
+@import "./mixins.less";
+//所有页面的宽度设定
+
+.layer,
+.layer-assets{
+	position: absolute;
+	max-width: 1153px;
+	right: @body-margin-right;
+	left: @body-margin-left;
+	bottom: @body-margin-botton;
+	// top: @body-margin-top;
+	top: 65px;
+}
+
+.layer-assets {
+	max-width: 1400px;
+	// max-width: 1440px;
+}
+// .ant-select-dropdown-menu-item{
+// 	padding: 5px 10px;
+// }
+
+// 头部栏样式
+.title {
+	width: 100%;
+	height: 28px;
+	padding: 0 20px;
+	margin: 12px 0;
+	&-bottom {
+		margin-top: 10px;
+	}
+    &-date {
+        width: 120px;
+        float: left;
+    }
+	&-checkbox {
+		line-height: 28px;
+		margin: 0px;
+        float: left;
+    }
+	&-checkboxtext{
+		float: left;
+		margin: 0 8px;
+		line-height: 28px;
+	}
+    &-right {
+        float:right;
+        margin-left: @top-btn-gap;
+		&-back {
+			margin-right: 45px;
+		}
+		& a{
+			color:#666;
+			&:hover{
+				color:#57c5f7;
+			}
+		}
+    }
+	.ant-btn {
+		height: 28px;
+	}
+// 设置页头部栏样式
+    &-conleft{
+        float: left;
+        // width: 63px;
+		padding: 0 8px;
+        height: @other-top-bar-height;
+        line-height: @other-top-bar-height;
+        text-align: center;
+        border: @border;
+		font-size: 12px;
+		color: #333;
+		&:last-child {
+			border-right: @border;
+		}
+
+		&:hover {
+			color: @activeColor;
+			cursor: pointer;
+		}
+    }
+    &-btn{
+        margin-left: @top-btn-gap;
+    }
+    &-selectd {
+        background: #eee;
+    }
+	&-config-topbar{
+		// min-width: 645px;
+	}
+	&-pay {
+		color: #555;
+	}
+	&-new-pay {
+		float: left;
+		color: #555;
+		margin-left: 10px;
+		height: 28px;
+		line-height: 26px;
+	}
+}
+.title-export {
+	border: 1px solid #d9d9d9;
+	height: 28px;
+	width: 58px;
+	text-align: center;
+	border-radius: 4px;
+	float: right;
+	color: #666;
+	&:hover {
+		color: #57c5f7;
+		border: 1px solid #57c5f7;
+	}
+}
+
+.title-button {
+	border: 1px solid #d9d9d9;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 8px;
+	// padding: 0 15px;
+	border-radius: 6px;
+	font-size: 12px;
+	color: #333;
+}
+
+.title-dropdown{
+	border: 1px solid #d9d9d9;
+	height: 28px;
+	line-height: 28px;
+	text-align: center;
+	border-radius: 6px;
+	font-size: 12px;
+	.ant-dropdown-trigger {
+		display: inline-block;
+		width: 57px;
+		height: 28px;
+	}
+}
+.title-dropdown {
+	background-color: #fff;
+	&:hover {
+		border: 1px solid @activeColor;
+		color: @activeColor;
+		cursor: pointer;
+
+		.export-text {
+		    color: @activeColor;
+		}
+	}
+}
+
+.title-button {
+	color: #555;
+	&:hover {
+		border: 1px solid #38acff;
+	}
+}
+
+.title-dropdown-icon {
+	transform: scale(0.7);
+}
+
+.title-category-select-wrap {
+	margin-left: 10px;
+}
+
+
+// .Xjllb-table-title,
+// .pconfig-table-title,
+// .zcfzb-table-title,
+// .lrb-table-title,
+// .initlrb-table-title,
+// .assets-table-title,
+// .assetsdetail-table-title,
+// .kmyeb-table-title,
+// .Amyeb-table-title,
+// .Amyeb-table-title-show,
+// .cxpz-table-title,
+.qcye-table-title {
+	background: @top-li-bg;
+	border: @border;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+// .Xjllb-table-body,
+// .pconfig-table-body,
+// .zcfzb-table-body,
+// .lrb-table-body,
+// .initlrb-table-body,
+// .assets-table-body,
+// .assetsdetail-table-body,
+// .kmyeb-table-body,
+// .Amyeb-table-body,
+// .Amyeb-table-body-show,
+.qcye-table-body {
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	top: 35px;
+	overflow-y: scroll;
+	border: @border;
+	background: @body-table-bg;
+}
+// .kmyeb-table-body,
+// .Amyeb-table-body,
+// .Amyeb-table-body-show
+//  {
+// 	top: 55px;
+// }
+.qcye-table-body {
+	top: 57px;
+}
+
+// .Xjllb-table-title,
+// .pconfig-table-title,
+// .zcfzb-table-title,
+// .lrb-table-title,
+// .initlrb-table-title,
+// .assets-table-title,
+// .assetsdetail-table-title,
+// .cxpz-table-title,
+.qcye-table-title,
+// .Xjllb-table-item,
+// .pconfig-table-item,
+// .zcfzb-table-item,
+// .lrb-table-item,
+// .initlrb-table-item,
+// .assets-table-item,
+// .assetsdetail-table-item,
+// .kmyeb-table-item,
+// .cxpz-table-item,
+.qcye-table-item > ul {
+	.clearfix;
+	border-bottom: @border;
+	& > li{
+        padding: 0 5px;
+		float: left;
+        .overflow;
+		border-right: @border;
+		&:last-child{
+			border-right: 0;
+		}
+	}
+}
+// .Xjllb-table-item,
+// .zcfzb-table-item,
+// .lrb-table-item,
+// .initlrb-table-item,
+// .assets-table-item
+// .assetsdetail-table-item,
+// .kmyeb-table-item,
+// .cxpz-table-item,
+.qcye-table-item {
+	&:nth-child(even) {
+		background-color: @top-li-bg;
+	}
+	&:nth-child(odd) {
+		background-color: #fff;
+	}
+	&:hover{
+		background-color: @hover-bg;
+	}
+}
+
+// .pconfig-table-item {
+// 	&:nth-child(odd) {
+// 		background-color: #fff;
+// 	}
+// 	&:hover{
+// 		background-color: @hover-bg;
+// 	}
+// }
+// .shadow-title-Xjllb,
+// .shadow-title,
+// .shadow-title-lrb,
+// .shadow-title-assetsdetail,
+// .shadow-title-fzhs,
+// .shadow-title-mxb,
+// .shadow-title-amxb1,
+// .shadow-title-amxb2,
+// .shadow-title-Amyeb1,
+// .shadow-title-Amyeb2,
+// .shadow-title-kmyeb1,
+// .shadow-title-kmyeb2,
+// .shadow-title-Assestscard {
+//     position: absolute;
+//     top: 1px;
+//     right: 1px;
+//     width: @shadow-wight;
+//     height: @shadow-height;
+//     background: @top-li-bg;
+//     z-index: 9;
+// }
+// .shadow-title-Amyeb1,
+// .shadow-title-Amyeb2 {
+//     top: 0;
+// 	z-index: 90;
+// }
+// .shadow-title-Xjllb,
+// .shadow-title-lrb,
+// .shadow-title-Assestscard,
+// .shadow-title-assetsdetail,
+// .shadow-title-fzhs,
+// {
+//     width: 17px;
+// }
+// .shadow-title-fzhs {
+// 	left: 44.7%;
+// }
+// .shadow-title-mxb {
+//     top: 32px;
+//     width: 17px;
+// }
+// .shadow-title-amxb1 {
+//     width: 17px;
+// 	height: 30px;
+// 	border-bottom: @border;
+// }
+// .shadow-title-amxb2 {
+//     top: 31px;
+// 	height: 30px;
+//     width: 17px;
+// }
+// .shadow-title-kmyeb1 {
+//     height: 24px;
+//     border-bottom: @border;
+// }
+// .shadow-title-kmyeb2 {
+//     top: 25px;
+//     height: 29px;
+// }
+// .shadow-title-Amyeb1,{
+// 	height: 27px;
+//     border-bottom: @border;
+// }
+// .shadow-title-Amyeb2,{
+// 	top: 28px;
+//     height: 27px;
+// }
+// .shadow-title-mxb-ass {
+// 	top: 50px;
+// }

@@ -1,0 +1,29 @@
+// mixins for clearfix
+// ------------------------
+.clearfix() {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+  }
+}
+
+.vertical-mixin(@height: 20px){
+	height: @height;
+	line-height: @height;
+}
+.overflow{
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+li{
+    list-style: none;
+}

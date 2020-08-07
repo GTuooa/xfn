@@ -1,0 +1,308 @@
+@import '~app/style/themes/common.less';
+.zhMxb{
+    & > .title{
+        min-width: 760px;
+        max-width: 1280px;
+    }
+    .table-normal-with-new{
+        min-width: 760px;
+        max-width: 1260px;
+
+    }
+}
+.acountDetail{
+  .over-ellipsis{
+    text-align: right;
+    margin-right: 5px;
+  }
+}
+.abstract-left{
+  text-align: left!important;
+}
+
+
+.amountzhmx-table-width {
+	& > li {
+		&:nth-child(1) {
+            min-width: 76px;
+            max-width: 76px;
+            text-align: center;
+            flex: 76;
+		}
+		&:nth-child(2) {
+            min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+            padding: 0 4px;
+		}
+		&:nth-child(3) {
+            min-width: 92px;
+            max-width: 334px;
+            flex: 334;
+			align-items: center;
+		}
+		&:nth-child(4){
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+			align-items: center;
+		}
+		&:nth-child(5){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+        &:nth-child(6){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+
+        &:nth-child(7){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+        & > span{
+            padding-right: 4px!important;
+            .over-ellipsis{
+              text-align: right;
+            }
+        }
+	}
+}
+
+.zhmxb-table-width{
+    & > li {
+        &:nth-child(1) {
+            min-width: 76px;
+            max-width: 76px;
+            text-align: center;
+            flex: 76;
+		}
+		&:nth-child(2) {
+            min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+            padding: 0 0 0 4px;
+		}
+		&:nth-child(3) {
+            min-width: 92px;
+            max-width: 334px;
+            flex: 334;
+			align-items: center;
+		}
+		&:nth-child(4){
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+			align-items: center;
+		}
+		&:nth-child(5){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+        &:nth-child(6){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+
+        &:nth-child(7){
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+		}
+        & > span{
+            padding-right: 4px!important;
+            text-overflow: inherit!important;
+            flex: 3;
+            .over-ellipsis{
+              text-align: right;
+            }
+        }
+        & > .account-flowNumber{
+            flex: 17;
+        }
+    }
+}
+
+.amountzhmx-title-cell {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+
+	overflow: hidden;
+
+	& > div > span {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+
+	.amountzhmx-item-first {
+		height: 30px;
+		line-height: 30px;
+		border-bottom: @border;
+        width: 100%;
+	}
+
+	.amountzhmx-item-second-one{
+		display: flex;
+		& > span {
+			display: flex;
+			border-left: @border;
+			justify-content: center;
+            flex:1;
+            padding-right: 4px;
+			&:nth-child(1) {
+				border-left: 0;
+			}
+            & > .over-ellipsis{
+                text-align: right;
+            }
+		}
+	}
+
+	.amountzhmx-item-second-one {
+    width: 100%;
+		& > span {
+			&:nth-child(1),
+			&:nth-child(2) {
+				flex: 139;
+			};
+		}
+	}
+}
+.shadow-title-amountzhmx {
+	position: absolute;
+	width: 12px;
+	height: 32px;
+	top: 37px;
+	right: 1px;
+	background: @bouble-background;
+}
+.account-detail-margin{
+  margin-left: 5px;
+}
+.cxls-search-margin{
+    padding-left: 7px;
+}
+.lslb-detail-width{
+  >span{
+    min-width: 280px;
+    max-width: 400px;
+  }
+}
+.zhmxb-table-title-first{
+  border-top: 1px solid #d9d9d9;
+  & > .mxb-title-lb{
+      flex: 1;
+  }
+  & > .mxb-title-fx{
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+  }
+}
+.zhmxb-table-title-first,
+.zhmxb-table-title-second{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    background: #f4f4f4;
+    height: 35px;
+    line-height: 30px;
+    padding-left: 4px;
+}
+
+.zhmx-serch{
+  display: inline-block;
+  width: 90%;
+  position: relative;
+  margin: 10px 5%;
+}
+.zhmx-serch-icon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.zhmxb-table-left{
+    min-width: 588px;
+    max-width: 950px;
+    flex: 588;
+}
+.zhmx-wrap{
+    height: 100%;
+}
+.zhmx-table{
+    height: 100%;
+    .table-normal{
+        width: 75%;
+    }
+}
+
+.zhMxb{
+    font-size: 12px;
+    color: #333;
+	.title-date{
+        margin-right: 8px;
+		.ant-select-selection--single{
+			height: 28px;
+			.ant-select-selection__rendered{
+				line-height: 28px;
+				font-size: 12px;
+				color: #333;
+			}
+		}
+	}
+	.title-checkboxtext{
+		margin-left: 8px;
+		& > span{
+			line-height: 28px;
+			padding-right: 0px;
+		}
+	}
+	.refresh-btn{
+		height: 28px;
+		border-radius: 6px;
+	    padding: 0 10px;
+	    font-size: 12px;
+	    color: #222;
+	    background: #fff;
+	    margin-left: 10px;
+	}
+	.title-dropdown{
+		color: #222;
+		background: #fff;
+	}
+
+	.table-title{
+		overflow-x: hidden;
+		overflow-y: scroll;
+	}
+    .table-item-hover:hover{
+        & >.account-flowNumber:hover{
+            color: #57c5f7;
+            cursor: pointer;
+        }
+    }
+    .table-span-no-padding{
+        & > .account-flowNumber{
+            padding-right: 0px!important;
+            max-width: 88px;
+        }
+    }
+}
+.zh-tree-title-handle{
+    padding: 10px 5px 0;
+}
+.zh-right-tree{
+    padding-left: 2px;
+}

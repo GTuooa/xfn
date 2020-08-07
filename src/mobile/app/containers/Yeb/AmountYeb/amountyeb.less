@@ -1,0 +1,60 @@
+
+.amountyeb{
+    .ba-title{
+        & > div:nth-child(1) {
+            flex: 1.3;
+        }
+    }
+    .ba .ba-info .amountyeb-ba-info {
+        flex: 1.3;
+    }
+    .ba .ba-info {
+        & > span:nth-child(1) {
+            flex: 1.3;
+        }
+    }
+    .ba-info .amountyeb-ba-info{
+        display: flex;
+        align-content: space-between;
+        .amountyeb-number-color,
+        .amountyeb-ba-number{
+            color: #00649e;
+        }
+        .amountyeb-ba-number{
+            justify-content: space-between;
+            padding-left: .1rem;
+        }
+    }
+    .ba > div.ba-info-color > span{
+        color: #00649e;
+    }
+    .amountyeb-search{
+        display: flex;
+        padding: .05rem .1rem;
+        justify-content: space-between;
+        background-color: #fff;
+        font-size: .12rem;
+        color: #222;
+        .icon-triangle{
+            color: #ccc;
+            margin-left: .03rem;
+        }
+        .amountyeb-asscategory{
+            flex: 1;
+            overflow: hidden;
+            .ass-category{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        }
+        .more-ass{
+            flex: 2;
+            padding-left: .05rem;
+            margin-left: .05rem;
+            border-left: 1px solid #ddd;
+        }
+    }
+
+}

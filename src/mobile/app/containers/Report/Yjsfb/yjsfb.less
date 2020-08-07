@@ -1,0 +1,115 @@
+@titlebar-backgroud: #FFDBA6;
+
+.sjb {
+	&-line {
+		display: flex;
+		padding: 0 .08rem;
+		margin-bottom: 1px;
+		color: #222;
+		font-size: .12rem;
+		//font-weight: bold;
+		height: .26rem;
+		line-height: .26rem;
+		& > span {
+			display: flex;
+		}
+
+		&-list {
+			background-color: white;
+		}
+
+		&.zcfzb-tilte,
+		&.title {
+			font-weight: normal;
+			color: #222;
+			font-size: .13rem;
+			line-height: .3rem;
+			height: .3rem;
+			background-color: #FEF4E3;
+		}
+
+		&.zcfzb-tilte {
+			.icon {
+				margin-top: .1rem;
+				color: #ccc;
+			}
+		}
+
+		&.title {
+			height: .3rem;
+			line-height: .3rem;
+			background: #FFDBA6;
+		}
+
+		&.firstlrb,
+		&.firstlrblast {
+			font-weight: bold;
+			background-color: #FEF3E3;
+			color: #222;
+			font-size: .12rem;
+			height: .3rem;
+			line-height: .3rem;
+			.linename {
+				padding-left: 0;
+			}
+		}
+
+		&.firstlrb {
+			.icon {
+				color: #ccc;
+				// margin: .09rem 0 0 .05rem;
+				margin: .09rem .03rem 0 .05rem;
+			}
+		}
+
+		&.second {
+			height: .26rem;
+			line-height: .26rem;
+			color: #555;
+			font-size: .12rem;
+			font-weight: normal;
+
+			.linename {
+				padding-left: 0;
+			}
+		}
+
+		&.third,
+		&.thirdlrb {
+			height: .26rem;
+			line-height: .26rem;
+			color: #666;
+			font-size: .12rem;
+			font-weight: normal;
+		}
+		&.thirdlrb {
+			.linename {
+				text-indent: .09rem;
+			}
+		}
+		.linename {
+		    flex: 1;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow : hidden;
+			.linenametext{
+		        width: 100%;
+				overflow: hidden;
+			    text-overflow: ellipsis;
+			    white-space: nowrap;
+			}
+			&>i{
+				margin: .09rem .03rem 0 .05rem;
+			}
+		}
+		.amount {
+            width: .84rem;
+			justify-content: flex-end;
+		}
+		.sumAmount{
+			width: .79rem;
+			justify-content: flex-end;
+		}
+	}
+}

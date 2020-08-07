@@ -1,0 +1,365 @@
+@import '~app/style/themes/common.less';
+@bouble-background    : #f4f4f4;
+@blue-color: #bae7ff;
+
+.account-mxb {
+    .ant-tree li{
+        padding: 2px 0;
+        & > span {
+            height: 20px;
+            line-height: 20px;
+        }
+        .ant-tree-switcher,
+        .ant-tree-iconEle{
+            width: 14px;
+        }
+    }
+    .account-mxb-top-search {
+        margin-left: 8px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        & > span{
+            display: flex;
+            &:nth-child(2){
+                .cxls-serch-input{
+                    padding-right: 30px;
+                }
+                .normal-search-delete{
+                    position: absolute;
+                    top: 8px;
+                    right: 25px;
+                    z-index: 3;
+                    color: rgba(0, 0, 0, 0.25);
+                }
+                .cxpz-serch-icon{
+                    position: absolute;
+                    top: 8px;
+                    right: 5px;
+                    z-index: 3;
+                }
+                &:before {
+                    content: '';
+               		position: absolute;
+               		width: 1px;
+               		height: 18px;
+               		background: #ddd;
+               		top: 5px;
+               		right: 20px;
+               		z-index: 4;
+                }
+            }
+        }
+    }
+    .account-mxb-top-search {
+        margin-left: 8px;
+        .account-mxb-top-search-select {
+            width: 120px;
+        }
+    }
+    .account-mxb-title {
+        display: flex;
+        border-top: @border;
+    	border-left: @border;
+    	border-right: @border;
+        background: @bouble-background;
+    	height: 30px;
+    	line-height: 30px;
+    	padding-left: 4px;
+    }
+    .account-card-pagination{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 3px 0;
+        background-color: #eee;
+        ul {
+            li {
+                margin-right: 0;
+                font-size: 12px;
+            }
+        }
+        .ant-pagination-simple{
+            .ant-pagination-prev,
+            .ant-pagination-next{
+                min-width: 30px;
+            }
+        }
+        .ant-pagination-slash{
+            margin: 0 5px 0 0;
+        }
+        .ant-pagination-prev .ant-pagination-item-link,
+        .ant-pagination-next .ant-pagination-item-link{
+            background-color: #eee;
+        }
+    }
+    .account-mxb-table-width {
+        .account-mxb-table-item-date {
+            min-width: 76px;
+            max-width: 76px;
+            text-align: center;
+            flex: 76;
+		}
+		.account-mxb-table-item-id {
+            min-width: 60px;
+            max-width: 60px;
+            flex: 60;
+            padding: 0 4px;
+		}
+		.account-mxb-table-item-abstract {
+            // min-width: 92px;
+            // max-width: 334px;
+            flex: 394;
+			align-items: center;
+		}
+		.account-mxb-table-item-type{
+            min-width: 80px;
+            max-width: 80px;
+            flex: 80;
+		}
+        .account-mxb-table-item-direction {
+            min-width: 60px;
+            max-width: 60px;
+            flex: 60;
+		}
+        .account-mxb-table-item-debit-amount,
+        .account-mxb-table-item-credit-amount{
+            min-width: 70px;
+            max-width: 110px;
+            flex: 110;
+		}
+        .account-mxb-table-item-closed-amount {
+            min-width: 80px;
+            max-width: 110px;
+            flex: 110;
+		}
+    }
+
+    .account-mxb-table-justify {
+        .account-mxb-table-item-debit-amount,
+        .account-mxb-table-item-credit-amount,
+        .account-mxb-table-item-closed-amount {
+            & > span {
+                text-align: right;
+                padding-right: 4px;
+            }
+        }
+    }
+
+    .account-mxb-tree-contain {
+        padding: 0;
+        // .account-mxb-left-tab,
+        // .account-mxb-right-tab {
+        //     width: 50%;
+        //     text-align: center;
+        // }
+        .account-mxb-left-tab {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .account-mxb-table-right-top {
+        height: 35px;
+        line-height: 35px;
+        padding-left: 31px;
+        border-bottom: @border;
+        & > span {
+            cursor: pointer;
+        }
+    }
+
+    .account-mxb-table-right-tree {
+        flex: 1;
+        overflow: scroll;
+    }
+
+    .account-mxb-table-right-top-current {
+        color: #1890ff;
+    }
+
+    // 树样式
+    .account-mxb-tree-contain {
+        padding: 0;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+
+        .account-mxb-account-category-select {
+            background: #eee;
+            height: 40px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+
+            .account-mxb-top-name {
+                min-width: 60px;
+            }
+
+            .account-mxb-top-search-select-wrap {
+                flex: 1;
+
+                .account-mxb-top-search-select {
+                    width: 100%;
+                    max-width: 155px;
+                }
+            }
+
+            .account-mxb-category-type {
+                flex: 14;
+                // margin-right: 20px;
+                cursor: pointer;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .account-mxb-hide-icon {
+                flex: 1;
+                text-align: right;
+            }
+            .account-mxb-show-icon {
+                display: flex;
+                flex: 1;
+                text-align: left;
+                width: 100%;
+                & > span {
+                    &:nth-child(1){
+                        flex: 10;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:nth-child(2){
+                        display: flex;
+                        flex: 1;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+            }
+            .account-mxb-arrow-icon {
+                font-size: 14px;
+                float:right;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .account-mxb-account-search {
+            position: relative;
+            padding: 10px 10px 0;
+
+            .account-mxb-account-select {
+                width: 100%;
+                input {
+                    padding-left: 14px
+                }
+                .ant-select-selection-selected-value {
+                    padding-left: 16px;
+                }
+            }
+            .account-mxb-account-search-icon {
+                position: absolute;
+                top: 18px;
+                left: 18px;
+            }
+        }
+
+        .account-mxb-account-card {
+            position: relative;
+            margin: 10px;
+            flex: 5;
+            border: @border;
+            padding: 2px 0 32px 0;
+            overflow-y: hidden;
+            .mxb-account-card-content{
+                overflow-y: auto;
+                position: absolute;
+                width: 100%;
+                height: calc(100% - 32px );
+                .account-card-content-items{
+                    height: calc(100% - 10px );
+                }
+
+
+            }
+        }
+        .account-mxb-account-no-pages{
+            position: relative;
+            margin: 10px;
+            flex: 5;
+            border: @border;
+            padding: 2px 0 0 0;
+            overflow-y: hidden;
+            .mxb-account-card-content{
+                overflow-y: auto;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                .account-card-content-items{
+                    height: calc(100% - 10px );
+                }
+
+
+            }
+        }
+        .account-mxb-account-type {
+            flex: 1;
+            overflow: auto;
+        }
+        .account-mxb-account-tree {
+            flex: 1;
+            overflow: auto;
+            padding-top: 5px;
+            & > div{
+                & > ul {
+                    padding-left: 5px;
+                }
+            }
+        }
+        .account-mxb-account-card-box{
+            margin: 6px;
+            height: 22px;
+            line-height: 22px;
+            .account-mxb-account-type-item,
+            .account-mxb-account-card-item {
+                height: 18px;
+                line-height: 18px;
+                margin: 5px 9px;
+                padding: 4px;
+                border-radius: 4px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                cursor: pointer;
+                color: #333;
+                &:hover{
+                    background-color: #e6f7ff;
+                }
+            }
+        }
+
+
+
+        .account-mxb-account-type-item-top {
+            border-bottom: @border;
+        }
+
+        .account-mxb-account-type-item-cur,
+        .account-mxb-account-card-item-cur {
+            background: @blue-color;
+        }
+
+        .account-mxb-account-category {
+            margin: 10px;
+            flex: 4;
+            border: @border;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}

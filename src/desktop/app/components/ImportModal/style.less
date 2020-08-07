@@ -1,0 +1,166 @@
+.import-mask {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	// z-index: 10;
+	z-index: 11;
+	background: #F8FBFF;
+
+	&-btn {
+		float: right;
+		margin: 10px;
+	}
+	&-main {
+		padding: 10px 0 0 17px;
+		&-message-copy {
+			float: right;
+			margin: 5px 10px;
+		}
+	}
+	&-tip {
+		margin-top: 20px;
+		font-size: 20px;
+	}
+}
+.input-file {
+	width: 60px;
+	height: 32px;
+	display: inline-block;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 32px;
+	border: #ddd solid 1px;
+	background: #fff;
+}
+.fileexport {
+	overflow: hidden;
+	line-height: 30px;
+}
+.filecontent {
+	float: left;
+	position: relative;
+	border: 1px solid #ccc;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 6px;
+	text-align: center;
+}
+.filetip{
+	float: left;
+}
+.fileinput {
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 60px;
+	height: 30px;
+	background: none;
+	border: 0 none;
+	opacity: 0;
+}
+.filetext {
+	float: left;
+	min-width: 200px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	margin-right: 10px;
+	padding: 0 5px;
+}
+.export-btn {
+	float: right;
+	padding: 0 5px;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 6px;
+	color: #333;
+	margin-right: 20px;
+}
+.onload {
+	margin: 20px 0 10px;
+	// width: 58px;
+	height: 14px;
+	line-height: 14px;
+	& > a{
+		color: #2db7f5 !important;
+	}
+}
+.title-export-disable {
+	color: #ccc !important;
+	cursor: not-allowed;
+}
+
+.import-mask-main-message {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.3);
+}
+
+@messageContentPadding: 10px;
+.import-mask-main-message-content {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 500px;
+	height: 470px;
+	background: #fff;
+	// text-align: center;
+	margin: auto;
+
+	.ant-pagination {
+		padding: 10px;
+		text-align: right;
+	}
+}
+.import-mask-main-message-title {
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	padding-left: @messageContentPadding;
+	border-bottom: 1px #eee solid;
+	font-weight: bold;
+	color: #222;
+}
+.import-mask-main-message-btn {
+	font-size: 14px;
+	padding: 10px 0 15px @messageContentPadding;
+	border-bottom: 1px #eee solid;
+	
+	.import-mask-main-message-onload {
+		margin-left: 20px;
+		color: #2db7f5;
+		cursor: pointer;
+	}
+}
+.import-mask-main-message-detail {
+	padding: @messageContentPadding;
+	height: 300px;
+	overflow-y: scroll;
+
+	.import-mask-main-message-item {
+		height: 24px;
+		line-height: 24px;
+		background: #e6e6e6;
+		padding: 3px 5px;
+		border-radius: 4px;
+		margin-bottom: 10px;
+	}
+}
+.import-mask-main-message-cross {
+	float: right;
+	margin: 10px 10px 0 0;
+}
+
+.import-mask-main-message-copy {
+	float: right;
+	margin: 5px 10px 0 0;
+}

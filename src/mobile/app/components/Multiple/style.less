@@ -1,0 +1,161 @@
+.xfn-multiple{
+    position: fixed;
+    overflow: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    font-weight: 100;
+    height: 100%;
+    transition: background-color .2s ease-in;
+    &-animate{
+        background-color: rgba(0, 0, 0, .4);
+        pointer-events: auto;
+    }
+    &-none-animate{
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none;//元素永远不会成为鼠标事件的target
+    }
+    &-caption{
+        height: .3rem;
+        line-height: .3rem;
+        color: #ccc;
+        background-color: #fff;
+        padding-left: .1rem;
+    }
+    &-popup {
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        font-size: .14rem;
+        transition: transform .2s;
+
+        min-height: 2.3rem;
+        max-height: 75%;
+        display: flex;
+        flex-direction: column;
+
+        &-animate{
+            transform: translateY(0%);
+        }
+        &-none-animate{
+            transform: translateY(100%);
+        }
+        .xfn-multiple-title{
+            height: .34rem;
+            line-height: .34rem;
+            text-align: center;
+            color: #999;
+            border-bottom: 1px solid #E8E8E8;
+            position: relative;
+            .icon{
+                color: #222;
+                font-size: .2rem;
+            }
+            .no-search{
+                position: absolute;
+                top: .07rem;
+                right: .1rem;
+            }
+            .xfn-multiple-search{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 .1rem;
+                .xfn-multiple-input{
+                    flex: 1;
+                    padding-right: .1rem;
+                    .am-list-item{
+                        border: none;
+                    }
+                }
+            }
+            .xfn-multiple-cancel{
+                color: #5e81d1;
+            }
+        }
+        .checked-title{
+            background-color: #ffdba6;
+            color: #222;
+            font-size: .13rem;
+            .icon-clear{
+                font-size: .15rem;
+                color:  #5e81d1;
+                padding: 0 .1rem;
+            }
+            .icon-sort{
+                font-size: .13rem;
+                color:  #5e81d1;
+            }
+            .checked-title-right{
+                color:  #5e81d1;
+                position: absolute;
+                right: 0;
+                padding-right: .1rem;
+            }
+        }
+        ul{
+            //min-height: 2.31rem;
+            //max-height: 3.15rem;
+            flex: 1;
+            overflow-y: auto;
+            li{
+                color: #222;
+                height: .42rem;
+                padding: 0 .1rem;
+                border-bottom: 1px solid #E8E8E8;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .icon{
+                    margin-left: .1rem;
+                }
+            }
+            .xfn-multiple-disabled{
+                color: #ccc;
+            }
+            .checked-item{
+                justify-content: flex-start;
+                height: .3rem;
+                padding: 0 .1rem 0 0;
+                font-size: .13rem;
+                .checked-delete{
+                    display: inline-block;
+                    height: .3rem;
+                    line-height: .3rem;
+                    padding: 0 .1rem;
+                    margin-right: .1rem;
+                    border-right: 1px solid #E8E8E8;
+                    color: #FF3B30;
+                }
+                .icon{
+                    margin-left: 0;
+                }
+
+            }
+        }
+        .xfn-multiple-select{
+            color: #5e81d1;
+            height: .42rem;
+            flex-shrink: 0;//项目空间不足 不缩小
+            padding: 0 .1rem;
+            border-top: 1px solid #E8E8E8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .overElli{
+                flex: 1;
+            }
+            .xfn-multiple-button{
+                background-color: #5e81d1;
+                color: #fff;
+                padding: .05rem .15rem;
+                border-radius: .05rem;
+                margin-left: .1rem;
+            }
+        }
+    }
+}

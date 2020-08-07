@@ -1,0 +1,120 @@
+.cxls {
+	font-size: .13rem;
+	color: #222;
+	.vc {
+		background-color: white;
+		margin: 0rem .05rem .1rem;
+		padding: .05rem;
+		border-radius: .04rem;
+		position: relative;
+	    box-shadow: 0px 3px 2px rgba(0, 0, 0, .3);
+		overflow: auto;
+	}
+	.item-title-top {
+		height: .25rem;
+    	line-height: .25rem;
+		font-size: .13rem;
+		border-bottom: 1px solid #d8d8d8;
+		.item-date {
+			float: right;
+		}
+		.item-flowNumber {
+			float: left;
+		}
+	}
+	.item-content {
+		display: flex;
+		justify-content: space-between;
+		padding: .05rem 0;
+		& > div:first-child{
+			flex: 1;
+			text-align:justify;
+			margin-right: .2rem;
+		}
+		& > span:first-child{
+			border: 1px solid #999;
+			border-radius: .04rem;
+			padding: 0rem .03rem;
+		}
+	}
+	.scroll-view {
+		background-color: rgb(248,248,248);
+	}
+
+	&-flex{
+		display: flex;
+		background-color: #fff;
+		align-items: center;
+		justify-content: center;
+		.overElli{
+			max-width: 90%;
+		}
+	}
+	&-account{
+		flex: 1;
+		padding: .05rem;
+		text-align: center;
+		font-weight: 600;
+		overflow: hidden;
+		.icon{
+			margin-left: .05rem;
+		}
+	}
+	&-account-select{
+		color: #5e81d1;
+		border-bottom: .02rem solid #5e81d1;
+	}
+	&-margin-bottom{
+		margin-bottom: .05rem;
+	}
+
+	&-amount{
+		background-color: #ffdba6;
+		padding: .05rem .1rem;
+		display: flex;
+		justify-content: space-between;
+		font-size: .13rem;
+		&-gray{
+			color: #666;
+			font-size: .12rem;
+			& > span:nth-child(1){
+				padding-right: .05rem;
+			}
+		}
+	}
+	&-gray{
+		color: #999;
+		font-size: .12rem;
+	}
+	.item-bottom {
+		border-top: 1px solid #d8d8d8;
+		padding-top: .05rem;
+		.button,
+		.disabled {
+			display: inline-block;
+			width: .55rem;
+	    	height: auto;
+			color: #222;
+	    	padding: .05rem 0rem;
+			background-color: #fff;
+			line-height: normal;
+		}
+		.button {
+			border-color: #222;
+		}
+		.disabled {
+			color: #999;
+		}
+
+		& > div:nth-of-type(1) {
+			float: left;
+		}
+		& > div:nth-of-type(2) {
+			float: right;
+			.button,
+			.disabled {
+				margin-left: .05rem;
+			}
+		}
+	}
+}

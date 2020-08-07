@@ -1,0 +1,304 @@
+@all-padding: 20px;
+@active-color: #a90202;
+
+.clearfix {
+	overflow: hidden;
+
+	&:after {
+		content: '';
+    	display: table;
+		clear: both;
+		visibility: hidden;
+		overflow: hidden;
+		_zoom: 1;
+	}
+}
+
+.tcgm {
+
+    font-size: 14px;
+    color: #222;
+    height: 100%;
+    padding: @all-padding;
+    overflow: scroll;
+
+    .tcgm-label {
+        display: inline-block;
+        width: 80px;
+        min-width: 80px;
+    }
+
+    .tcgm-name-wrap {
+        margin-bottom: 25px;
+
+        .tcgm-corp-name {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+
+    .tcgm-equity {
+        margin-bottom: 10px;
+
+        .tcgm-label {
+            float: left;
+        }
+
+        .tcgm-equity-list {
+            float: left;
+            // flex-wrap: wrap;
+            width: calc(100% - 85px);
+            .clearfix();
+
+            .tcgm-equity-item {
+                float: left;
+                border: 1px solid #979797;
+                width: 145px;
+                height: 62px;
+                margin-right: 28px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 15px;
+                background: #fff;
+
+                &:after {
+                    position: absolute;
+                    content: '+';
+                    top: 17px;
+                    right: -19px;
+                }
+
+                &:last-child:after {
+                    content: '';
+                }
+
+                .tcgm-equity-item-name {
+                    font-size: 16px;
+                    color: #333;
+                }
+                .tcgm-equity-item-number {
+                    color: #333;
+                    font-size: 13px;
+                }
+            }
+            .tcgm-equity-item-mini {
+                width: 98px;
+            }
+        }
+    }
+
+    .tcgm-invalid-equity {
+        display: flex;
+        margin-bottom: 20px;
+
+        .tcgm-invalid-equity-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tcgm-invalid-equity-item {
+                border: 1px solid #979797;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+                width: 263px;
+                height: 177px;
+                margin-right: 20px;
+                background: #fff;
+            }
+        }
+    }
+
+    .tcgm-expire-time {
+        margin-bottom: 45px;
+    }
+
+    .tcgm-cut-off-rule {
+        width: 100%;
+        background: #d9d9d9;
+        height: 1px;
+
+        margin: 60px 0 10px;
+    }
+
+    .tcgm-buy-or-upgrade-button {
+        border-bottom: solid 1px #d9d9d9;
+        height: 30px;
+        min-height: 30px;
+        display: flex;
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 24px;
+
+        & > div {
+            width: 87px;
+            height: 30px;
+            line-height: 30px;
+            border-top: solid 1px #d9d9d9;
+            border-right: solid 1px #d9d9d9;
+            text-align: center;
+
+            &:first-child {
+                border-left: solid 1px #d9d9d9;
+            }
+        }
+
+        .tcgm-buy-or-upgrade-button-current {
+            background: @active-color;
+            color: #fff;
+        }
+
+    }
+
+    .tcgm-upgrade-buy-wrap {
+        display: flex;
+        margin-bottom: 10px;
+
+        .tcgm-upgrade-buy-list {
+            display: flex;
+            flex-wrap: wrap;
+
+            .tcgm-upgrade-buy-item {
+                border:1px solid #979797;
+                width: 160px;
+                height: 62px;
+                margin-right: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff;
+                margin-bottom: 10px;
+
+                .tcgm-upgrade-buy-info {
+                    width: 130px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                .tcgm-upgrade-buy-dropdown {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .tcgm-upgrade-buy-item-current {
+                border: 2px solid @active-color;
+                position: relative;
+
+                .tcgm-upgrade-buy-info-icon {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    color: #fff;
+                    z-index: 2;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    border-top: 10px solid transparent;
+                    border-bottom: 10px solid @active-color;
+                    border-right: 12px solid @active-color;
+                    border-left: 12px solid transparent;
+                    height: 0;
+                    width: 0;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    .tcgm-upgrade-buy-money {
+        margin-bottom: 20px;
+        height: 44px;
+        line-height: 44px;
+        .tcgm-upgrade-buy-money-font {
+            font-size: 36px;
+            color: @active-color;
+        }
+
+        .tcgm-upgrade-buy-money-rule {
+            color: #666;
+            text-decoration: underline;
+            font-size: 12px;
+            margin-left: 100px;
+        }
+    }
+
+    .tcgm-upgrade-buy-methord {
+        margin-bottom: 20px;
+        display: flex;
+        & > span:nth-child(2){
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .tcgm-upgrade-buy-before {
+        margin-bottom: 20px;
+        .tcgm-upgrade-buy-before-link {
+            cursor: pointer;
+            color: @active-color;
+        }
+
+        .ant-checkbox-checked .ant-checkbox-inner, .ant-checkbox-indeterminate .ant-checkbox-inner {
+            background-color: @active-color;
+            border-color: @active-color;
+        }
+    }
+
+    .tcgm-upgrade-buy-button-wrap {
+
+        text-align: center;
+
+        .ant-btn {
+            color: #fff;
+            border-radius:2px;
+            width:222px;
+            height:49px;
+            background: @active-color;
+            font-size: 18px;
+        }
+    }
+    .tcgm-upgrade-buy-button-wrap-disabled {
+        text-align: center;
+
+        .ant-btn {
+            color: #fff;
+            border-radius:2px;
+            width:222px;
+            height:49px;
+            background: #adb5bd;
+            font-size: 18px;
+            border-color: #adb5bd;
+        }
+    }
+
+}
+
+.tcgm-upgrade-item-menu-item {
+    display: inline-block;
+    width: 100%;
+}
+
+.orderform-btn {
+    background:#5ec9f6;
+    border-radius:4px;
+    width:68px;
+    height:34px;
+    color: #fff;
+    line-height: 34px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.money-help {
+    font-size: 14px;
+}

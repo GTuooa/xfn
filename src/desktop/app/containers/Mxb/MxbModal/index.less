@@ -1,0 +1,381 @@
+@import '~app/style/themes/common.less';
+.mxb-contacts-card-top{
+	overflow: hidden;
+    padding: 13px 20px 20px;
+	.table-title-wrap{
+		margin-top: 10px;
+		& > button{
+			border-radius: 0px;
+			border-left: none;
+		}
+        .cursor {
+            cursor: pointer;
+        }
+	}
+	.table-tree-container{
+        width: 242px;
+        max-height: 635px;
+        overflow-y: scroll;
+        margin-left: 0;
+        padding: 0px;
+        .table-title-shadow {
+            display: none;
+        }
+		.table-right-tree{
+			margin: 0;
+			border: none;
+		}
+        span{
+            font-size: 12px;
+            color: #333;
+        }
+	}
+    .contacts-table-width{
+    	& > li{
+    		&:nth-child(1){
+    			flex: 81;
+    			& > span{
+    				line-height: 35px;
+    			}
+    		}
+    		&:nth-child(2){
+    			flex: 165;
+                text-align: left;
+                display: inline-block;
+                padding-left: 5px;
+    		}
+    	}
+    }
+    .contacts-table-width-charge{
+    	& > li{
+    		&:nth-child(1){
+    			flex: 1;
+    			& > span{
+    				line-height: 35px;
+    			}
+    		}
+    		&:nth-child(2){
+    			flex: 2;
+    		}
+            &:nth-child(3){
+    			flex: 3;
+                text-align: left;
+                display: inline-block;
+                padding-left: 5px;
+    		}
+    	}
+    }
+    .contacts-table-width-stock{
+        & > li{
+            &:nth-child(1){
+                flex: 40;
+                & > span{
+                    line-height: 35px;
+                }
+            }
+            &:nth-child(2){
+                flex: 100;
+                padding-left: 5px;
+            }
+            &:nth-child(3){
+                flex: 203;
+                text-align: left;
+                display: inline-block;
+                padding-left: 5px;
+            }
+            &:nth-child(4){
+                display: flex;
+                align-items: center;
+    			flex: 110;
+                padding-left: 5px;
+                & > input {
+                    margin-right: 5px;
+                }
+            }
+            &:nth-child(5){
+                flex: 59;
+                padding-left: 5px;
+            }
+    	}
+    }
+
+    .contacts-table-right{
+    	width: 508px;
+        margin-left: 10px;
+        .lsqc-serch{
+            width: 100%;
+            height: 30px;
+            position: relative;
+            .lsqc-icon{
+                position: absolute;
+                top: 7px;
+                left: 4px;
+                z-index: 99;
+                font-size: 12px;
+                color: #333;
+            }
+            .lsqc-serch-icon{
+                position: absolute;
+                top: 8px;
+                right: 4px;
+                z-index: 99;
+                font-size: 14px;
+            }
+            .lsqc-serch-input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 30px;
+                padding: 0 5px;
+                font-size: 12px;
+            }
+        }
+        & > .table-title-shadow{
+            top: 42px!important;
+        }
+    	.table-title-wrap{
+            font-size: 12px;
+            color: #333;
+    		.table-title{
+    			& > li{
+    				&:nth-child(1){
+    					flex: 81;
+    					& > span{
+    						line-height: 35px;
+    					}
+    				}
+    				&:nth-child(2){
+    					flex: 165;
+                        padding-left: 5px;
+    				}
+    			}
+    		}
+            .table-title-charge {
+                & > li{
+    				&:nth-child(1){
+    					flex: 1;
+    					& > span{
+    						line-height: 35px;
+    					}
+    				}
+    				&:nth-child(2){
+    					flex: 2;
+                        padding-left: 0;
+    				}
+                    &:nth-child(3){
+    					flex: 3;
+                        padding-left: 5px;
+    				}
+    			}
+            }
+            .table-title-stock{
+                & > li{
+                    &:nth-child(1){
+                        flex: 40!important;
+                        & > span{
+                            line-height: 35px;
+                        }
+                    }
+                    &:nth-child(2){
+                        flex: 100!important;
+                        padding-left: 5px;
+                    }
+                    &:nth-child(3){
+                        flex: 203;
+                        padding-left: 5px;
+                    }
+                    &:nth-child(4){
+                        flex: 110;
+                        padding-left: 5px;
+                    }
+                    &:nth-child(5){
+                        flex: 59;
+                        padding-left: 5px;
+                    }
+                }
+            }
+
+    	}
+        .table-body{
+            font-size: 12px;
+            color: #333;
+            & > .table-item{
+                height: 35px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+.mxb-common-modal-account{
+	padding: 4px 16px 0 16px;
+	& > li {
+		// margin: 4px 0;
+		display: flex;
+		text-align: left;
+		height: 25px;
+		line-height: 25px;
+		& > span {
+			white-space: nowrap;
+		}
+	}
+}
+.mxb-common-modal-tree{
+	text-align: left;
+	padding: 0 20px 0 8px;
+	.ant-tree li{
+		padding: 2px 0 2px 4px!important;
+	}
+}
+
+.mxb-common-modal{
+	position: absolute;
+	z-index: 1001!important;
+	width: 240px;
+	height: 320px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	background: #fff;
+	border-left: @border;
+	border-right: @border;
+	border-bottom: @border;
+	& > div {
+		width: 100%;
+	}
+	&-title{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 32px;
+		background-color: #eef3fa;
+		.title-icon{
+			margin-right: 20px;
+			height: 32px;
+			line-height: 32px;
+			i {
+				font-size: 12px;
+				color: #666;
+			}
+		}
+	}
+	&-content{
+		padding: 10px 20px;
+		border-bottom: @border;
+		overflow-y: scroll;
+		.common-modal-serch{
+			width: 100%;
+			height: 30px;
+			position: relative;
+			margin-bottom: 10px;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 1px;
+				height: 18px;
+				background: #ddd;
+				top: 5px;
+				right: 20px;
+				z-index: 4;
+			}
+			.serch-icon{
+				position: absolute;
+				top: 8px;
+				right: 4px;
+				z-index: 99;
+				font-size: 14px;
+			}
+			.search-delete{
+				position: absolute;
+				top: 8px;
+				right: 25px;
+				z-index: 99;
+				font-size: 12px;
+				color: rgba(0, 0, 0, 0.25);
+			}
+			.serch-input{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 30px;
+				padding: 0 5px;
+				font-size: 12px;
+			}
+		}
+		.common-mocal-card-list{
+			border: @border;
+			height: 175px;
+			overflow: auto;
+
+		}
+		.mxb-checkbox-group{
+			border: @border;
+			.checkbox-group-leader{
+				display: flex;
+			    justify-content: flex-start;
+			    align-items: center;
+				height: 36px;
+				border-bottom: @border;
+				background-color: #f4f4f4;
+				padding-left: 9px;
+			}
+			.checkbox-group-items{
+				display: flex;
+    			flex-wrap: wrap;
+				padding: 10px 9px;
+				& > span{
+					display: flex;
+				    align-items: center;
+				    justify-content: flex-start;
+				    flex-wrap: wrap;
+					& > label {
+						height: 30px;
+						line-height: 30px;
+					}
+				}
+
+			}
+		}
+		.checkbox-group-content{
+			height: 260px;
+			overflow: auto;
+		}
+	}
+
+	&-bottom{
+		padding-right: 20px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 48px;
+	}
+}
+.mxb-common-modal-checkbox-group{
+	width: 280px;
+	height: 360px;
+}
+.common-modal-mask{
+	position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+	background: rgba(0, 0, 0, 0);
+}
+
+.position-item{
+	flex-direction: column;
+	text-align: center;
+	.position-item-modal{
+		float: left;
+		// z-index: 99!important;
+		min-width: 280px;
+		max-width: 480px;
+		.project-mxb-filter-modal{
+			position: absolute;
+			top: 10px;
+		}
+	}
+}

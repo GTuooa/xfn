@@ -1,0 +1,30 @@
+.home-pleasure-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999999;
+    // background: rgba(0, 0, 0, 0);
+    pointer-events: none;
+
+    .home-orgTrial-icon {
+        position: absolute;
+        bottom: .9rem;
+        right: .1rem;
+        pointer-events: auto;
+        & > img {
+            width: .4rem;
+        }
+    }
+
+    .home-pleasure-icon {
+        position: absolute;
+        bottom: .5rem;
+        right: .1rem;
+        & > img {
+            width: .4rem;
+            opacity: .5;
+        }
+    }
+}

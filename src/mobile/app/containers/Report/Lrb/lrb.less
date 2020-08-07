@@ -1,0 +1,181 @@
+.lrb {
+    .fourthlrb > .linename {
+        padding-left: 0;
+    }
+    .fifthlrb > .linename {
+        padding-left: .26rem;
+    }
+}
+.select-change-table-xf{
+    position:absolute;
+    font-size: .12rem;
+    top: .08rem;
+    left: .1rem;
+}
+.lrb-typechange {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: #fff;
+    height: 0.3rem;
+    padding: 0 .09rem;
+    .title {
+        line-height: 0.3rem;
+        height: 0.3rem;
+        font-size:0.12rem;
+    }
+    .btn{
+        width:0.5rem;
+        background: #fff;
+        font-size:0.12rem;
+        border:none;
+    }
+}
+.ac-config-title{
+	background-color: #fff;
+	text-align: center;
+	display: flex;
+	padding: .05rem;
+	height: .3rem;
+	& > div{
+		flex: 1;
+		font-size: .12rem;
+		line-height: .2rem;
+	}
+	& > div:nth-child(1){
+		border-radius: .04rem 0 0 .04rem;
+		border: 1px solid #5d81d1;
+		border-right: 0;
+	}
+	& > div:nth-child(2){
+		border-radius: 0 .04rem .04rem 0;
+		border: 1px solid #5d81d1;
+		border-left: 0;
+	}
+	.select{
+		color: #fff;
+		background-color: #5d81d1;
+		border-radius: .04rem;
+	}
+}
+.xf-list-item{
+    display: flex;
+    padding: 0 .1rem;
+    width: auto;
+    justify-content: space-between;
+    font-size: .12rem;
+    height: .30rem;
+    line-height: .30rem;
+}
+.xf-list-amount{
+    display: flex;
+    padding: 0 .1rem;
+    width: auto;
+    color: #222;
+    font-size: .11rem;
+    height: .2rem;
+    line-height: .11rem;
+    align-items:baseline;
+    .monthaccumulation{
+        flex: 74;
+        padding-right: .05rem;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .shareOfMonth{
+        flex:63;
+        padding-right: .05rem;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .yearaccumulation{
+        flex:74;
+        padding-right: .05rem;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .shareOfYear{
+        flex:63;
+        padding-right: .05rem;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .typeChange{
+        flex:71;
+        text-align: right;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+.acctach-info{
+    font-size: .12rem;
+    background:#FFDBA6;
+    color: #222;
+    width:100%;
+    .acctach-info-title{
+        height:.3rem;
+        line-height: .3rem;
+        padding: 0 .1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .acctach-info-content{
+        display: flex;
+        flex-wrap: wrap ;
+        width:100%;
+        .acctach-info-content-item{
+            width:50%;
+            height: .25rem;
+            padding-left: .1rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+}
+.referModal{
+    width:100%;
+    position: absolute;
+    bottom: 0px;
+    .am-modal-content{
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+    .double-picker{
+        display: flex;
+        flex-wrap: wrap;
+        & > div{
+            width:50%
+        }
+    }
+
+}
+.ba-flag {
+    display: inline-block;
+    position:relative;
+    margin: .05rem .05rem 0 0;
+    height: .08rem;
+    background: #D1C0A5;
+    bottom: .01rem;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 0;
+        height: 0;
+        border-width: .04rem .03rem .04rem 0;
+        border-style:solid;
+        border-color:transparent #FFF3E3 transparent transparent;
+    }
+}

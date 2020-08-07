@@ -1,0 +1,541 @@
+@import '~app/style/variable.less';
+
+@button-primary-color: @active-color;
+@button-disabled-color: #adb5bd;
+@button-sub-color: #5d81d1;
+
+.tcxq-main-font {
+    .main-font-variable;
+}
+.tcxq-sub-font {
+    .sub-font-variable;
+}
+.tcxq-main-sub-font {
+    .main-sub-font-variable;
+}
+.tcxq-label {
+    .sub-font-variable;
+    .sub-title-common-variable;
+}
+
+.fee {
+
+    .tcxq-item-button {
+        display: inline-block;
+        width: .6rem;
+        height: .25rem;
+        line-height: .25rem;
+        text-align: center;
+        color: #fff;
+        font-size: .12rem;
+        border-radius: .03rem;
+    }
+
+    .fee-title {
+        .form-common-variable;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .fee-title-label {
+            .main-font-variable;
+        }
+
+        .fee-title-text {
+            .main-font-variable;
+            font-weight: bold;
+        }
+    }
+
+    // 当前功能模块
+    .tcxq-equity-list {
+        .tcxq-equity-item {
+            .form-common-variable-auto;
+            border-bottom: @border;
+            display: flex;
+            align-items: center;
+
+            .tcxq-equity-item-title {
+
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+            }
+            .tcxq-equity-item-button-blue {
+                background: linear-gradient(#6a9ceb, #4872d3);
+            }
+            .tcxq-equity-item-button-red {
+                background: linear-gradient(#cd3232, #a90202);
+            }
+            .tcxq-equity-item-button-grey {
+                background: @button-disabled-color;
+            }
+        }
+    }
+    .tcxq-wait-equity {
+        .tcxq-wait-equity-wrap {
+            .form-common-variable-auto;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .tcxq-invalid-equity {
+        .tcxq-invalid-equity-list {
+            .tcxq-invalid-equity-item {
+                .form-common-variable-auto;
+                display: flex;
+                align-items: center;
+
+                .tcxq-invalid-equity-item-detail {
+                    display: flex;
+                    flex: 1;
+                    flex-direction: column;
+                }
+
+                .tcxq-invalid-equity-item-button {
+                    width: 1.3rem;
+                    text-align: right;
+                }
+
+                .tcxq-invalid-equity-item-button-buy-blue {
+                    background: linear-gradient(#6a9ceb, #4872d3);
+                    margin-left: .05rem;
+                }
+                .tcxq-invalid-equity-item-button-buy-red {
+                    background: linear-gradient(#cd3232, #a90202);
+                    margin-left: .05rem;
+                }
+                .tcxq-invalid-equity-item-button-buy-grey {
+                    background: @button-disabled-color;
+                    margin-left: .05rem;
+                }
+
+                .tcxq-invalid-equity-item-button-trail {
+                    background: linear-gradient(#6a9ceb, @button-sub-color)
+                }
+
+                .tcxq-invalid-equity-item-button-disabled {
+                    background: @button-disabled-color;
+                }
+            }
+        }
+    }
+    .order-table {
+        .form-common-variable-auto;
+        margin-top: .1rem;
+
+        .order-table-title {
+            display: flex;
+            align-items: center;
+            margin: .08rem 0 .1rem 0;
+
+            .order-table-title-text {
+                flex: 1;
+                .main-font-variable;
+            }
+            .order-table-get-btn {
+                display: inline-block;
+                width: .6rem;
+                height: .2rem;
+                line-height: .2rem;
+                font-size: .12rem;
+                text-align: center;
+
+                color: #222;
+                border: 1px solid #222;
+            }
+            .order-table-get-btn-disabled {
+                color: #999;
+                border: 1px solid #999;
+            }
+        }
+        .order-table-list {
+            .order-table-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: .1rem;
+
+                .order-table-item-checkbox {
+                    width: .2rem;
+                    .app-checkbox-variable;
+                }
+
+                .order-table-item-detail {
+                    flex: 1;
+                    padding: .05rem .1rem;
+                    border: 1px solid rgba(215, 215, 215,0.7);
+                    box-shadow: .02rem .02rem .1rem .02rem rgba(215, 215, 215,0.7);
+                }
+                .order-table-item-detail-item {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: .05rem 0;
+
+                    .order-table-item-detail-payAmount {
+                        color: @button-primary-color;
+                        font-size: .13rem;
+                    }
+
+                    .order-table-item-detail-ordertime {
+                        color: #666;
+                        font-size: .11rem;
+                    }
+
+                    .order-table-item-detail-status {
+                        .tcxq-main-sub-font;
+                    }
+
+                    .order-table-item-detail-wait {
+                        text-decoration: underline;
+                        color: @button-primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .tcgm-equity {
+        .tcgm-equity-list {
+            .tcgm-equity-item {
+                .form-common-variable;
+                line-height: .4rem;
+                border-bottom: @border;
+
+                & > span:first-child {
+                    margin-right: .05rem;
+                }
+            }
+        }
+    }
+
+    .tcgm-expire-time-wrap {
+        .form-common-variable;
+        line-height: .4rem;
+    }
+
+    .tcgm-upgrade-buy-title {
+        background: @item-background;
+        height: .42rem;
+        padding: 0 .1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: @border;
+
+        .tcgm-upgrade-buy-title-switch {
+            // width: 1rem;
+            // border: 2px solid @button-primary-color;
+            // height: .3rem;
+            .main-font-variable;
+            // display: flex;
+            // align-items: center;
+
+            // & > span {
+            //     display: flex;
+            //     flex: 1;
+            //     height: .3rem;
+            //     justify-content: center;
+            //     align-items: center;
+            // }
+
+            // .tcgm-upgrade-buy-title-switch-current {
+            //     background: @button-primary-color;
+            //     color: #fff;
+            // }
+        }
+    }
+    .tcgm-upgrade-buy-wrap {
+        padding: 0 .1rem 0 .2rem;
+        background: #fff;
+        border-bottom: @border;
+
+        .tcgm-upgrade-buy-tip {
+            .tcxq-main-sub-font;
+            padding: .1rem 0;
+        }
+
+        .tcgm-upgrade-buy-list {
+            margin-bottom: .1rem;
+
+            .tcgm-upgrade-buy-item {
+
+                display: flex;
+                align-items: center;
+                margin-bottom: .1rem;
+
+                .tcgm-upgrade-buy-item-checkbox {
+                    width: .25rem;
+                    .app-checkbox-variable;
+                }
+
+                .tcgm-upgrade-buy-info {
+                    display: flex;
+                    flex: 1;
+                    padding: .1rem .1rem;
+                    align-items: center;
+                    border: 1px solid rgba(215, 215, 215,0.7);
+                    box-shadow: .02rem .02rem .1rem .02rem rgba(215, 215, 215,0.7);
+
+                    .tcgm-upgrade-buy-equityname {
+                        .main-font-variable;
+                        flex: 1;
+                    }
+                    .tcgm-upgrade-buy-relateNumber {
+                        .main-font-variable;
+                    }
+                    .tcgm-upgrade-buy-dropdown {
+                        font-size: .11rem;
+                        margin-left: .1rem;
+                    }
+                }
+            }
+            .tcgm-upgrade-buy-item-selected {
+                .sub-font-variable;
+            }
+        }
+    }
+    .tcgm-upgrade-buy-money-show {
+        .form-common-variable-auto;
+        margin-bottom: .1rem;
+
+        .tcgm-upgrade-buy-money {
+            display: flex;
+            margin-top: .1rem;
+            align-items: flex-end;
+            .tcgm-upgrade-buy-money-font {
+                flex: 1;
+                font-size: .3rem;
+                height: .3rem;
+                line-height: .3rem;
+                color: @button-primary-color;
+                padding-left: .05rem;
+            }
+            .tcgm-upgrade-buy-money-rule {
+                font-size: .11rem;
+                color: #222;
+                text-decoration: underline;
+            }
+        }
+    }
+    .tcgm-upgrade-buy-methord {
+        padding: .1rem 0;
+        .tcgm-upgrade-buy-methord-icon {
+            .main-font-variable;
+            margin-left: .05rem;
+        }
+    }
+    .tcgm-upgrade-buy-before {
+        padding: .1rem 0;
+        .tcgm-upgrade-buy-before-checkbox {
+            .app-checkbox-variable;
+        }
+        .tcgm-upgrade-buy-before-link {
+            font-size: .13rem;
+            color: @button-primary-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+.orderform-btn {
+    width: 100%;
+    text-align: center;
+
+    & > span {
+        border: 1px solid @button-primary-color;
+        display: inline-block;
+        border-radius: .08rem;
+        width: 1rem;
+        height: .3rem;
+        line-height: .3rem;
+        color: @button-primary-color;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.order {
+    font-size: .12rem;
+    font-family: PingFangSC-Regular;
+
+    &-item {
+        background: #ffffff;
+        margin-bottom: .1rem;
+        &-top {
+            padding: 0 .1rem;
+            border-bottom: 1px solid #dddddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: .32rem;
+            color:#999999;
+            &-time{
+                margin-left: .05rem;
+            }
+            &>p:nth-child(2) {
+                color: #666666;
+            }
+        }
+        &-bottom {
+            color: #222222;
+            height: .34rem;
+            padding: .1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            &>span:nth-child(2) {
+                color:#ec7646;
+                font-size: .13rem;
+            }
+        }
+    }
+
+    &-detail {
+        font-size: .11rem;
+        &>li{
+            display: flex;
+            // margin-bottom: .09rem;
+            margin-bottom: .07rem;
+            &>span:nth-child(1){
+				color: #333333;
+	        }
+			&>span:nth-child(2){
+				color: #666666;
+				font-family: PingFangSC-Regular;
+		   }
+        }
+        &-bill-tit {
+            height: .28rem;
+            text-align: center;
+            width: 100%;
+            line-height: .28rem;
+            font-size: .12rem;
+            color: #999999;
+            font-weight: normal;
+            &:before{
+                display:inline-block;
+                content: "";
+                padding: 1px 14%;
+                margin: 5px .15rem 5px 0;
+                background-color: #d8d8d8;
+            }
+            &:after{
+                display:inline-block;
+                content: "";
+                padding: 1px 14%;
+                margin: 5px 0px 5px .15rem;
+                background-color: #d8d8d8;
+            }
+        }
+        &-reimburse {
+            margin-top: .1rem;
+            &-btn {
+                display: inline-block;
+				background: #ffffff;
+				border: 1px solid @button-primary-color;
+				border-radius: .08rem;
+				width: 1rem;
+				height: .3rem;
+				line-height: .3rem;
+				color: @button-primary-color;
+				font-weight: normal;
+				text-align: center;
+				margin: 0 .15rem;
+            }
+        }
+        &-refund {
+            text-align: center;
+            & > b {
+                // margin-left: .8rem;
+                display: inline-block;
+				background: #ffffff;
+				border: 1px solid @button-primary-color;
+				border-radius: .08rem;
+				width: 1rem;
+				height: .3rem;
+				line-height: .3rem;
+				color: @button-primary-color;
+				font-weight: normal;
+				text-align: center;
+				margin: 0 auto;
+            }
+        }
+    }
+
+    &-apply-bill {
+        height: .43rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #ffffff;
+        &-btn {
+            display: block;
+            font-size: .14rem;
+            width: 3rem;
+            height: .32rem;
+            line-height: .32rem;
+            color: #ffffff;
+            background: #5ec9f6;
+            border: 1px solid #5ec9f6;
+            border-radius: 6px;
+            font-family: PingFangSC-Medium;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+    }
+
+    &-bill {
+        &-title {
+            color: #666666;
+            margin-bottom: .1rem;
+            padding-left: .1rem;
+        }
+        &-item {
+            &-icon {
+                // color: #cccccc;
+                color: #aaa;
+            }
+        }
+    }
+    .order-item-color {
+        color: #ec7646;
+        text-decoration: underline;
+    }
+}
+
+.order-billMessage {
+    .order-billMessage-item {
+        .form-common-variable;
+        display: flex;
+        border-bottom: @border;
+        align-items: center;
+
+        .order-billMessage-item-lable {
+            .tcxq-main-sub-font;
+            width: .7rem;
+        }
+        .order-billMessage-item-right {
+            flex: 1;
+            text-align: right;
+            .tcxq-main-font;
+        }
+        .order-billMessage-input {
+            flex: 1;
+            input {
+                text-align: right;
+            }
+        }
+    }
+
+    .order-billMessage-prompt {
+        color: #e40000;
+        border-bottom: @border;
+        padding: 0 .1rem;
+        text-align: right;
+        font-size: .12rem;
+        height: .3rem;
+        line-height: .3rem;
+    }
+}

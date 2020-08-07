@@ -1,0 +1,139 @@
+@wrap-padding:0 .1rem;
+@assmxb-font-size: .11rem;
+
+.assmxb {
+    &-title {
+        color: #666;
+        background-color: #fff;
+        align-items: center;
+        padding: @wrap-padding;
+
+        &-assinfo {
+            display: flex;
+            font-size: .11rem;
+            margin-right: .05rem;
+            padding: 0.04rem 0;
+        }
+        &-acinfo {
+            display: flex;
+            font-size: .11rem;
+            color: #999;
+            &-icon {
+                display: flex;
+                margin-left: .11rem;
+                min-width: .14rem;
+            }
+        }
+        &-tip {
+            min-width: .5rem;
+        }
+        &-ass,
+        &-ac {
+            display: flex;
+            flex: 1;
+            word-break:break-all;
+        }
+    }
+
+    &-main {
+        &-top,
+        &-bottom {
+            display: flex;
+            height: .3rem;
+            font-size: .13rem;
+            color: #222;
+            background-color: #FFDBA6;
+            align-items: center;
+            padding: @wrap-padding;
+
+        }
+        &-bottom {
+            background: #FFF4E3;
+        }
+
+        &-top{
+            margin-top: .06rem;
+        }
+
+        &-amount-odd {
+            width: 1.75rem;
+            &-direction {
+                color: #999;
+                font-size: .11rem;
+                font-weight: normal;
+                margin-left: .05rem;
+            }
+        }
+
+        &-amount {
+            display: flex;
+            flex: 1;
+            width: 0;
+            justify-content: flex-end;
+        }
+
+        &-list {
+            background-color: #fff;
+        }
+    }
+
+
+    &-jv {
+        padding: .05rem .1rem;
+        border-bottom: 1px solid #eee;
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-abstract {
+            font-size: .11rem;
+            color: #999;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            font-size: .12rem;
+            padding-top: .02rem;
+            color: #222;
+            & > * {
+                display: flex;
+            }
+            .assmxb-vcindex {
+                width: .6rem;
+                text-align: left;
+            }
+
+            .assmxb-jvdirection {
+                width: .4rem;
+                justify-content: center;
+            }
+
+            .assmxb-amount{
+                flex: 1;
+                width: 0;
+                justify-content: flex-end;
+            }
+        }
+
+        &-direction {
+		    border: 1px solid #999;
+		    font-size: .1rem;
+		    display: inline-block;
+		    width: .2rem;
+		    line-height: .2rem;
+		    border-radius: 50%;
+		    text-align: center;
+        }
+    }
+}
+
+.mxb-no-vc {
+    text-align: center;
+    height: .4rem;
+    line-height: .4rem;
+    font-size: .13rem;
+    color: #ccc;
+}

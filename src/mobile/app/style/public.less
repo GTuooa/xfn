@@ -1,0 +1,127 @@
+.clearfix {
+    display: block;
+    zoom: 1;
+
+    &:after {
+        content: " ";
+        display: block;
+        font-size: 0;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+
+// 公共设置
+// row
+@rowHiegth: .36rem;
+@rowColor: #fff;
+
+/*一像素边框 只能单独出现*/
+.border_bottom(@color: #ccc){
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;//calc(100% - 1px);
+      background-color: @color;
+      transform-origin: 100% 100%;
+      transform: scaleY(0.5);
+    }
+}
+.border_top(@color: #ccc){
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;//calc(100% - 1px);
+      background-color: @color;
+      transform-origin: 0% 0%;
+      transform: scaleY(0.5);
+    }
+}
+.border_left(@color: #ccc){
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: @color;
+      transform-origin: 0% 0%;
+      transform: scaleX(0.5);
+    }
+}
+.border_right(@color: #ccc){
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 1px;
+      background-color: @color;
+      transform-origin: 100% 100%;
+      transform: scaleX(0.5);
+    }
+}
+.border(@color: #ccc){//当宽高不是整数时会有问题
+    position: relative;
+    &:after{
+        content: '';
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+        border: 1px solid @color;
+    }
+}
+.overElli(){
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+
+
+
+
+
+
+
+
+// @background: #f8f8f8;
+//
+// // 外边框距
+// @wrapMarginTopAndBottom: 10px;
+//
+//
+//
+//
+// // 字体
+// // 1号标题字体颜色
+//
+// @textSize1: 14px;
+// @textSize2: 13px;
+//
+// @mainFontColor: #222;
+// @minorFontColor: #666;
+// @assistFontColor: #999;
+// @disableFontColor: #ccc;
+// @blueColor1: #38acff;
+//
+// // border
+// @borderGray: #ccc 1px solid;
+// @borderDashedGray: #ccc 1px dashed;

@@ -1,0 +1,247 @@
+@import '~app/style/themes/common.less';
+
+.title-config-topbar{
+    .ant-btn{
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+        color: #333;
+        background-color: #fff;
+    }
+}
+
+.ant-btn-ghost.disabled, .ant-btn-ghost[disabled], .ant-btn-ghost.disabled:hover, .ant-btn-ghost[disabled]:hover, .ant-btn-ghost.disabled:focus, .ant-btn-ghost[disabled]:focus, .ant-btn-ghost.disabled:active, .ant-btn-ghost[disabled]:active, .ant-btn-ghost.disabled.active, .ant-btn-ghost[disabled].active {
+    color: rgba(0, 0, 0, 0.25) !important;
+    background-color: #f5f5f5!important;
+}
+
+.accongig-tabel-width {
+	& > li{
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 32px;
+            max-width: 32px;
+            flex: 32;
+            & > .acconfig-plus{
+                margin-right: 0px;
+            }
+        }
+        &:nth-child(3) {
+			min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+        }
+        &:nth-child(4) {
+            min-width: 163px;
+            max-width: 233px;
+            flex: 163;
+        }
+        &:nth-child(5) {
+            min-width: 100px;
+            max-width: 100px;
+            flex: 100;
+            justify-content: flex-start;
+            padding-left: 8px;
+        }
+        &:nth-child(6) {
+            min-width: 56px;
+            max-width: 56px;
+            flex: 56;
+        }
+		&:nth-child(7) {
+            min-width: 150px;
+            max-width: 330px;
+            flex: 150;
+        }
+		&:nth-child(8) {
+            min-width: 50px;
+            max-width: 80px;
+            flex: 50;
+        }
+		&:nth-child(9) {
+            min-width: 80px;
+            max-width: 120px;
+            flex: 80;
+        }
+    }
+
+	& > li{
+		&:nth-child(2) {
+            justify-content: center;
+			align-items: center;
+        }
+        // &:nth-child(4) {
+        //     width: 60px;
+        // }
+	}
+}
+
+.acconfig-plus,
+.acconfig-plus-disable {
+	// margin-right: 10px;
+}
+.acconfig-plus,
+.acconfig-edit{
+	&:hover{
+		color: @activeColor;
+		cursor: pointer;
+	}
+}
+.acconfig-plus-disable {
+	color: #ccc;
+	&:hover{
+		color: #ccc;
+		cursor: not-allowed;
+	}
+}
+
+.pconfig-reverse-item-tip {
+	font-size: 13px;
+	color: #b90000;
+	padding-left: 150px;
+}
+
+.pconfig-kmset{
+	&-item {
+		.clearfix();
+		height: 40px;
+		line-height: 40px;
+
+		& > label {
+			float: left;
+		}
+		& > .ant-input {
+			float: left;
+
+			width: 80%;
+		}
+		&-select {
+			margin-top: 6px;
+		}
+	}
+	&-amount {
+		.clearfix();
+		height: 40px;
+		line-height: 40px;
+
+		& > label {
+			float: left;
+			margin-right: 40px;
+		}
+		& > label:nth-child(2) {
+			margin-right: 10px;
+		}
+		& > .ant-input {
+			float: left;
+			// width: 40%;
+			width: 100px;
+
+
+		}
+	}
+}
+
+
+.pconfig-reverse-item {
+	.clearfix();
+	margin: 10px 0;
+	line-height: 28px;
+	&-label {
+		float: left;
+		width: 30%;
+	}
+	&-input {
+		float: left;
+		width: 70%;
+	}
+	&-upacid {
+		float: left;
+		width: 13%;
+	}
+	&-acidinput {
+		float: left;
+		width: 57%;
+	}
+}
+
+.pconfig-reverse-item-acselect {
+	border-bottom: 1px dashed #ccc;
+	padding-bottom: 10px;
+}
+.pconfig-reverse-item-acselect-button {
+	border: 1px solid #d9d9d9;
+	padding: 2px 9px;
+	border-radius: 4px;
+}
+
+.reviseModal-item{
+	&-title{
+		&>span:nth-child(1){
+			margin-left: 50px;
+		}
+		&>span:nth-child(2){
+			margin-left: 60px;
+		}
+		&>span:nth-child(3){
+			margin-left: 50px;
+		}
+	}
+	&>div:first-child{
+		margin-bottom: 10px;
+	}
+	&>div:nth-child(2){
+		margin-bottom: 20px;
+	}
+	& span{
+		margin: 0 5px;
+	}
+	&-input{
+		width:130px;
+	}
+	&-ul{
+		background: #eee;
+		line-height:29px;
+		height:270px;
+		&>li{
+			margin: 0 0 10px 15px;
+		}
+		&>li:first-child{
+			font-weight: bold;
+			margin-left: 0;
+		}
+	}
+}
+
+.revers-ac-select-wrap {
+	height: 600px;
+	overflow: auto;
+}
+.lend-bg{
+    background-color: rgb(94, 129, 209);
+}
+
+.ac-config-app{
+    .title-config-topbar{
+        min-width: 800px;
+        max-width: 1120px;
+        display: flex;
+        .title-left{
+            height: auto;
+            overflow: hidden;
+            margin-bottom: 0px;
+            flex: 1;
+        }
+    }
+    .ac-config-hover{
+        text-decoration: underline;
+        & > hover{
+            color: #57c5f7;
+        }
+    }
+}

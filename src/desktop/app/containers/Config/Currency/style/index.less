@@ -1,0 +1,257 @@
+@import '~app/style/themes/common.less';
+
+.currency-tabel-width {
+	& > li{
+        &:nth-child(1) {
+            min-width: 40px;
+			max-width: 40px;
+			flex: 40;
+        }
+		&:nth-child(2) {
+            min-width: 60px;
+			max-width: 60px;
+			flex: 60;
+        }
+		&:nth-child(3) {
+			flex: 329;
+			padding: 0 4px;
+        }
+		&:nth-child(4) {
+			min-width: 80px;
+			max-width: 120px;
+			flex: 80;
+			padding: 0 4px;
+		}
+        &:nth-child(5) {
+			min-width: 80px;
+			max-width: 80px;
+			flex: 80;
+        }
+    }
+	& > li{
+		justify-content: center;
+		align-items: center;
+	}
+}
+.currency{
+	.currency-table-content{
+		& > li{
+			&:nth-child(3) {
+				justify-content: flex-start;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+			&:nth-child(4) {
+				& > span{
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					width: 100%;
+					text-align: right;
+				}
+			}
+		}
+	}
+}
+
+
+.table-currency-font{
+	font-size: 12px;
+	color: #333;
+}
+
+.title-config-topbar{
+	button{
+		height: 28px;
+		line-height: 28px;
+		font-size: 12px;
+		color: #333;
+	}
+}
+
+.currency {
+	&-plus{
+		margin-right: 10px;
+	}
+	&-plus,
+	&-edit{
+		&:hover{
+			color: @activeColor;
+			cursor: pointer;
+		}
+	}
+	&-left {
+		width: 30%;
+		padding: 0;
+		height: 100%;
+		&-title {
+			.vertical-mixin(@line-height);
+			border-bottom: @border;
+			background: @top-li-bg;
+			text-align: center;
+			&:hover {
+				color: @activeColor;
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&-model {
+		&-item {
+			margin-bottom: 10px;
+			color: #333333;
+			display: flex;
+			overflow: hidden;
+			align-items: center;
+			& > span{
+				min-width: 60px;
+			}
+		}
+		&-select {
+			flex: 1;
+			line-height: 18px;
+		}
+	}
+}
+
+.relatedaclist{
+	flex: 1;
+	overflow: auto;
+	margin-top: 10px;
+	.relatedaclist-item {
+		display: flex;
+		width: 100%;
+		padding: 0 4px;
+		& > span {
+			display: flex;
+			&:nth-child(1) {
+				width: 70px;
+			}
+			&:nth-child(2) {
+				flex: 1;
+			}
+		}
+	}
+}
+
+.relatedaclist-wrap{
+	flex: 1;
+	overflow: auto;
+	.relatedaclist-item {
+		display: flex;
+		width: 100%;
+		padding: 0 4px;
+		& > span {
+			display: flex;
+			&:nth-child(1) {
+				width: 70px;
+			}
+			&:nth-child(2) {
+				flex: 1;
+			}
+		}
+	}
+}
+.reverse-item {
+	.clearfix();
+    margin: 10px 0;
+	line-height: 28px;
+	font-size: 13px;
+	color: #333333;
+	&>span:nth-child(1) {
+		float: left;
+		width: 80px;
+	}
+	&-line {
+		width: 98%;
+		border-top: 1px dashed rgba(0, 0, 0, 0.3);
+		margin-top: 14px;
+	}
+	&-show {
+		width: 98%;
+		margin-top: 14px;
+		padding: 5px 0 0 10px;
+		background:#eeeeee;
+		border-radius:7px;
+		color: #666666;
+		&-title {
+			line-height: 35px;
+		}
+		&-tip{
+			line-height: 16px;
+
+			&>li {
+				color: #888;
+				position: relative;
+		        font-size: 13px;
+		        margin: 5px;
+		        margin-left: 10px;
+		        &::before {
+		            position: absolute;
+		            content: '';
+		            width: 4px;
+		            height: 4px;
+					border-radius: 2px;
+					background-color: #aaa;
+		            left: -10px;
+		            top: 4px;
+		            opacity: .4;
+		        }
+			}
+		}
+	}
+	&-input {
+		float: left;
+	    width: 81%;
+	}
+	&-icon {
+		color:#b90000;
+		margin-left: 80px;
+	}
+}
+.revers-color {
+    color: rgba(0, 0, 0, 0.50);
+}
+.reversAssDetail {
+	font-size: 13px;
+	color: #666666;
+	background-color: #eeeeee;
+	border-radius: 6px;
+	padding: 10px 0 10px 10px;
+	margin-bottom: 16px;
+	&-title {
+	    padding: 5px 0 2px 0;
+	}
+	&-bottom {
+		color: #333333;
+		font-size: 15px;
+	}
+}
+
+.relate {
+	position: relative;
+	padding-bottom: 17px;
+}
+.relate-modal-item {
+	margin-top: 5px;
+}
+.relateacmodal {
+	max-height: 100px;
+	overflow: hidden;
+}
+.relate-show{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #fff;
+	height: 17px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.lrpz-tree-wrap {
+	height: 350px;
+	overflow-y: scroll;
+}

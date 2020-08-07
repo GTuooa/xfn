@@ -1,0 +1,135 @@
+@wrap-padding:0 .1rem;
+@mxb-font-size: .11rem;
+
+.amountmxb {
+    &-title {
+        color: #666;
+        background-color: #fff;
+        align-items: center;
+        padding: @wrap-padding;
+
+        &-acinfo {
+            display: flex;
+        }
+        &-ac{
+            margin-right: .05rem;
+            font-size: .11rem;
+            padding: 0.04rem 0;
+        }
+        &-ac-tip{
+            min-width: .5rem;
+        }
+        &-icon{
+            display: flex;
+            color: #ccc;
+            flex: 1;
+            width: 0;
+            font-size: .11rem;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        &-assinfo {
+            font-size: .11rem;
+            color: #999;
+            .icon {
+                color: #ccc;
+                font-size: .11rem;
+                margin-left: .05rem;
+            }
+        }
+    }
+
+    &-main {
+        &-top,
+        &-bottom {
+            display: flex;
+            height: .39rem;
+            font-size: .13rem;
+            color: #222;
+            background-color: #FFDBA6;
+            align-items: center;
+            padding: @wrap-padding;
+
+        }
+        &-bottom {
+            background: #FFF4E3;
+        }
+
+        &-top{
+            margin-top: .06rem;
+        }
+
+        &-amount-odd {
+            &-direction {
+                color: #999;
+                font-size: .11rem;
+                font-weight: normal;
+                margin-left: .05rem;
+            }
+        }
+
+        &-amount {
+            display: flex;
+            flex: 1;
+            width: 0;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+        &-list {
+            background-color: #fff;
+        }
+    }
+
+
+    &-jv {
+        padding: .05rem .1rem;
+        border-bottom: 1px solid #eee;
+
+        &-title {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-abstract {
+            font-size: .11rem;
+            color: #999;
+        }
+
+        &-content {
+            display: flex;
+            justify-content: space-between;
+            font-size: .12rem;
+            padding-top: .02rem;
+            color: #222;
+            & > * {
+                display: flex;
+            }
+            .mxb-vcindex {
+                width: .6rem;
+                text-align: left;
+            }
+
+            .mxb-jvdirection {
+                width: .2rem;
+                text-align: left;
+            }
+            .mxb-amount-right,
+            .mxb-amount{
+                width: 0;
+                justify-content: flex-end;
+            }
+            .mxb-amount {
+                flex: 1;
+            }
+            .mxb-amount-right{
+                flex: 1.4;
+            }
+        }
+    }
+    .mxb-amount-color{
+        color: #00649e;
+    }
+}

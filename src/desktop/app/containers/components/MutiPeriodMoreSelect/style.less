@@ -1,0 +1,154 @@
+@border: 1px solid #d9d9d9;
+.common-data-change-box{
+    position: relative;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    .title-more-choose-calendar{
+        position: absolute;
+        top: 7px;
+        right: 6px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.25);
+    }
+    .muti-period-more-select{
+        position: relative;
+        .title-more-choose-date{
+            width: 109px;
+            & > div {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                & > input {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                .ant-calendar-picker-input{
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+                .ant-calendar-picker-icon{
+                    font-size: 12px;
+                    line-height: 20px;
+                }
+            }
+
+        }
+        .title-more-calendar{
+            position: absolute;
+            top: 0px;
+            z-index: 2;
+            right: 11px;
+            font-size: 14px;
+            color: #d9d9d9;
+            display: none;
+        }
+    }
+    .title-more-choose-date{
+        width: 109px;
+        .anticon-calendar{
+            display: none
+        }
+        & > div {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            & > input {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .ant-calendar-picker-input{
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            .ant-calendar-picker-icon{
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+
+    }
+
+    .title-more-choose-month{
+        // vertical-align: bottom;
+        // height: 28px;
+        // line-height: 28px;
+        width: 174px;
+        display: flex;
+        .anticon-calendar{
+            display: none
+        }
+        .ant-input{
+            padding: 0 5px;
+            input{
+                vertical-align: top;
+            }
+        }
+        & > span {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .ant-calendar-picker-clear, .ant-calendar-picker-icon{
+            right: 4px;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .ant-calendar-range-picker-separator{
+            height: 27px;
+            line-height: 27px;
+        }
+    }
+    .title-more-choose-month-month{
+        position: relative;
+        display: flex;
+        width: 174px;
+        border: @border;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        &:hover,&:focus,&:active{
+            border-color: #40a9ff;
+            box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+        }
+        & > div {
+            flex: 1;
+            height: 26px;
+            color: #666;
+            .ant-select-selection{
+                border: none;
+                height: 26px;
+                &:hover,&:focus,&:active{
+                    border-color: #d9d9d9;
+                    // border-top-color: #d9d9d9;
+                    // border-right-color: #d9d9d9;
+                    box-shadow: none!important;
+                }
+            }
+
+        }
+        .choose-month-month-separator{
+            display: inline-block;
+            min-width: 10px;
+            height: 26px;
+            line-height: 26px;
+            color: rgba(0, 0, 0, 0.45);
+            white-space: nowrap;
+            text-align: center;
+            vertical-align: middle;
+            pointer-events: none;
+        }
+    }
+    .title-more-choose{
+        width: 25px;
+        z-index: 9;
+        & > div {
+            background: transparent;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-left: none;
+        }
+    }
+    .ant-select-selection__rendered {
+        margin-left: 11px;
+        margin-right: 11px;
+    }
+}

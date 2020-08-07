@@ -1,0 +1,35 @@
+
+.form {
+    &-tip {
+        position: relative;
+    	font-size: .11rem;
+    	color: #8b939e;
+    	padding-top: .08rem;
+    	&-item {
+    		margin: .03rem .1rem 0 .2rem;
+    		position: relative;
+    		&::before {
+    			content: '';
+    			position: absolute;
+    			width: .03rem;
+    			height: .1rem;
+    			display: block;
+    			background-color: #93cdf7;
+    			top: .03rem;
+    			left: -.1rem;
+    		}
+    	}
+    }
+}
+
+.form-tip-hide {
+    height: 30px;
+    overflow: hidden;
+    padding-right: 30px;
+}
+
+.form-tip-switch {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+}

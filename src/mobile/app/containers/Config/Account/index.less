@@ -1,0 +1,106 @@
+.account-config {
+    .choose-type{
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+    	height: 100%;
+    	z-index: 2;
+    	background-color: black;
+    	opacity: 0.4;
+    }
+    .poundageRate{
+        .left{
+            display: inline-block;
+            width: 100%;
+        }
+        .antd-mobile-text-input-wrap{
+            border: 1px solid #979797;
+            .am-input-control > input{
+                text-align: right;
+                padding-right: .1rem;
+            }
+        }
+    }
+    .account-regret-modal-text{
+    	margin: .1rem 0 .1rem .05rem;
+    	.text{
+    		font-size:.13rem;
+    		line-height: .13rem;
+    		border-left: .05rem solid #62caf3;
+    		padding-left: .1rem;
+    	}
+    }
+    .account-regret-item{
+    	padding: .1rem 0 .1rem .2rem;
+        background-color: #fff;
+        font-size:.12rem;
+    	.text{
+    		padding-left: .1rem;
+            line-height: .2rem;
+    	}
+    }
+    .gray{
+        color: #ccc;
+    }
+
+}
+
+// 旧版录入流水要用
+.account-setting{
+    background-color: #fff;
+    font-size: .12rem;
+    color: #222;
+    &-item{
+        display: flex;
+        margin-left: .05rem;
+        justify-content: space-between;
+        padding: .08rem .1rem;
+        align-items: center;
+        border-bottom: 1px solid #f1f1f1;
+        & > i {
+            color: #999;
+        }
+        .checkbox{
+            margin: 0 .1rem;
+        }
+        & > div:nth-child(1),
+        & > div:nth-child(2){
+            flex: 1;
+            overflow: hidden;
+            .am-input-control > input{
+                text-align: right;
+            }
+        }
+        & > span:nth-child(1){
+            color: #666;
+            width: .7rem;
+        }
+        .noTextSwitchShort{
+            text-align: right;
+            .checkbox{
+                margin: 0;
+            }
+        }
+        .am-list-item {
+            height: 0rem !important;
+        }
+        .antd-single-picker {
+            height: auto;
+        }
+    }
+    &-single-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & > div{
+            flex: 1;
+            text-align: right;
+            margin-right: .05rem;
+            overflow: hidden;
+        }
+    }
+    .border-top{
+        border-top: 1px solid #f1f1f1;
+    }
+}

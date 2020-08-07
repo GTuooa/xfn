@@ -1,0 +1,123 @@
+
+//图片上传
+.enclosure-part {
+	// position: relative;
+	font-size: .12rem;
+	padding: .1rem;
+    background-color: #fff;
+    margin-bottom: .1rem;
+
+    .enclosure-part-wrap {
+
+        .enclosure-part-title {
+            display: flex;
+            height: .25rem;
+            align-items: center;
+
+            .enclosure-part-tips{
+                display: flex;
+                flex: 1;
+                font-size: .13rem;
+
+                & > span {
+                    color: #666;
+                }
+            }
+
+            .enclosure-part-input-icon {
+                width: .5rem;
+				text-align: right;
+				padding: .1rem;
+
+				.enclosure-part-upload-input {
+					position: absolute;
+					width: .5rem;
+					height: .2rem;
+					right: .02rem
+				}
+
+                // .enclosure-part-input {
+                //     position: absolute;
+                //     left: 0px;
+                //     top: 0px;
+                //     opacity: 0;
+				// 	width: 1rem;
+				// 	height: .2rem;
+                // }
+                // & > i {
+                //     margin: 0 .15rem 0 .25rem;
+                //     color: #666;
+                // }
+            }
+            .enclosure-part-switch-text {
+                position: relative;
+                display: flex;
+                // width: .6rem;
+                // min-width: .6rem;
+                justify-content: flex-end;
+                align-items: center;
+
+                .topBarSwitch {
+					width: 51px;
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    margin-left: 6px;
+                }
+            }
+        }
+
+        .enclosure-part-upload {
+            border-bottom: 1px solid #eee;
+            padding: .05rem 0;
+            display: flex;
+            & .enclosure-part-close{
+                padding-right: .1rem;
+                align-self: center;
+                color: red;
+                margin-right: .05rem;
+                font-size: .11rem;
+            }
+            & img{
+                width: .3rem;
+                height: .3rem;
+                align-self: center;
+            }
+            & ul{
+                flex: 3;
+                margin: 0 .05rem;
+                font-size: .1rem;
+                align-items: center;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+			& .enclosure-part-label-download {
+				font-size: .1rem;
+				margin-left: .1rem;
+				color: #5e81d1;
+			}
+            & .enclosure-part-label{
+                color: #5e81d1;
+                width: .6rem;
+                height: .25rem;
+                line-height: .25rem;
+                align-self: center;
+                font-size: .11rem;
+                & > .enclosure-part-label-have{
+                    display: flex;
+                    width: .6rem;
+                    justify-content: center;
+                    border: 1px solid #ccc;
+                    border-radius: .03rem;
+                }
+            }
+            .antd-single-picker {
+                flex: 1;
+            }
+        }
+    }
+    .form-tip-item::before{
+        background-color: #5E81D1;
+    }
+}

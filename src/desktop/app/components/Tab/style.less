@@ -1,0 +1,89 @@
+@border : 1px solid #d9d9d9;
+@border-hover : 1px solid #5e81d1;
+.basic-tab-radius-item,.basic-tab-item {
+    height: 28px;
+    line-height: 28px;
+    width: auto;
+    background: #fff;
+    color: #333;
+    display: inline-block;
+    padding: 0 9px;
+    border: @border;
+    border-left: 0;
+    height: 28px;
+    line-height: 28px;
+    cursor: pointer;
+    font-size: 12px;
+    margin-bottom: 5px;
+    position: relative;
+    z-index: 2;
+    left: 1px;
+    &:hover {
+        color: #5e81d1;
+        border: @border-hover;
+        border-left: 0;
+        z-index: 99;
+        &::before {
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            display: block;
+            width: 1px;
+            height: calc(100% + 2px);
+            background-color: #5e81d1;
+            content: '';
+            z-index: 999;
+        }
+        // &::after {
+        //     position: absolute;
+        //     top: -1px;
+        //     right: 0px;
+        //     display: block;
+        //     width: 1px;
+        //     height: calc(100% + 2px);
+        //     background-color: #5e81d1;
+        //     content: '';
+        //     z-index: 999;
+        // }
+    }
+
+    &::before {
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        display: block;
+        width: 1px;
+        height: calc(100% + 2px);
+        background-color: #d9d9d9;
+        content: '';
+        z-index: 1;
+    }
+    &:first-of-type {
+        &::before {
+            width: 0;
+        }
+        &:hover {
+            border-left: @border-hover;
+        }
+    }
+
+}
+.basic-tab-radius-item {
+    margin-bottom: 0;
+}
+.basic-tab-radius-item:first-of-type {
+    border-radius: 5px 0 0 5px;
+    border-left: @border;
+}
+.basic-tab-radius-item:last-of-type {
+    border-radius: 0 5px 5px 0;
+}
+.basic-tab-item:first-of-type {
+    border-left: @border;
+}
+.basic-tab-item-active {
+    background-color: #5e81d1 !important;
+    border: solid 1px #5e81d1;
+    border-left: 0;
+    color: #ffffff !important;
+}

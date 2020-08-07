@@ -1,0 +1,141 @@
+
+.preview{//凭证页面和附件管理页面通用
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    // margin-top: 50px;
+
+    .img-box{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 5%;
+        margin:90px auto 0 ;
+        //width: 90%;
+        height:720px;
+    }
+
+    .img-box-contain {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin:0px auto 0;
+        .img-box-contain-overflow{
+            background-color: #f5f5f5;
+            width: 960px;
+            height: 680px;
+            overflow: auto;
+            margin:auto;
+            //box-shadow:0 8px 10px 0 rgba(0,0,0,0.50);
+            //position:relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    & .noSupport{
+        background: #f1f1f1;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.50);
+        width: 559px;
+        height: 412px;
+        text-align: center;
+        font-size: 28px;
+        color: #666666;
+        font-weight: 200;
+        & i{
+            font-size: 280px;
+            margin: 20px 0;
+        }
+    }
+
+    & .btnBar{
+        width:960px;
+        margin:50px auto 0;
+        background-color: #eef3fa;
+        height:40px;
+        line-height: 40px;
+        //box-shadow:0 8px 10px 0 rgba(0,0,0,0.50);
+        position: relative;
+        .title{
+            font-size: 14px;
+            margin-top: auto;
+            margin-bottom: auto;
+            color: #555555;
+            font-weight:bold;
+            font-family:"PingFang SC"
+        }
+        .closeBtn{
+            position: absolute;
+            right:20px;
+            font-size: 14px;
+            top:0px;
+            //position: absolute;
+            //top: 0;
+            //right: 0;
+            cursor: pointer;
+            color:rgba(0,0,0,1);
+
+            font-weight:bold;
+            &:hover{
+                color: red;
+            }
+        }
+    }
+    // &>div:last-child{
+    //     width: 50px;
+    //     height: 50px;
+    //     margin: 10px 20px 0 0;
+    //     line-height: 50px;
+    //     font-size: 40px;
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     cursor: pointer;
+    //     color: #fff;
+    //     &:hover{
+    //         color: red;
+    //     }
+    // }
+    & .nav{
+        width: 485px;
+        height: 75px;
+        border-radius: 75px;
+        background: rgba(0,0,0,.6);
+        position: fixed;
+        bottom: 86px;
+        left: 50%;
+        transform: translate(-50%);
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        font-size: 12px;
+        & > button{
+            background: none;
+            outline: 0;
+            border: none;
+            color: #fff;
+            padding: 4px 15px;
+            margin: 0 5px;
+            &[disabled]{
+                color: rgba(255,255,255,.4);
+                & > a{
+                    color: rgba(255,255,255,.4);
+                }
+            }
+            & i{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            & > a{
+                display: inline-block;
+                color: #fff;
+            }
+        }
+    }
+}

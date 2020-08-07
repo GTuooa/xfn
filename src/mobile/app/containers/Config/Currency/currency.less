@@ -1,0 +1,140 @@
+
+.currency {
+    .collapse {
+        border-top: 1px solid #eee;
+    }
+    .collapse-footer {
+        color: #38ADFF;
+    }
+    &-info {
+        display: flex;
+
+		&-icon {
+            display: flex;
+            margin-top: .02rem;
+			flex: 6;
+        }
+		&-number {
+			display: flex;
+			flex: 22;
+		}
+		&-name {
+			display: flex;
+			flex: 72;
+		}
+	}
+
+	.clear-both {
+		clear: both;
+	}
+    &-item-wrap {
+        background-color: white;
+        padding-left: .08rem;
+    }
+    &-item {
+        display: flex;
+        align-items: center;
+        padding: .08rem .08rem .08rem 0;
+        // margin-bottom: 1px;
+        border-bottom: 1px solid #f1f1f1;
+        background-color: white;
+        font-size: .13rem;
+        color: #222;
+        & > * {
+            display: flex;
+        }
+        .checkbox {
+            padding-right: .1rem;
+        }
+
+        .icon {
+            font-size: .13rem;
+            color: #b2b2b2;
+        }
+        &-info {
+            flex: 1;
+            width: 0;
+            font-size: .13rem;
+        }
+    }    
+}
+
+.tab-title {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+    z-index: 10;
+    // margin-bottom: .06rem;
+
+    &-item {
+        display: flex;
+        flex: 1;
+        width: 0;
+        justify-content: center;
+        color: #888;
+        align-items: center;
+        height: .35rem;
+
+        &.selected {
+            color: #40AFFC;
+          border-bottom: .02rem solid #40AFFC;
+        }
+    }
+}
+
+.relate-item-wrap {
+    background-color: white;
+    padding-left: .1rem;
+}
+.relate-ass,
+.relate {
+    &-item {
+        display: flex;
+        align-items: center;
+        // background-color: white;
+        // margin-bottom: 1px;
+        border-bottom: 1px solid #f1f1f1;
+        padding: .05rem .12rem .05rem 0;
+        & > .icon {
+            padding: .05rem .1rem .05rem 0;
+        }
+        & > .checkbox {
+            padding: .05rem .1rem .05rem 0;
+        }
+    }
+
+    &-article {
+        flex: 1;
+        width: 0;
+
+        & > .ac-info {
+            color: #222;
+            font-size: .12rem;
+        }
+
+        & > .ac-ass {
+            color: #999;
+            font-size: .1rem;
+            height: .12rem;
+            line-height: .12rem;
+            margin-bottom: .04rem;
+        }
+    }
+
+    &-other {
+        width: 50px;
+        display: flex;
+        justify-content: space-between;
+
+        & > .ac-direction {
+            font-size: .12rem;
+            padding: 0 .02rem;
+        }
+    }
+}
+.currency .collapse-content {
+    padding-left: 0;
+}

@@ -1,0 +1,186 @@
+@color:#333;
+
+.container-wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.container-width-search-one { // 查询凭证页的一种宽度
+    min-width: 800px;
+    max-width: 1280px;
+}
+.container-width-search-two { // 查询凭证页的一种宽度
+    min-width: 960px;
+    max-width: 1280px;
+}
+.container-width-search-three { // 查询审批页的一种宽度
+    min-width: 900px;
+    max-width: 1120px;
+}
+.container-width-fjgl-one { // 查询凭证页的一种宽度
+    min-width: 800px;
+    max-width: 1280px;
+}
+.container-width-report-one { // 报表页的一种宽度
+    min-width: 820px;
+    max-width: 1140px;
+}
+.container-width-report-lrb { // 报表页的一种宽度
+    min-width: 800px;
+    max-width: 1120px;
+}
+.container-width-yeb-ass { //  ass 的一种宽度
+    min-width: 960px;
+    max-width: 1280px;
+}
+.container-width-yeb-one { //  ac 、ass、 、Asset 的一种宽度
+    min-width: 900px;
+    max-width: 1280px;
+}
+.container-width-yeb-two { // 外币余额表的宽度
+    min-width: 900px;
+    max-width: 1600px;
+}
+.container-width-yeb-three { // 数量余额表的宽度
+    min-width: 1098px;
+    max-width: 1738px;
+}
+.container-width-yeb-four { //  account 的一种宽度
+    min-width: 800px;
+    max-width: 1120px;
+}
+.container-width-yeb-five { //  account 的一种宽度
+    min-width: 900px;
+    max-width: 1120px;
+}
+.container-width-yeb-six { //  account 的一种宽度
+    min-width: 900px;
+    max-width: 1760px;
+}
+.container-width-yeb-seven { //  账户余额表 的宽度
+    min-width: 760px;
+    max-width: 1080px;
+}
+.container-width-mxb-one { //  ac 、ass 的一种宽度
+    min-width: 800px;
+    max-width: 1280px;
+}
+.container-width-mxb-two { //  Asset 的一种宽度
+    min-width: 960px;
+    max-width: 1600px;
+}
+.container-width-mxb-three { //  Asset 的一种宽度
+    min-width: 1120px;
+    max-width: 1760px;
+}
+.container-width-mxb-mutil-column { //  多栏账
+    min-width: 1120px;
+    max-width: 1760px;
+}
+.container-width-config-one { // 设置页的一种宽度
+    min-width: 780px;
+    max-width: 1120px;
+}
+.container-width-config-two {
+    min-width: 820px;
+    max-width: 1280px;
+}
+.container-width-config-three {
+    min-width: 820px;
+    max-width: 1140px;
+}
+.container-width-config-four { // 账套设置
+    min-width: 860px;
+    max-width: 1299px;
+}
+.container-width-running-enclosure { // 账套设置
+    min-width: 960px;
+    max-width: 1280px;
+}
+.container-width-config-five { // 审核
+    min-width: 800px;
+    max-width: 1080px;
+}
+
+.container-width-two{
+    min-width: 980px;
+    max-width: 1300px;
+    // padding: 12px 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.flex-title {
+    width: 100%;
+    padding: 12px 20px;
+    height: auto;
+    display: flex;
+
+    .flex-title-left {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        .title-conleft {
+            display: block;
+            //float: left;
+            padding: 0 8px;
+            height: 28px;
+            text-align: center;
+            font-size: 12px;
+            color: @color;
+            background: #fff;
+        }
+        .title-selectd {
+            background: #eee;
+        }
+    }
+    .flex-title-left-min-width {
+        min-width: 480px;
+    }
+
+    .flex-title-right{
+        display: flex;
+        justify-content: flex-end;
+        .ant-btn{
+            height: 28px;
+            line-height: 28px;
+            background-color: #fff;
+            font-size: 12px;
+            color:@color;
+        }
+        .ant-btn.disabled,
+        .ant-btn[disabled],
+        .ant-btn-ghost.disabled,
+        .ant-btn-ghost[disabled] {
+            color: #ccc;
+            background: #f5f5f5;
+        }
+
+        // .title-right{
+        //     // float: right;
+        // }
+        .title-dropdown{
+            border: 1px solid #d9d9d9;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 12px;
+            color: @color;
+            .ant-dropdown-trigger {
+                display: inline-block;
+                width: 57px;
+                height: 28px;
+            }
+
+            .export-text,
+            .export-text-disable {
+                display: inline-block;
+                width: 49px;
+            }
+        }
+    }
+
+}

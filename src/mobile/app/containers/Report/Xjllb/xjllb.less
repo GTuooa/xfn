@@ -1,0 +1,105 @@
+@titlebar-backgroud: #FFDBA6;
+
+.xjllb {
+	&-line {
+		display: flex;
+		padding: 0 .09rem;
+		margin-bottom: 1px;
+		color: #222;
+		font-size: .12rem;
+		font-weight: bold;
+		height: .44rem;
+		line-height: .44rem;
+		& > span {
+			display: flex;
+		}
+
+		&-list {
+			background-color: white;
+		}
+
+		&.title {
+			font-weight: normal;
+			color: #222;
+			font-size: .13rem;
+			height: .3rem;
+			line-height: .3rem;
+			background: #FFDBA6;
+		}
+
+		&.firstlrb,
+		&.firstlrblast {
+			font-weight: bold;
+			background-color: #FEF3E3;
+			color: #222;
+			height: .3rem;
+			line-height: .3rem;
+			.linename {
+				padding-left: 0;
+				position: relative;
+			}
+			.linenametext{
+				-webkit-flex-basis: 90%;
+		        flex-basis: 90%;
+		        width: 90%;
+			}
+		}
+
+		&.firstlrb {
+			.icon {
+				color: #ccc;
+				position: absolute;
+				right: 0;
+				top: .09rem;
+			}
+		}
+
+		&.second {
+			color: #222222;
+			font-weight: bold;
+			.linename {
+				padding-left: 0;
+			}
+		}
+
+		&.thirdlrb {
+			height: .26rem;
+			line-height: .26rem;
+			color: #666;
+			font-weight: normal;
+		}
+
+		&.fourthlrb {
+			font-weight: normal;
+			border-bottom: 1px solid #E4E4E4;
+			color: #666;
+		}
+
+		.linename {
+		    flex: 1;
+			// -webkit-flex-basis: 34%;
+			// flex-basis: 34%;
+			// width: 34%;
+
+			.linenametext{
+				font-size: .12rem;
+				-webkit-flex-basis:100%;
+				flex-basis: 100%;
+				width: 100%;
+			}
+		}
+		.lineindex {
+			width: .26rem;
+		    justify-content: center;
+		}
+
+		.amount {
+			justify-content: flex-end;
+			width: .84rem;
+		}
+		.amount-right {
+			justify-content: flex-end;
+			width: .86rem;
+		}
+	}
+}

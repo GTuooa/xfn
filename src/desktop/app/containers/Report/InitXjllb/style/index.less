@@ -1,0 +1,52 @@
+@import '~app/style/themes/common.less';
+
+.initXjllb{
+	width: 750px;
+	&-table-width{
+		& > li{
+			font-size: 12px;
+    		color: #333;
+			&:nth-child(1) {
+	            flex: 1;
+				justify-content: flex-start;
+				padding: 0 4px;
+	        }
+	        &:nth-child(2) {
+	            width: 61px;
+	        }
+	        &:nth-child(3){
+				width: 200px;
+	        }
+	    }
+	}
+	&-table-justify{
+		& > li{
+			&:nth-child(1) {
+				justify-content: flex-start;
+	        }
+			&:nth-child(3) {
+				padding: 0 4px;
+				align-items: center;
+				.initXjllb-table-input {
+					cursor: text;
+					height: 28px;
+					align-items: center;
+					.ant-input {
+						text-align: right;
+						color: #333;
+						font-size: 12px;
+					}
+				}
+				// .initXjllb-table-input:focus,
+				// .initXjllb-table-input:hover {
+				// 	border-color: #57c5f7;
+				// 	outline: 0;
+				// 	box-shadow: 0 0 0 2px #d5f1fd;
+				// }
+	    	}
+		}
+	}
+}
+.initXjllb-amount-line {
+	text-align: right;
+}

@@ -1,0 +1,667 @@
+@import '~app/style/themes/common.less';
+// @import '~app/style/themes/accountModal.less';
+
+.ls-config{
+    .title-config-topbar{
+        display: flex;
+        min-width: 800px;
+        max-width: 1120px;
+        .title-left{
+            flex: 1;
+        }
+    }
+
+    .table-item .table-item-with-triangle > span {
+        padding-right: 0;
+    }
+
+    .table-item-triangle-account-wrap {
+        margin-right: 14px;
+    }
+}
+.title-config-topbar{
+    & > .account-title-btn{
+        height: 28px;
+        line-height: 28px;
+        font-size: 12px;
+        color: #333;
+        background-color: #fff;
+    }
+    .title-right,
+    .account-title-btn {
+        height: 28px;
+        line-height: 28px;
+        background-color: #fff;
+        font-size: 12px;
+        color: #333;
+    }
+    .switch-width-account {
+        height: 22px;
+        line-height: 22px;
+    }
+    .ant-btn-ghost.disabled, .ant-btn-ghost[disabled], .ant-btn-ghost.disabled:hover, .ant-btn-ghost[disabled]:hover, .ant-btn-ghost.disabled:focus, .ant-btn-ghost[disabled]:focus, .ant-btn-ghost.disabled:active, .ant-btn-ghost[disabled]:active, .ant-btn-ghost.disabled.active, .ant-btn-ghost[disabled].active {
+        color: rgba(0, 0, 0, 0.25) !important;
+        background-color: #f5f5f5!important;
+    }
+}
+
+.accountConf-running-tabel-width {
+    font-size: 12px;
+    color: #333;
+    .switch-width {
+        margin-top: 5.5px;
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .use-unuse-style.ant-switch-checked {
+        background-color: #ff8350;
+        border-color: #ff8350;
+    }
+
+    & > li{
+        .cxls-table-item-cur{
+            text-decoration: underline;
+        }
+        .cxls-table-item-cur:hover {
+            color: #52c2ec;
+            & > span {
+            cursor: pointer;
+            }
+        }
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(2) {
+            min-width: 32px;
+            max-width: 32px;
+            flex: 28;
+            justify-content: center;
+			align-items: center;
+        }
+        &:nth-child(3) {
+            min-width: 270px;
+            max-width: 400px;
+			flex: 270;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+
+            .table-item-name {
+                flex: 1;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+
+                & > span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+            }
+            .table-item-triangle-account-wrap {
+                display: block;
+                width: 30px;
+                text-align: right;
+            }
+            .table-item-triangle-account {
+                // width: 20px;
+                .anticon-up:before {
+                    transform: scale(0.7,0.7);
+                }
+                .anticon-down:before {
+                    transform: scale(0.7,0.7);
+                }
+            }
+
+            &:hover {
+                .table-item-cur {
+                    color: #52c2ec;
+                }
+            }
+        }
+        &:nth-child(4) {
+            flex: 414;
+        }
+        &:nth-child(5) {
+            min-width: 56px;
+            max-width: 56px;
+            flex: 56;
+        }
+    }
+    .trianglePointer{
+        cursor: pointer;
+    }
+}
+
+.accountConf-account-tabel-width-true {
+    & > li{
+        font-size: 12px;
+        color: #333;
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+            & > label {
+                height: 15px;
+            }
+        }
+        &:nth-child(2) {
+            min-width: 140px;
+            max-width: 166px;
+            flex: 140;
+        }
+        &:nth-child(3) {
+            min-width: 70px;
+            max-width: 120px;
+            flex: 70;
+        }
+        &:nth-child(4) {
+            min-width: 120px;
+            max-width: 280px;
+            flex: 120;
+        }
+        &:nth-child(5) {
+            min-width: 144px;
+            max-width: 144px;
+            flex: 144;
+        }
+        &:nth-child(6) {
+            min-width: 156px;
+            max-width: 200px;
+            flex: 156;
+        }
+        &:nth-child(7) {
+            min-width: 100px;
+            max-width: 140px;
+            flex: 100;
+        }
+    }
+}
+
+.accountConf-account-tabel-width-false {
+    & > li{
+        font-size: 12px;
+        color: #333;
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+            & > label {
+                height: 15px;
+            }
+        }
+        &:nth-child(2) {
+            min-width: 240px;
+            max-width: 306px;
+            flex: 240;
+        }
+        &:nth-child(3) {
+            min-width: 70px;
+            max-width: 120px;
+            flex: 70;
+        }
+        &:nth-child(4) {
+            min-width: 120px;
+            max-width: 280px;
+            flex: 120;
+        }
+        &:nth-child(5) {
+            min-width: 144px;
+            max-width: 144px;
+            flex: 144;
+        }
+        &:nth-child(6) {
+            min-width: 156px;
+            max-width: 200px;
+            flex: 156;
+        }
+    }
+}
+
+.accountConf-account-tabel-width-false {
+    & > li{
+        font-size: 12px;
+        color: #333;
+        &:nth-child(1) {
+            min-width: 28px;
+            max-width: 28px;
+            flex: 28;
+			justify-content: center;
+			align-items: center;
+            & > label {
+                height: 15px;
+            }
+        }
+        &:nth-child(2) {
+            min-width: 240px;
+            max-width: 306px;
+            flex: 240;
+        }
+        &:nth-child(3) {
+            min-width: 70px;
+            max-width: 120px;
+            flex: 70;
+        }
+        &:nth-child(4) {
+            min-width: 120px;
+            max-width: 280px;
+            flex: 120;
+        }
+        &:nth-child(5) {
+            min-width: 144px;
+            max-width: 144px;
+            flex: 144;
+        }
+        &:nth-child(6) {
+            min-width: 156px;
+            max-width: 200px;
+            flex: 156;
+        }
+    }
+}
+.accountConf-account-remove-height{
+    & > li{
+        &:nth-child(1) {
+            & > label {
+                height: 34px;
+            }
+        }
+    }
+}
+
+.account-conf-tax-rate-title {
+    display: flex;
+    & > label {
+        margin-right: 30px;
+    }
+}
+
+.account-conf-tax-rate-list {
+
+    width: 100%;
+    background:#ffffff;
+    border:1px solid #d9d9d9;
+    padding: 15px 10px 5px 10px;
+    margin-top: 5px;
+
+    & > li {
+        display: flex;
+        margin-bottom: 10px;
+
+        & > label {
+            width: 80px;
+        }
+        & > div {
+            flex: 1;
+
+            .ant-select {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.accountconf-plus-disable {
+    color: #ccc;
+}
+
+.table-item-disable {
+    color: #ccc;
+}
+.running-index {
+  display: flex;
+  flex-wrap: wrap;
+
+  .accountConf-modal-list-item {
+      display: flex;
+      height: 29px;
+      line-height: 26px;
+      // margin: 10px 1% 0;
+      width: 49%;
+      .ant-select-selection-selected-value {
+          max-width: 240px;
+      }
+      & > div {
+          flex: 1;
+          display: flex;
+
+          .ant-select {
+              width: 100%;
+          }
+
+          .ant-checkbox {
+              margin-right: 8px;
+          }
+
+          .ant-input-wrapper {
+              width: 100%;
+          }
+          .ant-calendar-picker {
+              width: 100%;
+          }
+      }
+      & > label {
+          width: auto;
+          min-width: 60px;
+          line-height: 32px;
+      }
+      .ant-radio{
+        line-height: 26px;
+      }
+  }
+  .accountConf-modal-block {
+    display: block;
+    width: 100%;
+    margin: 10px 1% 0;
+    .ant-checkbox {
+      margin-right: 8px;
+    }
+    .ant-checkbox-group {
+      display: inline-block;
+    }
+  }
+  .accountConf-separator-item {
+    line-height: 15px;
+    .accountConf-line {
+      background: #d8d8d8;
+      width: 93%;
+      height: 1px;
+      margin-left: 48px;
+    }
+
+  }
+  .accountConf-modal-flex {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    & > .accountConf-modal-list-item {
+      width: 48%;
+      // margin: 0;
+    }
+    & > .accountConf-modal-margin {
+      margin-top: 10px;
+    }
+    .flex-child {
+        flex: 1;
+    }
+  }
+  .accountConf-modal-list-blockitem {
+    line-height: 26px;
+    width: 100%;
+    // margin: 10px 1% 0;
+    margin-bottom: 12px;
+
+    & > label {
+        width: 70px;
+    }
+    .ant-checkbox {
+      margin-right: 8px;
+    }
+    .ant-radio {
+      padding-right: 5px;
+    }
+
+
+  }
+  .accountConf-modal-margin-left {
+      margin-left: 1% !important;
+  }
+  .no-margin-left {
+      margin-left: 0 !important;
+  }
+  .no-margin-right {
+      margin-right: 0 !important;
+  }
+  .no-margin-top {
+      margin-top: 0 !important;
+  }
+  .no-margin-bottom {
+      margin-bottom: 0 !important;
+  }
+  .capital-item-css{
+    & > label{
+      width: 100px;
+    }
+  }
+  .no-margin {
+      margin: 0 !important;
+  }
+  .no-padding{
+      padding:0 !important;
+  }
+  .child-chosen {
+      margin-left: 25px;
+  }
+  .need-line + .need-line {
+     background: #fff;
+  }
+  .accountConf-modal-list-checkbox {
+    margin-right: 10px;
+    .ant-checkbox{
+      margin-right: 8px;
+    }
+    .accountConf-modal-list-radio {
+      display: block;
+      line-height: 26px;
+      margin-right: 10px;
+    }
+  }
+
+}
+.running-content {
+    .ant-select-selection {
+        border-radius: 4px !important;
+    }
+    .ant-input {
+        border-radius: 4px !important;
+    }
+}
+
+.item-place {
+    .change-place {
+        // display: none;
+        visibility: hidden;
+        width: 24px;
+    }
+}
+.item-place:hover {
+    .change-place {
+        visibility: visible;
+        display: inline-block;
+    }
+    .go-up, .go-down {
+        &:hover {
+            cursor: pointer;
+            color: rgb(139,213,231);
+        }
+    }
+}
+.instead-amount {
+    &>span:nth-of-type(n+3) {
+        margin-left: 12px;
+    }
+}
+
+
+.account-regret-modal-content{
+    .account-regret-modal-text{
+        margin: 10px 0;
+        & > p{
+            border-left: 5px solid #62caf3;
+            padding-left: 10px;
+        }
+    }
+    .account-regret-modal-hadMsg{
+        border-top: 1px dashed;
+        .regret-modal-hadMsg-content{
+            background-color: #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+            padding: 10px;
+            & > p {
+                font-size: 16px;
+                font-weight: bold;
+            }
+            & > ul{
+                & > li {
+                    list-style: disc;
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .accountConf-modal-list-item{
+        display: flex;
+        & > label {
+            flex: 3;
+        }
+        & > span {
+            flex: 7;
+        }
+        & > div {
+            flex: 7;
+        }
+    }
+
+}
+
+
+
+
+.regret-title-more{
+    margin-left: 8px;
+    height: 28px;
+    line-height: 28px;
+    // padding: 0 8px;
+    font-size: 12px;
+    color: #333;
+}
+.account-conf-tax-rate-enable{
+    padding: 1rem;
+    text-align: center;
+    width: 50%;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    .rate-enable-icon{
+        margin-right: 10px;
+    }
+}
+.length-longer {
+    & > label {
+        min-width:112px !important;
+    }
+    .ant-select-selection-selected-value {
+        max-width: 224px !important;
+    }
+}
+.title-lsqc-left{
+    width: 80px;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    margin-bottom: 0px;
+}
+.ls-config-title{
+    & > span:nth-last-child(2){
+        border-right: 1px solid #d8d8d8;
+    }
+    .title-lsqc-left{
+        width: auto;
+    }
+}
+
+.tax-rate-conf-color{
+    font-size: 12px;
+    color: #333;
+    flex: 1;
+}
+
+.ac-setUp {
+    .table-body > div:nth-of-type(even) {
+        background: @bouble-background;
+    }
+    .table-body > div:nth-of-type(odd) {
+        background: white;
+    }
+    min-width: 760px;
+    max-width: 1080px;
+}
+.accountConf-modal-list{
+    .accountConf-modal-list-item{
+        display: flex;
+        margin-bottom: 12px;
+        & > label{
+            min-width: 80px;
+            line-height: 28px;
+        }
+        & > div{
+            width: 100%;
+            & > .ant-select{
+                width: 100%
+            }
+        }
+    }
+    .ant-checkbox-wrapper{
+        font-size: 12px;
+        color: #333;
+        line-height: 26px;
+    }
+    .ant-radio-wrapper {
+        font-size: 12px;
+        color: #333;
+        margin-left: 15px;
+        line-height: 26px;
+    }
+    .small-margin {
+        margin-bottom: 6px !important;
+        .ant-checkbox-wrapper {
+            margin-left: 15px;
+        }
+    }
+    .accountConf-separator {
+        height: 1px;
+        background-color: #dddddd;
+        width: 100%;
+        margin-bottom: 12px;
+    }
+}
+.accountConf-modals {
+    .ant-modal-body {
+        padding-bottom: 0;
+        padding:12px 40px;
+    }
+}
+.rate-list {
+    display: flex;
+    height: 28px;
+    margin-bottom: 12px;
+    input {
+        width: 325px;
+    }
+    .rate-title {
+        min-width: 80px;
+        line-height: 28px;
+    }
+    .rate-percent {
+        margin-left:4px;
+        line-height: 28px;
+    }
+    .pre-content {
+        display:flex;
+        margin-left:5px;
+        flex-direction: column;
+        i {
+            flex: 1;
+            margin-top: 2px;
+        }
+    }
+}
